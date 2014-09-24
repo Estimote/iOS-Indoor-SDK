@@ -116,7 +116,7 @@ The procedure consists of the following steps:
 - placing beacons
 - mapping the physical location to an instance of ```ESTLocation```
  
-Invoke ```[ESTIndoorLocationManager locationSetupControllerWithCompletion:]``` to obtain a dedicated UIViewController that guides you through this process.
+Invoke [[ESTIndoorLocationManager locationSetupControllerWithCompletion:]](http://estimote.github.io/iOS-Indoor-SDK/Classes/ESTIndoorLocationManager.html#//api/name/locationSetupControllerWithCompletion:) to obtain a dedicated UIViewController that guides you through this process.
 The result of this procedure is a prepared physical location and an instance of ```ESTLocation``` that can be used for obtaining position updates.
 
 #### Manually, using ESTLocationBuilder
