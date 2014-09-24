@@ -160,7 +160,7 @@ The next step is to place beacons and doors on the boundary segments of the loca
 
 If you mapped a location in [Estimote App](https://itunes.apple.com/us/app/estimote/id686915066?mt=8) you can export it by tapping on ```Export location code snippet```.
 
-The resulting JSON can be parsed into an ```ESTLocation``` object by invoking ```[ESTLocationBuilder parseFromJSON:]```.
+The resulting JSON can be parsed into an ```ESTLocation``` object by invoking [[ESTLocationBuilder parseFromJSON:]](http://estimote.github.io/iOS-Indoor-SDK/Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:).
 
 See also [SDK Examples](Examples) for how to do this.
 
