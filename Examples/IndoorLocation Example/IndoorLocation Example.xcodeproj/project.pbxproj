@@ -1,0 +1,652 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC239C9319C9C6B3003B46F9 /* location.json in Resources */ = {isa = PBXBuildFile; fileRef = AC239C9219C9C6B3003B46F9 /* location.json */; };
+		AC48C11B19C70660007F16E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC48C11A19C70660007F16E8 /* Foundation.framework */; };
+		AC48C11D19C70660007F16E8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC48C11C19C70660007F16E8 /* CoreGraphics.framework */; };
+		AC48C11F19C70660007F16E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC48C11E19C70660007F16E8 /* UIKit.framework */; };
+		AC48C12519C70660007F16E8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC48C12319C70660007F16E8 /* InfoPlist.strings */; };
+		AC48C12719C70660007F16E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC48C12619C70660007F16E8 /* main.m */; };
+		AC48C12B19C70660007F16E8 /* ESTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC48C12A19C70660007F16E8 /* ESTAppDelegate.m */; };
+		AC48C13319C70660007F16E8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC48C13219C70660007F16E8 /* Images.xcassets */; };
+		AC48C15F19C7094C007F16E8 /* ESTMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC48C15E19C7094C007F16E8 /* ESTMenuViewController.m */; };
+		AC48C16419C709CE007F16E8 /* ESTAuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC48C16219C709CE007F16E8 /* ESTAuthorizationViewController.m */; };
+		AC48C16519C709CE007F16E8 /* ESTAuthorizationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC48C16319C709CE007F16E8 /* ESTAuthorizationViewController.xib */; };
+		AC48C16619C70D00007F16E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC48C12C19C70660007F16E8 /* Main.storyboard */; };
+		AC4A9FCA19C7129000018F3E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4A9FC919C7129000018F3E /* SystemConfiguration.framework */; };
+		AC4A9FCC19C7129700018F3E /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4A9FCB19C7129700018F3E /* CoreBluetooth.framework */; };
+		AC4A9FCE19C7129C00018F3E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4A9FCD19C7129C00018F3E /* CoreLocation.framework */; };
+		AC60632C19C7196000D7D57B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC60632B19C7196000D7D57B /* AVFoundation.framework */; };
+		AC60632E19C7196500D7D57B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC60632D19C7196500D7D57B /* CoreMotion.framework */; };
+		AC60633019C7197900D7D57B /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC60632F19C7197900D7D57B /* MediaPlayer.framework */; };
+		AC60633119C7199E00D7D57B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC60632919C7194800D7D57B /* AudioToolbox.framework */; };
+		AC60633319C719A800D7D57B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC60633219C719A800D7D57B /* MessageUI.framework */; };
+		AC6BD58519CAE38500F5FDF2 /* ESTIndoorLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD58319CAE38500F5FDF2 /* ESTIndoorLocationViewController.m */; };
+		AC6BD58619CAE38500F5FDF2 /* ESTIndoorLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC6BD58419CAE38500F5FDF2 /* ESTIndoorLocationViewController.xib */; };
+		ACF1604B19CC373500C8A814 /* libEstimoteIndoorSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF1601419CC373500C8A814 /* libEstimoteIndoorSDK.a */; };
+		ACF1604C19CC373500C8A814 /* 5a.mov in Resources */ = {isa = PBXBuildFile; fileRef = ACF1601619CC373500C8A814 /* 5a.mov */; };
+		ACF1604D19CC373500C8A814 /* 5b.mov in Resources */ = {isa = PBXBuildFile; fileRef = ACF1601719CC373500C8A814 /* 5b.mov */; };
+		ACF1604E19CC373500C8A814 /* 8a.mov in Resources */ = {isa = PBXBuildFile; fileRef = ACF1601819CC373500C8A814 /* 8a.mov */; };
+		ACF1604F19CC373500C8A814 /* 8b.mov in Resources */ = {isa = PBXBuildFile; fileRef = ACF1601919CC373500C8A814 /* 8b.mov */; };
+		ACF1605019CC373500C8A814 /* 8c.mov in Resources */ = {isa = PBXBuildFile; fileRef = ACF1601A19CC373500C8A814 /* 8c.mov */; };
+		ACF1605119CC373500C8A814 /* 5a_first_frame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF1601C19CC373500C8A814 /* 5a_first_frame@2x.png */; };
+		ACF1605219CC373500C8A814 /* 5b_first_frame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF1601D19CC373500C8A814 /* 5b_first_frame@2x.png */; };
+		ACF1605319CC373500C8A814 /* 8a_first_frame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF1601E19CC373500C8A814 /* 8a_first_frame@2x.png */; };
+		ACF1605419CC373500C8A814 /* 8b_first_frame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF1601F19CC373500C8A814 /* 8b_first_frame@2x.png */; };
+		ACF1605519CC373500C8A814 /* 8c_first_frame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF1602019CC373500C8A814 /* 8c_first_frame@2x.png */; };
+		ACF1605719CC373500C8A814 /* beacon_grey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF1602219CC373500C8A814 /* beacon_grey@2x.png */; };
+		ACF1605819CC373500C8A814 /* beaconblueberry@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF1602319CC373500C8A814 /* beaconblueberry@2x.png */; };
+		ACF1605919CC373500C8A814 /* beaconBlueberrySmall.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF1602419CC373500C8A814 /* beaconBlueberrySmall.png */; };
+		ACF1605A19CC373500C8A814 /* beaconBlueberrySmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF1602519CC373500C8A814 /* beaconBlueberrySmall@2x.png */; };
+		ACF1605C19CC373500C8A814 /* beacongrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF1602719CC373500C8A814 /* beacongrey@2x.png */; };
+		ACF1605D19CC373500C8A814 /* beaconGreySmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF1602819CC373500C8A814 /* beaconGreySmall@2x.png */; };
+		ACF1605E19CC373500C8A814 /* beaconicy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF1602919CC373500C8A814 /* beaconicy@2x.png */; };
+		ACF1605F19CC373500C8A814 /* beaconIcySmall.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF1602A19CC373500C8A814 /* beaconIcySmall.png */; };
+		ACF1606019CC373500C8A814 /* beaconIcySmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF1602B19CC373500C8A814 /* beaconIcySmall@2x.png */; };
+		ACF1606119CC373500C8A814 /* beaconmint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF1602C19CC373500C8A814 /* beaconmint@2x.png */; };
+		ACF1606219CC373500C8A814 /* beaconMintSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF1602D19CC373500C8A814 /* beaconMintSmall.png */; };
+		ACF1606319CC373500C8A814 /* beaconMintSmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF1602E19CC373500C8A814 /* beaconMintSmall@2x.png */; };
+		ACF1606419CC373500C8A814 /* indoor_error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF1602F19CC373500C8A814 /* indoor_error@2x.png */; };
+		ACF1606519CC373500C8A814 /* instructions@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF1603019CC373500C8A814 /* instructions@2x.png */; };
+		ACF1606719CC373500C8A814 /* navigation_guy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF1603219CC373500C8A814 /* navigation_guy@2x.png */; };
+		ACF1606B19CC373500C8A814 /* screen8_beacon_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF1603619CC373500C8A814 /* screen8_beacon_blue@2x.png */; };
+		ACF1606C19CC373500C8A814 /* screen8_beacon_gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF1603719CC373500C8A814 /* screen8_beacon_gray@2x.png */; };
+		ACF1606D19CC373500C8A814 /* screen8_beacon_gray_trans@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF1603819CC373500C8A814 /* screen8_beacon_gray_trans@2x.png */; };
+		ACF1606E19CC373500C8A814 /* screen8_beacon_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF1603919CC373500C8A814 /* screen8_beacon_green@2x.png */; };
+		ACF1606F19CC373500C8A814 /* screen8_beacon_purple@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF1603A19CC373500C8A814 /* screen8_beacon_purple@2x.png */; };
+		ACF1607119CC373500C8A814 /* tick@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF1603C19CC373500C8A814 /* tick@2x.png */; };
+		ACF1607219CC373500C8A814 /* welcome@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF1603D19CC373500C8A814 /* welcome@2x.png */; };
+		ACF1607319CC373500C8A814 /* SixBeaconsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACF1603E19CC373500C8A814 /* SixBeaconsView.xib */; };
+		ACF1607419CC373500C8A814 /* wall_bump.wav in Resources */ = {isa = PBXBuildFile; fileRef = ACF1603F19CC373500C8A814 /* wall_bump.wav */; };
+		ACF1607519CC373500C8A814 /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF1604919CC373500C8A814 /* libEstimoteSDK.a */; };
+		ACF1607619CC373500C8A814 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = ACF1604A19CC373500C8A814 /* README.md */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AC239C9219C9C6B3003B46F9 /* location.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = location.json; sourceTree = "<group>"; };
+		AC48C11719C70660007F16E8 /* IndoorLocation Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IndoorLocation Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC48C11A19C70660007F16E8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AC48C11C19C70660007F16E8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AC48C11E19C70660007F16E8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AC48C12219C70660007F16E8 /* IndoorLocation Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IndoorLocation Example-Info.plist"; sourceTree = "<group>"; };
+		AC48C12419C70660007F16E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AC48C12619C70660007F16E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AC48C12819C70660007F16E8 /* IndoorLocation Example-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IndoorLocation Example-Prefix.pch"; sourceTree = "<group>"; };
+		AC48C12919C70660007F16E8 /* ESTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESTAppDelegate.h; sourceTree = "<group>"; };
+		AC48C12A19C70660007F16E8 /* ESTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESTAppDelegate.m; sourceTree = "<group>"; };
+		AC48C12D19C70660007F16E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC48C13219C70660007F16E8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AC48C15D19C7094C007F16E8 /* ESTMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTMenuViewController.h; sourceTree = "<group>"; };
+		AC48C15E19C7094C007F16E8 /* ESTMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTMenuViewController.m; sourceTree = "<group>"; };
+		AC48C16119C709CE007F16E8 /* ESTAuthorizationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTAuthorizationViewController.h; sourceTree = "<group>"; };
+		AC48C16219C709CE007F16E8 /* ESTAuthorizationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTAuthorizationViewController.m; sourceTree = "<group>"; };
+		AC48C16319C709CE007F16E8 /* ESTAuthorizationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTAuthorizationViewController.xib; sourceTree = "<group>"; };
+		AC4A9FC919C7129000018F3E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AC4A9FCB19C7129700018F3E /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		AC4A9FCD19C7129C00018F3E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AC60632919C7194800D7D57B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		AC60632B19C7196000D7D57B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AC60632D19C7196500D7D57B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		AC60632F19C7197900D7D57B /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		AC60633219C719A800D7D57B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		AC6BD58219CAE38500F5FDF2 /* ESTIndoorLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTIndoorLocationViewController.h; sourceTree = "<group>"; };
+		AC6BD58319CAE38500F5FDF2 /* ESTIndoorLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTIndoorLocationViewController.m; sourceTree = "<group>"; };
+		AC6BD58419CAE38500F5FDF2 /* ESTIndoorLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTIndoorLocationViewController.xib; sourceTree = "<group>"; };
+		ACF1600B19CC373500C8A814 /* ESTIndoorLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTIndoorLocationManager.h; sourceTree = "<group>"; };
+		ACF1600C19CC373500C8A814 /* ESTIndoorLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTIndoorLocationView.h; sourceTree = "<group>"; };
+		ACF1600D19CC373500C8A814 /* ESTLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTLocation.h; sourceTree = "<group>"; };
+		ACF1600E19CC373500C8A814 /* ESTLocationBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTLocationBuilder.h; sourceTree = "<group>"; };
+		ACF1600F19CC373500C8A814 /* ESTLocationLinearObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTLocationLinearObject.h; sourceTree = "<group>"; };
+		ACF1601019CC373500C8A814 /* ESTOrientedLineSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTOrientedLineSegment.h; sourceTree = "<group>"; };
+		ACF1601119CC373500C8A814 /* ESTOrientedPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTOrientedPoint.h; sourceTree = "<group>"; };
+		ACF1601219CC373500C8A814 /* ESTPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTPoint.h; sourceTree = "<group>"; };
+		ACF1601319CC373500C8A814 /* ESTPositionedBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTPositionedBeacon.h; sourceTree = "<group>"; };
+		ACF1601419CC373500C8A814 /* libEstimoteIndoorSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEstimoteIndoorSDK.a; sourceTree = "<group>"; };
+		ACF1601619CC373500C8A814 /* 5a.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = 5a.mov; sourceTree = "<group>"; };
+		ACF1601719CC373500C8A814 /* 5b.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = 5b.mov; sourceTree = "<group>"; };
+		ACF1601819CC373500C8A814 /* 8a.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = 8a.mov; sourceTree = "<group>"; };
+		ACF1601919CC373500C8A814 /* 8b.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = 8b.mov; sourceTree = "<group>"; };
+		ACF1601A19CC373500C8A814 /* 8c.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = 8c.mov; sourceTree = "<group>"; };
+		ACF1601C19CC373500C8A814 /* 5a_first_frame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "5a_first_frame@2x.png"; sourceTree = "<group>"; };
+		ACF1601D19CC373500C8A814 /* 5b_first_frame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "5b_first_frame@2x.png"; sourceTree = "<group>"; };
+		ACF1601E19CC373500C8A814 /* 8a_first_frame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8a_first_frame@2x.png"; sourceTree = "<group>"; };
+		ACF1601F19CC373500C8A814 /* 8b_first_frame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8b_first_frame@2x.png"; sourceTree = "<group>"; };
+		ACF1602019CC373500C8A814 /* 8c_first_frame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8c_first_frame@2x.png"; sourceTree = "<group>"; };
+		ACF1602219CC373500C8A814 /* beacon_grey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beacon_grey@2x.png"; sourceTree = "<group>"; };
+		ACF1602319CC373500C8A814 /* beaconblueberry@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beaconblueberry@2x.png"; sourceTree = "<group>"; };
+		ACF1602419CC373500C8A814 /* beaconBlueberrySmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beaconBlueberrySmall.png; sourceTree = "<group>"; };
+		ACF1602519CC373500C8A814 /* beaconBlueberrySmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beaconBlueberrySmall@2x.png"; sourceTree = "<group>"; };
+		ACF1602719CC373500C8A814 /* beacongrey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beacongrey@2x.png"; sourceTree = "<group>"; };
+		ACF1602819CC373500C8A814 /* beaconGreySmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beaconGreySmall@2x.png"; sourceTree = "<group>"; };
+		ACF1602919CC373500C8A814 /* beaconicy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beaconicy@2x.png"; sourceTree = "<group>"; };
+		ACF1602A19CC373500C8A814 /* beaconIcySmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beaconIcySmall.png; sourceTree = "<group>"; };
+		ACF1602B19CC373500C8A814 /* beaconIcySmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beaconIcySmall@2x.png"; sourceTree = "<group>"; };
+		ACF1602C19CC373500C8A814 /* beaconmint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beaconmint@2x.png"; sourceTree = "<group>"; };
+		ACF1602D19CC373500C8A814 /* beaconMintSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beaconMintSmall.png; sourceTree = "<group>"; };
+		ACF1602E19CC373500C8A814 /* beaconMintSmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beaconMintSmall@2x.png"; sourceTree = "<group>"; };
+		ACF1602F19CC373500C8A814 /* indoor_error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "indoor_error@2x.png"; sourceTree = "<group>"; };
+		ACF1603019CC373500C8A814 /* instructions@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "instructions@2x.png"; sourceTree = "<group>"; };
+		ACF1603219CC373500C8A814 /* navigation_guy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation_guy@2x.png"; sourceTree = "<group>"; };
+		ACF1603619CC373500C8A814 /* screen8_beacon_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screen8_beacon_blue@2x.png"; sourceTree = "<group>"; };
+		ACF1603719CC373500C8A814 /* screen8_beacon_gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screen8_beacon_gray@2x.png"; sourceTree = "<group>"; };
+		ACF1603819CC373500C8A814 /* screen8_beacon_gray_trans@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screen8_beacon_gray_trans@2x.png"; sourceTree = "<group>"; };
+		ACF1603919CC373500C8A814 /* screen8_beacon_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screen8_beacon_green@2x.png"; sourceTree = "<group>"; };
+		ACF1603A19CC373500C8A814 /* screen8_beacon_purple@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screen8_beacon_purple@2x.png"; sourceTree = "<group>"; };
+		ACF1603C19CC373500C8A814 /* tick@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tick@2x.png"; sourceTree = "<group>"; };
+		ACF1603D19CC373500C8A814 /* welcome@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "welcome@2x.png"; sourceTree = "<group>"; };
+		ACF1603E19CC373500C8A814 /* SixBeaconsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SixBeaconsView.xib; sourceTree = "<group>"; };
+		ACF1603F19CC373500C8A814 /* wall_bump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wall_bump.wav; sourceTree = "<group>"; };
+		ACF1604219CC373500C8A814 /* ESTBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeacon.h; sourceTree = "<group>"; };
+		ACF1604319CC373500C8A814 /* ESTBeaconDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconDefinitions.h; sourceTree = "<group>"; };
+		ACF1604419CC373500C8A814 /* ESTBeaconFirmwareInfoVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconFirmwareInfoVO.h; sourceTree = "<group>"; };
+		ACF1604519CC373500C8A814 /* ESTBeaconFirmwareVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconFirmwareVO.h; sourceTree = "<group>"; };
+		ACF1604619CC373500C8A814 /* ESTBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconManager.h; sourceTree = "<group>"; };
+		ACF1604719CC373500C8A814 /* ESTBeaconRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconRegion.h; sourceTree = "<group>"; };
+		ACF1604819CC373500C8A814 /* ESTBeaconVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconVO.h; sourceTree = "<group>"; };
+		ACF1604919CC373500C8A814 /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEstimoteSDK.a; sourceTree = "<group>"; };
+		ACF1604A19CC373500C8A814 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC48C11419C70660007F16E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC60633319C719A800D7D57B /* MessageUI.framework in Frameworks */,
+				AC60633119C7199E00D7D57B /* AudioToolbox.framework in Frameworks */,
+				AC60633019C7197900D7D57B /* MediaPlayer.framework in Frameworks */,
+				ACF1604B19CC373500C8A814 /* libEstimoteIndoorSDK.a in Frameworks */,
+				AC60632E19C7196500D7D57B /* CoreMotion.framework in Frameworks */,
+				AC60632C19C7196000D7D57B /* AVFoundation.framework in Frameworks */,
+				AC4A9FCE19C7129C00018F3E /* CoreLocation.framework in Frameworks */,
+				AC4A9FCC19C7129700018F3E /* CoreBluetooth.framework in Frameworks */,
+				AC4A9FCA19C7129000018F3E /* SystemConfiguration.framework in Frameworks */,
+				AC48C11D19C70660007F16E8 /* CoreGraphics.framework in Frameworks */,
+				AC48C11F19C70660007F16E8 /* UIKit.framework in Frameworks */,
+				AC48C11B19C70660007F16E8 /* Foundation.framework in Frameworks */,
+				ACF1607519CC373500C8A814 /* libEstimoteSDK.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC48C10E19C70660007F16E8 = {
+			isa = PBXGroup;
+			children = (
+				AC48C12019C70660007F16E8 /* IndoorLocation Example */,
+				AC48C11919C70660007F16E8 /* Frameworks */,
+				AC48C11819C70660007F16E8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC48C11819C70660007F16E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC48C11719C70660007F16E8 /* IndoorLocation Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC48C11919C70660007F16E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ACF1600919CC373500C8A814 /* EstimoteIndoorLocationSDK */,
+				ACF1604019CC373500C8A814 /* EstimoteSDK */,
+				AC60633219C719A800D7D57B /* MessageUI.framework */,
+				AC60632F19C7197900D7D57B /* MediaPlayer.framework */,
+				AC60632D19C7196500D7D57B /* CoreMotion.framework */,
+				AC60632B19C7196000D7D57B /* AVFoundation.framework */,
+				AC60632919C7194800D7D57B /* AudioToolbox.framework */,
+				AC4A9FCD19C7129C00018F3E /* CoreLocation.framework */,
+				AC4A9FCB19C7129700018F3E /* CoreBluetooth.framework */,
+				AC4A9FC919C7129000018F3E /* SystemConfiguration.framework */,
+				AC48C11A19C70660007F16E8 /* Foundation.framework */,
+				AC48C11C19C70660007F16E8 /* CoreGraphics.framework */,
+				AC48C11E19C70660007F16E8 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC48C12019C70660007F16E8 /* IndoorLocation Example */ = {
+			isa = PBXGroup;
+			children = (
+				AC48C12919C70660007F16E8 /* ESTAppDelegate.h */,
+				AC48C12A19C70660007F16E8 /* ESTAppDelegate.m */,
+				AC48C12C19C70660007F16E8 /* Main.storyboard */,
+				AC48C15C19C7094C007F16E8 /* ESTMenuViewController */,
+				AC48C16019C709CE007F16E8 /* ESTAuthorizationViewController */,
+				AC6BD58119CAE38500F5FDF2 /* ESTIndoorLocationViewController */,
+				AC48C13219C70660007F16E8 /* Images.xcassets */,
+				AC48C12119C70660007F16E8 /* Supporting Files */,
+			);
+			path = "IndoorLocation Example";
+			sourceTree = "<group>";
+		};
+		AC48C12119C70660007F16E8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC239C9219C9C6B3003B46F9 /* location.json */,
+				AC48C12219C70660007F16E8 /* IndoorLocation Example-Info.plist */,
+				AC48C12319C70660007F16E8 /* InfoPlist.strings */,
+				AC48C12619C70660007F16E8 /* main.m */,
+				AC48C12819C70660007F16E8 /* IndoorLocation Example-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC48C15C19C7094C007F16E8 /* ESTMenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AC48C15D19C7094C007F16E8 /* ESTMenuViewController.h */,
+				AC48C15E19C7094C007F16E8 /* ESTMenuViewController.m */,
+			);
+			path = ESTMenuViewController;
+			sourceTree = "<group>";
+		};
+		AC48C16019C709CE007F16E8 /* ESTAuthorizationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AC48C16119C709CE007F16E8 /* ESTAuthorizationViewController.h */,
+				AC48C16219C709CE007F16E8 /* ESTAuthorizationViewController.m */,
+				AC48C16319C709CE007F16E8 /* ESTAuthorizationViewController.xib */,
+			);
+			path = ESTAuthorizationViewController;
+			sourceTree = "<group>";
+		};
+		AC6BD58119CAE38500F5FDF2 /* ESTIndoorLocationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AC6BD58219CAE38500F5FDF2 /* ESTIndoorLocationViewController.h */,
+				AC6BD58319CAE38500F5FDF2 /* ESTIndoorLocationViewController.m */,
+				AC6BD58419CAE38500F5FDF2 /* ESTIndoorLocationViewController.xib */,
+			);
+			path = ESTIndoorLocationViewController;
+			sourceTree = "<group>";
+		};
+		ACF1600919CC373500C8A814 /* EstimoteIndoorLocationSDK */ = {
+			isa = PBXGroup;
+			children = (
+				ACF1600A19CC373500C8A814 /* Headers */,
+				ACF1601419CC373500C8A814 /* libEstimoteIndoorSDK.a */,
+				ACF1601519CC373500C8A814 /* Resources */,
+			);
+			name = EstimoteIndoorLocationSDK;
+			path = ../../EstimoteIndoorLocationSDK;
+			sourceTree = "<group>";
+		};
+		ACF1600A19CC373500C8A814 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				ACF1600B19CC373500C8A814 /* ESTIndoorLocationManager.h */,
+				ACF1600C19CC373500C8A814 /* ESTIndoorLocationView.h */,
+				ACF1600D19CC373500C8A814 /* ESTLocation.h */,
+				ACF1600E19CC373500C8A814 /* ESTLocationBuilder.h */,
+				ACF1600F19CC373500C8A814 /* ESTLocationLinearObject.h */,
+				ACF1601019CC373500C8A814 /* ESTOrientedLineSegment.h */,
+				ACF1601119CC373500C8A814 /* ESTOrientedPoint.h */,
+				ACF1601219CC373500C8A814 /* ESTPoint.h */,
+				ACF1601319CC373500C8A814 /* ESTPositionedBeacon.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		ACF1601519CC373500C8A814 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ACF1601619CC373500C8A814 /* 5a.mov */,
+				ACF1601719CC373500C8A814 /* 5b.mov */,
+				ACF1601819CC373500C8A814 /* 8a.mov */,
+				ACF1601919CC373500C8A814 /* 8b.mov */,
+				ACF1601A19CC373500C8A814 /* 8c.mov */,
+				ACF1601B19CC373500C8A814 /* Images */,
+				ACF1603E19CC373500C8A814 /* SixBeaconsView.xib */,
+				ACF1603F19CC373500C8A814 /* wall_bump.wav */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		ACF1601B19CC373500C8A814 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				ACF1601C19CC373500C8A814 /* 5a_first_frame@2x.png */,
+				ACF1601D19CC373500C8A814 /* 5b_first_frame@2x.png */,
+				ACF1601E19CC373500C8A814 /* 8a_first_frame@2x.png */,
+				ACF1601F19CC373500C8A814 /* 8b_first_frame@2x.png */,
+				ACF1602019CC373500C8A814 /* 8c_first_frame@2x.png */,
+				ACF1602219CC373500C8A814 /* beacon_grey@2x.png */,
+				ACF1602319CC373500C8A814 /* beaconblueberry@2x.png */,
+				ACF1602419CC373500C8A814 /* beaconBlueberrySmall.png */,
+				ACF1602519CC373500C8A814 /* beaconBlueberrySmall@2x.png */,
+				ACF1602719CC373500C8A814 /* beacongrey@2x.png */,
+				ACF1602819CC373500C8A814 /* beaconGreySmall@2x.png */,
+				ACF1602919CC373500C8A814 /* beaconicy@2x.png */,
+				ACF1602A19CC373500C8A814 /* beaconIcySmall.png */,
+				ACF1602B19CC373500C8A814 /* beaconIcySmall@2x.png */,
+				ACF1602C19CC373500C8A814 /* beaconmint@2x.png */,
+				ACF1602D19CC373500C8A814 /* beaconMintSmall.png */,
+				ACF1602E19CC373500C8A814 /* beaconMintSmall@2x.png */,
+				ACF1602F19CC373500C8A814 /* indoor_error@2x.png */,
+				ACF1603019CC373500C8A814 /* instructions@2x.png */,
+				ACF1603219CC373500C8A814 /* navigation_guy@2x.png */,
+				ACF1603619CC373500C8A814 /* screen8_beacon_blue@2x.png */,
+				ACF1603719CC373500C8A814 /* screen8_beacon_gray@2x.png */,
+				ACF1603819CC373500C8A814 /* screen8_beacon_gray_trans@2x.png */,
+				ACF1603919CC373500C8A814 /* screen8_beacon_green@2x.png */,
+				ACF1603A19CC373500C8A814 /* screen8_beacon_purple@2x.png */,
+				ACF1603C19CC373500C8A814 /* tick@2x.png */,
+				ACF1603D19CC373500C8A814 /* welcome@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		ACF1604019CC373500C8A814 /* EstimoteSDK */ = {
+			isa = PBXGroup;
+			children = (
+				ACF1604119CC373500C8A814 /* Headers */,
+				ACF1604919CC373500C8A814 /* libEstimoteSDK.a */,
+				ACF1604A19CC373500C8A814 /* README.md */,
+			);
+			name = EstimoteSDK;
+			path = ../../EstimoteSDK;
+			sourceTree = "<group>";
+		};
+		ACF1604119CC373500C8A814 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				ACF1604219CC373500C8A814 /* ESTBeacon.h */,
+				ACF1604319CC373500C8A814 /* ESTBeaconDefinitions.h */,
+				ACF1604419CC373500C8A814 /* ESTBeaconFirmwareInfoVO.h */,
+				ACF1604519CC373500C8A814 /* ESTBeaconFirmwareVO.h */,
+				ACF1604619CC373500C8A814 /* ESTBeaconManager.h */,
+				ACF1604719CC373500C8A814 /* ESTBeaconRegion.h */,
+				ACF1604819CC373500C8A814 /* ESTBeaconVO.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC48C11619C70660007F16E8 /* IndoorLocation Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC48C14919C70660007F16E8 /* Build configuration list for PBXNativeTarget "IndoorLocation Example" */;
+			buildPhases = (
+				AC48C11319C70660007F16E8 /* Sources */,
+				AC48C11419C70660007F16E8 /* Frameworks */,
+				AC48C11519C70660007F16E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "IndoorLocation Example";
+			productName = "IndoorLocation Example";
+			productReference = AC48C11719C70660007F16E8 /* IndoorLocation Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC48C10F19C70660007F16E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = EST;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Estimote Inc";
+			};
+			buildConfigurationList = AC48C11219C70660007F16E8 /* Build configuration list for PBXProject "IndoorLocation Example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC48C10E19C70660007F16E8;
+			productRefGroup = AC48C11819C70660007F16E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC48C11619C70660007F16E8 /* IndoorLocation Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC48C11519C70660007F16E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACF1606E19CC373500C8A814 /* screen8_beacon_green@2x.png in Resources */,
+				ACF1607419CC373500C8A814 /* wall_bump.wav in Resources */,
+				ACF1604F19CC373500C8A814 /* 8b.mov in Resources */,
+				ACF1605719CC373500C8A814 /* beacon_grey@2x.png in Resources */,
+				ACF1606D19CC373500C8A814 /* screen8_beacon_gray_trans@2x.png in Resources */,
+				ACF1605419CC373500C8A814 /* 8b_first_frame@2x.png in Resources */,
+				ACF1604E19CC373500C8A814 /* 8a.mov in Resources */,
+				AC48C13319C70660007F16E8 /* Images.xcassets in Resources */,
+				ACF1606519CC373500C8A814 /* instructions@2x.png in Resources */,
+				ACF1606C19CC373500C8A814 /* screen8_beacon_gray@2x.png in Resources */,
+				ACF1605C19CC373500C8A814 /* beacongrey@2x.png in Resources */,
+				ACF1606319CC373500C8A814 /* beaconMintSmall@2x.png in Resources */,
+				AC48C12519C70660007F16E8 /* InfoPlist.strings in Resources */,
+				ACF1605319CC373500C8A814 /* 8a_first_frame@2x.png in Resources */,
+				ACF1605019CC373500C8A814 /* 8c.mov in Resources */,
+				ACF1606219CC373500C8A814 /* beaconMintSmall.png in Resources */,
+				ACF1606F19CC373500C8A814 /* screen8_beacon_purple@2x.png in Resources */,
+				ACF1606019CC373500C8A814 /* beaconIcySmall@2x.png in Resources */,
+				ACF1607319CC373500C8A814 /* SixBeaconsView.xib in Resources */,
+				ACF1606419CC373500C8A814 /* indoor_error@2x.png in Resources */,
+				ACF1605919CC373500C8A814 /* beaconBlueberrySmall.png in Resources */,
+				ACF1606B19CC373500C8A814 /* screen8_beacon_blue@2x.png in Resources */,
+				ACF1605F19CC373500C8A814 /* beaconIcySmall.png in Resources */,
+				AC6BD58619CAE38500F5FDF2 /* ESTIndoorLocationViewController.xib in Resources */,
+				AC239C9319C9C6B3003B46F9 /* location.json in Resources */,
+				ACF1605A19CC373500C8A814 /* beaconBlueberrySmall@2x.png in Resources */,
+				AC48C16619C70D00007F16E8 /* Main.storyboard in Resources */,
+				ACF1605819CC373500C8A814 /* beaconblueberry@2x.png in Resources */,
+				ACF1604D19CC373500C8A814 /* 5b.mov in Resources */,
+				ACF1605E19CC373500C8A814 /* beaconicy@2x.png in Resources */,
+				ACF1605119CC373500C8A814 /* 5a_first_frame@2x.png in Resources */,
+				ACF1607219CC373500C8A814 /* welcome@2x.png in Resources */,
+				ACF1605D19CC373500C8A814 /* beaconGreySmall@2x.png in Resources */,
+				ACF1605219CC373500C8A814 /* 5b_first_frame@2x.png in Resources */,
+				AC48C16519C709CE007F16E8 /* ESTAuthorizationViewController.xib in Resources */,
+				ACF1607119CC373500C8A814 /* tick@2x.png in Resources */,
+				ACF1605519CC373500C8A814 /* 8c_first_frame@2x.png in Resources */,
+				ACF1606119CC373500C8A814 /* beaconmint@2x.png in Resources */,
+				ACF1606719CC373500C8A814 /* navigation_guy@2x.png in Resources */,
+				ACF1604C19CC373500C8A814 /* 5a.mov in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC48C11319C70660007F16E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACF1607619CC373500C8A814 /* README.md in Sources */,
+				AC48C12719C70660007F16E8 /* main.m in Sources */,
+				AC48C15F19C7094C007F16E8 /* ESTMenuViewController.m in Sources */,
+				AC48C16419C709CE007F16E8 /* ESTAuthorizationViewController.m in Sources */,
+				AC6BD58519CAE38500F5FDF2 /* ESTIndoorLocationViewController.m in Sources */,
+				AC48C12B19C70660007F16E8 /* ESTAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AC48C12319C70660007F16E8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC48C12419C70660007F16E8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AC48C12C19C70660007F16E8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC48C12D19C70660007F16E8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC48C14719C70660007F16E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AC48C14819C70660007F16E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC48C14A19C70660007F16E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IndoorLocation Example/IndoorLocation Example-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../EstimoteSDK/Headers",
+					"$(SRCROOT)/../../EstimoteIndoorLocationSDK/Headers",
+				);
+				INFOPLIST_FILE = "IndoorLocation Example/IndoorLocation Example-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../../EstimoteSDK",
+					"$(PROJECT_DIR)/../../EstimoteIndoorLocationSDK",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AC48C14B19C70660007F16E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IndoorLocation Example/IndoorLocation Example-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../EstimoteSDK/Headers",
+					"$(SRCROOT)/../../EstimoteIndoorLocationSDK/Headers",
+				);
+				INFOPLIST_FILE = "IndoorLocation Example/IndoorLocation Example-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../../EstimoteSDK",
+					"$(PROJECT_DIR)/../../EstimoteIndoorLocationSDK",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC48C11219C70660007F16E8 /* Build configuration list for PBXProject "IndoorLocation Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC48C14719C70660007F16E8 /* Debug */,
+				AC48C14819C70660007F16E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC48C14919C70660007F16E8 /* Build configuration list for PBXNativeTarget "IndoorLocation Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC48C14A19C70660007F16E8 /* Debug */,
+				AC48C14B19C70660007F16E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC48C10F19C70660007F16E8 /* Project object */;
+}
