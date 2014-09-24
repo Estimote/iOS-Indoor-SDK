@@ -95,7 +95,7 @@ On a *location*’s boundary segments can be placed doors, windows which are cal
 
 #### Using the built-in Location Setup ViewController
 
-First you need to import the ESTIndoorLocationManager class header file. Then you need to set up your appID and appToken using the following method:
+First you need to import the [ESTIndoorLocationManager](http://estimote.github.io/iOS-Indoor-SDK/Classes/ESTIndoorLocationManager.html) class header file. Then you need to set up your appID and appToken using the following method:
 ```objective-c
 #import "ESTIndoorLocationManager.h"
 
@@ -121,7 +121,7 @@ The result of this procedure is a prepared physical location and an instance of 
 
 #### Manually, using ESTLocationBuilder
 
-You have the option to create an ```ESTLocation``` manually. For that use the ```ESTLocationBuilder``` class.
+You have the option to create an ```ESTLocation``` manually. For that use the [ESTLocationBuilder](http://estimote.github.io/iOS-Indoor-SDK/Classes/ESTLocationBuilder.html) class.
 
 In order to construct a new location you need to:
 
