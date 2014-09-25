@@ -42,6 +42,15 @@ Once integrated with your app, our dedicated UIViewController will guide the use
 
 ## Installation
 
+SDK is available as ```EstimoteIndoorSDK``` in [CocoaPods](http://cocoapods.org/). Installation is just a matter of putting following line in your ```Podfile```.
+
+```
+pod 'EstimoteIndoorSDK'
+```
+
+
+Alternatively you can add SDK manually:
+
 1. Copy the EstimoteIndooLocationSDK directory (containing libEstimoteIndoorLocationSDK.a, Headers and Resources) into your project.
 2. If you are not already using EstimoteSDK in your project, do the same for EstimoteSDK directory.
 This is what your catalogue structure should look like:
