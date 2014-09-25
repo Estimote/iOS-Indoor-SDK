@@ -95,7 +95,7 @@ On a *location*’s boundary segments can be placed doors, windows which are cal
 
 #### Using the built-in Location Setup ViewController
 
-First you need to import the ESTIndoorLocationManager class header file. Then you need to set up your appID and appToken using the following method:
+First you need to import the [ESTIndoorLocationManager](http://estimote.github.io/iOS-Indoor-SDK/Classes/ESTIndoorLocationManager.html) class header file. Then you need to set up your appID and appToken using the following method:
 ```objective-c
 #import "ESTIndoorLocationManager.h"
 
@@ -116,12 +116,12 @@ The procedure consists of the following steps:
 - placing beacons
 - mapping the physical location to an instance of ```ESTLocation```
  
-Invoke ```[ESTIndoorLocationManager locationSetupControllerWithCompletion:]``` to obtain a dedicated UIViewController that guides you through this process.
+Invoke [[ESTIndoorLocationManager locationSetupControllerWithCompletion:]](http://estimote.github.io/iOS-Indoor-SDK/Classes/ESTIndoorLocationManager.html#//api/name/locationSetupControllerWithCompletion:) to obtain a dedicated UIViewController that guides you through this process.
 The result of this procedure is a prepared physical location and an instance of ```ESTLocation``` that can be used for obtaining position updates.
 
 #### Manually, using ESTLocationBuilder
 
-You have the option to create an ```ESTLocation``` manually. For that use the ```ESTLocationBuilder``` class.
+You have the option to create an ```ESTLocation``` manually. For that use the [ESTLocationBuilder](http://estimote.github.io/iOS-Indoor-SDK/Classes/ESTLocationBuilder.html) class.
 
 In order to construct a new location you need to:
 
@@ -160,7 +160,7 @@ The next step is to place beacons and doors on the boundary segments of the loca
 
 If you mapped a location in [Estimote App](https://itunes.apple.com/us/app/estimote/id686915066?mt=8) you can export it by tapping on ```Export location code snippet```.
 
-The resulting JSON can be parsed into an ```ESTLocation``` object by invoking ```[ESTLocationBuilder parseFromJSON:]```.
+The resulting JSON can be parsed into an ```ESTLocation``` object by invoking [[ESTLocationBuilder parseFromJSON:]](http://estimote.github.io/iOS-Indoor-SDK/Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:).
 
 See also [SDK Examples](Examples) for how to do this.
 
