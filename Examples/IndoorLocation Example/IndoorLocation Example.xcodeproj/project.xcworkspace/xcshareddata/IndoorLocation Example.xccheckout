@@ -12,22 +12,34 @@
 	<dict>
 		<key>69EEE6E79BA14B1C3967C37FF39C52D9B74A9786</key>
 		<string>github.com:Estimote/iOS-indoor-location.git</string>
+		<key>8F2B5D0605825C532C65F83009F0E92144196004</key>
+		<string>github.com:Estimote/iOS-Indoor-SDK.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>IndoorLocation Example/IndoorLocation Example.xcodeproj</string>
+	<string>Examples/IndoorLocation Example/IndoorLocation Example.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>69EEE6E79BA14B1C3967C37FF39C52D9B74A9786</key>
-		<string>../../..</string>
+		<string>../../../../../iOS-indoor-location</string>
+		<key>8F2B5D0605825C532C65F83009F0E92144196004</key>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>github.com:Estimote/iOS-indoor-location.git</string>
+	<string>github.com:Estimote/iOS-Indoor-SDK.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>69EEE6E79BA14B1C3967C37FF39C52D9B74A9786</string>
+	<string>8F2B5D0605825C532C65F83009F0E92144196004</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8F2B5D0605825C532C65F83009F0E92144196004</string>
+			<key>IDESourceControlWCCName</key>
+			<string>IndoorSDKPublic</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
