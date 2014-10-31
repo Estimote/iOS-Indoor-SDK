@@ -53,7 +53,7 @@ class MenuViewController: UIViewController, AuthorizationViewControllerDelegate 
     @IBAction func loadLocationFromJSON() {
         let bundle = NSBundle.mainBundle()
         let path = bundle.pathForResource("location", ofType: "json")
-        let content = NSString.stringWithContentsOfFile(path!, encoding: NSUTF8StringEncoding, error: nil) as String
+        let content = NSString(contentsOfFile: path!, encoding: NSUTF8StringEncoding, error: nil) as String
         
         let location = ESTLocationBuilder.parseFromJSON(content)
         
