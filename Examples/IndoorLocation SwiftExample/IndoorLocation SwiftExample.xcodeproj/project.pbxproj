@@ -14,7 +14,6 @@
 		AC958C6819C83FAF005BF90D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC958C6619C83FAF005BF90D /* Main.storyboard */; };
 		AC958C6A19C83FAF005BF90D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC958C6919C83FAF005BF90D /* Images.xcassets */; };
 		AC958C6D19C83FAF005BF90D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC958C6B19C83FAF005BF90D /* LaunchScreen.xib */; };
-		AC958C7919C83FAF005BF90D /* IndoorLocation_SwiftExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC958C7819C83FAF005BF90D /* IndoorLocation_SwiftExampleTests.swift */; };
 		AC958CFA19C84BFA005BF90D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC958CF919C84BFA005BF90D /* MessageUI.framework */; };
 		AC958CFC19C84BFF005BF90D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC958CFB19C84BFF005BF90D /* MediaPlayer.framework */; };
 		AC958CFE19C84C08005BF90D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC958CFD19C84C08005BF90D /* CoreMotion.framework */; };
@@ -82,16 +81,6 @@
 		ACF160E019CC455900C8A814 /* wall_bump.wav in Resources */ = {isa = PBXBuildFile; fileRef = ACF160AD19CC455900C8A814 /* wall_bump.wav */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		AC958C7319C83FAF005BF90D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AC958C5519C83FAF005BF90D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AC958C5C19C83FAF005BF90D;
-			remoteInfo = "IndoorLocation SwiftExample";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		AC227C6319C85CB500A58662 /* IndoorLocation SwiftExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IndoorLocation SwiftExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		AC227C7E19C863C900A58662 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
@@ -103,9 +92,6 @@
 		AC958C6719C83FAF005BF90D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC958C6919C83FAF005BF90D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AC958C6C19C83FAF005BF90D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		AC958C7219C83FAF005BF90D /* IndoorLocation SwiftExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IndoorLocation SwiftExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC958C7719C83FAF005BF90D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AC958C7819C83FAF005BF90D /* IndoorLocation_SwiftExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndoorLocation_SwiftExampleTests.swift; sourceTree = "<group>"; };
 		AC958CF919C84BFA005BF90D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		AC958CFB19C84BFF005BF90D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		AC958CFD19C84C08005BF90D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -193,13 +179,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AC958C6F19C83FAF005BF90D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -217,7 +196,6 @@
 				AC958CFB19C84BFF005BF90D /* MediaPlayer.framework */,
 				AC958CF919C84BFA005BF90D /* MessageUI.framework */,
 				AC958C5F19C83FAF005BF90D /* IndoorLocation SwiftExample */,
-				AC958C7519C83FAF005BF90D /* IndoorLocation SwiftExampleTests */,
 				AC958C5E19C83FAF005BF90D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -226,7 +204,6 @@
 			isa = PBXGroup;
 			children = (
 				AC958C5D19C83FAF005BF90D /* IndoorLocation SwiftExample.app */,
-				AC958C7219C83FAF005BF90D /* IndoorLocation SwiftExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -255,23 +232,6 @@
 				ACF15FC219CC371F00C8A814 /* EstimoteSDK */,
 				AC239C9419C9C768003B46F9 /* location.json */,
 				AC958C6119C83FAF005BF90D /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		AC958C7519C83FAF005BF90D /* IndoorLocation SwiftExampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				AC958C7819C83FAF005BF90D /* IndoorLocation_SwiftExampleTests.swift */,
-				AC958C7619C83FAF005BF90D /* Supporting Files */,
-			);
-			path = "IndoorLocation SwiftExampleTests";
-			sourceTree = "<group>";
-		};
-		AC958C7619C83FAF005BF90D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				AC958C7719C83FAF005BF90D /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -424,24 +384,6 @@
 			productReference = AC958C5D19C83FAF005BF90D /* IndoorLocation SwiftExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AC958C7119C83FAF005BF90D /* IndoorLocation SwiftExampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AC958C7F19C83FAF005BF90D /* Build configuration list for PBXNativeTarget "IndoorLocation SwiftExampleTests" */;
-			buildPhases = (
-				AC958C6E19C83FAF005BF90D /* Sources */,
-				AC958C6F19C83FAF005BF90D /* Frameworks */,
-				AC958C7019C83FAF005BF90D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AC958C7419C83FAF005BF90D /* PBXTargetDependency */,
-			);
-			name = "IndoorLocation SwiftExampleTests";
-			productName = "IndoorLocation SwiftExampleTests";
-			productReference = AC958C7219C83FAF005BF90D /* IndoorLocation SwiftExampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -453,10 +395,6 @@
 				TargetAttributes = {
 					AC958C5C19C83FAF005BF90D = {
 						CreatedOnToolsVersion = 6.0;
-					};
-					AC958C7119C83FAF005BF90D = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = AC958C5C19C83FAF005BF90D;
 					};
 				};
 			};
@@ -474,7 +412,6 @@
 			projectRoot = "";
 			targets = (
 				AC958C5C19C83FAF005BF90D /* IndoorLocation SwiftExample */,
-				AC958C7119C83FAF005BF90D /* IndoorLocation SwiftExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -526,13 +463,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AC958C7019C83FAF005BF90D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -548,23 +478,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AC958C6E19C83FAF005BF90D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AC958C7919C83FAF005BF90D /* IndoorLocation_SwiftExampleTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		AC958C7419C83FAF005BF90D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AC958C5C19C83FAF005BF90D /* IndoorLocation SwiftExample */;
-			targetProxy = AC958C7319C83FAF005BF90D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AC958C6619C83FAF005BF90D /* Main.storyboard */ = {
@@ -712,40 +626,6 @@
 			};
 			name = Release;
 		};
-		AC958C8019C83FAF005BF90D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "IndoorLocation SwiftExampleTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IndoorLocation SwiftExample.app/IndoorLocation SwiftExample";
-			};
-			name = Debug;
-		};
-		AC958C8119C83FAF005BF90D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "IndoorLocation SwiftExampleTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IndoorLocation SwiftExample.app/IndoorLocation SwiftExample";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -763,15 +643,6 @@
 			buildConfigurations = (
 				AC958C7D19C83FAF005BF90D /* Debug */,
 				AC958C7E19C83FAF005BF90D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AC958C7F19C83FAF005BF90D /* Build configuration list for PBXNativeTarget "IndoorLocation SwiftExampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AC958C8019C83FAF005BF90D /* Debug */,
-				AC958C8119C83FAF005BF90D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
