@@ -79,7 +79,7 @@ This is what your catalogue structure should look like:
    #import "ESTLocationBuilder.h"
    ```
 
-   After all that, your Briding header could look like this:
+   After all that, your Bridging header could look like this:
 
    ![ScreenShot BridgingHeader](ReadmeImages/BridgingHeader.png)
 
