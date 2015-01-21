@@ -57,6 +57,8 @@
 	
 	<option value="//api/name/rotateOnPositionUpdate">&nbsp;&nbsp;&nbsp;&nbsp;rotateOnPositionUpdate</option>
 	
+	<option value="//api/name/showBeaconOrientation">&nbsp;&nbsp;&nbsp;&nbsp;showBeaconOrientation</option>
+	
 	<option value="//api/name/showTrace">&nbsp;&nbsp;&nbsp;&nbsp;showTrace</option>
 	
 	<option value="//api/name/showWallLengthLabels">&nbsp;&nbsp;&nbsp;&nbsp;showWallLengthLabels</option>
@@ -78,9 +80,15 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
+	<option value="//api/name/calculatePictureCoordinateForRealX:">&nbsp;&nbsp;&nbsp;&nbsp;- calculatePictureCoordinateForRealX:</option>
+	
+	<option value="//api/name/calculatePictureCoordinateForRealY:">&nbsp;&nbsp;&nbsp;&nbsp;- calculatePictureCoordinateForRealY:</option>
+	
 	<option value="//api/name/clearTrace">&nbsp;&nbsp;&nbsp;&nbsp;- clearTrace</option>
 	
 	<option value="//api/name/drawLocation:">&nbsp;&nbsp;&nbsp;&nbsp;- drawLocation:</option>
+	
+	<option value="//api/name/drawLocation:inRegionOfInterest:">&nbsp;&nbsp;&nbsp;&nbsp;- drawLocation:inRegionOfInterest:</option>
 	
 	<option value="//api/name/drawObject:withPosition:">&nbsp;&nbsp;&nbsp;&nbsp;- drawObject:withPosition:</option>
 	
@@ -134,6 +142,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/rotateOnPositionUpdate">rotateOnPositionUpdate</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/showBeaconOrientation">showBeaconOrientation</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/showTrace">showTrace</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/showWallLengthLabels">showWallLengthLabels</a></span></li>
@@ -156,9 +166,15 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/calculatePictureCoordinateForRealX:">calculatePictureCoordinateForRealX:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/calculatePictureCoordinateForRealY:">calculatePictureCoordinateForRealY:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/clearTrace">clearTrace</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/drawLocation:">drawLocation:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/drawLocation:inRegionOfInterest:">drawLocation:inRegionOfInterest:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/drawObject:withPosition:">drawObject:withPosition:</a></span></li>
 	
@@ -220,6 +236,12 @@
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/location">&nbsp;&nbsp;location</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/showBeaconOrientation">&nbsp;&nbsp;showBeaconOrientation</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -337,6 +359,12 @@
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/drawLocation:inRegionOfInterest:">&ndash;&nbsp;drawLocation:inRegionOfInterest:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/drawObject:withPosition:">&ndash;&nbsp;drawObject:withPosition:</a></code>
 	</span>
 	
@@ -350,6 +378,18 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/clearTrace">&ndash;&nbsp;clearTrace</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/calculatePictureCoordinateForRealX:">&ndash;&nbsp;calculatePictureCoordinateForRealX:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/calculatePictureCoordinateForRealY:">&ndash;&nbsp;calculatePictureCoordinateForRealY:</a></code>
 	</span>
 	
 	
@@ -691,6 +731,42 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/showBeaconOrientation" title="showBeaconOrientation"></a>
+	<h3 class="subsubtitle method-title">showBeaconOrientation</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>If YES then a beacons orientation indicator will be displayed.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL showBeaconOrientation</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/showTrace" title="showTrace"></a>
 	<h3 class="subsubtitle method-title">showTrace</h3>
 	
@@ -953,6 +1029,108 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
+	<a name="//api/name/calculatePictureCoordinateForRealX:" title="calculatePictureCoordinateForRealX:"></a>
+	<h3 class="subsubtitle method-title">calculatePictureCoordinateForRealX:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calculates <a href="#//api/name/location">location</a> X coordinate (in meters) to drawn <a href="#//api/name/location">location</a> X coordinate.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGFloat)calculatePictureCoordinateForRealX:(id)<em>realX</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>realX</em></dt>
+			<dd><p>X coordinate with regards to room (in meters)</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>X coordinate with regards to drawn <a href="#//api/name/location">location</a> in this view.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/calculatePictureCoordinateForRealY:" title="calculatePictureCoordinateForRealY:"></a>
+	<h3 class="subsubtitle method-title">calculatePictureCoordinateForRealY:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calculates <a href="#//api/name/location">location</a> Y coordinate (in meters) to drawn <a href="#//api/name/location">location</a> Y coordinate.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGFloat)calculatePictureCoordinateForRealY:(id)<em>realY</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>realY</em></dt>
+			<dd><p>Y coordinate with regards to room (in meters)</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Y coordinate with regards to drawn <a href="#//api/name/location">location</a> in this view.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/clearTrace" title="clearTrace"></a>
 	<h3 class="subsubtitle method-title">clearTrace</h3>
 	
@@ -1001,7 +1179,7 @@ Will throw an exception if called without first calling <a href="#//api/name/dra
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)drawLocation:(ESTLocation *)<em>location</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)drawLocation:(id)<em>location</em></code></div>
 
     
 	
@@ -1036,18 +1214,71 @@ Will throw an exception if called without first calling <a href="#//api/name/dra
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/drawLocation:inRegionOfInterest:" title="drawLocation:inRegionOfInterest:"></a>
+	<h3 class="subsubtitle method-title">drawLocation:inRegionOfInterest:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Draws a graphical representation of <a href="../Classes/ESTLocation.html"><code>ESTLocation</code></a> object
+cropped to only include things explicitly inside the chosen
+region (defined by bounding box).</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)drawLocation:(id)<em>location</em> inRegionOfInterest:(id)<em>regionOfInterest</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>location</em></dt>
+			<dd><p>Object representing current <a href="#//api/name/location">location</a>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>regionOfInterest</em></dt>
+			<dd><p>Region of interest to be drawn</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/drawObject:withPosition:" title="drawObject:withPosition:"></a>
 	<h3 class="subsubtitle method-title">drawObject:withPosition:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Draws a view that represets a real object at given position.</p>
+		<p>Draws a view that represents a real object at given position.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)drawObject:(UIView *)<em>object</em> withPosition:(ESTPoint *)<em>position</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)drawObject:(id)<em>object</em> withPosition:(id)<em>position</em></code></div>
 
     
 	
@@ -1099,7 +1330,7 @@ Will throw an exception if called without first calling <a href="#//api/name/dra
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)updatePosition:(ESTOrientedPoint *)<em>position</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)updatePosition:(id)<em>position</em></code></div>
 
     
 	
@@ -1138,6 +1369,9 @@ Will throw an exception if called without first calling <a href="#//api/name/dra
 					
                     
                     
+                    
+                    
+
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>
@@ -1148,7 +1382,7 @@ Will throw an exception if called without first calling <a href="#//api/name/dra
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 Estimote. All rights reserved. (Last updated: 2014-09-24)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-01-21)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

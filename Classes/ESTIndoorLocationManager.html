@@ -48,11 +48,7 @@
 	
 	<option value="class_methods">Class Methods</option>
 	
-	<option value="//api/name/isAuthorized">&nbsp;&nbsp;&nbsp;&nbsp;+ isAuthorized</option>
-	
 	<option value="//api/name/locationSetupControllerWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;+ locationSetupControllerWithCompletion:</option>
-	
-	<option value="//api/name/setupAppID:andAppToken:">&nbsp;&nbsp;&nbsp;&nbsp;+ setupAppID:andAppToken:</option>
 	
 	
 	
@@ -103,11 +99,7 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isAuthorized">isAuthorized</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/locationSetupControllerWithCompletion:">locationSetupControllerWithCompletion:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setupAppID:andAppToken:">setupAppID:andAppToken:</a></span></li>
 	
 </ul></li>
 
@@ -225,18 +217,6 @@ the location. Note that only one location at a time is supported.</p>
 
 						<ul class="task-list">
 							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/setupAppID:andAppToken:">+&nbsp;setupAppID:andAppToken:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/isAuthorized">+&nbsp;isAuthorized</a></code>
-	</span>
-	
-	
-</li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/locationSetupControllerWithCompletion:">+&nbsp;locationSetupControllerWithCompletion:</a></code>
 	</span>
@@ -356,42 +336,6 @@ the location. Note that only one location at a time is supported.</p>
 						<h2 class="subtitle subtitle-methods">Class Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/isAuthorized" title="isAuthorized"></a>
-	<h3 class="subsubtitle method-title">isAuthorized</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Checks if App ID and App Token were set.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>+ (BOOL)isAuthorized</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationManager.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
 	<a name="//api/name/locationSetupControllerWithCompletion:" title="locationSetupControllerWithCompletion:"></a>
 	<h3 class="subsubtitle method-title">locationSetupControllerWithCompletion:</h3>
 	
@@ -404,7 +348,7 @@ Estimote Indoor Location.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (UIViewController *)locationSetupControllerWithCompletion:(void ( ^ ) ( ESTLocation *location , NSError *error ))<em>completion</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (UIViewController *)locationSetupControllerWithCompletion:(id)<em>completion</em></code></div>
 
     
 	
@@ -429,61 +373,10 @@ Estimote Indoor Location.</p>
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationManager.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/setupAppID:andAppToken:" title="setupAppID:andAppToken:"></a>
-	<h3 class="subsubtitle method-title">setupAppID:andAppToken:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Sets App ID and App Token, enabling communication with the Estimote Cloud API. It is required for
-<a href="#//api/name/locationSetupControllerWithCompletion:"><code>locationSetupControllerWithCompletion:</code></a> to be able to configure the beacons for Indoor Location.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>+ (void)setupAppID:(NSString *)<em>appID</em> andAppToken:(NSString *)<em>appToken</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>appID</em></dt>
-			<dd><p>The API App ID.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>appToken</em></dt>
-			<dd><p>The API App Token.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>You can find your API App ID and API App Token in the Account Settings section of the Estimote Cloud.</p>
+		<p>In order to have this method working you need to call [ESTConfig setupAppID:andAppToken:] first
+to configure the beacons for Indoor Location.</p>
 	</div>
 	
 	
@@ -521,7 +414,7 @@ Calling this method without stopping the indoor location for previous location r
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)startIndoorLocation:(ESTLocation *)<em>location</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)startIndoorLocation:(id)<em>location</em></code></div>
 
     
 	
@@ -596,6 +489,9 @@ Calling this method without stopping the indoor location for previous location r
 					
                     
                     
+                    
+                    
+
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>
@@ -606,7 +502,7 @@ Calling this method without stopping the indoor location for previous location r
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 Estimote. All rights reserved. (Last updated: 2014-09-24)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-01-21)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

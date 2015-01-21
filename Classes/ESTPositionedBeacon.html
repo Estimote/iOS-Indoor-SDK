@@ -59,6 +59,8 @@
 	
 	<option value="//api/name/beaconTranslatedByDX:dY:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconTranslatedByDX:dY:</option>
 	
+	<option value="//api/name/description">&nbsp;&nbsp;&nbsp;&nbsp;- description</option>
+	
 	<option value="//api/name/hash">&nbsp;&nbsp;&nbsp;&nbsp;- hash</option>
 	
 	<option value="//api/name/initWithBeaconIdentifiedByMac:withPosition:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithBeaconIdentifiedByMac:withPosition:</option>
@@ -97,6 +99,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Identifying and Comparing Objects">Identifying and Comparing Objects</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Describing Objects">Describing Objects</a></span></li>
+	
 </ul></li>
 
 
@@ -126,6 +130,8 @@
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconTranslatedByDX:dY:">beaconTranslatedByDX:dY:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/description">description</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hash">hash</a></span></li>
 	
@@ -288,6 +294,20 @@
 						</ul>
 						
 						
+						<a title="Describing Objects" name="task_Describing Objects"></a>
+						<h3 class="subsubtitle task-title">Describing Objects</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/description">&ndash;&nbsp;description</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
 						
 						<h3 class="subsubtitle task-title">Other Methods</h3>
 
@@ -439,7 +459,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (ESTPositionedBeacon *)beaconFromDictionary:(NSDictionary *)<em>dict</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (ESTPositionedBeacon *)beaconFromDictionary:(id)<em>dict</em></code></div>
 
     
 	
@@ -498,7 +518,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (instancetype)beaconTranslatedByDX:(double)<em>dX</em> dY:(double)<em>dY</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (instancetype)beaconTranslatedByDX:(id)<em>dX</em> dY:(id)<em>dY</em></code></div>
 
     
 	
@@ -522,6 +542,47 @@
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>A beacon with <a href="#//api/name/position">position</a> translated by (dX, dY).</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTPositionedBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/description" title="description"></a>
+	<h3 class="subsubtitle method-title">description</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a string representation of the positioned beacon.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)description</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A string representation of the ESTPositionedBeacon.</p>
 	</div>
 	
 	
@@ -590,7 +651,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeaconIdentifiedByMac:(NSString *)<em>macAddress</em> withPosition:(ESTOrientedPoint *)<em>position</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeaconIdentifiedByMac:(id)<em>macAddress</em> withPosition:(id)<em>position</em></code></div>
 
     
 	
@@ -646,7 +707,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeaconIdentifiedByMac:(NSString *)<em>macAddress</em> withPosition:(ESTOrientedPoint *)<em>position</em> color:(ESTBeaconColor)<em>color</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeaconIdentifiedByMac:(id)<em>macAddress</em> withPosition:(id)<em>position</em> color:(id)<em>color</em></code></div>
 
     
 	
@@ -682,7 +743,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (instancetype)initWithESTBeacon:(ESTBeacon *)<em>beacon</em> withPosition:(ESTOrientedPoint *)<em>position</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithESTBeacon:(id)<em>beacon</em> withPosition:(id)<em>position</em></code></div>
 
     
 	
@@ -789,7 +850,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BOOL)isEqualToPositionedBeacon:(ESTPositionedBeacon *)<em>beacon</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)isEqualToPositionedBeacon:(id)<em>beacon</em></code></div>
 
     
 	
@@ -874,6 +935,9 @@
 					
                     
                     
+                    
+                    
+
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>
@@ -884,7 +948,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 Estimote. All rights reserved. (Last updated: 2014-09-24)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-01-21)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						
