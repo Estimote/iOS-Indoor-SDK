@@ -47,7 +47,7 @@ class AuthorizationViewController: UIViewController {
             self.appIDTextField.resignFirstResponder()
             self.appTokenTextField.resignFirstResponder()
             
-            ESTIndoorLocationManager.setupAppID(self.appIDTextField.text, andAppToken: self.appTokenTextField.text)
+            ESTConfig.setupAppID(self.appIDTextField.text, andAppToken: self.appTokenTextField.text)
             
             self.delegate.authorizationEnded(nil)
         }

@@ -2,6 +2,7 @@
 
 #import "ESTAuthorizationViewController.h"
 #import "ESTIndoorLocationManager.h"
+#import <ESTConfig.h>
 
 @interface ESTAuthorizationViewController () <UITextFieldDelegate>
 
@@ -47,7 +48,7 @@
         [self.appTokenField resignFirstResponder];
         [self.appIdField resignFirstResponder];
         
-        [ESTIndoorLocationManager setupAppID:self.appIdField.text andAppToken:self.appTokenField.text];
+        [ESTConfig setupAppID:self.appIdField.text andAppToken:self.appTokenField.text];
         
         if (self.completion)
         {

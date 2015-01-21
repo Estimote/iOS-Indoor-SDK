@@ -18,6 +18,9 @@ IB_DESIGNABLE
 /** `ESTLocation` object to be drawn. */
 @property (nonatomic, strong, readonly) ESTLocation *location;
 
+/** If YES then a beacons orientation indicator will be displayed. */
+@property (nonatomic, assign) BOOL showBeaconOrientation;
+
 /** If YES then a trace will be displayed. */
 @property (nonatomic, assign) BOOL showTrace;
 
@@ -125,7 +128,17 @@ IB_DESIGNABLE
 - (void)drawLocation:(ESTLocation *)location;
 
 /**
- * Draws a view that represets a real object at given position.
+ * Draws a graphical representation of `ESTLocation` object
+ * cropped to only include things explicitly inside the chosen
+ * region (defined by bounding box).
+ *
+ * @param location Object representing current location.
+ * @param regionOfInterest Region of interest to be drawn
+ */
+- (void)drawLocation:(ESTLocation *)location inRegionOfInterest:(CGRect)regionOfInterest;
+
+/**
+ * Draws a view that represents a real object at given position.
  *
  * @param  object View representing a real object.
  * @param  position Object representing position in the location.
@@ -145,5 +158,23 @@ IB_DESIGNABLE
  * Will throw an exception if called without first calling `drawLocation:`.
  */
 - (void)clearTrace;
+
+/**
+ * Calculates location X coordinate (in meters) to drawn location X coordinate.
+ *
+ * @param realX X coordinate with regards to room (in meters)
+ *
+ * @return X coordinate with regards to drawn location in this view.
+ */
+- (CGFloat)calculatePictureCoordinateForRealX:(double)realX;
+
+/**
+ * Calculates location Y coordinate (in meters) to drawn location Y coordinate.
+ *
+ * @param realY Y coordinate with regards to room (in meters)
+ *
+ * @return Y coordinate with regards to drawn location in this view.
+ */
+- (CGFloat)calculatePictureCoordinateForRealY:(double)realY;
 
 @end

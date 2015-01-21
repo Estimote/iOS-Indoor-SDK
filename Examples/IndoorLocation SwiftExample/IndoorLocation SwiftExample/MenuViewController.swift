@@ -25,7 +25,7 @@ class MenuViewController: UIViewController, AuthorizationViewControllerDelegate 
     
     //MARK: Button handling
     @IBAction func setupNewLocation() {
-        if !ESTIndoorLocationManager.isAuthorized() {
+        if !ESTConfig.isAuthorized() {
             var authorizationViewController:AuthorizationViewController = AuthorizationViewController()
             authorizationViewController.delegate = self
             

@@ -82,24 +82,11 @@ Do not forget to stop the manager if you are not using location updates any more
 ///-----------------------------------------
 
 /**
- * Sets App ID and App Token, enabling communication with the Estimote Cloud API. It is required for
- * `locationSetupControllerWithCompletion:` to be able to configure the beacons for Indoor Location.
- *
- * You can find your API App ID and API App Token in the Account Settings section of the Estimote Cloud.
- *
- * @param appID The API App ID.
- * @param appToken The API App Token.
- */
-+ (void)setupAppID:(NSString *)appID andAppToken:(NSString *)appToken;
-
-/**
- * Checks if App ID and App Token were set.
- */
-+ (BOOL)isAuthorized;
-
-/**
  * Creates a `UIViewController` that guides through a process for preparing physical location for
  * Estimote Indoor Location.
+ *
+ * In order to have this method working you need to call -[ESTConfig setupAppID:andAppToken:] first
+ * to configure the beacons for Indoor Location.
  *
  * @param completion A block that is invoked when setup has been finished.
  * @return Controller for setting up location.

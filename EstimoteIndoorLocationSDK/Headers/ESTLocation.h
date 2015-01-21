@@ -7,11 +7,11 @@
 #import "ESTLocationLinearObject.h"
 
 /**
-* Represents a physical location prepared for Estimote Indoor Location. Object is immutable.
-*
-* Instances of `ESTLocation` can be created by `ESTLocationBuilder` or by importing
-* JSON with `[ESTLocationBuilder parseFromJSON:]`.
-*/
+ * Represents a physical location prepared for Estimote Indoor Location. Object is immutable.
+ *
+ * Instances of `ESTLocation` can be created by `ESTLocationBuilder` or by importing
+ * JSON with `[ESTLocationBuilder parseFromJSON:]`.
+ */
 @interface ESTLocation : NSObject
 
 #pragma mark Properties

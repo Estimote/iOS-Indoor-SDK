@@ -67,8 +67,9 @@ This is what your catalogue structure should look like:
     * AVFoundation.framework
     * MediaPlayer.framework
     * MessageUI.framework
-4. That's it! By this point, your project should compile successfully and you should be able to start using EstimoteIndoorLocationSDK. 
-5. If you're coding in Swift, there's one more extra step necessary: to add a Bridging header file to expose Objective-C headers to Swift.
+4. Go to "Build Settings", find "Other Linker Flags" and add `-lc++`.
+5. That's it! By this point, your project should compile successfully and you should be able to start using EstimoteIndoorLocationSDK. 
+6. If you're coding in Swift, there's one more extra step necessary: to add a Bridging header file to expose Objective-C headers to Swift.
 
    To do that first add a new file to the project - make it a `Header file` and call it `YourProjectName-Bridging-Header.h`. In this file you need to import the following EstimoteIndoorLocationSDK and EstimoteSDK headers:
 
@@ -104,18 +105,19 @@ On a *location*’s boundary segments can be placed doors, windows which are cal
 
 #### Using the built-in Location Setup ViewController
 
-First you need to import the [ESTIndoorLocationManager](http://estimote.github.io/iOS-Indoor-SDK/Classes/ESTIndoorLocationManager.html) class header file. Then you need to set up your appID and appToken using the following method:
+First you need to import the [ESTIndoorLocationManager](http://estimote.github.io/iOS-Indoor-SDK/Classes/ESTIndoorLocationManager.html) and [ESTConfig](http://estimote.github.io/iOS-SDK/Classes/ESTConfig.html) class header file. Then you need to set up your appID and appToken using the following method:
 ```objective-c
 #import "ESTIndoorLocationManager.h"
+#import "ESTConfig.h"
 
-[ESTIndoorLocationManager setupAppID:@"yourAppID" andAppToken:@"yourAppToken"];
+[ESTConfig setupAppID:@"yourAppID" andAppToken:@"yourAppToken"];
 ```
 
 You can find your API App ID and API App Token in the [Account Settings](http://cloud.estimote.com/#/account) section of the [Estimote Cloud](http://cloud.estimote.com/).
 
 You can check the authorization status using the following method that will return a BOOL value:
 ```objective-c
-[ESTIndoorLocationManager isAuthorized]
+[ESTConfig isAuthorized]
 ```
 
 In order to obtain precise position updates you need to prepare a physical location for Estimote Indoor Location.

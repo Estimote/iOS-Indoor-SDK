@@ -2,8 +2,7 @@
 //  ESTBeacon.h
 //  EstimoteSDK
 //
-//  Version: 2.1.5
-//  Created by Marcin Klimek on 06/03/14.
+//  Version: 2.3.2
 //  Copyright (c) 2014 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
@@ -34,7 +33,7 @@
  *
  * @param beacon The beacon object reporting the event.
  */
-- (void)beaconConnectionDidSucceeded:(ESTBeacon*)beacon;
+- (void)beaconConnectionDidSucceeded:(ESTBeacon *)beacon;
 
 /**
  * Tells the delegate that an attempt to connect to a beacon has failed.
@@ -42,7 +41,7 @@
  * @param beacon The beacon object reporting the event.
  * @param error An error object containing the error code that indicates why connection failed.
  */
-- (void)beaconConnectionDidFail:(ESTBeacon*)beacon withError:(NSError*)error;
+- (void)beaconConnectionDidFail:(ESTBeacon *)beacon withError:(NSError *)error;
 
 /**
  * Tells the delegate that a previously connected beacon has disconnected.
@@ -50,7 +49,7 @@
  * @param beacon The beacon object reporting the event.
  * @param error An error object containing the error code that indicates why the beacon disconnected.
  */
-- (void)beacon:(ESTBeacon*)beacon didDisconnectWithError:(NSError*)error;
+- (void)beacon:(ESTBeacon *)beacon didDisconnectWithError:(NSError *)error;
 
 /**
  * Tells the delegate that a beacon's [ESTBeacon isMoving] value has changed.
@@ -58,7 +57,7 @@
  * @param beacon The beacon object reporting the event.
  * @param state The new isMoving value.
  */
-- (void)beacon:(ESTBeacon*)beacon accelerometerStateChanged:(BOOL)state;
+- (void)beacon:(ESTBeacon *)beacon accelerometerStateChanged:(BOOL)state;
 
 @end
 
@@ -76,7 +75,7 @@
  * Additional properties become available once connected to the beacon. See connect for more details about connecting to the beacon. You will also need to assign a delegate to be notified about connection and disconnection events. The delegate needs to conform to the ESTBeaconDelegate protocol.
  */
 
-@interface ESTBeacon : NSObject
+@interface ESTBeacon : NSObject <NSCopying, NSCoding>
 
 #pragma mark Accessing the Delegate
 ///--------------------------------------------------------------------
@@ -88,7 +87,7 @@
  *
  * @see ESTBeaconDelegate
  */
-@property (nonatomic, weak)       id <ESTBeaconDelegate>   delegate;
+@property (nonatomic, weak) id <ESTBeaconDelegate> delegate;
 
 #pragma mark Properties Always Available
 ///--------------------------------------------------------------------
@@ -100,14 +99,14 @@
  *
  * @see writeMajor:completion:
  */
-@property (readonly, nonatomic)   NSNumber*                 major;
+@property (readonly, nonatomic) NSNumber *major;
 
 /**
  * The least significant value in the beacon.
  *
  * @see writeMinor:completion:
  */
-@property (readonly, nonatomic)   NSNumber*                 minor;
+@property (readonly, nonatomic) NSNumber *minor;
 
 /**
  * The color of the beacon.
@@ -116,21 +115,21 @@
  *
  * @see ESTBeaconColor
  */
-@property (readonly, nonatomic)   ESTBeaconColor            color;
+@property (readonly, nonatomic) ESTBeaconColor color;
 
 /**
  * The received signal strength of the beacon, measured in decibels.
  *
  * This value is the average RSSI value of the samples received since the range of the beacon was last reported to your app.
  */
-@property (readonly, nonatomic)   NSInteger                 rssi;
+@property (readonly, nonatomic) NSInteger rssi;
 
 /**
  * The connection status between the user device and the beacon.
  *
  * @see ESTBeaconConnectionStatus
  */
-@property (readonly, nonatomic)   ESTBeaconConnectionStatus connectionStatus;
+@property (readonly, nonatomic) ESTConnectionStatus connectionStatus;
 
 #pragma mark Public Properties Available After CoreLocation Based Scan
 ///--------------------------------------------------------------------
@@ -142,21 +141,21 @@
  *
  * @see writeProximityUUID:completion:
  */
-@property (readonly, nonatomic)   NSUUID*                   proximityUUID;
+@property (readonly, nonatomic) NSUUID *proximityUUID;
 
 /**
  * An estimated distance from the beacon in meters.
  *
  * This value is only as accurate as the rssi readings, i.e. it is subject to the same external factors such as multipath propagation, diffraction, absorption and interference. In general, the greater the distance, the lesser the accuracy.
  */
-@property (readonly, nonatomic)   NSNumber*                 distance;
+@property (readonly, nonatomic) NSNumber *distance;
 
 /**
  * The relative proximity to the beacon.
  *
  * The value in this property gives a general sense of the relative proximity to the beacon. Use it to quickly identify beacons that are nearer to the user rather than farther away.
  */
-@property (readonly, nonatomic)   CLProximity               proximity;
+@property (readonly, nonatomic) CLProximity proximity;
 
 #pragma mark Public Properties Available After CoreBluetooth Based Scan
 ///--------------------------------------------------------------------
@@ -166,14 +165,14 @@
 /**
  * The MAC address of the beacon.
  */
-@property (readonly, nonatomic)   NSString*                 macAddress;
+@property (readonly, nonatomic) NSString *macAddress;
 
 /**
  * Factory calibrated constant indicating the expected RSSI value at the distance of 1 meter from the beacon.
  *
  * The value of this constant depends on the broadcasting power and is used to calculate the estimated distance from the beacon.
  */
-@property (readonly, nonatomic)   NSNumber*                 measuredPower;
+@property (readonly, nonatomic) NSNumber *measuredPower;
 
 /**
  * Flag indicating the state the beacon's firmware is in.
@@ -186,12 +185,12 @@
  *
  * @see ESTBeaconFirmwareState
  */
-@property (readonly, nonatomic)   ESTBeaconFirmwareState    firmwareState;
+@property (readonly, nonatomic) ESTBeaconFirmwareState firmwareState;
 
 /**
  *  The underlying Bluetooth peripheral device.
  */
-@property (readonly, nonatomic)   CBPeripheral*             peripheral;
+@property (readonly, nonatomic) CBPeripheral *peripheral;
 
 #pragma mark Properties Available After Connecting
 ///--------------------------------------------------------------------
@@ -203,7 +202,7 @@
  *
  * This value is stored and retrieved from the Estimote Cloud.
  */
-@property (readonly, nonatomic)   NSString*               name;
+@property (readonly, nonatomic) NSString *name;
 
 /**
  * The proximity ID of the beacon when it's in motion.
@@ -214,11 +213,13 @@
  *
  * 2. When monitoring regions - you can have two separate regions, one with the regular proximityUUID and one with the motionProximityUUID. Enter and exit notifications will then correspond to the beacon starting and stopping to move.
  *
+ * @warning This feature is disabled by default. The option to enable it will be made available in an upcoming update to the SDK.
+ *
  * @since Estimote OS 2.0
  *
  * @see writeMotionProximityUUID:completion:
  */
-@property (readonly, nonatomic)   NSUUID*                   motionProximityUUID;
+@property (readonly, nonatomic) NSUUID *motionProximityUUID;
 
 /**
  * The power of the beacon's radio signal in dBm.
@@ -227,38 +228,38 @@
  *
  * @see writePower:completion:
  */
-@property (readonly, nonatomic)   NSNumber*               power;
+@property (readonly, nonatomic) NSNumber *power;
 
 /**
  * The advertising interval of the beacon in ms.
  *
  * @see writeAdvInterval:completion:
  */
-@property (readonly, nonatomic)   NSNumber*               advInterval;
+@property (readonly, nonatomic) NSNumber *advInterval;
 
 /**
  * The battery charge level for the beacon.
  *
  * Battery level ranges from 0 (fully discharged) to 100 (fully charged).
  */
-@property (readonly, nonatomic)   NSNumber*               batteryLevel;
+@property (readonly, nonatomic) NSNumber *batteryLevel;
 
 /**
  *    Remaining lifetime in days, based on current battery level, advertising interval and broadcasting power values
  */
-@property (readonly, nonatomic)   NSNumber*               remainingLifetime;
+@property (readonly, nonatomic) NSNumber *remainingLifetime;
 
 /**
  * The battery model.
  * 
  * @see ESTBeaconBatteryType
  */
-@property (readonly, nonatomic)   ESTBeaconBatteryType    batteryType;
+@property (readonly, nonatomic) ESTBeaconBatteryType batteryType;
 
 /**
  * The hardware version of the beacon.
  */
-@property (readonly, nonatomic)   NSString*               hardwareVersion;
+@property (readonly, nonatomic) NSString *hardwareVersion;
 
 /**
  * The firmware version of the beacon.
@@ -266,7 +267,7 @@
  * @see checkFirmwareUpdateWithCompletion:
  * @see updateFirmwareWithProgress:completion:
  */
-@property (readonly, nonatomic)   NSString*               firmwareVersion;
+@property (readonly, nonatomic) NSString *firmwareVersion;
 
 /**
  * A flag indicating if a firmware update is available.
@@ -275,7 +276,7 @@
  *
  * @see ESTBeaconFirmwareUpdate
  */
-@property (readonly, nonatomic)   ESTBeaconFirmwareUpdate firmwareUpdateInfo;
+@property (readonly, nonatomic) ESTFirmwareUpdate firmwareUpdateInfo;
 
 /**
  * A flag indicating if the beacon is in motion or not.
@@ -288,14 +289,21 @@
  *
  * @see [ESTBeaconDelegate beacon:accelerometerStateChanged:]
  */
-@property (readonly, nonatomic)   BOOL                    isMoving;
+@property (readonly, nonatomic) BOOL isMoving;
+
+/**
+ * A flag indicating if the beacon has UUID rotation turned on.
+ *
+ * @since Estimote OS A2.2
+ */
+@property (readonly, nonatomic) BOOL isSecured;
 
 /**
  * A flag indicating if the accelerometer is available.
  *
  * @since Estimote OS A2.0
  */
-@property (readonly, nonatomic)   BOOL                    isAccelerometerAvailable;
+@property (readonly, nonatomic) BOOL isAccelerometerAvailable;
 
 /**
  * A flag indicating if accelerometer can be enabled and disabled.
@@ -304,7 +312,7 @@
  *
  * @see enableAccelerometer:completion:
  */
-@property (readonly, nonatomic)   BOOL                    isAccelerometerEditAvailable;
+@property (readonly, nonatomic) BOOL isAccelerometerEditAvailable;
 
 /**
  * A flag indicating if accelerometer is enabled.
@@ -313,7 +321,16 @@
  *
  * @see enableAccelerometer:completion:
  */
-@property (readonly, nonatomic)   BOOL                    accelerometerEnabled;
+@property (readonly, nonatomic) BOOL accelerometerEnabled;
+
+/**
+ * A flag indicating if motion UUID is enabled.
+ *
+ * @since Estimote OS A2.1
+ *
+ * @see enableMotionUUID:completion:
+ */
+@property (readonly, nonatomic) BOOL motionUUIDEnabled;
 
 /**
  * A flag indicating availability and status of the Basic Power Mode.
@@ -323,7 +340,7 @@
  * @see ESTBeaconPowerSavingMode
  * @see enableBasicPowerMode:completion
  */
-@property (readonly, nonatomic)   ESTBeaconPowerSavingMode basicPowerMode;
+@property (readonly, nonatomic) ESTBeaconPowerSavingMode basicPowerMode;
 
 /**
  * A flag indicating availability and status of the Smart Power Mode.
@@ -333,7 +350,17 @@
  * @see ESTBeaconPowerSavingMode
  * @see enableSmartPowerMode:completion
  */
-@property (readonly, nonatomic)   ESTBeaconPowerSavingMode smartPowerMode;
+@property (readonly, nonatomic) ESTBeaconPowerSavingMode smartPowerMode;
+
+/**
+ *  A flag indicating status of Estimote Secure UUID.
+ *
+ *  @since Estimote OS 2.2
+ *  @see ESTBeaconEstimoteSecureUUID
+ *  @see enableEstimoteSecureUUID:completion
+ */
+
+@property (readonly, nonatomic) ESTBeaconEstimoteSecureUUID estimoteSecureUUID;
 
 #pragma mark Connecting and Disconnecting
 ///--------------------------------------------------------------------
@@ -347,7 +374,7 @@
  *
  * - have the beacon assigned to your Estimote Cloud account,
  *
- * - set up your Estimote Cloud credentials using the [ESTBeaconManager setupAppID:andAppToken:] class method.
+ * - set up your Estimote Cloud credentials using the [ESTConfig setupAppID:andAppToken:] class method.
  *
  * Upon successful connection, delegate's [ESTBeaconDelegate beaconConnectionDidSucceeded:] method is called. If connection fails, delegate's [ESTBeaconDelegate beaconConnectionDidFail:withError:] method will be called instead.
  *
@@ -355,7 +382,7 @@
  *
  * @see connectWithAttempts:connectionTimeout:
  */
--(void)connect;
+- (void)connect;
 
 /**
  * Connects to the beacon.
@@ -365,7 +392,7 @@
  * @param attempts Number of connection attempts before giving up.
  * @param timeout  Connection timeout in seconds.
  */
--(void)connectWithAttempts:(NSInteger)attempts
+- (void)connectWithAttempts:(NSInteger)attempts
          connectionTimeout:(NSInteger)timeout;
 
 /**
@@ -373,7 +400,7 @@
  *
  * Always remember to disconnect from the beacon when the connection is no longer required, as the beacon in the connected state stops broadcasting and thus is not being picked up by ranging, monitoring and discovery.
  */
--(void)disconnect;
+- (void)disconnect;
 
 #pragma mark Interacting with Sensors
 ///--------------------------------------------------------------------
@@ -411,7 +438,7 @@
  *
  * - NSError *error - If an error occurred, this error object describes the error. If the operation completed successfully, the value is nil.
  */
-- (void)calibrateTemperatureWithReferenceTemperature:(NSNumber*)temperature
+- (void)calibrateTemperatureWithReferenceTemperature:(NSNumber *)temperature
                                           completion:(ESTNumberCompletionBlock)completion;
 
 /**
@@ -457,7 +484,7 @@
  *
  * - NSError *error - If an error occurred, this error object describes the error. If the operation completed successfully, the value is nil.
  */
-- (void)writeName:(NSString*)name completion:(ESTStringCompletionBlock)completion;
+- (void)writeName:(NSString *)name completion:(ESTStringCompletionBlock)completion;
 
 /**
  * Sets the proximityUUID.
@@ -473,22 +500,7 @@
  *
  * @warning If you change the proximityUUID, you might want to consider changing the motionProximityUUID as well. If you don't, the beacon will broadcast two different proximityUUIDs depending on whether its in motion or not!@
  */
-- (void)writeProximityUUID:(NSString*)pUUID completion:(ESTStringCompletionBlock)completion;
-
-/**
- * Sets the motionProximityUUID.
- *
- * @param pUUID The new motionProximityUUID.
- * @param completion A block that is called when the new motionProximityUUID has been set.
- *
- * The completion block receives the following parameters:
- *
- * - NSString *value - The new motionProximityUUID.
- * - NSError *error - If an error occurred, this error object describes the error. If the operation completed successfully, the value is nil.
- *
- * @since Estimote OS 2.0
- */
-- (void)writeMotionProximityUUID:(NSString*)pUUID completion:(ESTStringCompletionBlock)completion;
+- (void)writeProximityUUID:(NSString *)pUUID completion:(ESTStringCompletionBlock)completion;
 
 /**
  * Sets the major value.
@@ -578,6 +590,28 @@
 - (void)enableAccelerometer:(BOOL)enable
                  completion:(ESTBoolCompletionBlock)completion;
 
+
+/**
+ * Enables or disables the motion UUID.
+ *
+ * @param enable YES to enable, NO to disable the motion UUID.
+ * @param completion A block that is called when the motion UUID has been enabled or disabled.
+ *
+ * The completion block receives the following parameters:
+ *
+ * - BOOL value - YES if the motion UUID has been enabled, NO if the motion UUID has been disabled.
+ *
+ * - NSError *error - If an error occurred, this error object describes the error. If the operation completed successfully, the value is nil.
+ *
+ * @since Estimote OS A2.1
+ *
+ * @see isAccelerometerAvailable
+ * @see isAccelerometerEditAvailable
+ */
+
+- (void)enableMotionUUID:(BOOL)enable
+              completion:(ESTBoolCompletionBlock)completion;
+
 /**
  * Enables or disables the basicPowerMode.
  *
@@ -608,6 +642,16 @@
 - (void)enableSmartPowerMode:(BOOL)enable
                   completion:(ESTBoolCompletionBlock)completion;
 
+/**
+ *  Enables Estimote Secure UUID.
+ *
+ *  @param enable     Yes to enable, No to disable Estimote Secure UUID.
+ *  @param completion Block with operation result.
+ */
+
+- (void)enableEstimoteSecureUUID:(BOOL)enable
+                      completion:(ESTBoolCompletionBlock)completion;
+
 #pragma mark Updating Firmware
 ///--------------------------------------------------------------------
 /// @name Updating Firmware (must be connected)
@@ -634,7 +678,7 @@
  *
  * - NSError *error - If an error occurred, this error object describes the error. If the operation completed successfully, the value is nil.
  */
--(void)checkFirmwareUpdateWithCompletion:(ESTFirmwareInfoCompletionBlock)completion;
+- (void)checkFirmwareUpdateWithCompletion:(ESTFirmwareInfoCompletionBlock)completion;
 
 /**
  * Updates the beacon's firmware.
@@ -655,7 +699,7 @@
  *
  * - NSError *error - If an error occurred, this error object describes the error. If the operation completed successfully, the value is nil.
  */
--(void)updateFirmwareWithProgress:(ESTProgressBlock)progress
+- (void)updateFirmwareWithProgress:(ESTProgressBlock)progress
                        completion:(ESTCompletionBlock)completion;
 
 #pragma mark Comparing Beacons for Equality
@@ -679,6 +723,6 @@
 /**
  * Returns ESTBeaconVO object from ESTBeacon, so it would be easier to compare beacons with already fetched from the cloud.
  */
--(ESTBeaconVO*)valueObject;
+- (ESTBeaconVO *)valueObject;
 
 @end

@@ -596,6 +596,7 @@
 					"$(PROJECT_DIR)/../../EstimoteSDK",
 					"$(inherited)",
 				);
+				OTHER_LDFLAGS = "-lc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "IndoorLocation SwiftExample/IndoorLocation SwiftExample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -621,6 +622,7 @@
 					"$(PROJECT_DIR)/../../EstimoteSDK",
 					"$(inherited)",
 				);
+				OTHER_LDFLAGS = "-lc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "IndoorLocation SwiftExample/IndoorLocation SwiftExample-Bridging-Header.h";
 			};

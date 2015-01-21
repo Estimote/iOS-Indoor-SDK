@@ -4,6 +4,7 @@
 #import "ESTAuthorizationViewController.h"
 #import "ESTIndoorLocationViewController.h"
 #import <ESTIndoorLocationManager.h>
+#import <ESTConfig.h>
 #import <ESTLocationBuilder.h>
 
 #define LAST_CREATED_LOCATION_KEY @"last_created_location_key"
@@ -43,7 +44,7 @@
 #pragma mark - Button handling
 - (IBAction)setupNewLocation:(id)sender
 {
-    if (![ESTIndoorLocationManager isAuthorized])
+    if (![ESTConfig isAuthorized])
     {
         __weak ESTMenuViewController *weakSelf = self;
         ESTAuthorizationViewController *authorizationVC = [[ESTAuthorizationViewController alloc] initWithCompletion:^(NSError *error) {

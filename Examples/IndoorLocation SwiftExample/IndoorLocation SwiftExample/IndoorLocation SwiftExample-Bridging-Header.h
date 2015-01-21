@@ -6,3 +6,4 @@
 #import "ESTLocation.h"
 #import "ESTIndoorLocationView.h"
 #import "ESTLocationBuilder.h"
+#import "ESTConfig.h"

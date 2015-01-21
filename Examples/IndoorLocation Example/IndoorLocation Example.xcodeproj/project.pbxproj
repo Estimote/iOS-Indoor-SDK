@@ -595,6 +595,7 @@
 					"$(PROJECT_DIR)/../../EstimoteSDK",
 					"$(PROJECT_DIR)/../../EstimoteIndoorLocationSDK",
 				);
+				OTHER_LDFLAGS = "-lc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -620,6 +621,7 @@
 					"$(PROJECT_DIR)/../../EstimoteSDK",
 					"$(PROJECT_DIR)/../../EstimoteIndoorLocationSDK",
 				);
+				OTHER_LDFLAGS = "-lc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

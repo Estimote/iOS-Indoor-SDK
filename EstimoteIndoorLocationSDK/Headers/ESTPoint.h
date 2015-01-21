@@ -1,5 +1,6 @@
 //  Copyright (c) 2014 Estimote. All rights reserved.
 
+#import <Foundation/Foundation.h>
 
 /** Represents a geometrical point. Object is immutable. */
 @interface ESTPoint : NSObject
@@ -68,6 +69,14 @@
  * @return Distance between points.
  */
 - (double)distanceToPoint:(ESTPoint *)point;
+
+/**
+ * Computes the length of the vector represented by the point
+ * i.e. distance from the point to the (0,0).
+ *
+ * @return Length of the vector
+ */
+- (double)length;
 
 #pragma mark Serialization
 ///-----------------------------------------
