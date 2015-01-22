@@ -30,8 +30,8 @@ Pod::Spec.new do |s|
   s.frameworks = 'UIKit', 'Foundation', 'SystemConfiguration', 'MobileCoreServices', 'CoreLocation', 'CoreGraphics', 'CoreBluetooth', 'CoreMotion', 'MessageUI', 'MediaPlayer', 'AVFoundation', 'AudioToolbox'
   s.requires_arc = true
 
-  s.xcconfig  =  { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/EstimoteIndoorLocationSDK"',
-                  'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/Headers/EstimoteIndoorLocationSDK"',
+  s.xcconfig  =  { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/EstimoteIndoorSDK"',
+                  'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/Headers/EstimoteIndoorSDK"',
                   'OTHER_LDFLAGS' => '"-lc++"'}
 
 
