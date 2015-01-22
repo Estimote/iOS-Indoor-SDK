@@ -1,3 +1,7 @@
+## 1.1.1 (January 22, 2015)
+
+ - Bugfix release.
+
 ## 1.1.0 (January 21, 2015)
 
  - Improvements to accuracy and stability of localisation.
