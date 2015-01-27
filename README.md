@@ -161,7 +161,7 @@ in the same order as the points. In this example there would be the following 4 
 The next step is to place beacons and doors on the boundary segments of the location:
 
 ```objective-c
-[locationBuilder addBeaconIdentifiedByMac:@"AA:AA:AA:AA:AA:AA"
+[locationBuilder addBeaconIdentifiedByMac:@"aabbccddeeff"
                    atBoundarySegmentIndex:0
                                inDistance:2
                                  fromSide:ESTLocationBuilderLeftSide];
