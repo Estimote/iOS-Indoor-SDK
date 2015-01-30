@@ -1,3 +1,7 @@
+## 1.1.2 (January 30, 2015)
+
+ - Removing warnings during linking.
+
 ## 1.1.1 (January 22, 2015)
 
  - Bugfix release.
