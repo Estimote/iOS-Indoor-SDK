@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name        = "EstimoteIndoorSDK"
-  s.version      = "1.1.1"
+  s.version      = "1.2.0"
   s.summary      = "Indoor Location SDK allows real-time beacon-based mapping and indoor location"
   s.description  = <<-DESC
                   Map any space using Estimote Beacons and visualize your location within it in real-time.
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.platform    = :ios
   s.ios.deployment_target = '7.0'
 
-  s.source      = { :git => "https://github.com/Estimote/iOS-Indoor-SDK.git", :tag => "1.1.1" }
+  s.source      = { :git => "https://github.com/Estimote/iOS-Indoor-SDK.git", :tag => "1.2.0" }
   s.source_files =  'EstimoteIndoorLocationSDK/Headers/*.h'
 
   s.resources = 'EstimoteIndoorLocationSDK/Resources/**/*'
@@ -35,5 +35,5 @@ Pod::Spec.new do |s|
                   'OTHER_LDFLAGS' => '"-lc++"'}
 
 
-  s.dependency "EstimoteSDK", "~> 2.3.2"
+  s.dependency "EstimoteSDK", "~> 2.4.0"
 end
