@@ -1,3 +1,8 @@
+## 1.2.0 (March 3, 2015)
+
+ - Major improvements in user's orientation within location. Orientation in position reported via  [ESTIndoorLocationManagerDelegate indoorLocationManager:didUpdatePosition:inLocation:] is less error-prone and more responsive to user's rotation.
+ - Updated dependency to Estimote iOS SDK 2.4.0.
+
 ## 1.1.2 (January 30, 2015)
 
  - Removing warnings during linking.

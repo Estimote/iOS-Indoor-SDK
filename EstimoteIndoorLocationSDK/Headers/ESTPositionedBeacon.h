@@ -2,6 +2,7 @@
 
 #import "ESTOrientedPoint.h"
 #import "ESTBeacon.h"
+#import "ESTDefinitions.h"
 
 /** Represents a beacon with additional information about its position. Object is immutable. */
 @interface ESTPositionedBeacon : NSObject
