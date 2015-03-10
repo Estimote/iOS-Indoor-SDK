@@ -38,6 +38,8 @@ The mapping process is simple and fast. Start by placing one beacon immediately 
 
 Once integrated with your app, our dedicated UIViewController will guide the users of your application through mapping of their own locations.
 
+There is nice video tutorial by [@phillydev716](https://twitter.com/phillydev716) on [YouTube on how to use Indoor Location in your app](https://www.youtube.com/watch?v=BjXHBBvrWQ0).
+
 [![Video describing Estimote Indoor Location](ReadmeImages/VideoThumbnail.jpg)](https://www.youtube.com/watch?v=wtBERi7Lf3c)
 
 ## Installation
