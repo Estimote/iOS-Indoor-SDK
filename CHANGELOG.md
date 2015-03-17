@@ -1,3 +1,6 @@
+## 1.2.1 (March 17, 2015)
+ - The Estimote Indoor SDK now works better in large locations.
+
 ## 1.2.0 (March 3, 2015)
 
  - Major improvements in user's orientation within location. Orientation in position reported via  [ESTIndoorLocationManagerDelegate indoorLocationManager:didUpdatePosition:inLocation:] is less error-prone and more responsive to user's rotation.

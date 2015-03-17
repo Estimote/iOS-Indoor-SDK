@@ -28,6 +28,9 @@
 /** Bezier path of the boundary of the location. */
 @property (nonatomic, strong, readonly) UIBezierPath    *shape;
 
+/** Area of the location in square meters. */
+@property (nonatomic, assign, readonly) double          area;
+
 /** Bounding box of the location. */
 @property (nonatomic, assign, readonly) CGRect          boundingBox;
 
