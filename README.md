@@ -202,13 +202,13 @@ See also [SDK Examples](Examples) for how to do this.
 
 ### Managing locations in the cloud
 
-Once you are using ```ESTIndoorLocationManager``` you can manage locations for user's account associated with the currently used Estimote Account.
+Once you are using ```ESTIndoorLocationManager``` you can manage locations for the currently used Estimote Account.
 
-Locations' management methods provided by ```ESTIndoorLocationManager``` are as follows:
+```ESTIndoorLocationManager``` provides methods so that you can:
 
-- storing new location
-- removing a location
-- fetching all locations
+- store a new location
+- remove a location
+- fetch all locations
 
 Please note that in order to have these methods working you need to be authenticated in Estimote Cloud. To do that you have to call -[ESTConfig setupAppID:andAppToken:] first.
 
