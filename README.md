@@ -28,6 +28,7 @@ Learn more:
     * [Manually, using ESTLocationBuilder](#manually-using-estlocationbuilder)
     * [From JSON](#from-json)
   * [Obtaining position update inside the location](#obtaining-position-update-inside-the-location)
+  * [Managing locations in the cloud](#managing-locations-update-in-the-cloud)
 * [Changelog](#changelog)
 
 ## How does Indoor Location work?
@@ -181,7 +182,9 @@ See also [SDK Examples](Examples) for how to do this.
 
 Once you have instance of ```ESTLocation``` you can start obtaining position updates for that location.
 First you need to set a ```delegate``` which will be receiving the updates and then start the manager for
-the location. Note that only one location at a time is supported.
+the location.
+In addition to position, updates provide also information about accuracy of determined position which can be represented as a circle of given radius within which the real position is expected to be. 
+Note that only one location at a time is supported.
  
 ```objective-c
 ESTIndoorLocationManager * indoorLocationManager = [indoorLocationManager.delegate new];
@@ -196,6 +199,18 @@ Do not forget to stop the manager if you are not using location updates any more
 ```
 
 See also [SDK Examples](Examples) for how to do this.
+
+### Managing locations in the cloud
+
+Once you are using ```ESTIndoorLocationManager``` you can manage locations for user's account associated with the currently used Estimote Account.
+
+Locations' management methods provided by ```ESTIndoorLocationManager``` are as follows:
+
+- storing new location
+- removing a location
+- fetching all locations
+
+Please note that in order to have these methods working you need to be authenticated in Estimote Cloud. To do that you have to call -[ESTConfig setupAppID:andAppToken:] first.
 
 ## Changelog
 
