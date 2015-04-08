@@ -1,3 +1,11 @@
+## 1.3 (April, 8, 2015)
+ - Locations can be stored in the cloud.
+ - We are now providing accuracy of determined position. IndoorLocationManager delegate method `indoorLocationManager:didUpdatePosition:inLocation:` is now deprecated. Instead of it, use `indoorLocationManager:didUpdatePosition:withAccuracy:inLocation:`
+ - Added IndoorLocationManager delegate method to tell that delegate is ready and will start updating position (`indoorLocationManagerIsReady:`).
+ - Meaningful error codes are provided when IndoorLocationManager fails to update position (`ESTIndoorError.h`).
+
+Please note that iPod is no longer supported due to absence of magnetometer.
+
 ## 1.2.1 (March 17, 2015)
  - The Estimote Indoor SDK now works better in large locations.
 
