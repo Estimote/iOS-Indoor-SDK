@@ -184,6 +184,7 @@ Once you have instance of ```ESTLocation``` you can start obtaining position upd
 First you need to set a ```delegate``` which will be receiving the updates and then start the manager for
 the location.
 In addition to position, updates provide also information about accuracy of determined position which can be represented as a circle of given radius within which the real position is expected to be. 
+Example usage of accuracy as accuracy circle is provided by ```ESTPositionView```. See also [SDK Examples](Examples) for how to use it. 
 Note that only one location at a time is supported.
  
 ```objective-c
