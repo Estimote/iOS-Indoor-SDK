@@ -2,7 +2,7 @@
  - Locations can be stored in the cloud.
  - We are now providing accuracy of determined position. IndoorLocationManager delegate method `indoorLocationManager:didUpdatePosition:inLocation:` is now deprecated. Instead of it, use `indoorLocationManager:didUpdatePosition:withAccuracy:inLocation:`
  - Added IndoorLocationManager delegate method to tell that delegate is ready and will start updating position (`indoorLocationManagerIsReady:`).
- - Meaningful error codes are provided when IndoorLocationManager fails to update position (`ESTIndoorError.h`).
+ - Meaningful error codes are provided when IndoorLocationManager fails to update position (described in `ESTIndoorLocationManager.h`).
 
 Please note that iPod is no longer supported due to absence of magnetometer.
 
