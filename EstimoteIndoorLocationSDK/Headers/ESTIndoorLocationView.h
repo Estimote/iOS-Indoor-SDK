@@ -2,6 +2,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ESTLocation.h"
+#import "ESTIndoorLocationManager.h"
 
 #ifdef IB_DESIGNABLE
 IB_DESIGNABLE

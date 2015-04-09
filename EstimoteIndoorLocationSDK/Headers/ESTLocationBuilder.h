@@ -56,7 +56,7 @@ The next step is to place beacons, doors on the boundary segments of the locatio
 ///-----------------------------------------
 
 /**
- * Adds a list of boundary points of location. Can be added clockwise or anti-clockwise.
+ * Adds a list of boundary points of location. Can be added clockwise or counter clockwise.
  *
  * @param boundaryPoints List of boundary points (`ESTPoint`) that defines a location.
  */

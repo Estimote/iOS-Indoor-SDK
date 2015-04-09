@@ -111,6 +111,13 @@ typedef enum : NSUInteger {
 /** Returns an integer that can be used as a table address in a hash table structure. */
 - (NSUInteger)hash;
 
+#pragma mark Describing Objects
+///-----------------------------------------
+/// @name Describing Objects
+///-----------------------------------------
+
+- (NSString *)description;
+
 @end
 
 

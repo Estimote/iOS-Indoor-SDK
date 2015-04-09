@@ -55,6 +55,12 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
+	<option value="//api/name/addNewLocation:success:failure:">&nbsp;&nbsp;&nbsp;&nbsp;- addNewLocation:success:failure:</option>
+	
+	<option value="//api/name/fetchUserLocationsWithSuccess:failure:">&nbsp;&nbsp;&nbsp;&nbsp;- fetchUserLocationsWithSuccess:failure:</option>
+	
+	<option value="//api/name/removeLocation:success:failure:">&nbsp;&nbsp;&nbsp;&nbsp;- removeLocation:success:failure:</option>
+	
 	<option value="//api/name/startIndoorLocation:">&nbsp;&nbsp;&nbsp;&nbsp;- startIndoorLocation:</option>
 	
 	<option value="//api/name/stopIndoorLocation">&nbsp;&nbsp;&nbsp;&nbsp;- stopIndoorLocation</option>
@@ -81,6 +87,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Obtaining position inside the location">Obtaining position inside the location</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Managing locations in the cloud">Managing locations in the cloud</a></span></li>
+	
 </ul></li>
 
 
@@ -106,6 +114,12 @@
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addNewLocation:success:failure:">addNewLocation:success:failure:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fetchUserLocationsWithSuccess:failure:">fetchUserLocationsWithSuccess:failure:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeLocation:success:failure:">removeLocation:success:failure:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startIndoorLocation:">startIndoorLocation:</a></span></li>
 	
@@ -165,7 +179,7 @@ The procedure consists of the following steps:</p>
 
 
 <p>Invoke <a href="#//api/name/locationSetupControllerWithCompletion:"><code>locationSetupControllerWithCompletion:</code></a> to obtain dedicated UIViewController guiding through this process.
-Result of this procedure is a prepared physical location and an instance of <a href="../Classes/ESTLocation.html">ESTLocation</a> that can be used for obtaining position updates.</p>
+Result of this procedure is a prepared physical location and an instance of <a href="../Classes/ESTLocation.html"><code>ESTLocation</code></a> that can be used for obtaining position updates.</p>
 
 <h3>Obtaining position inside the location</h3>
 
@@ -181,6 +195,14 @@ the location. Note that only one location at a time is supported.</p>
 
 <pre><code>[indoorLocationManager stopIndoorLocation];
 </code></pre>
+
+<h3>Managing locations in the cloud</h3>
+
+<p>You can manage your locations in Cloud either through <a href="http://cloud.estimote.com">http://cloud.estimote.com</a> or with Estimote Indoor Location SDK.
+With the SDK you can add and remove locations to the cloud account associated with the used appId
+as well as fetch all the locations stored for that account.</p>
+
+<p>Please remember that in order to have any of these methods working you need to call [ESTConfig setupAppID:andAppToken:] first.</p>
 					</div>
 					
 					
@@ -239,6 +261,32 @@ the location. Note that only one location at a time is supported.</p>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/stopIndoorLocation">&ndash;&nbsp;stopIndoorLocation</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Managing locations in the cloud" name="task_Managing locations in the cloud"></a>
+						<h3 class="subsubtitle task-title">Managing locations in the cloud</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addNewLocation:success:failure:">&ndash;&nbsp;addNewLocation:success:failure:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeLocation:success:failure:">&ndash;&nbsp;removeLocation:success:failure:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fetchUserLocationsWithSuccess:failure:">&ndash;&nbsp;fetchUserLocationsWithSuccess:failure:</a></code>
 	</span>
 	
 	
@@ -402,6 +450,184 @@ to configure the beacons for Indoor Location.</p>
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
+	<a name="//api/name/addNewLocation:success:failure:" title="addNewLocation:success:failure:"></a>
+	<h3 class="subsubtitle method-title">addNewLocation:success:failure:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Saves new location to user&rsquo;s account associated with the currently used AppId.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)addNewLocation:(ESTLocation *)<em>location</em> success:(ESTIndoorCloudSuccess)<em>success</em> failure:(ESTIndoorCloudFailure)<em>failure</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>location</em></dt>
+			<dd><p>Location to add.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>success</em></dt>
+			<dd><p>Success callback. Object returned is a new <a href="../Classes/ESTLocation.html"><code>ESTLocation</code></a> same as given with identifier set from cloud.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>failure</em></dt>
+			<dd><p>Failure callback. Contains error that occurred.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>In order to have this method working you need to call [ESTConfig setupAppID:andAppToken:] first.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTIndoorLocationManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fetchUserLocationsWithSuccess:failure:" title="fetchUserLocationsWithSuccess:failure:"></a>
+	<h3 class="subsubtitle method-title">fetchUserLocationsWithSuccess:failure:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Fetches all locations from user&rsquo;s account associated with the currently used AppId.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)fetchUserLocationsWithSuccess:(ESTIndoorCloudSuccess)<em>success</em> failure:(ESTIndoorCloudFailure)<em>failure</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>success</em></dt>
+			<dd><p>Success callback. Invoked after location from cloud are fetched. Contains array of <a href="../Classes/ESTLocation.html"><code>ESTLocation</code></a>s.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>failure</em></dt>
+			<dd><p>Failure callback. Contains error that occurred.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>In order to have this method working you need to call [ESTConfig setupAppID:andAppToken:] first.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTIndoorLocationManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/removeLocation:success:failure:" title="removeLocation:success:failure:"></a>
+	<h3 class="subsubtitle method-title">removeLocation:success:failure:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Removes a location from user&rsquo;s account associated with the currently used AppId.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)removeLocation:(ESTLocation *)<em>location</em> success:(ESTIndoorCloudSuccess)<em>success</em> failure:(ESTIndoorCloudFailure)<em>failure</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>location</em></dt>
+			<dd><p>Location to remove. Must contain cloud&rsquo;s identifier <a href="../Classes/ESTLocation.html#//api/name/identifier"><code>[ESTLocation identifier]</code></a>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>success</em></dt>
+			<dd><p>Success callback. Object returned is the removed <a href="../Classes/ESTLocation.html"><code>ESTLocation</code></a>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>failure</em></dt>
+			<dd><p>Failure callback. Contains error that occurred.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>In order to have this method working you need to call [ESTConfig setupAppID:andAppToken:] first.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTIndoorLocationManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/startIndoorLocation:" title="startIndoorLocation:"></a>
 	<h3 class="subsubtitle method-title">startIndoorLocation:</h3>
 	
@@ -502,7 +728,7 @@ Calling this method without stopping the indoor location for previous location r
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-03-17)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-04-09)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</span></p>
 						

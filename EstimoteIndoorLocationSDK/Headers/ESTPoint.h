@@ -127,7 +127,6 @@
  *
  * @return A string representation of the point in form of (x,y)
  */
--(NSString *)description;
-
+- (NSString *)description;
 
 @end

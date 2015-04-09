@@ -19,6 +19,9 @@
 /// @name Properties
 ///-----------------------------------------
 
+/** Globally unique identifier of the location. Identifier is being set by server once location is persisted. */
+@property (nonatomic, strong, readonly) NSString        *identifier;
+
 /** Name of the location. */
 @property (nonatomic, strong, readonly) NSString        *name;
 
@@ -147,5 +150,17 @@
 
 /** Returns an integer that can be used as a table address in a hash table structure. */
 - (NSUInteger)hash;
+
+#pragma mark Describing Objects
+///-----------------------------------------
+/// @name Describing Objects
+///-----------------------------------------
+
+/**
+ * Returns a string representation of the location.
+ *
+ * @return A string representation of the location.
+ */
+- (NSString *)description;
 
 @end
