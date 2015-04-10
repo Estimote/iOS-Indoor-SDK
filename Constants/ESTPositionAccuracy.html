@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>ESTLocationBuilderSide Constants Reference</title>
+		<title>ESTPositionAccuracy Constants Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">ESTLocationBuilderSide Constants Reference</h1>
+				<h1 class="hideInXcode">ESTPositionAccuracy Constants Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -45,7 +45,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="ESTLocationBuilderSide Constants Reference" name="top"></a>
+				<a title="ESTPositionAccuracy Constants Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -54,7 +54,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">ESTLocationBuilderSide Constants Reference</h1>
+						<h1 class="title title-header">ESTPositionAccuracy Constants Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -62,7 +62,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ESTLocationBuilder.h</td>
+	<td class="specification-value">ESTIndoorLocationManager.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -74,11 +74,13 @@
 					
                     
                     
-                    <h3 class="subsubtitle method-title">ESTLocationBuilderSide</h3>
+                    <h3 class="subsubtitle method-title">ESTPositionAccuracy</h3>
                     
 					
 					<div class="section section-overview">
-                        <p>Side of the boundary segment as seen from inside of the location.</p>
+                        <p>Describes the accuracy of the determined position.
+Accuracy can be represented as a circle of given radius within which the real position is expected to be.
+Note that values for accuracy levels are approximate and can change in the future.</p>
 					</div>
 					
 					
@@ -86,11 +88,17 @@
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_ENUM(int, ESTLocationBuilderSide ) {<br/>
+                        <code>typedef NS_ENUM(NSInteger, ESTPositionAccuracy ) {<br/>
                             
-                            &nbsp;&nbsp; <a href="">ESTLocationBuilderLeftSide</a>,<br/>
+                            &nbsp;&nbsp; <a href="">ESTPositionAccuracyVeryHigh</a> = 0,<br/>
                             
-                            &nbsp;&nbsp; <a href="">ESTLocationBuilderRightSide</a>,<br/>
+                            &nbsp;&nbsp; <a href="">ESTPositionAccuracyHigh</a> = 1,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTPositionAccuracyMedium</a> = 2,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTPositionAccuracyLow</a> = 3,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTPositionAccuracyVeryLow</a> = 4,<br/>
                             
                             };</code>
                     
@@ -100,11 +108,12 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="ESTLocationBuilderLeftSide"></a><code>ESTLocationBuilderLeftSide</code></dt>
+                            <dt><a name="" title="ESTPositionAccuracyVeryHigh"></a><code>ESTPositionAccuracyVeryHigh</code></dt>
 <dd>
 
 
-<p>Left side of the boundary segment as seen from inside of the location.</p>
+<p>Very high accuracy represents the state when the algorithm is highly certain about determined position.
+Accuracy is below 1m.</p>
 
 
 
@@ -112,16 +121,17 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">ESTLocationBuilder.h</code>.
+		Declared In <code class="declared-in-ref">ESTIndoorLocationManager.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="ESTLocationBuilderRightSide"></a><code>ESTLocationBuilderRightSide</code></dt>
+                            <dt><a name="" title="ESTPositionAccuracyHigh"></a><code>ESTPositionAccuracyHigh</code></dt>
 <dd>
 
 
-<p>Right side of the boundary segment as seen from inside of the location.</p>
+<p>Accuracy of determined position is high.
+Accuracy is below 1.62m.</p>
 
 
 
@@ -129,7 +139,62 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">ESTLocationBuilder.h</code>.
+		Declared In <code class="declared-in-ref">ESTIndoorLocationManager.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTPositionAccuracyMedium"></a><code>ESTPositionAccuracyMedium</code></dt>
+<dd>
+
+
+<p>Accuracy of determined position is medium.
+Accuracy is below 2.62m.</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTIndoorLocationManager.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTPositionAccuracyLow"></a><code>ESTPositionAccuracyLow</code></dt>
+<dd>
+
+
+<p>Accuracy of determined position is low.
+Accuracy is below 4.24m.</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTIndoorLocationManager.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTPositionAccuracyVeryLow"></a><code>ESTPositionAccuracyVeryLow</code></dt>
+<dd>
+
+
+<p>Accuracy of determined position is very low - typically during the initialization phase.
+Accuracy can also drop to this level when the quality of determined position decreases significantly.
+Accuracy should be thought of as comparable to location size.</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTIndoorLocationManager.h</code>.
 	</p>
 	
 </dd>
@@ -146,7 +211,7 @@
                     
                     <div class="method-subsection declared-in-section">
                         <h4 class="method-subtitle">Declared In</h4>
-                        <code class="declared-in-ref">ESTLocationBuilder.h</code><br />
+                        <code class="declared-in-ref">ESTIndoorLocationManager.h</code><br />
                     </div>				
                     
                     

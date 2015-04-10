@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>ESTLocationBuilderSide Constants Reference</title>
+		<title>ESTIndoorErrorCode Constants Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">ESTLocationBuilderSide Constants Reference</h1>
+				<h1 class="hideInXcode">ESTIndoorErrorCode Constants Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -45,7 +45,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="ESTLocationBuilderSide Constants Reference" name="top"></a>
+				<a title="ESTIndoorErrorCode Constants Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -54,7 +54,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">ESTLocationBuilderSide Constants Reference</h1>
+						<h1 class="title title-header">ESTIndoorErrorCode Constants Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -62,7 +62,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ESTLocationBuilder.h</td>
+	<td class="specification-value">ESTIndoorLocationManager.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -74,11 +74,11 @@
 					
                     
                     
-                    <h3 class="subsubtitle method-title">ESTLocationBuilderSide</h3>
+                    <h3 class="subsubtitle method-title">ESTIndoorErrorCode</h3>
                     
 					
 					<div class="section section-overview">
-                        <p>Side of the boundary segment as seen from inside of the location.</p>
+                        <p>The possible errors returned during updating position.</p>
 					</div>
 					
 					
@@ -86,11 +86,13 @@
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_ENUM(int, ESTLocationBuilderSide ) {<br/>
+                        <code>typedef NS_ENUM(NSInteger, ESTIndoorErrorCode ) {<br/>
                             
-                            &nbsp;&nbsp; <a href="">ESTLocationBuilderLeftSide</a>,<br/>
+                            &nbsp;&nbsp; <a href="">ESTIndoorGenericError</a>,<br/>
                             
-                            &nbsp;&nbsp; <a href="">ESTLocationBuilderRightSide</a>,<br/>
+                            &nbsp;&nbsp; <a href="">ESTIndoorPositionOutsideLocationError</a>,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTIndoorMagnetometerInitializationError</a>,<br/>
                             
                             };</code>
                     
@@ -100,11 +102,11 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="ESTLocationBuilderLeftSide"></a><code>ESTLocationBuilderLeftSide</code></dt>
+                            <dt><a name="" title="ESTIndoorGenericError"></a><code>ESTIndoorGenericError</code></dt>
 <dd>
 
 
-<p>Left side of the boundary segment as seen from inside of the location.</p>
+<p>An unknown error occurred.</p>
 
 
 
@@ -112,16 +114,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">ESTLocationBuilder.h</code>.
+		Declared In <code class="declared-in-ref">ESTIndoorLocationManager.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="ESTLocationBuilderRightSide"></a><code>ESTLocationBuilderRightSide</code></dt>
+                            <dt><a name="" title="ESTIndoorPositionOutsideLocationError"></a><code>ESTIndoorPositionOutsideLocationError</code></dt>
 <dd>
 
 
-<p>Right side of the boundary segment as seen from inside of the location.</p>
+<p>Device is outside the location.</p>
 
 
 
@@ -129,7 +131,24 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">ESTLocationBuilder.h</code>.
+		Declared In <code class="declared-in-ref">ESTIndoorLocationManager.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTIndoorMagnetometerInitializationError"></a><code>ESTIndoorMagnetometerInitializationError</code></dt>
+<dd>
+
+
+<p>The device does not have mangetometer or there is a hardware problem with it.</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTIndoorLocationManager.h</code>.
 	</p>
 	
 </dd>
@@ -146,7 +165,7 @@
                     
                     <div class="method-subsection declared-in-section">
                         <h4 class="method-subtitle">Declared In</h4>
-                        <code class="declared-in-ref">ESTLocationBuilder.h</code><br />
+                        <code class="declared-in-ref">ESTIndoorLocationManager.h</code><br />
                     </div>				
                     
                     

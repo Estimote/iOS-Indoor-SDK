@@ -49,6 +49,8 @@
 	
 	<option value="//api/name/creationDate">&nbsp;&nbsp;&nbsp;&nbsp;creationDate</option>
 	
+	<option value="//api/name/identifier">&nbsp;&nbsp;&nbsp;&nbsp;identifier</option>
+	
 	<option value="//api/name/linearObjects">&nbsp;&nbsp;&nbsp;&nbsp;linearObjects</option>
 	
 	<option value="//api/name/name">&nbsp;&nbsp;&nbsp;&nbsp;name</option>
@@ -74,6 +76,8 @@
 	<option value="//api/name/containsPoint:">&nbsp;&nbsp;&nbsp;&nbsp;- containsPoint:</option>
 	
 	<option value="//api/name/containsPointWithX:y:">&nbsp;&nbsp;&nbsp;&nbsp;- containsPointWithX:y:</option>
+	
+	<option value="//api/name/description">&nbsp;&nbsp;&nbsp;&nbsp;- description</option>
 	
 	<option value="//api/name/hash">&nbsp;&nbsp;&nbsp;&nbsp;- hash</option>
 	
@@ -117,6 +121,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Identifying and Comparing Objects">Identifying and Comparing Objects</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Describing Objects">Describing Objects</a></span></li>
+	
 </ul></li>
 
 
@@ -134,6 +140,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/boundingBox">boundingBox</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/creationDate">creationDate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/identifier">identifier</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/linearObjects">linearObjects</a></span></li>
 	
@@ -162,6 +170,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/containsPoint:">containsPoint:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/containsPointWithX:y:">containsPointWithX:y:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/description">description</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hash">hash</a></span></li>
 	
@@ -236,6 +246,12 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 
 						<ul class="task-list">
 							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/identifier">&nbsp;&nbsp;identifier</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/name">&nbsp;&nbsp;name</a></code>
 	</span>
@@ -390,6 +406,20 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/hash">&ndash;&nbsp;hash</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Describing Objects" name="task_Describing Objects"></a>
+						<h3 class="subsubtitle task-title">Describing Objects</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/description">&ndash;&nbsp;description</a></code>
 	</span>
 	
 	
@@ -563,6 +593,42 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
     
 
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSDate *creationDate</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTLocation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/identifier" title="identifier"></a>
+	<h3 class="subsubtitle method-title">identifier</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Globally unique identifier of the location. Identifier is being set by server once location is persisted.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *identifier</code></div>
 
     
 	
@@ -929,6 +995,47 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>YES if given point is inside the location.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTLocation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/description" title="description"></a>
+	<h3 class="subsubtitle method-title">description</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a string representation of the location.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)description</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A string representation of the location.</p>
 	</div>
 	
 	
@@ -1339,7 +1446,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-03-17)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-04-10)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</span></p>
 						
