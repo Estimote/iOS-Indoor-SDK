@@ -3,11 +3,13 @@
 #import "ESTIndoorLocationViewController.h"
 #import "ESTIndoorLocationManager.h"
 #import "ESTIndoorLocationView.h"
+#import "ESTPositionView.h"
 
 @interface ESTIndoorLocationViewController () <ESTIndoorLocationManagerDelegate>
 
 @property (nonatomic, strong) ESTIndoorLocationManager *manager;
 @property (nonatomic, strong) ESTLocation *location;
+@property (nonatomic, strong) ESTPositionView *positionView;
 
 @end
 
@@ -30,7 +32,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     self.title = self.location.name;
 }
 
@@ -55,9 +56,11 @@
     
     [self.indoorLocationView drawLocation:self.location];
     
-    // You can change the avatar using positionImage property of ESTIndoorLocationView class.
-    // self.indoorLocationView.positionImage = [UIImage imageNamed:@"name_of_your_image"];
-    
+    // You can use positionView with set avatar to visualize accuracy circle.
+     self.positionView = [[ESTPositionView alloc] initWithImage:[UIImage imageNamed:@"navigation_guy"] location:self.location forViewWithBounds:self.indoorLocationView.bounds];
+     self.positionView.hidden = YES;
+     self.indoorLocationView.positionView = self.positionView;
+
     [self.manager startIndoorLocation:self.location];
 }
 
@@ -84,19 +87,31 @@
 
 - (void)indoorLocationManager:(ESTIndoorLocationManager *)manager
             didUpdatePosition:(ESTOrientedPoint *)position
+                 withAccuracy:(ESTPositionAccuracy)positionAccuracy
                    inLocation:(ESTLocation *)location
 {
+    self.positionView.hidden = NO;
     self.positionLabel.text = [NSString stringWithFormat:@"x: %.2f  y: %.2f   α: %.2f",
                                position.x,
                                position.y,
                                position.orientation];
-    
+
+    [self.positionView updateAccuracy:positionAccuracy];
     [self.indoorLocationView updatePosition:position];
 }
 
 - (void)indoorLocationManager:(ESTIndoorLocationManager *)manager didFailToUpdatePositionWithError:(NSError *)error
 {
-    self.positionLabel.text = @"It seems you are outside the location.";
+    self.positionView.hidden = YES;
+    
+    if (error.code == ESTIndoorPositionOutsideLocationError)
+    {
+        self.positionLabel.text = @"It seems you are not in this location.";
+    }
+    else if (error.code == ESTIndoorMagnetometerInitializationError)
+    {
+        self.positionLabel.text = @"It seems your magnetometer is not working.";
+    }
     NSLog(@"%@", error.localizedDescription);
 }
 

@@ -29,7 +29,7 @@
 		AC60633319C719A800D7D57B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC60633219C719A800D7D57B /* MessageUI.framework */; };
 		AC6BD58519CAE38500F5FDF2 /* ESTIndoorLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD58319CAE38500F5FDF2 /* ESTIndoorLocationViewController.m */; };
 		AC6BD58619CAE38500F5FDF2 /* ESTIndoorLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC6BD58419CAE38500F5FDF2 /* ESTIndoorLocationViewController.xib */; };
-		ACF1604B19CC373500C8A814 /* libEstimoteIndoorSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF1601419CC373500C8A814 /* libEstimoteIndoorSDK.a */; };
+		AC9591361AD7D08B00AD9BED /* libEstimoteIndoorSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF1601419CC373500C8A814 /* libEstimoteIndoorSDK.a */; };
 		ACF1604C19CC373500C8A814 /* 5a.mov in Resources */ = {isa = PBXBuildFile; fileRef = ACF1601619CC373500C8A814 /* 5a.mov */; };
 		ACF1604D19CC373500C8A814 /* 5b.mov in Resources */ = {isa = PBXBuildFile; fileRef = ACF1601719CC373500C8A814 /* 5b.mov */; };
 		ACF1604E19CC373500C8A814 /* 8a.mov in Resources */ = {isa = PBXBuildFile; fileRef = ACF1601819CC373500C8A814 /* 8a.mov */; };
@@ -98,6 +98,8 @@
 		AC6BD58219CAE38500F5FDF2 /* ESTIndoorLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTIndoorLocationViewController.h; sourceTree = "<group>"; };
 		AC6BD58319CAE38500F5FDF2 /* ESTIndoorLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTIndoorLocationViewController.m; sourceTree = "<group>"; };
 		AC6BD58419CAE38500F5FDF2 /* ESTIndoorLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTIndoorLocationViewController.xib; sourceTree = "<group>"; };
+		AC9591341AD7CF0300AD9BED /* ESTIndoorSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTIndoorSDK.h; sourceTree = "<group>"; };
+		AC9591351AD7CF0300AD9BED /* ESTPositionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTPositionView.h; sourceTree = "<group>"; };
 		ACF1600B19CC373500C8A814 /* ESTIndoorLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTIndoorLocationManager.h; sourceTree = "<group>"; };
 		ACF1600C19CC373500C8A814 /* ESTIndoorLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTIndoorLocationView.h; sourceTree = "<group>"; };
 		ACF1600D19CC373500C8A814 /* ESTLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTLocation.h; sourceTree = "<group>"; };
@@ -158,10 +160,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC9591361AD7D08B00AD9BED /* libEstimoteIndoorSDK.a in Frameworks */,
 				AC60633319C719A800D7D57B /* MessageUI.framework in Frameworks */,
 				AC60633119C7199E00D7D57B /* AudioToolbox.framework in Frameworks */,
 				AC60633019C7197900D7D57B /* MediaPlayer.framework in Frameworks */,
-				ACF1604B19CC373500C8A814 /* libEstimoteIndoorSDK.a in Frameworks */,
 				AC60632E19C7196500D7D57B /* CoreMotion.framework in Frameworks */,
 				AC60632C19C7196000D7D57B /* AVFoundation.framework in Frameworks */,
 				AC4A9FCE19C7129C00018F3E /* CoreLocation.framework in Frameworks */,
@@ -284,6 +286,8 @@
 		ACF1600A19CC373500C8A814 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				AC9591341AD7CF0300AD9BED /* ESTIndoorSDK.h */,
+				AC9591351AD7CF0300AD9BED /* ESTPositionView.h */,
 				ACF1600B19CC373500C8A814 /* ESTIndoorLocationManager.h */,
 				ACF1600C19CC373500C8A814 /* ESTIndoorLocationView.h */,
 				ACF1600D19CC373500C8A814 /* ESTLocation.h */,

@@ -24,6 +24,9 @@
 		AC958D0819C84C3A005BF90D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC958D0719C84C3A005BF90D /* SystemConfiguration.framework */; };
 		AC958D0A19C84C43005BF90D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC958D0919C84C43005BF90D /* Foundation.framework */; };
 		AC958D0C19C84C5C005BF90D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC958D0B19C84C5C005BF90D /* CoreGraphics.framework */; };
+		AC95913D1AD7F55200AD9BED /* ESTIndoorSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = AC95913A1AD7F55200AD9BED /* ESTIndoorSDK.h */; };
+		AC95913E1AD7F55200AD9BED /* ESTPositionView.h in Headers */ = {isa = PBXBuildFile; fileRef = AC95913B1AD7F55200AD9BED /* ESTPositionView.h */; };
+		AC95913F1AD7FF6C00AD9BED /* libEstimoteIndoorSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF1608219CC455900C8A814 /* libEstimoteIndoorSDK.a */; };
 		ACA807F019C965F100662B31 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA807EE19C965F100662B31 /* LocationViewController.swift */; };
 		ACA807F119C965F100662B31 /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACA807EF19C965F100662B31 /* LocationViewController.xib */; };
 		ACF1600019CC371F00C8A814 /* ESTBeacon.h in Headers */ = {isa = PBXBuildFile; fileRef = ACF15FC419CC371F00C8A814 /* ESTBeacon.h */; };
@@ -44,7 +47,6 @@
 		ACF160B419CC455900C8A814 /* ESTOrientedPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = ACF1607F19CC455900C8A814 /* ESTOrientedPoint.h */; };
 		ACF160B519CC455900C8A814 /* ESTPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = ACF1608019CC455900C8A814 /* ESTPoint.h */; };
 		ACF160B619CC455900C8A814 /* ESTPositionedBeacon.h in Headers */ = {isa = PBXBuildFile; fileRef = ACF1608119CC455900C8A814 /* ESTPositionedBeacon.h */; };
-		ACF160B719CC455900C8A814 /* libEstimoteIndoorSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF1608219CC455900C8A814 /* libEstimoteIndoorSDK.a */; };
 		ACF160B819CC455900C8A814 /* 5a.mov in Resources */ = {isa = PBXBuildFile; fileRef = ACF1608419CC455900C8A814 /* 5a.mov */; };
 		ACF160B919CC455900C8A814 /* 5b.mov in Resources */ = {isa = PBXBuildFile; fileRef = ACF1608519CC455900C8A814 /* 5b.mov */; };
 		ACF160BA19CC455900C8A814 /* 8a.mov in Resources */ = {isa = PBXBuildFile; fileRef = ACF1608619CC455900C8A814 /* 8a.mov */; };
@@ -102,6 +104,8 @@
 		AC958D0719C84C3A005BF90D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AC958D0919C84C43005BF90D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AC958D0B19C84C5C005BF90D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AC95913A1AD7F55200AD9BED /* ESTIndoorSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTIndoorSDK.h; sourceTree = "<group>"; };
+		AC95913B1AD7F55200AD9BED /* ESTPositionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTPositionView.h; sourceTree = "<group>"; };
 		ACA807EE19C965F100662B31 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		ACA807EF19C965F100662B31 /* LocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
 		ACF15FC419CC371F00C8A814 /* ESTBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeacon.h; sourceTree = "<group>"; };
@@ -164,10 +168,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC95913F1AD7FF6C00AD9BED /* libEstimoteIndoorSDK.a in Frameworks */,
 				AC958D0C19C84C5C005BF90D /* CoreGraphics.framework in Frameworks */,
 				AC958D0A19C84C43005BF90D /* Foundation.framework in Frameworks */,
 				AC958D0819C84C3A005BF90D /* SystemConfiguration.framework in Frameworks */,
-				ACF160B719CC455900C8A814 /* libEstimoteIndoorSDK.a in Frameworks */,
 				AC958D0619C84C1F005BF90D /* CoreBluetooth.framework in Frameworks */,
 				AC958D0419C84C1A005BF90D /* CoreLocation.framework in Frameworks */,
 				ACF1600719CC371F00C8A814 /* libEstimoteSDK.a in Frameworks */,
@@ -275,6 +279,8 @@
 		ACF1607819CC455900C8A814 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				AC95913A1AD7F55200AD9BED /* ESTIndoorSDK.h */,
+				AC95913B1AD7F55200AD9BED /* ESTPositionView.h */,
 				ACF1607919CC455900C8A814 /* ESTIndoorLocationManager.h */,
 				ACF1607A19CC455900C8A814 /* ESTIndoorLocationView.h */,
 				ACF1607B19CC455900C8A814 /* ESTLocation.h */,
@@ -344,6 +350,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC95913E1AD7F55200AD9BED /* ESTPositionView.h in Headers */,
 				ACF1600419CC371F00C8A814 /* ESTBeaconManager.h in Headers */,
 				ACF1600319CC371F00C8A814 /* ESTBeaconFirmwareVO.h in Headers */,
 				ACF160B219CC455900C8A814 /* ESTLocationLinearObject.h in Headers */,
@@ -351,6 +358,7 @@
 				ACF160B419CC455900C8A814 /* ESTOrientedPoint.h in Headers */,
 				ACF160AE19CC455900C8A814 /* ESTIndoorLocationManager.h in Headers */,
 				ACF160B119CC455900C8A814 /* ESTLocationBuilder.h in Headers */,
+				AC95913D1AD7F55200AD9BED /* ESTIndoorSDK.h in Headers */,
 				ACF160B519CC455900C8A814 /* ESTPoint.h in Headers */,
 				ACF1600519CC371F00C8A814 /* ESTBeaconRegion.h in Headers */,
 				ACF160AF19CC455900C8A814 /* ESTIndoorLocationView.h in Headers */,
