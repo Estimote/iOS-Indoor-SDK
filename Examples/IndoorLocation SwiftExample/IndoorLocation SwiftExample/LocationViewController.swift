@@ -66,7 +66,7 @@ class LocationViewController: UIViewController, ESTIndoorLocationManagerDelegate
         self.positionLabel.text = NSString(format: "x: %.2f   y: %.2f    α: %.2f",
             position.x,
             position.y,
-            position.orientation)
+            position.orientation) as String
 
         self.positionView?.updateAccuracy(accuracy)
         self.indoorLocationView.updatePosition(position)

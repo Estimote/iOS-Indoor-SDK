@@ -39,7 +39,7 @@ class MenuViewController: UIViewController, AuthorizationViewControllerDelegate 
         let dictionaryLocationRepresentation:NSDictionary? = NSUserDefaults.standardUserDefaults().objectForKey(self.kLastCreateLocationKey) as? NSDictionary
         
         if let dict = dictionaryLocationRepresentation {
-            let location = ESTLocation(fromDictionary: dictionaryLocationRepresentation)
+            let location = ESTLocation(fromDictionary: dict as [NSObject : AnyObject])
             var locationViewController = LocationViewController(nibName: "LocationViewController", bundle: nil)
             locationViewController.location = location
             self.navigationController?.pushViewController(locationViewController, animated: true)
@@ -53,7 +53,7 @@ class MenuViewController: UIViewController, AuthorizationViewControllerDelegate 
     @IBAction func loadLocationFromJSON() {
         let bundle = NSBundle.mainBundle()
         let path = bundle.pathForResource("location", ofType: "json")
-        let content = NSString(contentsOfFile: path!, encoding: NSUTF8StringEncoding, error: nil) as String
+        let content = NSString(contentsOfFile: path!, encoding: NSUTF8StringEncoding, error: nil) as! String
         
         let location = ESTLocationBuilder.parseFromJSON(content)
         
