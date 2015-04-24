@@ -81,9 +81,9 @@
 
 
 /**
-* Returns a new oriented point object based on the given oriented point and orientation.
+* Returns a new oriented point object based on the given point and orientation.
 *
-* @param point An oriented point.
+* @param point A point.
 * @param orientation Orientation of the point.
 * @return An oriented point initialized with (point.x, point.y, orientation).
 */

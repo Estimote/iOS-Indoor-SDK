@@ -1,3 +1,7 @@
+## 1.4.0 (April, 23, 2015)
+- If you're outside a mapped location, the app will detect that much more quickly.
+- If your position is off, we’ll recover it much faster when you’re close to the beacons.
+
 ## 1.3.0 (April, 10, 2015)
  - Locations can be stored in the cloud.
  - We are now providing accuracy of determined position. IndoorLocationManager delegate method `indoorLocationManager:didUpdatePosition:inLocation:` is now deprecated. Instead of it, use `indoorLocationManager:didUpdatePosition:withAccuracy:inLocation:`. `ESTPositionView.h` was added to provide example usage of determined position accuracy.
