@@ -242,4 +242,25 @@ Please remember that in order to have any of these methods working you need to c
 - (void)fetchUserLocationsWithSuccess:(ESTIndoorCloudSuccess)success
                               failure:(ESTIndoorCloudFailure)failure;
 
+/**
+ * Fetches nearby public locations from cloud.
+ *
+ * @param success Success callback. Invoked after location from cloud are fetched. Contains array of locations.
+ * @param failure Failure callback. Contains error that occurred.
+ */
+- (void)fetchNearbyPublicLocationsWithSuccess:(ESTIndoorCloudSuccess)success
+                                failure:(ESTIndoorCloudFailure)failure;
+
+/**
+ * Fetches location of specified identifier from cloud.
+ *
+ * @param locationIdentifier Identifier of given public location.
+ * @param success Success callback. Invoked after location from cloud is fetched. Contains location.
+ * @param failure Failure callback. Contains error that occurred.
+ */
+- (void)fetchLocationByIdentifier:(NSString *)locationIdentifier
+                      withSuccess:(ESTIndoorCloudSuccess)success
+                          failure:(ESTIndoorCloudFailure)failure;
+
+
 @end

@@ -209,7 +209,9 @@ Once you are using ```ESTIndoorLocationManager``` you can manage locations for t
 
 - store a new location
 - remove a location
-- fetch all locations
+- fetch user's locations
+- fetch nearby public locations 
+- fetch single location by given identifier (yours or public)
 
 Please note that in order to have these methods working you need to be authenticated in Estimote Cloud. To do that you have to call -[ESTConfig setupAppID:andAppToken:] first.
 

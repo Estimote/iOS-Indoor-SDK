@@ -163,7 +163,7 @@ IB_DESIGNABLE
 /**
  * Calculates location X coordinate (in meters) to drawn location X coordinate.
  *
- * @param realX X coordinate with regards to room (in meters)
+ * @param realX X coordinate with regards to room (in meters).
  *
  * @return X coordinate with regards to drawn location in this view.
  */
@@ -172,10 +172,28 @@ IB_DESIGNABLE
 /**
  * Calculates location Y coordinate (in meters) to drawn location Y coordinate.
  *
- * @param realY Y coordinate with regards to room (in meters)
+ * @param realY Y coordinate with regards to room (in meters).
  *
  * @return Y coordinate with regards to drawn location in this view.
  */
 - (CGFloat)calculatePictureCoordinateForRealY:(double)realY;
+
+/**
+ * Calculates drawn location X coordinate to location coordinate (in meters).
+ *
+ * @param pictureX X coordinate with regards to drawn location in this view.
+ *
+ * @return X coordinate with regards to room (in meters).
+ */
+- (CGFloat)calculateRealCoordinateForPictureX:(double)pictureX;
+
+/**
+ * Calculates drawn location Y coordinate to location coordinate (in meters).
+ *
+ * @param pictureX Y coordinate with regards to drawn location in this view.
+ *
+ * @return Y coordinate with regards to room (in meters).
+ */
+- (CGFloat)calculateRealCoordinateForPictureY:(double)pictureY;
 
 @end

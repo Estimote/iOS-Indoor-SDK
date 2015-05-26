@@ -42,7 +42,7 @@ in the same order as the points. There are following 4 segments: [(0,0), (0,5)],
 
 The next step is to place beacons, doors on the boundary segments of the location:
 
-    [locationBuilder addBeaconIdentifiedByMac:@"MAC1"
+    [locationBuilder addBeaconIdentifiedByMac:@"63d4819e6a1d"
                        atBoundarySegmentIndex:0
                                    inDistance:2
                                      fromSide:ESTLocationBuilderLeftSide];
@@ -78,7 +78,7 @@ The next step is to place beacons, doors on the boundary segments of the locatio
  * Places a beacon on the boundary segment.
  * Boundary segments were created in the same order as points were added.
  *
- * @param macAddress MAC address of the beacon.
+ * @param macAddress MAC address of the beacon (lowercase, no colons, e.g. "63d4819e6a1d").
  * @param boundarySegmentIndex Index of the boundary segment.
  * @param distance Distance from the beacon to the side of the boundary segment.
  * @param side Side of the boundary segment as seen from inside of the location.

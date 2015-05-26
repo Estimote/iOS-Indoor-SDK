@@ -1,3 +1,8 @@
+## 1.5.0 (May, 26, 2015)
+- Added methods for fetching nearby public locations from Estimote Cloud. You can also fetch a single location (your or public) from the cloud by its identifier. For example, if you want to get your hands on the “living-room”, you can now do so without fetching all the locations and filtering the array manually.
+- It is now possible to convert the picture coordinates (as seen on the ESTIndoorLocationView, e.g. x=110px, y=50px) to real coordinates (e.g. x=2.2m, y=1m).
+- ESTLocationBuilder is now more robust: it provides meaningful errors should something go wrong creating a location.
+
 ## 1.4.0 (April, 23, 2015)
 - If you're outside a mapped location, the app will detect that much more quickly.
 - If your position is off, we’ll recover it much faster when you’re close to the beacons.
