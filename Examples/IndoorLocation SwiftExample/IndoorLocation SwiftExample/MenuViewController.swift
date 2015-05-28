@@ -14,6 +14,10 @@ class MenuViewController: UIViewController, AuthorizationViewControllerDelegate 
             
             if let newLocation = location {
                 NSUserDefaults.standardUserDefaults().setObject(location.toDictionary(), forKey: self.kLastCreateLocationKey)
+
+                var manager = ESTIndoorLocationManager()
+                manager.addNewLocation(newLocation, success: { (object) in NSLog("%@", newLocation.name) }, failure: { (error: NSError!) in NSLog("Error: %@", error) })
+                
                 weakSelf!.loadPreviousLocation()
             }
         }
@@ -33,6 +37,24 @@ class MenuViewController: UIViewController, AuthorizationViewControllerDelegate 
         } else {
             self.showLocationSetup()
         }
+    }
+
+    @IBAction func viewListOfLocations() {
+        if !ESTConfig.isAuthorized() {
+            var authorizationViewController:AuthorizationViewController = AuthorizationViewController()
+            authorizationViewController.delegate = self
+            
+            self.presentViewController(UINavigationController(rootViewController: authorizationViewController), animated: true, completion: nil)
+        } else {
+            self.showListOfLocations()
+        }
+    }
+    
+    func showListOfLocations() {
+        weak var weakSelf:MenuViewController? = self
+        var manager  = ESTIndoorLocationManager()
+        var listView = ListViewController(nibName: "ListViewController", bundle: nil)
+        self.navigationController?.pushViewController(listView, animated: true)
     }
     
     @IBAction func loadPreviousLocation() {
@@ -68,7 +90,6 @@ class MenuViewController: UIViewController, AuthorizationViewControllerDelegate 
             
             weak var weakSelf:MenuViewController? = self
             dispatch_after(1, dispatch_get_main_queue(), {
-                weakSelf!.showLocationSetup()
             })
         }
     }

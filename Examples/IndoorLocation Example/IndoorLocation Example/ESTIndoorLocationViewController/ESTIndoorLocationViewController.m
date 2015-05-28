@@ -57,9 +57,11 @@
     [self.indoorLocationView drawLocation:self.location];
     
     // You can use positionView with set avatar to visualize accuracy circle.
-     self.positionView = [[ESTPositionView alloc] initWithImage:[UIImage imageNamed:@"navigation_guy"] location:self.location forViewWithBounds:self.indoorLocationView.bounds];
-     self.positionView.hidden = YES;
-     self.indoorLocationView.positionView = self.positionView;
+    self.positionView = [[ESTPositionView alloc] initWithImage:[UIImage imageNamed:@"navigation_guy"] location:self.location forViewWithBounds:self.indoorLocationView.bounds];
+    self.positionView.hidden = YES;
+    self.indoorLocationView.positionView = self.positionView;
+    
+    self.positionLabel.hidden = YES;
 
     [self.manager startIndoorLocation:self.location];
 }
@@ -91,6 +93,7 @@
                    inLocation:(ESTLocation *)location
 {
     self.positionView.hidden = NO;
+    self.positionLabel.hidden = NO;
     self.positionLabel.text = [NSString stringWithFormat:@"x: %.2f  y: %.2f   α: %.2f",
                                position.x,
                                position.y,
@@ -103,6 +106,7 @@
 - (void)indoorLocationManager:(ESTIndoorLocationManager *)manager didFailToUpdatePositionWithError:(NSError *)error
 {
     self.positionView.hidden = YES;
+    self.positionLabel.hidden = NO;
     
     if (error.code == ESTIndoorPositionOutsideLocationError)
     {

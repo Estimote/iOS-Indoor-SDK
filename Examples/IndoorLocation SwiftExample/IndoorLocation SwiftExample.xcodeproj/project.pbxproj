@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AC227C7F19C863C900A58662 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC227C7E19C863C900A58662 /* AuthorizationViewController.swift */; };
 		AC239C9519C9C768003B46F9 /* location.json in Resources */ = {isa = PBXBuildFile; fileRef = AC239C9419C9C768003B46F9 /* location.json */; };
+		AC7CF5A01B14555E003105B1 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7CF59E1B14555E003105B1 /* ListViewController.swift */; };
+		AC7CF5A11B14555E003105B1 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC7CF59F1B14555E003105B1 /* ListViewController.xib */; };
 		AC958C6319C83FAF005BF90D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC958C6219C83FAF005BF90D /* AppDelegate.swift */; };
 		AC958C6519C83FAF005BF90D /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC958C6419C83FAF005BF90D /* MenuViewController.swift */; };
 		AC958C6819C83FAF005BF90D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC958C6619C83FAF005BF90D /* Main.storyboard */; };
@@ -26,7 +28,6 @@
 		AC958D0C19C84C5C005BF90D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC958D0B19C84C5C005BF90D /* CoreGraphics.framework */; };
 		AC95913D1AD7F55200AD9BED /* ESTIndoorSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = AC95913A1AD7F55200AD9BED /* ESTIndoorSDK.h */; };
 		AC95913E1AD7F55200AD9BED /* ESTPositionView.h in Headers */ = {isa = PBXBuildFile; fileRef = AC95913B1AD7F55200AD9BED /* ESTPositionView.h */; };
-		AC95913F1AD7FF6C00AD9BED /* libEstimoteIndoorSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF1608219CC455900C8A814 /* libEstimoteIndoorSDK.a */; };
 		ACA807F019C965F100662B31 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA807EE19C965F100662B31 /* LocationViewController.swift */; };
 		ACA807F119C965F100662B31 /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACA807EF19C965F100662B31 /* LocationViewController.xib */; };
 		ACF1600019CC371F00C8A814 /* ESTBeacon.h in Headers */ = {isa = PBXBuildFile; fileRef = ACF15FC419CC371F00C8A814 /* ESTBeacon.h */; };
@@ -36,8 +37,6 @@
 		ACF1600419CC371F00C8A814 /* ESTBeaconManager.h in Headers */ = {isa = PBXBuildFile; fileRef = ACF15FC819CC371F00C8A814 /* ESTBeaconManager.h */; };
 		ACF1600519CC371F00C8A814 /* ESTBeaconRegion.h in Headers */ = {isa = PBXBuildFile; fileRef = ACF15FC919CC371F00C8A814 /* ESTBeaconRegion.h */; };
 		ACF1600619CC371F00C8A814 /* ESTBeaconVO.h in Headers */ = {isa = PBXBuildFile; fileRef = ACF15FCA19CC371F00C8A814 /* ESTBeaconVO.h */; };
-		ACF1600719CC371F00C8A814 /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF15FCB19CC371F00C8A814 /* libEstimoteSDK.a */; };
-		ACF1600819CC371F00C8A814 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = ACF15FCC19CC371F00C8A814 /* README.md */; };
 		ACF160AE19CC455900C8A814 /* ESTIndoorLocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = ACF1607919CC455900C8A814 /* ESTIndoorLocationManager.h */; };
 		ACF160AF19CC455900C8A814 /* ESTIndoorLocationView.h in Headers */ = {isa = PBXBuildFile; fileRef = ACF1607A19CC455900C8A814 /* ESTIndoorLocationView.h */; };
 		ACF160B019CC455900C8A814 /* ESTLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = ACF1607B19CC455900C8A814 /* ESTLocation.h */; };
@@ -81,12 +80,18 @@
 		ACF160DE19CC455900C8A814 /* welcome@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF160AB19CC455900C8A814 /* welcome@2x.png */; };
 		ACF160DF19CC455900C8A814 /* SixBeaconsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACF160AC19CC455900C8A814 /* SixBeaconsView.xib */; };
 		ACF160E019CC455900C8A814 /* wall_bump.wav in Resources */ = {isa = PBXBuildFile; fileRef = ACF160AD19CC455900C8A814 /* wall_bump.wav */; };
+		ACFC4DBB1B0F248B001891A3 /* libEstimoteIndoorSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF1608219CC455900C8A814 /* libEstimoteIndoorSDK.a */; };
+		ACFC4DBC1B0F2498001891A3 /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF15FCB19CC371F00C8A814 /* libEstimoteSDK.a */; };
+		ACFC4DC51B1311A8001891A3 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFC4DC31B1311A8001891A3 /* LocationCell.swift */; };
+		ACFC4DC61B1311A8001891A3 /* LocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACFC4DC41B1311A8001891A3 /* LocationCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AC227C6319C85CB500A58662 /* IndoorLocation SwiftExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IndoorLocation SwiftExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		AC227C7E19C863C900A58662 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		AC239C9419C9C768003B46F9 /* location.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = location.json; sourceTree = "<group>"; };
+		AC7CF59E1B14555E003105B1 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		AC7CF59F1B14555E003105B1 /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
 		AC958C5D19C83FAF005BF90D /* IndoorLocation SwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IndoorLocation SwiftExample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC958C6119C83FAF005BF90D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC958C6219C83FAF005BF90D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +166,8 @@
 		ACF160AB19CC455900C8A814 /* welcome@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "welcome@2x.png"; sourceTree = "<group>"; };
 		ACF160AC19CC455900C8A814 /* SixBeaconsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SixBeaconsView.xib; sourceTree = "<group>"; };
 		ACF160AD19CC455900C8A814 /* wall_bump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wall_bump.wav; sourceTree = "<group>"; };
+		ACFC4DC31B1311A8001891A3 /* LocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		ACFC4DC41B1311A8001891A3 /* LocationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,13 +175,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC95913F1AD7FF6C00AD9BED /* libEstimoteIndoorSDK.a in Frameworks */,
+				ACFC4DBC1B0F2498001891A3 /* libEstimoteSDK.a in Frameworks */,
+				ACFC4DBB1B0F248B001891A3 /* libEstimoteIndoorSDK.a in Frameworks */,
 				AC958D0C19C84C5C005BF90D /* CoreGraphics.framework in Frameworks */,
 				AC958D0A19C84C43005BF90D /* Foundation.framework in Frameworks */,
 				AC958D0819C84C3A005BF90D /* SystemConfiguration.framework in Frameworks */,
 				AC958D0619C84C1F005BF90D /* CoreBluetooth.framework in Frameworks */,
 				AC958D0419C84C1A005BF90D /* CoreLocation.framework in Frameworks */,
-				ACF1600719CC371F00C8A814 /* libEstimoteSDK.a in Frameworks */,
 				AC958D0219C84C14005BF90D /* AudioToolbox.framework in Frameworks */,
 				AC958D0019C84C0F005BF90D /* AVFoundation.framework in Frameworks */,
 				AC958CFE19C84C08005BF90D /* CoreMotion.framework in Frameworks */,
@@ -225,6 +232,10 @@
 				AC958C6B19C83FAF005BF90D /* LaunchScreen.xib */,
 				AC227C6319C85CB500A58662 /* IndoorLocation SwiftExample-Bridging-Header.h */,
 				AC958C6019C83FAF005BF90D /* Supporting Files */,
+				ACFC4DC31B1311A8001891A3 /* LocationCell.swift */,
+				ACFC4DC41B1311A8001891A3 /* LocationCell.xib */,
+				AC7CF59E1B14555E003105B1 /* ListViewController.swift */,
+				AC7CF59F1B14555E003105B1 /* ListViewController.xib */,
 			);
 			path = "IndoorLocation SwiftExample";
 			sourceTree = "<group>";
@@ -451,9 +462,11 @@
 				ACF160CA19CC455900C8A814 /* beaconicy@2x.png in Resources */,
 				ACF160C319CC455900C8A814 /* beacon_grey@2x.png in Resources */,
 				ACF160BF19CC455900C8A814 /* 8a_first_frame@2x.png in Resources */,
+				AC7CF5A11B14555E003105B1 /* ListViewController.xib in Resources */,
 				ACF160C519CC455900C8A814 /* beaconBlueberrySmall.png in Resources */,
 				ACF160C919CC455900C8A814 /* beaconGreySmall@2x.png in Resources */,
 				ACF160C619CC455900C8A814 /* beaconBlueberrySmall@2x.png in Resources */,
+				ACFC4DC61B1311A8001891A3 /* LocationCell.xib in Resources */,
 				ACA807F119C965F100662B31 /* LocationViewController.xib in Resources */,
 				AC958C6A19C83FAF005BF90D /* Images.xcassets in Resources */,
 				ACF160CE19CC455900C8A814 /* beaconMintSmall.png in Resources */,
@@ -479,8 +492,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC227C7F19C863C900A58662 /* AuthorizationViewController.swift in Sources */,
+				AC7CF5A01B14555E003105B1 /* ListViewController.swift in Sources */,
 				AC958C6519C83FAF005BF90D /* MenuViewController.swift in Sources */,
-				ACF1600819CC371F00C8A814 /* README.md in Sources */,
+				ACFC4DC51B1311A8001891A3 /* LocationCell.swift in Sources */,
 				AC958C6319C83FAF005BF90D /* AppDelegate.swift in Sources */,
 				ACA807F019C965F100662B31 /* LocationViewController.swift in Sources */,
 			);
