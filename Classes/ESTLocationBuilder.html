@@ -1,116 +1,157 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<head>
-	<meta charset="utf-8">
-
-	<title>ESTLocationBuilder Class Reference</title>
-
-	<link rel="stylesheet" href="../css/style.css">
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
-</head>
-<body class="appledoc">
-	<header>
-		<div class="container" class="hide-in-xcode">
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>ESTLocationBuilder Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.2.1 (build 1333)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">Estimote Indoor Location SDK </a></h1>
+				<a id="developerHome" href="../index.html">Estimote</a>
+			</div>
 			
-			<h1 id="library-title">
-				<a href="../index.html">Estimote Indoor Location SDK </a>
-			</h1>
-
-			<p id="developer-home">
-				<a href="../index.html">Estimote</a>
-			</p>
-			
-		</div>
-	</header>
-
-	<aside>
-		<div class="container">
-			<nav>
-				<ul id="header-buttons" role="toolbar">
-					<li><a href="../index.html">Index</a></li>
-<li><a href="../hierarchy.html">Hierarchy</a></li>
-
-					<li id="on-this-page" role="navigation">
-						<label>
-							On This Page
-
-							<div class="chevron">
-								<div class="chevy chevron-left"></div>
-								<div class="chevy chevron-right"></div>
-							</div>
-
-							<select id="jump-to">
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">ESTLocationBuilder Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
 	
 	<option value="overview">Overview</option>
 	
-
+	
 	
 	
 	<option value="tasks">Tasks</option>
 	
 	
-
 	
 	
-
 	
-	<optgroup label="Class Methods">
-		
-		<option value="//api/name/parseFromJSON:">+ parseFromJSON:</option>
-		
-	</optgroup>
 	
-
 	
-	<optgroup label="Instance Methods">
-		
-		<option value="//api/name/addBeaconIdentifiedByMac:atBoundarySegmentIndex:inDistance:fromSide:">- addBeaconIdentifiedByMac:atBoundarySegmentIndex:inDistance:fromSide:</option>
-		
-		<option value="//api/name/addDoorsWithLength:atBoundarySegmentIndex:inDistance:fromSide:">- addDoorsWithLength:atBoundarySegmentIndex:inDistance:fromSide:</option>
-		
-		<option value="//api/name/addWindowWithLength:atBoundarySegmentIndex:inDistance:fromSide:">- addWindowWithLength:atBoundarySegmentIndex:inDistance:fromSide:</option>
-		
-		<option value="//api/name/build">- build</option>
-		
-		<option value="//api/name/setLocationBoundaryPoints:">- setLocationBoundaryPoints:</option>
-		
-		<option value="//api/name/setLocationCreationDate:">- setLocationCreationDate:</option>
-		
-		<option value="//api/name/setLocationName:">- setLocationName:</option>
-		
-		<option value="//api/name/setLocationOrientation:">- setLocationOrientation:</option>
-		
-	</optgroup>
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/parseFromJSON:">&nbsp;&nbsp;&nbsp;&nbsp;+ parseFromJSON:</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/addBeaconIdentifiedByMac:atBoundarySegmentIndex:inDistance:fromSide:">&nbsp;&nbsp;&nbsp;&nbsp;- addBeaconIdentifiedByMac:atBoundarySegmentIndex:inDistance:fromSide:</option>
+	
+	<option value="//api/name/addDoorsWithLength:atBoundarySegmentIndex:inDistance:fromSide:">&nbsp;&nbsp;&nbsp;&nbsp;- addDoorsWithLength:atBoundarySegmentIndex:inDistance:fromSide:</option>
+	
+	<option value="//api/name/addWindowWithLength:atBoundarySegmentIndex:inDistance:fromSide:">&nbsp;&nbsp;&nbsp;&nbsp;- addWindowWithLength:atBoundarySegmentIndex:inDistance:fromSide:</option>
+	
+	<option value="//api/name/build">&nbsp;&nbsp;&nbsp;&nbsp;- build</option>
+	
+	<option value="//api/name/setLocationBoundaryPoints:">&nbsp;&nbsp;&nbsp;&nbsp;- setLocationBoundaryPoints:</option>
+	
+	<option value="//api/name/setLocationCreationDate:">&nbsp;&nbsp;&nbsp;&nbsp;- setLocationCreationDate:</option>
+	
+	<option value="//api/name/setLocationName:">&nbsp;&nbsp;&nbsp;&nbsp;- setLocationName:</option>
+	
+	<option value="//api/name/setLocationOrientation:">&nbsp;&nbsp;&nbsp;&nbsp;- setLocationOrientation:</option>
+	
 	
 	
 </select>
-						</label>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</aside>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
 
-	<article>
-		<div id="overview_contents" class="container">
-			<div id="content">
-				<main role="main">
-					<h1 class="title">ESTLocationBuilder Class Reference</h1>
 
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Preparing shape of the location">Preparing shape of the location</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Adding details of the location">Adding details of the location</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Building &amp; Importing Location">Building &amp; Importing Location</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseFromJSON:">parseFromJSON:</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addBeaconIdentifiedByMac:atBoundarySegmentIndex:inDistance:fromSide:">addBeaconIdentifiedByMac:atBoundarySegmentIndex:inDistance:fromSide:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addDoorsWithLength:atBoundarySegmentIndex:inDistance:fromSide:">addDoorsWithLength:atBoundarySegmentIndex:inDistance:fromSide:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addWindowWithLength:atBoundarySegmentIndex:inDistance:fromSide:">addWindowWithLength:atBoundarySegmentIndex:inDistance:fromSide:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/build">build</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setLocationBoundaryPoints:">setLocationBoundaryPoints:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setLocationCreationDate:">setLocationCreationDate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setLocationName:">setLocationName:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setLocationOrientation:">setLocationOrientation:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="ESTLocationBuilder Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">ESTLocationBuilder Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<th>Inherits from</th>
-	<td>NSObject</td>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
 </tr><tr>
-	<th>Declared in</th>
-	<td>ESTLocationBuilder.h<br />ESTLocationBuilder.m</td>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">ESTLocationBuilder.h<br />ESTLocationBuilder.m</td>
 </tr>
 						</tbody></table></div>
 					
-
+                    
                     
 					
 					<div class="section section-overview">
@@ -145,7 +186,7 @@ in the same order as the points. There are following 4 segments: [(0,0), (0,5)],
 
 <p>The next step is to place beacons, doors on the boundary segments of the location:</p>
 
-<pre><code>[locationBuilder addBeaconIdentifiedByMac:@"63d4819e6a1d"
+<pre><code>[locationBuilder addBeaconIdentifiedByMac:@"MAC1"
                    atBoundarySegmentIndex:0
                                inDistance:2
                                  fromSide:ESTLocationBuilderLeftSide];
@@ -153,587 +194,696 @@ in the same order as the points. There are following 4 segments: [(0,0), (0,5)],
 					</div>
 					
 					
-
+					
 					
 					
 					<div class="section section-tasks">
 						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
-
+						
 						<a title="Preparing shape of the location" name="task_Preparing shape of the location"></a>
-						<h2 class="task-title">Preparing shape of the location</h2>
+						<h3 class="subsubtitle task-title">Preparing shape of the location</h3>
 
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/setLocationBoundaryPoints:" title="setLocationBoundaryPoints:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/setLocationBoundaryPoints:">&ndash;&nbsp;setLocationBoundaryPoints:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Adds a list of boundary points of location. Can be added clockwise or counter clockwise.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)setLocationBoundaryPoints:(NSArray *)<em>boundaryPoints</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>boundaryPoints</code></th>
-						<td><p>List of boundary points (<a href="../Classes/ESTPoint.html"><code>ESTPoint</code></a>) that defines a location.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">ESTLocationBuilder.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/setLocationOrientation:" title="setLocationOrientation:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/setLocationOrientation:">&ndash;&nbsp;setLocationOrientation:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Sets the <a href="#//api/name/orientation">orientation</a> of the room with respect to the magnetic north. Counted clockwise in degrees.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)setLocationOrientation:(double)<em>orientation</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>orientation</code></th>
-						<td><p>Location <a href="#//api/name/orientation">orientation</a> in degrees.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">ESTLocationBuilder.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div>
-						</div>
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setLocationBoundaryPoints:">&ndash;&nbsp;setLocationBoundaryPoints:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setLocationOrientation:">&ndash;&nbsp;setLocationOrientation:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
 						
-
+						
 						<a title="Adding details of the location" name="task_Adding details of the location"></a>
-						<h2 class="task-title">Adding details of the location</h2>
+						<h3 class="subsubtitle task-title">Adding details of the location</h3>
 
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/addBeaconIdentifiedByMac:atBoundarySegmentIndex:inDistance:fromSide:" title="addBeaconIdentifiedByMac:atBoundarySegmentIndex:inDistance:fromSide:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/addBeaconIdentifiedByMac:atBoundarySegmentIndex:inDistance:fromSide:">&ndash;&nbsp;addBeaconIdentifiedByMac:atBoundarySegmentIndex:inDistance:fromSide:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Places a beacon on the boundary segment.
-Boundary segments were created in the same order as points were added.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)addBeaconIdentifiedByMac:(NSString *)<em>macAddress</em> atBoundarySegmentIndex:(NSUInteger)<em>boundarySegmentIndex</em> inDistance:(double)<em>distance</em> fromSide:(ESTLocationBuilderSide)<em>side</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>macAddress</code></th>
-						<td><p>MAC address of the beacon (lowercase, no colons, e.g. &ldquo;63d4819e6a1d&rdquo;).</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>boundarySegmentIndex</code></th>
-						<td><p>Index of the boundary segment.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>distance</code></th>
-						<td><p>Distance from the beacon to the side of the boundary segment.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>side</code></th>
-						<td><p>Side of the boundary segment as seen from inside of the location.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">ESTLocationBuilder.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/addDoorsWithLength:atBoundarySegmentIndex:inDistance:fromSide:" title="addDoorsWithLength:atBoundarySegmentIndex:inDistance:fromSide:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/addDoorsWithLength:atBoundarySegmentIndex:inDistance:fromSide:">&ndash;&nbsp;addDoorsWithLength:atBoundarySegmentIndex:inDistance:fromSide:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Places a door on the boundary segment.
-Boundary segments were created in the same order as points were added.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)addDoorsWithLength:(double)<em>length</em> atBoundarySegmentIndex:(NSUInteger)<em>boundarySegmentIndex</em> inDistance:(double)<em>distance</em> fromSide:(ESTLocationBuilderSide)<em>side</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>length</code></th>
-						<td><p>Length of the door.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>boundarySegmentIndex</code></th>
-						<td><p>Index of the boundary segment.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>distance</code></th>
-						<td><p>Distance from the door to the side of the boundary segment.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>side</code></th>
-						<td><p>Side of the boundary segment as seen from inside of the location.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">ESTLocationBuilder.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/addWindowWithLength:atBoundarySegmentIndex:inDistance:fromSide:" title="addWindowWithLength:atBoundarySegmentIndex:inDistance:fromSide:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/addWindowWithLength:atBoundarySegmentIndex:inDistance:fromSide:">&ndash;&nbsp;addWindowWithLength:atBoundarySegmentIndex:inDistance:fromSide:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Places a window on the boundary segment.
-Boundary segments were created in the same order as points were added.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)addWindowWithLength:(double)<em>length</em> atBoundarySegmentIndex:(NSUInteger)<em>boundarySegmentIndex</em> inDistance:(double)<em>distance</em> fromSide:(ESTLocationBuilderSide)<em>side</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>length</code></th>
-						<td><p>Length of the window.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>boundarySegmentIndex</code></th>
-						<td><p>Index of the boundary segment.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>distance</code></th>
-						<td><p>Distance from the window to the side of the boundary segment.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>side</code></th>
-						<td><p>Side of the boundary segment as seen from inside of the location.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">ESTLocationBuilder.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/setLocationName:" title="setLocationName:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/setLocationName:">&ndash;&nbsp;setLocationName:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Sets a <a href="#//api/name/name">name</a> of the location. If not set EST_LOCATION_DEFAULT_NAME is used.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)setLocationName:(NSString *)<em>locationName</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>locationName</code></th>
-						<td><p>Name of the location.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">ESTLocationBuilder.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/setLocationCreationDate:" title="setLocationCreationDate:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/setLocationCreationDate:">&ndash;&nbsp;setLocationCreationDate:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Sets a creation date of the location. If not set the current date is used.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)setLocationCreationDate:(NSDate *)<em>date</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>date</code></th>
-						<td><p>Creation date.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">ESTLocationBuilder.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div>
-						</div>
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addBeaconIdentifiedByMac:atBoundarySegmentIndex:inDistance:fromSide:">&ndash;&nbsp;addBeaconIdentifiedByMac:atBoundarySegmentIndex:inDistance:fromSide:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addDoorsWithLength:atBoundarySegmentIndex:inDistance:fromSide:">&ndash;&nbsp;addDoorsWithLength:atBoundarySegmentIndex:inDistance:fromSide:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addWindowWithLength:atBoundarySegmentIndex:inDistance:fromSide:">&ndash;&nbsp;addWindowWithLength:atBoundarySegmentIndex:inDistance:fromSide:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setLocationName:">&ndash;&nbsp;setLocationName:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setLocationCreationDate:">&ndash;&nbsp;setLocationCreationDate:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
 						
-
+						
 						<a title="Building &amp; Importing Location" name="task_Building &amp; Importing Location"></a>
-						<h2 class="task-title">Building &amp; Importing Location</h2>
+						<h3 class="subsubtitle task-title">Building &amp; Importing Location</h3>
 
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/build" title="build"></a>
-	<h3 class="method-title"><code><a href="#//api/name/build">&ndash;&nbsp;build</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Builds a location.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (ESTLocation *)build</code></div>
-
-		    
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>A valid location.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">ESTLocationBuilder.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/build">&ndash;&nbsp;build</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parseFromJSON:">+&nbsp;parseFromJSON:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
 	<a name="//api/name/parseFromJSON:" title="parseFromJSON:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/parseFromJSON:">+&nbsp;parseFromJSON:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Parses JSON string representation of the location. You might have it from the app
+	<h3 class="subsubtitle method-title">parseFromJSON:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Parses JSON string representation of the location. You might have it from the app
 through &ldquo;Export location code snippet&rdquo;.</p>
-			</div>
-			
-		    
+	</div>		
+	
+    
 
-			<div class="method-subsection method-declaration"><code>+ (ESTLocation *)parseFromJSON:(NSString *)<em>json</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (ESTLocation *)parseFromJSON:(NSString *)<em>json</em></code></div>
 
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>json</code></th>
-						<td><p>JSON encoded as a string representation of the location.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>Location object built based upon the JSON. Returns nil if location cannot be built.</p>
-			</div>
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>If location cannot be constructed based on JSON, an exception will be raised with
-explanation why it has happened.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">ESTLocationBuilder.h</code></p>
-			</div>
-			
-			
-		</div>
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>json</em></dt>
+			<dd><p>JSON encoded as a string representation of the location.</p></dd>
+		</dl>
+		
 	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Location object built based upon the JSON. Returns nil if location cannot be built.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If location cannot be constructed based on JSON, an exception will be raised with
+explanation why it has happened.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTLocationBuilder.h</code><br />
+	</div>				
+	
+	
 </div>
-						</div>
 						
 					</div>
 					
 					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/addBeaconIdentifiedByMac:atBoundarySegmentIndex:inDistance:fromSide:" title="addBeaconIdentifiedByMac:atBoundarySegmentIndex:inDistance:fromSide:"></a>
+	<h3 class="subsubtitle method-title">addBeaconIdentifiedByMac:atBoundarySegmentIndex:inDistance:fromSide:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Places a beacon on the boundary segment.
+Boundary segments were created in the same order as points were added.</p>
+	</div>		
+	
+    
 
+	<div class="method-subsection method-declaration"><code>- (void)addBeaconIdentifiedByMac:(NSString *)<em>macAddress</em> atBoundarySegmentIndex:(NSUInteger)<em>boundarySegmentIndex</em> inDistance:(double)<em>distance</em> fromSide:(ESTLocationBuilderSide)<em>side</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>macAddress</em></dt>
+			<dd><p>MAC address of the beacon.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>boundarySegmentIndex</em></dt>
+			<dd><p>Index of the boundary segment.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>distance</em></dt>
+			<dd><p>Distance from the beacon to the side of the boundary segment.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>side</em></dt>
+			<dd><p>Side of the boundary segment as seen from inside of the location.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTLocationBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/addDoorsWithLength:atBoundarySegmentIndex:inDistance:fromSide:" title="addDoorsWithLength:atBoundarySegmentIndex:inDistance:fromSide:"></a>
+	<h3 class="subsubtitle method-title">addDoorsWithLength:atBoundarySegmentIndex:inDistance:fromSide:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Places a door on the boundary segment.
+Boundary segments were created in the same order as points were added.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)addDoorsWithLength:(double)<em>length</em> atBoundarySegmentIndex:(NSUInteger)<em>boundarySegmentIndex</em> inDistance:(double)<em>distance</em> fromSide:(ESTLocationBuilderSide)<em>side</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>length</em></dt>
+			<dd><p>Length of the door.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>boundarySegmentIndex</em></dt>
+			<dd><p>Index of the boundary segment.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>distance</em></dt>
+			<dd><p>Distance from the door to the side of the boundary segment.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>side</em></dt>
+			<dd><p>Side of the boundary segment as seen from inside of the location.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTLocationBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/addWindowWithLength:atBoundarySegmentIndex:inDistance:fromSide:" title="addWindowWithLength:atBoundarySegmentIndex:inDistance:fromSide:"></a>
+	<h3 class="subsubtitle method-title">addWindowWithLength:atBoundarySegmentIndex:inDistance:fromSide:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Places a window on the boundary segment.
+Boundary segments were created in the same order as points were added.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)addWindowWithLength:(double)<em>length</em> atBoundarySegmentIndex:(NSUInteger)<em>boundarySegmentIndex</em> inDistance:(double)<em>distance</em> fromSide:(ESTLocationBuilderSide)<em>side</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>length</em></dt>
+			<dd><p>Length of the window.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>boundarySegmentIndex</em></dt>
+			<dd><p>Index of the boundary segment.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>distance</em></dt>
+			<dd><p>Distance from the window to the side of the boundary segment.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>side</em></dt>
+			<dd><p>Side of the boundary segment as seen from inside of the location.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTLocationBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/build" title="build"></a>
+	<h3 class="subsubtitle method-title">build</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Builds a location.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (ESTLocation *)build</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A valid location.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTLocationBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setLocationBoundaryPoints:" title="setLocationBoundaryPoints:"></a>
+	<h3 class="subsubtitle method-title">setLocationBoundaryPoints:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Adds a list of boundary points of location. Can be added clockwise or counter clockwise.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setLocationBoundaryPoints:(NSArray *)<em>boundaryPoints</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>boundaryPoints</em></dt>
+			<dd><p>List of boundary points (<a href="../Classes/ESTPoint.html"><code>ESTPoint</code></a>) that defines a location.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTLocationBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setLocationCreationDate:" title="setLocationCreationDate:"></a>
+	<h3 class="subsubtitle method-title">setLocationCreationDate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets a creation date of the location. If not set the current date is used.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setLocationCreationDate:(NSDate *)<em>date</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>date</em></dt>
+			<dd><p>Creation date.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTLocationBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setLocationName:" title="setLocationName:"></a>
+	<h3 class="subsubtitle method-title">setLocationName:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets a <a href="#//api/name/name">name</a> of the location. If not set EST_LOCATION_DEFAULT_NAME is used.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setLocationName:(NSString *)<em>locationName</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>locationName</em></dt>
+			<dd><p>Name of the location.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTLocationBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setLocationOrientation:" title="setLocationOrientation:"></a>
+	<h3 class="subsubtitle method-title">setLocationOrientation:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the <a href="#//api/name/orientation">orientation</a> of the room with respect to the magnetic north. Counted clockwise in degrees.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setLocationOrientation:(double)<em>orientation</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>orientation</em></dt>
+			<dd><p>Location <a href="#//api/name/orientation">orientation</a> in degrees.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTLocationBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
                     
-				</main>
+                    
+                    
+                    
 
-				<footer>
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
 					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-05-05)</span><br />
 						
-						<p class="copyright">Copyright &copy; 2015 Estimote. All rights reserved. Updated: 2015-05-25</p>
-						
-						
-						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</span></p>
 						
 					</div>
-				</footer>
+				</div>
 			</div>
-		</div>
-	</article>
-
-	<script src="../js/script.js"></script>
-</body>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
 </html>
