@@ -75,10 +75,10 @@ class LocationViewController: UIViewController, ESTIndoorLocationManagerDelegate
     func indoorLocationManager(manager: ESTIndoorLocationManager!, didFailToUpdatePositionWithError error: NSError!) {
         
         self.positionView?.hidden = true
-        if (error.code == ESTIndoorErrorCode.PositionOutsideLocationError.rawValue) {
+        if (error.code == ESTIndoorErrorCode.IndoorPositionOutsideLocationError.rawValue) {
             self.positionLabel.text = "It seems you are outside the location."
         }
-        else if (error.code == ESTIndoorErrorCode.MagnetometerInitializationError.rawValue) {
+        else if (error.code == ESTIndoorErrorCode.IndoorMagnetometerInitializationError.rawValue) {
             self.positionLabel.text = "It seems your magnetometer is not working.";
         }
 

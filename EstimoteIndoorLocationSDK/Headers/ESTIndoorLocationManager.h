@@ -17,7 +17,13 @@ typedef NS_ENUM(NSInteger, ESTIndoorErrorCode) {
     /** Device is outside the location. */
     ESTIndoorPositionOutsideLocationError,
     /** The device does not have mangetometer or there is a hardware problem with it. */
-    ESTIndoorMagnetometerInitializationError
+    ESTIndoorMagnetometerInitializationError,
+    /** Bluetooth is powered off. */
+    ESTBluetoothOffError,
+    /** App is not authorized to use Bluetooth Low Energy. */
+    ESTUnauthorizedToUseBluetoothError,
+    /** Platform does not support Bluetooth Low Energy. */
+    ESTBluetoothNotSupportedError
 };
 
 /**
@@ -32,25 +38,25 @@ typedef NS_ENUM(NSInteger, ESTPositionAccuracy)
      * Accuracy is below 1m.
      */
     ESTPositionAccuracyVeryHigh = 0,
-    
-    /** 
+
+    /**
      * Accuracy of determined position is high.
      * Accuracy is below 1.62m.
      */
     ESTPositionAccuracyHigh     = 1,
-    
-    /** 
+
+    /**
      * Accuracy of determined position is medium.
      * Accuracy is below 2.62m.
      */
     ESTPositionAccuracyMedium   = 2,
-    
-    /** 
+
+    /**
      * Accuracy of determined position is low.
      * Accuracy is below 4.24m.
      */
     ESTPositionAccuracyLow      = 3,
-    
+
     /**
      * Accuracy of determined position is very low - typically during the initialization phase.
      * Accuracy can also drop to this level when the quality of determined position decreases significantly.
@@ -116,24 +122,24 @@ this class to setup a new location and to obtain position inside the location.
 Only one instance of this class should be created inside the application.
 
 ### Setting up a new location
- 
+
 In order to obtain precise position updates you need to prepare a physical location for Estimote Indoor Location.
 The procedure consists of the following steps:
 
 - Configuration of the beacons.
 - Placing beacons.
 - Mapping the physical location to an instance of `ESTLocation`.
- 
+
 Invoke `locationSetupControllerWithCompletion:` to obtain dedicated UIViewController guiding through this process.
 Result of this procedure is a prepared physical location and an instance of `ESTLocation` that can be used for obtaining position updates.
 
- 
+
 ### Obtaining position inside the location
- 
+
 Once you have instance of `ESTLocation` you can start obtaining position updates for that location.
 First you need to set a `delegate` which will be receiving the updates and then start the manager for
 the location. Note that only one location at a time is supported.
- 
+
     indoorLocationManager.delegate = yourDelegate;
     [indoorLocationManager startIndoorLocation:yourLocation];
 
@@ -206,39 +212,39 @@ Please remember that in order to have any of these methods working you need to c
 ///----------------------------------------------
 
 /**
-* Saves new location to user's account associated with the currently used AppId.
-*
-* In order to have this method working you need to call -[ESTConfig setupAppID:andAppToken:] first.
-*
-* @param location Location to add.
-* @param success Success callback. Object returned is a new `ESTLocation` same as given with identifier set from cloud.
-* @param failure Failure callback. Contains error that occurred.
-*/
+ * Saves new location to user's account associated with the currently used AppId.
+ *
+ * In order to have this method working you need to call -[ESTConfig setupAppID:andAppToken:] first.
+ *
+ * @param location Location to add.
+ * @param success Success callback. Object returned is a new `ESTLocation` same as given with identifier set from cloud.
+ * @param failure Failure callback. Contains error that occurred.
+ */
 - (void)addNewLocation:(ESTLocation *)location
                success:(ESTIndoorCloudSuccess)success
                failure:(ESTIndoorCloudFailure)failure;
 
 /**
-* Removes a location from user's account associated with the currently used AppId.
-*
-* In order to have this method working you need to call -[ESTConfig setupAppID:andAppToken:] first.
-*
-* @param location Location to remove. Must contain cloud's identifier `[ESTLocation identifier]`.
-* @param success Success callback. Object returned is the removed `ESTLocation`.
-* @param failure Failure callback. Contains error that occurred.
-*/
+ * Removes a location from user's account associated with the currently used AppId.
+ *
+ * In order to have this method working you need to call -[ESTConfig setupAppID:andAppToken:] first.
+ *
+ * @param location Location to remove. Must contain cloud's identifier `[ESTLocation identifier]`.
+ * @param success Success callback. Object returned is the removed `ESTLocation`.
+ * @param failure Failure callback. Contains error that occurred.
+ */
 - (void)removeLocation:(ESTLocation *)location
                success:(ESTIndoorCloudSuccess)success
                failure:(ESTIndoorCloudFailure)failure;
 
 /**
-* Fetches all locations from user's account associated with the currently used AppId.
-*
-* In order to have this method working you need to call -[ESTConfig setupAppID:andAppToken:] first.
-*
-* @param success Success callback. Invoked after location from cloud are fetched. Contains array of `ESTLocation`s.
-* @param failure Failure callback. Contains error that occurred.
-*/
+ * Fetches all locations from user's account associated with the currently used AppId.
+ *
+ * In order to have this method working you need to call -[ESTConfig setupAppID:andAppToken:] first.
+ *
+ * @param success Success callback. Invoked after location from cloud are fetched. Contains array of `ESTLocation`s.
+ * @param failure Failure callback. Contains error that occurred.
+ */
 - (void)fetchUserLocationsWithSuccess:(ESTIndoorCloudSuccess)success
                               failure:(ESTIndoorCloudFailure)failure;
 
@@ -249,7 +255,7 @@ Please remember that in order to have any of these methods working you need to c
  * @param failure Failure callback. Contains error that occurred.
  */
 - (void)fetchNearbyPublicLocationsWithSuccess:(ESTIndoorCloudSuccess)success
-                                failure:(ESTIndoorCloudFailure)failure;
+                                      failure:(ESTIndoorCloudFailure)failure;
 
 /**
  * Fetches location of specified identifier from cloud.

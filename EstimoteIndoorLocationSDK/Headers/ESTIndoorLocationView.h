@@ -1,14 +1,25 @@
 //  Copyright (c) 2014 Estimote. All rights reserved.
 
 #import <UIKit/UIKit.h>
-#import "ESTLocation.h"
-#import "ESTIndoorLocationManager.h"
+
+@class ESTLocation;
+@class ESTPoint;
+@class ESTOrientedPoint;
+
+/**
+ * Width of the border around location shape.
+ * Non-zero value is needed for objects like beacons
+ * to be rendered inside view.
+ */
+static const int kShapeLayerMargin = 20;
 
 #ifdef IB_DESIGNABLE
 IB_DESIGNABLE
 #endif
 
-/** A simple view for drawing ESTLocation and position within it. */
+/**
+ * A view for drawing ESTLocation and user position within it.
+ */
 @interface ESTIndoorLocationView : UIView
 
 #pragma mark Properties
@@ -19,13 +30,10 @@ IB_DESIGNABLE
 /** `ESTLocation` object to be drawn. */
 @property (nonatomic, strong, readonly) ESTLocation *location;
 
-/** If YES then a beacons orientation indicator will be displayed. */
-@property (nonatomic, assign) BOOL showBeaconOrientation;
-
-/** If YES then a trace will be displayed. */
+/** If YES, then a trace will be displayed. */
 @property (nonatomic, assign) BOOL showTrace;
 
-/** If YES then the view will be rotated so the position indicator will always be pointing up. */
+/** If YES. then the view will be rotated so the position indicator will always be pointing up. */
 @property (nonatomic, assign) BOOL rotateOnPositionUpdate;
 
 /** Determines if location was drawn successfully. */
@@ -36,7 +44,7 @@ IB_DESIGNABLE
 /// @name Styling properties
 ///-----------------------------------------
 
-/** View representing current position indicator */
+/** View representing current position indicator. */
 @property (nonatomic, strong) UIView    *positionView;
 
 /** Image used as current position indicator. */
@@ -116,16 +124,16 @@ IB_DESIGNABLE
 @property (nonatomic, assign) BOOL showWallLengthLabels;
 #endif
 
-#pragma mark Drawing
+#pragma mark Drawing location
 ///-----------------------------------------
-/// @name Drawing
+/// @name Drawing location
 ///-----------------------------------------
 
 /**
-* Draws a graphical representation of `ESTLocation` object.
-*
-* @param location Object representing current location.
-*/
+ * Draws a graphical representation of `ESTLocation` object.
+ *
+ * @param location Object representing current location.
+ */
 - (void)drawLocation:(ESTLocation *)location;
 
 /**
@@ -136,15 +144,13 @@ IB_DESIGNABLE
  * @param location Object representing current location.
  * @param regionOfInterest Region of interest to be drawn
  */
-- (void)drawLocation:(ESTLocation *)location inRegionOfInterest:(CGRect)regionOfInterest;
+- (void)drawLocation:(ESTLocation *)location
+  inRegionOfInterest:(CGRect)regionOfInterest;
 
-/**
- * Draws a view that represents a real object at given position.
- *
- * @param  object View representing a real object.
- * @param  position Object representing position in the location.
- */
-- (void)drawObject:(UIView *)object withPosition:(ESTPoint *)position;
+#pragma mark Handling position updates
+///-----------------------------------------
+/// @name Handling position updates
+///-----------------------------------------
 
 /**
  * Updates current position indicator to the given position. If position is nil, indicator is hidden.
@@ -154,46 +160,146 @@ IB_DESIGNABLE
  */
 - (void)updatePosition:(ESTOrientedPoint *)position;
 
+#pragma mark Drawing trace
+///-----------------------------------------
+/// @name Drawing trace
+///-----------------------------------------
+
 /**
  * Clears the trace.
+ *
  * Will throw an exception if called without first calling `drawLocation:`.
  */
 - (void)clearTrace;
 
+#pragma mark Drawing user objects
+///-----------------------------------------
+/// @name Drawing user objects
+///-----------------------------------------
+
 /**
- * Calculates location X coordinate (in meters) to drawn location X coordinate.
+ * Draws a view that represents a real object at given position.
  *
- * @param realX X coordinate with regards to room (in meters).
+ * Will throw an exception if called without first calling `drawLocation:`.
  *
- * @return X coordinate with regards to drawn location in this view.
+ * @param  object View representing a real object. Cannot be nil.
+ * @param  position Object representing position in the location. Cannot be nil.
+ */
+- (void)drawObject:(UIView *)object
+      withPosition:(ESTPoint *)position __attribute__((deprecated(("Use drawObjectInBackground:withPosition:identifier: and drawObjectInForeground:withPosition:identifier: instead"))));
+
+/**
+ * Draws a view that represents a real object at given position in background.
+ *
+ * Background objects are drawn in order of addition below all other views.
+ * Object will be rotated with regard to location to match orientation of the position.
+ * Will throw an exception if called without first calling `drawLocation:`.
+ *
+ * @param object View representing a real object. Cannot be nil.
+ * @param position Object representing position in the location. Cannot be nil.
+ * @param identifier Unique identifier by which view will be identified. Cannot be nil.
+ */
+- (void)drawObjectInBackground:(UIView *)object
+                  withPosition:(ESTOrientedPoint *)position
+                    identifier:(NSString *)identifier;
+
+/**
+ * Draws a view that represents a real object at given position in foreground.
+ *
+ * Foreground objects are drawn in order of addition on top of background objects,
+ * location and trace, but below position view. Object will be rotated with
+ * regard to location to match orientation of the position.
+ * Will throw an exception if called without first calling `drawLocation:`.
+ *
+ * @param object View representing a real object. Cannot be nil.
+ * @param position Object representing position in the location. Cannot be nil.
+ * @param identifier Unique identifier by which view will be identified. Cannot be nil.
+ */
+- (void)drawObjectInForeground:(UIView *)object
+                  withPosition:(ESTOrientedPoint *)position
+                    identifier:(NSString *)identifier;
+
+/**
+ * Moves an object identified by identifier to a given position.
+ *
+ * Object will be be rotated with regard to location to match orientation of the position.
+ * If animated is set to true, the transition will be animated with 0.1 s duration.
+ * Will throw an exception, if there is no view with corresponding identifier.
+ *
+ * @param identifier Unique identifier by which view will be identified. Cannot be nil.
+ * @param position Object representing position in the location. Cannot be nil.
+ * @param animated Whether transition should be animated.
+ */
+- (void)moveObjectWithIdentifier:(NSString *)identifier
+                      toPosition:(ESTOrientedPoint *)position
+                        animated:(BOOL)animated;
+
+/**
+ * Removes an object identified by identifier from the view.
+ *
+ * Will throw an exception, if there is no view with corresponding identifier.
+ *
+ * @param identifier Unique identifier by which view will be identified. Cannot be nil.
+ */
+- (void)removeObjectWithIdentifier:(NSString *)identifier;
+
+#pragma mark Real to image coordinate calculations
+///-----------------------------------------
+/// @name Real to image coordinate calculations
+///-----------------------------------------
+
+/**
+ * Calculates X in view coordinate system from X in physical coordinate system.
+ *
+ * @param realX X coordinate in physical coordinate system (in meters).
+ *
+ * @return X coordinate in view coordinate system (in pixels).
  */
 - (CGFloat)calculatePictureCoordinateForRealX:(double)realX;
 
 /**
- * Calculates location Y coordinate (in meters) to drawn location Y coordinate.
+ * Calculates Y in view coordinate system from Y in physical coordinate system.
  *
- * @param realY Y coordinate with regards to room (in meters).
+ * @param realY Y coordinate in physical coordinate system (in meters).
  *
- * @return Y coordinate with regards to drawn location in this view.
+ * @return Y coordinate in view coordinate system (in pixels).
  */
 - (CGFloat)calculatePictureCoordinateForRealY:(double)realY;
 
 /**
- * Calculates drawn location X coordinate to location coordinate (in meters).
+ * Calculates point in view coordinate system from point in physical coordinate system.
  *
- * @param pictureX X coordinate with regards to drawn location in this view.
+ * @param realPoint Point with coordinates in physical coordinate system (in meters).
  *
- * @return X coordinate with regards to room (in meters).
+ * @return Point with coordinates in view coordinate system (in pixels).
  */
-- (CGFloat)calculateRealCoordinateForPictureX:(double)pictureX;
+- (CGPoint)calculatePicturePointFromRealPoint:(ESTPoint *)realPoint;
 
 /**
- * Calculates drawn location Y coordinate to location coordinate (in meters).
+ * Calculates X in physical coordinate system from X in view coordinate system.
  *
- * @param pictureX Y coordinate with regards to drawn location in this view.
+ * @param realX X coordinate in view coordinate system (in pixels).
  *
- * @return Y coordinate with regards to room (in meters).
+ * @return X coordinate in physical coordinate system (in meters).
  */
-- (CGFloat)calculateRealCoordinateForPictureY:(double)pictureY;
+- (double)calculateRealCoordinateForPictureX:(CGFloat)pictureX;
+
+/**
+ * Calculates Y in physical coordinate system from T in view coordinate system.
+ *
+ * @param realY Y coordinate in view coordinate system (in pixels).
+ *
+ * @return Y coordinate in physical coordinate system (in meters).
+ */
+- (double)calculateRealCoordinateForPictureY:(CGFloat)pictureY;
+
+/**
+ * Calculates point in physical coordinate system from point in view coordinate system.
+ *
+ * @param realPoint Point with coordinates in view coordinate system (in pixels).
+ *
+ * @return Point with coordinates in physical coordinate system (in meters).
+ */
+- (ESTPoint *)calculateRealPointFromPicturePoint:(CGPoint)picturePoint;
 
 @end

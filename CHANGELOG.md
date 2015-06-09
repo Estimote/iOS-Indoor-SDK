@@ -1,3 +1,7 @@
+## 1.6.0 (June, 9, 2015)
+- Significant improvements to user orientation within location, making the positioning more accurate and less error prone.
+- Generic improvements to ESTIndoorLocationView, giving user more control over location drawing.
+
 ## 1.5.0 (May, 26, 2015)
 - Added methods for fetching nearby public locations from Estimote Cloud. You can also fetch a single location (your or public) from the cloud by its identifier. For example, if you want to get your hands on the “living-room”, you can now do so without fetching all the locations and filtering the array manually.
 - It is now possible to convert the picture coordinates (as seen on the ESTIndoorLocationView, e.g. x=110px, y=50px) to real coordinates (e.g. x=2.2m, y=1m).
