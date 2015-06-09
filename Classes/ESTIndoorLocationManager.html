@@ -57,6 +57,10 @@
 	
 	<option value="//api/name/addNewLocation:success:failure:">&nbsp;&nbsp;&nbsp;&nbsp;- addNewLocation:success:failure:</option>
 	
+	<option value="//api/name/fetchLocationByIdentifier:withSuccess:failure:">&nbsp;&nbsp;&nbsp;&nbsp;- fetchLocationByIdentifier:withSuccess:failure:</option>
+	
+	<option value="//api/name/fetchNearbyPublicLocationsWithSuccess:failure:">&nbsp;&nbsp;&nbsp;&nbsp;- fetchNearbyPublicLocationsWithSuccess:failure:</option>
+	
 	<option value="//api/name/fetchUserLocationsWithSuccess:failure:">&nbsp;&nbsp;&nbsp;&nbsp;- fetchUserLocationsWithSuccess:failure:</option>
 	
 	<option value="//api/name/removeLocation:success:failure:">&nbsp;&nbsp;&nbsp;&nbsp;- removeLocation:success:failure:</option>
@@ -116,6 +120,10 @@
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addNewLocation:success:failure:">addNewLocation:success:failure:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fetchLocationByIdentifier:withSuccess:failure:">fetchLocationByIdentifier:withSuccess:failure:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fetchNearbyPublicLocationsWithSuccess:failure:">fetchNearbyPublicLocationsWithSuccess:failure:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fetchUserLocationsWithSuccess:failure:">fetchUserLocationsWithSuccess:failure:</a></span></li>
 	
@@ -287,6 +295,18 @@ as well as fetch all the locations stored for that account.</p>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/fetchUserLocationsWithSuccess:failure:">&ndash;&nbsp;fetchUserLocationsWithSuccess:failure:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fetchNearbyPublicLocationsWithSuccess:failure:">&ndash;&nbsp;fetchNearbyPublicLocationsWithSuccess:failure:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fetchLocationByIdentifier:withSuccess:failure:">&ndash;&nbsp;fetchLocationByIdentifier:withSuccess:failure:</a></code>
 	</span>
 	
 	
@@ -495,6 +515,113 @@ to configure the beacons for Indoor Location.</p>
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>In order to have this method working you need to call [ESTConfig setupAppID:andAppToken:] first.</p>
 	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTIndoorLocationManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fetchLocationByIdentifier:withSuccess:failure:" title="fetchLocationByIdentifier:withSuccess:failure:"></a>
+	<h3 class="subsubtitle method-title">fetchLocationByIdentifier:withSuccess:failure:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Fetches location of specified identifier from cloud.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)fetchLocationByIdentifier:(NSString *)<em>locationIdentifier</em> withSuccess:(ESTIndoorCloudSuccess)<em>success</em> failure:(ESTIndoorCloudFailure)<em>failure</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>locationIdentifier</em></dt>
+			<dd><p>Identifier of given public location.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>success</em></dt>
+			<dd><p>Success callback. Invoked after location from cloud is fetched. Contains location.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>failure</em></dt>
+			<dd><p>Failure callback. Contains error that occurred.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTIndoorLocationManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fetchNearbyPublicLocationsWithSuccess:failure:" title="fetchNearbyPublicLocationsWithSuccess:failure:"></a>
+	<h3 class="subsubtitle method-title">fetchNearbyPublicLocationsWithSuccess:failure:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Fetches nearby public locations from cloud.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)fetchNearbyPublicLocationsWithSuccess:(ESTIndoorCloudSuccess)<em>success</em> failure:(ESTIndoorCloudFailure)<em>failure</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>success</em></dt>
+			<dd><p>Success callback. Invoked after location from cloud are fetched. Contains array of locations.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>failure</em></dt>
+			<dd><p>Failure callback. Contains error that occurred.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -728,7 +855,7 @@ Calling this method without stopping the indoor location for previous location r
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-05-05)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-06-09)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</span></p>
 						
