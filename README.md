@@ -15,7 +15,7 @@ Learn more:
 - Play with [SDK Examples](Examples) written in Objective-C and Swift.
 - Download our [Estimote app](https://itunes.apple.com/us/app/estimote/id686915066?mt=8) from App Store and play with Indoor Location.
 - Check our [Community Portal](http://community.estimote.com/hc/en-us) to get the answers for the most common questions.
-
+- Post any remaining questions on [Estimote Community Forums](https://forums.estimote.com) to get help from Estimote and the beacon community.
 
 ## Table of Contents
 
