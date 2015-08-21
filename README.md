@@ -11,6 +11,7 @@ Indoor Location creates a rich canvas upon which to build powerful new mobile ex
 Estimote Indoor Location works exclusively with Estimote Beacons.
 
 Learn more:
+- [Build an app with Indoor SDK](http://developer.estimote.com/indoor/build-an-app/) tutorial.
 - Comprehensive [SDK Documentation](http://estimote.github.io/iOS-Indoor-SDK/).
 - Play with [SDK Examples](Examples) written in Objective-C and Swift.
 - Download our [Estimote app](https://itunes.apple.com/us/app/estimote/id686915066?mt=8) from App Store and play with Indoor Location.
