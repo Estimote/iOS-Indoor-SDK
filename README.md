@@ -14,7 +14,7 @@ Learn more:
 - [Build an app with Indoor SDK](http://developer.estimote.com/indoor/build-an-app/) tutorial.
 - Comprehensive [SDK Documentation](http://estimote.github.io/iOS-Indoor-SDK/).
 - Play with [SDK Examples](Examples) written in Objective-C and Swift.
-- Download our [Estimote app](https://itunes.apple.com/us/app/estimote/id686915066?mt=8) from App Store and play with Indoor Location.
+- Download our [Estimote Indoor Location app](https://itunes.apple.com/us/app/estimote-indoor-location/id963704810?mt=8) from App Store and play with Indoor Location.
 - Check our [Community Portal](http://community.estimote.com/hc/en-us) to get the answers for the most common questions.
 - Post any remaining questions on [Estimote Community Forums](https://forums.estimote.com) to get help from Estimote and the beacon community.
 
@@ -25,9 +25,9 @@ Learn more:
 * [Key Concepts](#key-concepts)
 * [Usage](#usage)
   * [Setting up a new location](#setting-up-a-new-location)
+    * [From Estimote Cloud](#from-estimote-cloud)
     * [Using the built-in Location Setup ViewController](#using-the-built-in-location-setup-viewcontroller)
     * [Manually, using ESTLocationBuilder](#manually-using-estlocationbuilder)
-    * [From JSON](#from-json)
   * [Obtaining position update inside the location](#obtaining-position-update-inside-the-location)
   * [Managing locations in the cloud](#managing-locations-update-in-the-cloud)
 * [Changelog](#changelog)
@@ -51,7 +51,6 @@ SDK is available as ```EstimoteIndoorSDK``` in [CocoaPods](http://cocoapods.org/
 ```
 pod 'EstimoteIndoorSDK'
 ```
-
 
 Alternatively you can add SDK manually:
 
@@ -102,10 +101,13 @@ Note that Estimote Indoor Location uses [Cartesian coordinate system](http://en.
 
 On a *location*’s boundary segments can be placed doors, windows which are called *linear objects*.
 
-
 ## Usage
 
 ### Setting up a new location
+
+#### From Estimote Cloud
+
+If you mapped a location in [Estimote Indoor Location app](https://itunes.apple.com/us/app/estimote-indoor-location/id963704810?mt=8), it was automatically uploaded to your Estimote Cloud account. You can fetch it in your own app via the `ESTIndoorLocationManager`'s "fetch" methods—for example, [fetchLocationByIdentifier](http://estimote.github.io/iOS-Indoor-SDK/Classes/ESTIndoorLocationManager.html#//api/name/fetchLocationByIdentifier:withSuccess:failure:).
 
 #### Using the built-in Location Setup ViewController
 
@@ -170,14 +172,6 @@ The next step is to place beacons and doors on the boundary segments of the loca
                                inDistance:2
                                  fromSide:ESTLocationBuilderLeftSide];
 ```
-
-#### From JSON
-
-If you mapped a location in [Estimote App](https://itunes.apple.com/us/app/estimote/id686915066?mt=8) you can export it by tapping on ```Export location code snippet```.
-
-The resulting JSON can be parsed into an ```ESTLocation``` object by invoking [[ESTLocationBuilder parseFromJSON:]](http://estimote.github.io/iOS-Indoor-SDK/Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:).
-
-See also [SDK Examples](Examples) for how to do this.
 
 ### Obtaining position update inside the location
 
