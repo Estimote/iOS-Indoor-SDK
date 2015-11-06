@@ -1,3 +1,13 @@
+## 2.0.0 (November, 6, 2015)
+- Prefix was changed from EST to EIL.
+- Updated dependency to Estimote iOS SDK 3.8.0.
+- Using `EILIndoorLocationManager` to provide position updates is separated into three layers now:
+  - Use `start` to warm-up `EILIndoorLocationManager` to deliver earlier location states and position updates later on.
+  - Use `startMonitoringForLocation:` to enable checking inside-outside location state. You can monitor multiple locations at the same time.
+  - Use `startPositionUpdatesForLocation:` to obtain real-time position updates. 
+- Mapping tool is no longer present in SDK, use [Estimote Indoor Location app](https://itunes.apple.com/us/app/estimote-indoor-location/id963704810?mt=8) to access most recent version of the mapping tool instead.
+- Managing locations in Estimote Cloud is no longer handled by `EILIndoorLocationManager`. Use dedicated request classes. See README for more information.
+
 ## 1.6.0 (June, 9, 2015)
 - Significant improvements to user orientation within location, making the positioning more accurate and less error prone.
 - Generic improvements to ESTIndoorLocationView, giving user more control over location drawing.

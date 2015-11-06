@@ -1,0 +1,909 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>EILIndoorLocationManager Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.2.1 (build 1333)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">Estimote Indoor Location SDK </a></h1>
+				<a id="developerHome" href="../index.html">Estimote</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">EILIndoorLocationManager Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
+	
+	<option value="//api/name/isRunning">&nbsp;&nbsp;&nbsp;&nbsp;isRunning</option>
+	
+	<option value="//api/name/monitoredLocations">&nbsp;&nbsp;&nbsp;&nbsp;monitoredLocations</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/start">&nbsp;&nbsp;&nbsp;&nbsp;- start</option>
+	
+	<option value="//api/name/startMonitoringForLocation:">&nbsp;&nbsp;&nbsp;&nbsp;- startMonitoringForLocation:</option>
+	
+	<option value="//api/name/startPositionUpdatesForLocation:">&nbsp;&nbsp;&nbsp;&nbsp;- startPositionUpdatesForLocation:</option>
+	
+	<option value="//api/name/stateForLocation:">&nbsp;&nbsp;&nbsp;&nbsp;- stateForLocation:</option>
+	
+	<option value="//api/name/stateForLocationWithIdentifier:">&nbsp;&nbsp;&nbsp;&nbsp;- stateForLocationWithIdentifier:</option>
+	
+	<option value="//api/name/stop">&nbsp;&nbsp;&nbsp;&nbsp;- stop</option>
+	
+	<option value="//api/name/stopMonitoringForLocation:">&nbsp;&nbsp;&nbsp;&nbsp;- stopMonitoringForLocation:</option>
+	
+	<option value="//api/name/stopPositionUpdates">&nbsp;&nbsp;&nbsp;&nbsp;- stopPositionUpdates</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Indoor Location Monitoring">Indoor Location Monitoring</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Indoor Location Position Updates">Indoor Location Position Updates</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isRunning">isRunning</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/monitoredLocations">monitoredLocations</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/start">start</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startMonitoringForLocation:">startMonitoringForLocation:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startPositionUpdatesForLocation:">startPositionUpdatesForLocation:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stateForLocation:">stateForLocation:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stateForLocationWithIdentifier:">stateForLocationWithIdentifier:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stop">stop</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stopMonitoringForLocation:">stopMonitoringForLocation:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stopPositionUpdates">stopPositionUpdates</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="EILIndoorLocationManager Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">EILIndoorLocationManager Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">EILIndoorLocationManager.h<br />EILIndoorLocationManager.m</td>
+</tr>
+						</tbody></table></div>
+					
+                    
+                    
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/start">&ndash;&nbsp;start</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stop">&ndash;&nbsp;stop</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isRunning">&nbsp;&nbsp;isRunning</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Indoor Location Monitoring" name="task_Indoor Location Monitoring"></a>
+						<h3 class="subsubtitle task-title">Indoor Location Monitoring</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/startMonitoringForLocation:">&ndash;&nbsp;startMonitoringForLocation:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stopMonitoringForLocation:">&ndash;&nbsp;stopMonitoringForLocation:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/monitoredLocations">&nbsp;&nbsp;monitoredLocations</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stateForLocation:">&ndash;&nbsp;stateForLocation:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stateForLocationWithIdentifier:">&ndash;&nbsp;stateForLocationWithIdentifier:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Indoor Location Position Updates" name="task_Indoor Location Position Updates"></a>
+						<h3 class="subsubtitle task-title">Indoor Location Position Updates</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/startPositionUpdatesForLocation:">&ndash;&nbsp;startPositionUpdatesForLocation:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stopPositionUpdates">&ndash;&nbsp;stopPositionUpdates</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="subsubtitle method-title">delegate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The delegate object to receive position update events.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;EILIndoorLocationManagerDelegate&gt; delegate</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILIndoorLocationManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isRunning" title="isRunning"></a>
+	<h3 class="subsubtitle method-title">isRunning</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Informs whether <code>Indoor Location Manager</code> is currently running.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) BOOL isRunning</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILIndoorLocationManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/monitoredLocations" title="monitoredLocations"></a>
+	<h3 class="subsubtitle method-title">monitoredLocations</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The set of all monitored <code>Indoor Location</code>s.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSSet *monitoredLocations</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILIndoorLocationManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/start" title="start"></a>
+	<h3 class="subsubtitle method-title">start</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Starts <code>Indoor Location Manager</code>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)start</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Starting <code>Indoor Location Manager</code> early allows it to warm-up and later on deliver without delay <code>Indoor Location</code> status change and position updates.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILIndoorLocationManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/startMonitoringForLocation:" title="startMonitoringForLocation:"></a>
+	<h3 class="subsubtitle method-title">startMonitoringForLocation:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Starts monitoring the specified <code>Indoor Location</code> allowing you determine if you are inside or outside monitored location.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)startMonitoringForLocation:(EILLocation *)<em>location</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>location</em></dt>
+			<dd><p>The <code>Indoor Location</code> object that defines the boundary to monitor. This parameter must not be <code>nil.</code></p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The current state, i.e., inside/outside, is available on-demand, by calling the <a href="#//api/name/stateForLocation:"><code>stateForLocation:</code></a> method.</p>
+
+<p>If the <code>Indoor Location Manager</code> is not started this method will <a href="#//api/name/start">start</a> it.</p>
+
+<p>Starting monitoring for <code>Indoor Location</code> early allows position updates to be delivered without delay later on.</p>
+
+<p>Starting monitoring for a location already monitored will do nothing.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/stopMonitoringForLocation:">- stopMonitoringForLocation:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILIndoorLocationManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/startPositionUpdatesForLocation:" title="startPositionUpdatesForLocation:"></a>
+	<h3 class="subsubtitle method-title">startPositionUpdatesForLocation:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Starts the delivery of position updates for the specified location.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)startPositionUpdatesForLocation:(EILLocation *)<em>location</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>location</em></dt>
+			<dd><p>The location.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If the <code>Indoor Location Manager</code> is not started invoking this method will <a href="#//api/name/start">start</a> it.</p>
+
+<p>Only one location is supported at the same time. Calling this method without previously stopping position updates will have no effect.</p>
+
+<p>Calling this method without calling <a href="#//api/name/start">start</a> <a href="#//api/name/startMonitoringForLocation:"><code>startMonitoringForLocation:</code></a> will result in approximately 6 s delay before first position updates are provided. Starting monitoring earlier will reduce this time by the amount of time monitoring was running.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILIndoorLocationManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stateForLocation:" title="stateForLocation:"></a>
+	<h3 class="subsubtitle method-title">stateForLocation:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Determines state for the monitored location.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (EILLocationState)stateForLocation:(EILLocation *)<em>location</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>location</em></dt>
+			<dd><p>An <a href="../Classes/EILLocation.html"><code>EILLocation</code></a> object for which state should be determined.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>State in which the monitored location is.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If the location is not monitored <code>EILLocationStateUnknown</code> will be returned.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILIndoorLocationManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stateForLocationWithIdentifier:" title="stateForLocationWithIdentifier:"></a>
+	<h3 class="subsubtitle method-title">stateForLocationWithIdentifier:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Determines state for the monitored location identified by its identifier.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (EILLocationState)stateForLocationWithIdentifier:(NSString *)<em>locationIdentifier</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>locationIdentifier</em></dt>
+			<dd><p>An identifier of the location for which state should be determined.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>State in which the monitored location is.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Each location saved in Estimote Cloud is given a unique string identifier that corresponds to the <code>identifier</code> property of <a href="../Classes/EILLocation.html"><code>EILLocation</code></a>. You can find it on cloud.estimote.com, on the &ldquo;Locations&rdquo; screen, and use it with the Indoor SDK to, among other things, fetch your stored location from Estimote Cloud.</p>
+
+<p>If the location is not monitored <code>EILLocationStateUnknown</code> will be returned.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILIndoorLocationManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stop" title="stop"></a>
+	<h3 class="subsubtitle method-title">stop</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Completely stops <code>Indoor Location Manager</code>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)stop</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Invoking this method will stop all <code>Indoor Location</code> monitoring and position updates.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILIndoorLocationManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stopMonitoringForLocation:" title="stopMonitoringForLocation:"></a>
+	<h3 class="subsubtitle method-title">stopMonitoringForLocation:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Stops monitoring the specified <code>Indoor Location</code>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)stopMonitoringForLocation:(EILLocation *)<em>location</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>location</em></dt>
+			<dd><p>The <code>Indoor Location</code> object currently being monitored. This parameter must not be <code>nil</code>. The object you specify need not be the exact same object that you registered, but its identifier or name should be the same.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/startMonitoringForLocation:">- startMonitoringForLocation:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILIndoorLocationManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stopPositionUpdates" title="stopPositionUpdates"></a>
+	<h3 class="subsubtitle method-title">stopPositionUpdates</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Stops the delivery of position updates.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)stopPositionUpdates</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILIndoorLocationManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+                    
+                    
+                    
+                    
+
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-11-06)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>
