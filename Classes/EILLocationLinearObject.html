@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>ESTPositionedBeacon Class Reference</title>
+		<title>EILLocationLinearObject Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">ESTPositionedBeacon Class Reference</h1>
+				<h1 class="hideInXcode">EILLocationLinearObject Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -39,39 +39,33 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/color">&nbsp;&nbsp;&nbsp;&nbsp;color</option>
-	
-	<option value="//api/name/macAddress">&nbsp;&nbsp;&nbsp;&nbsp;macAddress</option>
-	
 	<option value="//api/name/position">&nbsp;&nbsp;&nbsp;&nbsp;position</option>
+	
+	<option value="//api/name/type">&nbsp;&nbsp;&nbsp;&nbsp;type</option>
 	
 	
 	
 	
 	<option value="class_methods">Class Methods</option>
 	
-	<option value="//api/name/beaconFromDictionary:">&nbsp;&nbsp;&nbsp;&nbsp;+ beaconFromDictionary:</option>
+	<option value="//api/name/linearObjectFromDictionary:">&nbsp;&nbsp;&nbsp;&nbsp;+ linearObjectFromDictionary:</option>
+	
+	<option value="//api/name/linearObjectWithLinearObject:">&nbsp;&nbsp;&nbsp;&nbsp;+ linearObjectWithLinearObject:</option>
 	
 	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/beaconTranslatedByDX:dY:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconTranslatedByDX:dY:</option>
-	
-	<option value="//api/name/description">&nbsp;&nbsp;&nbsp;&nbsp;- description</option>
-	
 	<option value="//api/name/hash">&nbsp;&nbsp;&nbsp;&nbsp;- hash</option>
 	
-	<option value="//api/name/initWithBeaconIdentifiedByMac:withPosition:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithBeaconIdentifiedByMac:withPosition:</option>
-	
-	<option value="//api/name/initWithBeaconIdentifiedByMac:withPosition:color:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithBeaconIdentifiedByMac:withPosition:color:</option>
-	
-	<option value="//api/name/initWithESTBeacon:withPosition:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithESTBeacon:withPosition:</option>
+	<option value="//api/name/initWithType:position:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithType:position:</option>
 	
 	<option value="//api/name/isEqual:">&nbsp;&nbsp;&nbsp;&nbsp;- isEqual:</option>
 	
-	<option value="//api/name/isEqualToPositionedBeacon:">&nbsp;&nbsp;&nbsp;&nbsp;- isEqualToPositionedBeacon:</option>
+	<option value="//api/name/isEqualToLinearObject:">&nbsp;&nbsp;&nbsp;&nbsp;- isEqualToLinearObject:</option>
+	
+	<option value="//api/name/linearObjectTranslatedByDX:dY:">&nbsp;&nbsp;&nbsp;&nbsp;- linearObjectTranslatedByDX:dY:</option>
 	
 	<option value="//api/name/toDictionary">&nbsp;&nbsp;&nbsp;&nbsp;- toDictionary</option>
 	
@@ -93,13 +87,13 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Properties">Properties</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating and Initializing Beacons">Creating and Initializing Beacons</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating and Initializing Linear Objects">Creating and Initializing Linear Objects</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Operations on linear object">Operations on linear object</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Serialization">Serialization</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Identifying and Comparing Objects">Identifying and Comparing Objects</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Describing Objects">Describing Objects</a></span></li>
 	
 </ul></li>
 
@@ -109,11 +103,9 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/color">color</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/macAddress">macAddress</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/position">position</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/type">type</a></span></li>
 	
 </ul></li>
 
@@ -121,7 +113,9 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconFromDictionary:">beaconFromDictionary:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/linearObjectFromDictionary:">linearObjectFromDictionary:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/linearObjectWithLinearObject:">linearObjectWithLinearObject:</a></span></li>
 	
 </ul></li>
 
@@ -129,21 +123,15 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconTranslatedByDX:dY:">beaconTranslatedByDX:dY:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/description">description</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hash">hash</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithBeaconIdentifiedByMac:withPosition:">initWithBeaconIdentifiedByMac:withPosition:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithBeaconIdentifiedByMac:withPosition:color:">initWithBeaconIdentifiedByMac:withPosition:color:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithESTBeacon:withPosition:">initWithESTBeacon:withPosition:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithType:position:">initWithType:position:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isEqual:">isEqual:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isEqualToPositionedBeacon:">isEqualToPositionedBeacon:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isEqualToLinearObject:">isEqualToLinearObject:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/linearObjectTranslatedByDX:dY:">linearObjectTranslatedByDX:dY:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/toDictionary">toDictionary</a></span></li>
 	
@@ -154,7 +142,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="ESTPositionedBeacon Class Reference" name="top"></a>
+				<a title="EILLocationLinearObject Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -163,7 +151,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">ESTPositionedBeacon Class Reference</h1>
+						<h1 class="title title-header">EILLocationLinearObject Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -174,7 +162,7 @@
 	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ESTPositionedBeacon.h<br />ESTPositionedBeacon.m</td>
+	<td class="specification-value">EILLocationLinearObject.h<br />EILLocationLinearObject.m</td>
 </tr>
 						</tbody></table></div>
 					
@@ -184,7 +172,9 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Represents a beacon with additional information about its <a href="#//api/name/position">position</a>. Object is immutable.</p>
+						<p>Represents an object in a location which <a href="#//api/name/position">position</a> can be described by a line segment.
+Typical examples are doors, windows, internal partition walls etc.
+Object is immutable.</p>
 					</div>
 					
 					
@@ -202,19 +192,13 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
+		<code><a href="#//api/name/type">&nbsp;&nbsp;type</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/position">&nbsp;&nbsp;position</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/macAddress">&nbsp;&nbsp;macAddress</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/color">&nbsp;&nbsp;color</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -222,25 +206,33 @@
 						</ul>
 						
 						
-						<a title="Creating and Initializing Beacons" name="task_Creating and Initializing Beacons"></a>
-						<h3 class="subsubtitle task-title">Creating and Initializing Beacons</h3>
+						<a title="Creating and Initializing Linear Objects" name="task_Creating and Initializing Linear Objects"></a>
+						<h3 class="subsubtitle task-title">Creating and Initializing Linear Objects</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/initWithBeaconIdentifiedByMac:withPosition:">&ndash;&nbsp;initWithBeaconIdentifiedByMac:withPosition:</a></code>
+		<code><a href="#//api/name/initWithType:position:">&ndash;&nbsp;initWithType:position:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/initWithESTBeacon:withPosition:">&ndash;&nbsp;initWithESTBeacon:withPosition:</a></code>
+		<code><a href="#//api/name/linearObjectWithLinearObject:">+&nbsp;linearObjectWithLinearObject:</a></code>
 	</span>
 	
 	
-</li><li>
+</li>
+						</ul>
+						
+						
+						<a title="Operations on linear object" name="task_Operations on linear object"></a>
+						<h3 class="subsubtitle task-title">Operations on linear object</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/beaconTranslatedByDX:dY:">&ndash;&nbsp;beaconTranslatedByDX:dY:</a></code>
+		<code><a href="#//api/name/linearObjectTranslatedByDX:dY:">&ndash;&nbsp;linearObjectTranslatedByDX:dY:</a></code>
 	</span>
 	
 	
@@ -254,7 +246,7 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/beaconFromDictionary:">+&nbsp;beaconFromDictionary:</a></code>
+		<code><a href="#//api/name/linearObjectFromDictionary:">+&nbsp;linearObjectFromDictionary:</a></code>
 	</span>
 	
 	
@@ -280,41 +272,13 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/isEqualToPositionedBeacon:">&ndash;&nbsp;isEqualToPositionedBeacon:</a></code>
+		<code><a href="#//api/name/isEqualToLinearObject:">&ndash;&nbsp;isEqualToLinearObject:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/hash">&ndash;&nbsp;hash</a></code>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="Describing Objects" name="task_Describing Objects"></a>
-						<h3 class="subsubtitle task-title">Describing Objects</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/description">&ndash;&nbsp;description</a></code>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						
-						<h3 class="subsubtitle task-title">Other Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/initWithBeaconIdentifiedByMac:withPosition:color:">&ndash;&nbsp;initWithBeaconIdentifiedByMac:withPosition:color:</a></code>
 	</span>
 	
 	
@@ -332,90 +296,19 @@
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/color" title="color"></a>
-	<h3 class="subsubtitle method-title">color</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Beacons color.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) ESTBeaconColor color</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTPositionedBeacon.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/macAddress" title="macAddress"></a>
-	<h3 class="subsubtitle method-title">macAddress</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Beacons mac address.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *macAddress</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTPositionedBeacon.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
 	<a name="//api/name/position" title="position"></a>
 	<h3 class="subsubtitle method-title">position</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Oriented point representing beacons position and orientation.</p>
+		<p>Coordinates of the object in form of an oriented line segment.
+Orientation typically represent direction toward center of the location, perpendicular to the line segment.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) ESTOrientedPoint *position</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) EILOrientedLineSegment *position</code></div>
 
     
 	
@@ -433,7 +326,43 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTPositionedBeacon.h</code><br />
+		<code class="declared-in-ref">EILLocationLinearObject.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/type" title="type"></a>
+	<h3 class="subsubtitle method-title">type</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Type of the object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) EILLocationLinearObjectType type</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILLocationLinearObject.h</code><br />
 	</div>				
 	
 	
@@ -448,18 +377,18 @@
 						<h2 class="subtitle subtitle-methods">Class Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/beaconFromDictionary:" title="beaconFromDictionary:"></a>
-	<h3 class="subsubtitle method-title">beaconFromDictionary:</h3>
+	<a name="//api/name/linearObjectFromDictionary:" title="linearObjectFromDictionary:"></a>
+	<h3 class="subsubtitle method-title">linearObjectFromDictionary:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Deserializes a positioned beacon from <code>NSDictionary</code>.</p>
+		<p>Deserializes a linear object from <code>NSDictionary</code>.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (ESTPositionedBeacon *)beaconFromDictionary:(NSDictionary *)<em>dict</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (EILLocationLinearObject *)linearObjectFromDictionary:(NSDictionary *)<em>dict</em></code></div>
 
     
 	
@@ -468,7 +397,7 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>dict</em></dt>
-			<dd><p><code>NSDictionary</code> to deserialize from.</p></dd>
+			<dd><p>NSDictionary to deserialize from.</p></dd>
 		</dl>
 		
 	</div>
@@ -477,7 +406,7 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A positioned beacon created from <code>NSDictionary</code>.</p>
+		<p>A linear object created from NSDictionary.</p>
 	</div>
 	
 	
@@ -492,7 +421,58 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTPositionedBeacon.h</code><br />
+		<code class="declared-in-ref">EILLocationLinearObject.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/linearObjectWithLinearObject:" title="linearObjectWithLinearObject:"></a>
+	<h3 class="subsubtitle method-title">linearObjectWithLinearObject:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a new linear object based on the given linear object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (instancetype)linearObjectWithLinearObject:(EILLocationLinearObject *)<em>linearObject</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>point</em></dt>
+			<dd><p>A linear object.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An linear object initialized with linearObject.<a href="#//api/name/type">type</a> and linearObject.<a href="#//api/name/position">position</a></p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILLocationLinearObject.h</code><br />
 	</div>				
 	
 	
@@ -505,103 +485,6 @@
 					<div class="section section-methods">
 						<a title="Instance Methods" name="instance_methods"></a>
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/beaconTranslatedByDX:dY:" title="beaconTranslatedByDX:dY:"></a>
-	<h3 class="subsubtitle method-title">beaconTranslatedByDX:dY:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Returns a new beacon object.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (instancetype)beaconTranslatedByDX:(double)<em>dX</em> dY:(double)<em>dY</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>dX</em></dt>
-			<dd><p>X beacon <a href="#//api/name/position">position</a> translation value.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>dY</em></dt>
-			<dd><p>Beacon Y beacon <a href="#//api/name/position">position</a> translation value.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A beacon with <a href="#//api/name/position">position</a> translated by (dX, dY).</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTPositionedBeacon.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/description" title="description"></a>
-	<h3 class="subsubtitle method-title">description</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Returns a string representation of the positioned beacon.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (NSString *)description</code></div>
-
-    
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A string representation of the ESTPositionedBeacon.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTPositionedBeacon.h</code><br />
-	</div>				
-	
-	
-</div>
 						
 						<div class="section-method">
 	<a name="//api/name/hash" title="hash"></a>
@@ -633,25 +516,25 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTPositionedBeacon.h</code><br />
+		<code class="declared-in-ref">EILLocationLinearObject.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/initWithBeaconIdentifiedByMac:withPosition:" title="initWithBeaconIdentifiedByMac:withPosition:"></a>
-	<h3 class="subsubtitle method-title">initWithBeaconIdentifiedByMac:withPosition:</h3>
+	<a name="//api/name/initWithType:position:" title="initWithType:position:"></a>
+	<h3 class="subsubtitle method-title">initWithType:position:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Designated initializer. Returns a new beacon object.</p>
+		<p>Returns a new linear object.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeaconIdentifiedByMac:(NSString *)<em>macAddress</em> withPosition:(ESTOrientedPoint *)<em>position</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithType:(EILLocationLinearObjectType)<em>type</em> position:(EILOrientedLineSegment *)<em>position</em></code></div>
 
     
 	
@@ -659,13 +542,13 @@
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>macAddress</em></dt>
-			<dd><p>Beacon MAC address.</p></dd>
+			<dt><em>type</em></dt>
+			<dd><p>A <a href="#//api/name/type">type</a> of the linear object.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>position</em></dt>
-			<dd><p>Beacon <a href="#//api/name/position">position</a>.</p></dd>
+			<dd><p>Coordinates of the object in form of an oriented line segment</p></dd>
 		</dl>
 		
 	</div>
@@ -674,7 +557,7 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A positioned beacon initialized with MAC and <a href="#//api/name/position">position</a>.</p>
+		<p>A linear object initialized with <a href="#//api/name/position">position</a> and <a href="#//api/name/type">type</a>.</p>
 	</div>
 	
 	
@@ -689,99 +572,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTPositionedBeacon.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/initWithBeaconIdentifiedByMac:withPosition:color:" title="initWithBeaconIdentifiedByMac:withPosition:color:"></a>
-	<h3 class="subsubtitle method-title">initWithBeaconIdentifiedByMac:withPosition:color:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Internal designated initializer</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeaconIdentifiedByMac:(NSString *)<em>macAddress</em> withPosition:(ESTOrientedPoint *)<em>position</em> color:(ESTBeaconColor)<em>color</em></code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTPositionedBeacon.m</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/initWithESTBeacon:withPosition:" title="initWithESTBeacon:withPosition:"></a>
-	<h3 class="subsubtitle method-title">initWithESTBeacon:withPosition:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Returns a new beacon object.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (instancetype)initWithESTBeacon:(ESTBeacon *)<em>beacon</em> withPosition:(ESTOrientedPoint *)<em>position</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>beacon</em></dt>
-			<dd><p>Beacon object.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>position</em></dt>
-			<dd><p>Beacon <a href="#//api/name/position">position</a>.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A positioned beacon initialized with MAC and <a href="#//api/name/position">position</a>.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTPositionedBeacon.h</code><br />
+		<code class="declared-in-ref">EILLocationLinearObject.h</code><br />
 	</div>				
 	
 	
@@ -794,7 +585,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns a boolean value that indicates whether given beacon is equal to this one.</p>
+		<p>Returns a boolean value that indicates whether given linear object is equal to this one.</p>
 	</div>		
 	
     
@@ -808,7 +599,7 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>other</em></dt>
-			<dd><p>The object to be compared to the beacon. May be nil.</p></dd>
+			<dd><p>The object to be compared to this linear object. May be nil.</p></dd>
 		</dl>
 		
 	</div>
@@ -817,7 +608,7 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>YES if beacons are equal, otherwise NO.</p>
+		<p>YES if linear objects are equal, otherwise NO.</p>
 	</div>
 	
 	
@@ -832,25 +623,70 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTPositionedBeacon.h</code><br />
+		<code class="declared-in-ref">EILLocationLinearObject.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/isEqualToPositionedBeacon:" title="isEqualToPositionedBeacon:"></a>
-	<h3 class="subsubtitle method-title">isEqualToPositionedBeacon:</h3>
+	<a name="//api/name/isEqualToLinearObject:" title="isEqualToLinearObject:"></a>
+	<h3 class="subsubtitle method-title">isEqualToLinearObject:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns a boolean value that indicates whether given beacon is equal to this one.</p>
+		<p><a href="#//api/name/isEqual:">isEqual:</a></p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BOOL)isEqualToPositionedBeacon:(ESTPositionedBeacon *)<em>beacon</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)isEqualToLinearObject:(EILLocationLinearObject *)<em>object</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/isEqual:">- isEqual:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILLocationLinearObject.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/linearObjectTranslatedByDX:dY:" title="linearObjectTranslatedByDX:dY:"></a>
+	<h3 class="subsubtitle method-title">linearObjectTranslatedByDX:dY:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Translates the linear object by a given vector (dX, dY) and returns a new linear object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)linearObjectTranslatedByDX:(double)<em>dX</em> dY:(double)<em>dY</em></code></div>
 
     
 	
@@ -858,8 +694,13 @@
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>beacon</em></dt>
-			<dd><p>The beacon object to be compared to the beacon. May be nil.</p></dd>
+			<dt><em>dX</em></dt>
+			<dd><p>Value of translation on X axis.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>dY</em></dt>
+			<dd><p>Value of translation on Y axis.</p></dd>
 		</dl>
 		
 	</div>
@@ -868,7 +709,7 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>YES if beacons are equal, otherwise NO.</p>
+		<p>A new linear object translated by (dX, dY).</p>
 	</div>
 	
 	
@@ -883,7 +724,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTPositionedBeacon.h</code><br />
+		<code class="declared-in-ref">EILLocationLinearObject.h</code><br />
 	</div>				
 	
 	
@@ -896,7 +737,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Serializes the positioned beacon to <code>NSDictionary</code>.</p>
+		<p>Serializes the linear object to <code>NSDictionary</code>.</p>
 	</div>		
 	
     
@@ -909,7 +750,7 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A positioned beacon representation in <code>NSDictionary</code>.</p>
+		<p>A linear object representation in NSDictionary.</p>
 	</div>
 	
 	
@@ -924,7 +765,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTPositionedBeacon.h</code><br />
+		<code class="declared-in-ref">EILLocationLinearObject.h</code><br />
 	</div>				
 	
 	
@@ -948,7 +789,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-06-09)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-11-06)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</span></p>
 						

@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>ESTPoint Class Reference</title>
+		<title>EILOrientedPoint Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">ESTPoint Class Reference</h1>
+				<h1 class="hideInXcode">EILOrientedPoint Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -39,9 +39,7 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/x">&nbsp;&nbsp;&nbsp;&nbsp;x</option>
-	
-	<option value="//api/name/y">&nbsp;&nbsp;&nbsp;&nbsp;y</option>
+	<option value="//api/name/orientation">&nbsp;&nbsp;&nbsp;&nbsp;orientation</option>
 	
 	
 	
@@ -50,9 +48,15 @@
 	
 	<option value="//api/name/pointFromDictionary:">&nbsp;&nbsp;&nbsp;&nbsp;+ pointFromDictionary:</option>
 	
+	<option value="//api/name/pointWithOrientedPoint:">&nbsp;&nbsp;&nbsp;&nbsp;+ pointWithOrientedPoint:</option>
+	
 	<option value="//api/name/pointWithPoint:">&nbsp;&nbsp;&nbsp;&nbsp;+ pointWithPoint:</option>
 	
+	<option value="//api/name/pointWithPoint:orientation:">&nbsp;&nbsp;&nbsp;&nbsp;+ pointWithPoint:orientation:</option>
+	
 	<option value="//api/name/pointWithX:y:">&nbsp;&nbsp;&nbsp;&nbsp;+ pointWithX:y:</option>
+	
+	<option value="//api/name/pointWithX:y:orientation:">&nbsp;&nbsp;&nbsp;&nbsp;+ pointWithX:y:orientation:</option>
 	
 	
 	
@@ -61,17 +65,15 @@
 	
 	<option value="//api/name/description">&nbsp;&nbsp;&nbsp;&nbsp;- description</option>
 	
-	<option value="//api/name/distanceToPoint:">&nbsp;&nbsp;&nbsp;&nbsp;- distanceToPoint:</option>
-	
 	<option value="//api/name/hash">&nbsp;&nbsp;&nbsp;&nbsp;- hash</option>
 	
 	<option value="//api/name/initWithX:y:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithX:y:</option>
 	
+	<option value="//api/name/initWithX:y:orientation:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithX:y:orientation:</option>
+	
 	<option value="//api/name/isEqual:">&nbsp;&nbsp;&nbsp;&nbsp;- isEqual:</option>
 	
-	<option value="//api/name/isEqualToPoint:">&nbsp;&nbsp;&nbsp;&nbsp;- isEqualToPoint:</option>
-	
-	<option value="//api/name/length">&nbsp;&nbsp;&nbsp;&nbsp;- length</option>
+	<option value="//api/name/isEqualToOrientedPoint:">&nbsp;&nbsp;&nbsp;&nbsp;- isEqualToOrientedPoint:</option>
 	
 	<option value="//api/name/pointTranslatedBydX:dY:">&nbsp;&nbsp;&nbsp;&nbsp;- pointTranslatedBydX:dY:</option>
 	
@@ -113,9 +115,7 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/x">x</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/y">y</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/orientation">orientation</a></span></li>
 	
 </ul></li>
 
@@ -125,9 +125,15 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pointFromDictionary:">pointFromDictionary:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pointWithOrientedPoint:">pointWithOrientedPoint:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pointWithPoint:">pointWithPoint:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pointWithPoint:orientation:">pointWithPoint:orientation:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pointWithX:y:">pointWithX:y:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pointWithX:y:orientation:">pointWithX:y:orientation:</a></span></li>
 	
 </ul></li>
 
@@ -137,17 +143,15 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/description">description</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/distanceToPoint:">distanceToPoint:</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hash">hash</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithX:y:">initWithX:y:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithX:y:orientation:">initWithX:y:orientation:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isEqual:">isEqual:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isEqualToPoint:">isEqualToPoint:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/length">length</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isEqualToOrientedPoint:">isEqualToOrientedPoint:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pointTranslatedBydX:dY:">pointTranslatedBydX:dY:</a></span></li>
 	
@@ -160,7 +164,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="ESTPoint Class Reference" name="top"></a>
+				<a title="EILOrientedPoint Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -169,7 +173,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">ESTPoint Class Reference</h1>
+						<h1 class="title title-header">EILOrientedPoint Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -177,10 +181,10 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">NSObject</td>
+	<td class="specification-value"><a href="../Classes/EILPoint.html">EILPoint</a> : NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ESTPoint.h<br />ESTPoint.m</td>
+	<td class="specification-value">EILOrientedPoint.h<br />EILOrientedPoint.m</td>
 </tr>
 						</tbody></table></div>
 					
@@ -190,7 +194,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Represents a geometrical point. Object is immutable.</p>
+						<p>Represents a geometrical point with additional information about <a href="#//api/name/orientation">orientation</a>. Object is immutable.</p>
 					</div>
 					
 					
@@ -208,13 +212,7 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/x">&nbsp;&nbsp;x</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/y">&nbsp;&nbsp;y</a></code>
+		<code><a href="#//api/name/orientation">&nbsp;&nbsp;orientation</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -228,6 +226,18 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
+		<code><a href="#//api/name/initWithX:y:orientation:">&ndash;&nbsp;initWithX:y:orientation:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pointWithX:y:orientation:">+&nbsp;pointWithX:y:orientation:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/initWithX:y:">&ndash;&nbsp;initWithX:y:</a></code>
 	</span>
 	
@@ -240,7 +250,13 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/pointWithPoint:">+&nbsp;pointWithPoint:</a></code>
+		<code><a href="#//api/name/pointWithOrientedPoint:">+&nbsp;pointWithOrientedPoint:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pointWithPoint:orientation:">+&nbsp;pointWithPoint:orientation:</a></code>
 	</span>
 	
 	
@@ -255,18 +271,6 @@
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/pointTranslatedBydX:dY:">&ndash;&nbsp;pointTranslatedBydX:dY:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/distanceToPoint:">&ndash;&nbsp;distanceToPoint:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/length">&ndash;&nbsp;length</a></code>
 	</span>
 	
 	
@@ -306,7 +310,7 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/isEqualToPoint:">&ndash;&nbsp;isEqualToPoint:</a></code>
+		<code><a href="#//api/name/isEqualToOrientedPoint:">&ndash;&nbsp;isEqualToOrientedPoint:</a></code>
 	</span>
 	
 	
@@ -333,6 +337,20 @@
 </li>
 						</ul>
 						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pointWithPoint:">+&nbsp;pointWithPoint:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
 					</div>
 					
 					
@@ -344,18 +362,19 @@
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/x" title="x"></a>
-	<h3 class="subsubtitle method-title">x</h3>
+	<a name="//api/name/orientation" title="orientation"></a>
+	<h3 class="subsubtitle method-title">orientation</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>X coordinate of the point.</p>
+		<p>Orientation of the point. If not defined takes EIL_ORIENTATION_UNDEFINED value.
+Value is in degrees, counted clockwise.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) double x</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) double orientation</code></div>
 
     
 	
@@ -373,43 +392,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTPoint.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/y" title="y"></a>
-	<h3 class="subsubtitle method-title">y</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Y coordinate of the point.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) double y</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTPoint.h</code><br />
+		<code class="declared-in-ref">EILOrientedPoint.h</code><br />
 	</div>				
 	
 	
@@ -430,12 +413,12 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Deserializes a point from <code>NSDictionar</code>y<code></code>.</p>
+		<p>Deserializes an oriented point from <code>NSDictionary</code>.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (ESTPoint *)pointFromDictionary:(NSDictionary *)<em>dict</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (EILOrientedPoint *)pointFromDictionary:(NSDictionary *)<em>dict</em></code></div>
 
     
 	
@@ -444,7 +427,7 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>dict</em></dt>
-			<dd><p>NSDictionar<a href="#//api/name/y">y</a> to deserialize from.</p></dd>
+			<dd><p>NSDictionary to deserialize from.</p></dd>
 		</dl>
 		
 	</div>
@@ -453,7 +436,7 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A point created from NSDictionar<a href="#//api/name/y">y</a>.</p>
+		<p>An oriented point created from NSDictionary.</p>
 	</div>
 	
 	
@@ -468,7 +451,58 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTPoint.h</code><br />
+		<code class="declared-in-ref">EILOrientedPoint.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/pointWithOrientedPoint:" title="pointWithOrientedPoint:"></a>
+	<h3 class="subsubtitle method-title">pointWithOrientedPoint:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a new oriented point object based on the given oriented point.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (instancetype)pointWithOrientedPoint:(EILOrientedPoint *)<em>point</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>point</em></dt>
+			<dd><p>An oriented point.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An oriented point initialized with (point.x, point.y, point.<a href="#//api/name/orientation">orientation</a>).</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILOrientedPoint.h</code><br />
 	</div>				
 	
 	
@@ -486,7 +520,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (instancetype)pointWithPoint:(ESTPoint *)<em>point</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)pointWithPoint:(EILPoint *)<em>point</em></code></div>
 
     
 	
@@ -504,7 +538,7 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A point initialized with (point.<a href="#//api/name/x">x</a>, point.<a href="#//api/name/y">y</a>).</p>
+		<p>A point initialized with (point.<a href="../Classes/EILPoint.html#//api/name/x">x</a>, point.<a href="../Classes/EILPoint.html#//api/name/y">y</a>).</p>
 	</div>
 	
 	
@@ -519,7 +553,63 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTPoint.h</code><br />
+		<code class="declared-in-ref">EILPoint.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/pointWithPoint:orientation:" title="pointWithPoint:orientation:"></a>
+	<h3 class="subsubtitle method-title">pointWithPoint:orientation:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a new oriented point object based on the given point and <a href="#//api/name/orientation">orientation</a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (instancetype)pointWithPoint:(EILPoint *)<em>point</em> orientation:(double)<em>orientation</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>point</em></dt>
+			<dd><p>A point.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>orientation</em></dt>
+			<dd><p>Orientation of the point.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An oriented point initialized with (point.x, point.y, <a href="#//api/name/orientation">orientation</a>).</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILOrientedPoint.h</code><br />
 	</div>				
 	
 	
@@ -532,7 +622,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns a new point object.</p>
+		<p>Returns a new oriented point object with <a href="#//api/name/orientation">orientation</a> set to EIL_ORIENTATION_UNDEFINED</p>
 	</div>		
 	
     
@@ -560,7 +650,7 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A point initialized with (<a href="#//api/name/x">x</a>, <a href="#//api/name/y">y</a>).</p>
+		<p>An oriented point initialized with (x, y, EIL_ORIENTATION_UNDEFINED).</p>
 	</div>
 	
 	
@@ -575,7 +665,68 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTPoint.h</code><br />
+		<code class="declared-in-ref">EILOrientedPoint.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/pointWithX:y:orientation:" title="pointWithX:y:orientation:"></a>
+	<h3 class="subsubtitle method-title">pointWithX:y:orientation:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a new oriented point object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (instancetype)pointWithX:(double)<em>x</em> y:(double)<em>y</em> orientation:(double)<em>orientation</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>x</em></dt>
+			<dd><p>Coordinate on X axis.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>y</em></dt>
+			<dd><p>Coordinate on Y axis.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>orientation</em></dt>
+			<dd><p>Orientation of the point.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An oriented point initialized with (x, y, <a href="#//api/name/orientation">orientation</a>).</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILOrientedPoint.h</code><br />
 	</div>				
 	
 	
@@ -609,7 +760,7 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A string representation of the point in form of (<a href="#//api/name/x">x</a>,<a href="#//api/name/y">y</a>)</p>
+		<p>A string representation of the point in form of (x,y, <a href="#//api/name/orientation">orientation</a>)</p>
 	</div>
 	
 	
@@ -624,58 +775,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTPoint.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/distanceToPoint:" title="distanceToPoint:"></a>
-	<h3 class="subsubtitle method-title">distanceToPoint:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Computes distance between given point and this point.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (double)distanceToPoint:(ESTPoint *)<em>point</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>point</em></dt>
-			<dd><p>Given point to which distance will be computed.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>Distance between points.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTPoint.h</code><br />
+		<code class="declared-in-ref">EILOrientedPoint.h</code><br />
 	</div>				
 	
 	
@@ -711,7 +811,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTPoint.h</code><br />
+		<code class="declared-in-ref">EILOrientedPoint.h</code><br />
 	</div>				
 	
 	
@@ -724,7 +824,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns a new point object.</p>
+		<p>Returns a new oriented point object with <a href="#//api/name/orientation">orientation</a> set to EIL_ORIENTATION_UNDEFINED</p>
 	</div>		
 	
     
@@ -752,7 +852,7 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A point initialized with (<a href="#//api/name/x">x</a>, <a href="#//api/name/y">y</a>).</p>
+		<p>An oriented point initialized with (x, y, EIL_ORIENTATION_UNDEFINED).</p>
 	</div>
 	
 	
@@ -767,7 +867,68 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTPoint.h</code><br />
+		<code class="declared-in-ref">EILOrientedPoint.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithX:y:orientation:" title="initWithX:y:orientation:"></a>
+	<h3 class="subsubtitle method-title">initWithX:y:orientation:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a new oriented point object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithX:(double)<em>x</em> y:(double)<em>y</em> orientation:(double)<em>orientation</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>x</em></dt>
+			<dd><p>Coordinate on X axis.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>y</em></dt>
+			<dd><p>Coordinate on Y axis.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>orientation</em></dt>
+			<dd><p>Orientation of the point.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An oriented point initialized with (x, y, <a href="#//api/name/orientation">orientation</a>).</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILOrientedPoint.h</code><br />
 	</div>				
 	
 	
@@ -780,7 +941,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns a boolean value that indicates whether given point is equal to this one.</p>
+		<p>Returns a boolean value that indicates whether given oriented point is equal to this one.</p>
 	</div>		
 	
     
@@ -794,7 +955,7 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>other</em></dt>
-			<dd><p>The object to be compared to this point. Ma<a href="#//api/name/y">y</a> be nil.</p></dd>
+			<dd><p>The object to be compared to this oriented point. May be nil.</p></dd>
 		</dl>
 		
 	</div>
@@ -803,7 +964,7 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>YES if points are equal, otherwise NO.</p>
+		<p>YES if oriented points  are equal, otherwise NO.</p>
 	</div>
 	
 	
@@ -818,15 +979,15 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTPoint.h</code><br />
+		<code class="declared-in-ref">EILOrientedPoint.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/isEqualToPoint:" title="isEqualToPoint:"></a>
-	<h3 class="subsubtitle method-title">isEqualToPoint:</h3>
+	<a name="//api/name/isEqualToOrientedPoint:" title="isEqualToOrientedPoint:"></a>
+	<h3 class="subsubtitle method-title">isEqualToOrientedPoint:</h3>
 	
 	
 	
@@ -836,7 +997,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BOOL)isEqualToPoint:(ESTPoint *)<em>point</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)isEqualToOrientedPoint:(EILOrientedPoint *)<em>point</em></code></div>
 
     
 	
@@ -863,49 +1024,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTPoint.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/length" title="length"></a>
-	<h3 class="subsubtitle method-title">length</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Computes the length of the vector represented b<a href="#//api/name/y">y</a> the point
-i.e. distance from the point to the (0,0).</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (double)length</code></div>
-
-    
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>Length of the vector</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTPoint.h</code><br />
+		<code class="declared-in-ref">EILOrientedPoint.h</code><br />
 	</div>				
 	
 	
@@ -918,7 +1037,7 @@ i.e. distance from the point to the (0,0).</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Translates the point b<a href="#//api/name/y">y</a> a given vector (dX, dY) and returns a new point.</p>
+		<p>Translates the oriented point by a given vector (dX, dY) and returns a new oriented point.</p>
 	</div>		
 	
     
@@ -946,7 +1065,7 @@ i.e. distance from the point to the (0,0).</p>
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A new point translated b<a href="#//api/name/y">y</a> (dX, dY).</p>
+		<p>A new oriented point translated by (dX, dY).</p>
 	</div>
 	
 	
@@ -961,7 +1080,7 @@ i.e. distance from the point to the (0,0).</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTPoint.h</code><br />
+		<code class="declared-in-ref">EILOrientedPoint.h</code><br />
 	</div>				
 	
 	
@@ -974,7 +1093,7 @@ i.e. distance from the point to the (0,0).</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Serializes the point to <code>NSDictionar</code>y<code></code>.</p>
+		<p>Serializes the oriented point to <code>NSDictionary</code>.</p>
 	</div>		
 	
     
@@ -987,7 +1106,7 @@ i.e. distance from the point to the (0,0).</p>
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A point representation in NSDictionar<a href="#//api/name/y">y</a>.</p>
+		<p>An oriented point representation in NSDictionary.</p>
 	</div>
 	
 	
@@ -1002,7 +1121,7 @@ i.e. distance from the point to the (0,0).</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTPoint.h</code><br />
+		<code class="declared-in-ref">EILOrientedPoint.h</code><br />
 	</div>				
 	
 	
@@ -1026,7 +1145,7 @@ i.e. distance from the point to the (0,0).</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-06-09)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-11-06)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</span></p>
 						

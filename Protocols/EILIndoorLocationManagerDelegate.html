@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>ESTIndoorLocationManagerDelegate Protocol Reference</title>
+		<title>EILIndoorLocationManagerDelegate Protocol Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">ESTIndoorLocationManagerDelegate Protocol Reference</h1>
+				<h1 class="hideInXcode">EILIndoorLocationManagerDelegate Protocol Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -45,11 +45,7 @@
 	
 	<option value="//api/name/indoorLocationManager:didFailToUpdatePositionWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- indoorLocationManager:didFailToUpdatePositionWithError:</option>
 	
-	<option value="//api/name/indoorLocationManager:didUpdatePosition:inLocation:">&nbsp;&nbsp;&nbsp;&nbsp;- indoorLocationManager:didUpdatePosition:inLocation:</option>
-	
 	<option value="//api/name/indoorLocationManager:didUpdatePosition:withAccuracy:inLocation:">&nbsp;&nbsp;&nbsp;&nbsp;- indoorLocationManager:didUpdatePosition:withAccuracy:inLocation:</option>
-	
-	<option value="//api/name/indoorLocationManagerIsReady:">&nbsp;&nbsp;&nbsp;&nbsp;- indoorLocationManagerIsReady:</option>
 	
 	
 	
@@ -81,11 +77,7 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/indoorLocationManager:didFailToUpdatePositionWithError:">indoorLocationManager:didFailToUpdatePositionWithError:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/indoorLocationManager:didUpdatePosition:inLocation:">indoorLocationManager:didUpdatePosition:inLocation:</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/indoorLocationManager:didUpdatePosition:withAccuracy:inLocation:">indoorLocationManager:didUpdatePosition:withAccuracy:inLocation:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/indoorLocationManagerIsReady:">indoorLocationManagerIsReady:</a></span></li>
 	
 </ul></li>
 
@@ -94,7 +86,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="ESTIndoorLocationManagerDelegate Protocol Reference" name="top"></a>
+				<a title="EILIndoorLocationManagerDelegate Protocol Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -103,7 +95,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">ESTIndoorLocationManagerDelegate Protocol Reference</h1>
+						<h1 class="title title-header">EILIndoorLocationManagerDelegate Protocol Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -114,7 +106,7 @@
 	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ESTIndoorLocationManager.h</td>
+	<td class="specification-value">EILIndoorLocationManager.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -124,7 +116,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The <code>ESTIndoorLocationManagerDelegate</code> protocol defines the methods to receive position updates.</p>
+						<p>The <code>EILIndoorLocationManagerDelegate</code> protocol defines the methods to receive location updates.</p>
 					</div>
 					
 					
@@ -141,18 +133,6 @@
 
 						<ul class="task-list">
 							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/indoorLocationManager:didUpdatePosition:inLocation:">&ndash;&nbsp;indoorLocationManager:didUpdatePosition:inLocation:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/indoorLocationManagerIsReady:">&ndash;&nbsp;indoorLocationManagerIsReady:</a></code>
-	</span>
-	
-	
-</li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/indoorLocationManager:didUpdatePosition:withAccuracy:inLocation:">&ndash;&nbsp;indoorLocationManager:didUpdatePosition:withAccuracy:inLocation:</a></code>
 	</span>
@@ -193,7 +173,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)indoorLocationManager:(ESTIndoorLocationManager *)<em>manager</em> didFailToUpdatePositionWithError:(NSError *)<em>error</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)indoorLocationManager:(EILIndoorLocationManager *)<em>manager</em> didFailToUpdatePositionWithError:(NSError *)<em>error</em></code></div>
 
     
 	
@@ -226,63 +206,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationManager.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/indoorLocationManager:didUpdatePosition:inLocation:" title="indoorLocationManager:didUpdatePosition:inLocation:"></a>
-	<h3 class="subsubtitle method-title">indoorLocationManager:didUpdatePosition:inLocation:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Tells the delegate that new position update is available.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)indoorLocationManager:(ESTIndoorLocationManager *)<em>manager</em> didUpdatePosition:(ESTOrientedPoint *)<em>position</em> inLocation:(ESTLocation *)<em>location</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>manager</em></dt>
-			<dd><p>The manager object that generated the event.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>position</em></dt>
-			<dd><p>The position inside the location.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>location</em></dt>
-			<dd><p>The location for which the position was updated.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationManager.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationManager.h</code><br />
 	</div>				
 	
 	
@@ -300,7 +224,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)indoorLocationManager:(ESTIndoorLocationManager *)<em>manager</em> didUpdatePosition:(ESTOrientedPoint *)<em>position</em> withAccuracy:(ESTPositionAccuracy)<em>positionAccuracy</em> inLocation:(ESTLocation *)<em>location</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)indoorLocationManager:(EILIndoorLocationManager *)<em>manager</em> didUpdatePosition:(EILOrientedPoint *)<em>position</em> withAccuracy:(EILPositionAccuracy)<em>positionAccuracy</em> inLocation:(EILLocation *)<em>location</em></code></div>
 
     
 	
@@ -343,53 +267,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationManager.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/indoorLocationManagerIsReady:" title="indoorLocationManagerIsReady:"></a>
-	<h3 class="subsubtitle method-title">indoorLocationManagerIsReady:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Tells the delegate that Location Manager is ready and will start updating position.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)indoorLocationManagerIsReady:(ESTIndoorLocationManager *)<em>manager</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>manager</em></dt>
-			<dd><p>The manager object that generated the event.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationManager.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationManager.h</code><br />
 	</div>				
 	
 	
@@ -413,7 +291,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-06-09)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-11-06)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</span></p>
 						

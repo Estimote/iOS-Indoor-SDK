@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>ESTLocationLinearObject Class Reference</title>
+		<title>EILPoint Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">ESTLocationLinearObject Class Reference</h1>
+				<h1 class="hideInXcode">EILPoint Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -39,33 +39,41 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/position">&nbsp;&nbsp;&nbsp;&nbsp;position</option>
+	<option value="//api/name/x">&nbsp;&nbsp;&nbsp;&nbsp;x</option>
 	
-	<option value="//api/name/type">&nbsp;&nbsp;&nbsp;&nbsp;type</option>
+	<option value="//api/name/y">&nbsp;&nbsp;&nbsp;&nbsp;y</option>
 	
 	
 	
 	
 	<option value="class_methods">Class Methods</option>
 	
-	<option value="//api/name/linearObjectFromDictionary:">&nbsp;&nbsp;&nbsp;&nbsp;+ linearObjectFromDictionary:</option>
+	<option value="//api/name/pointFromDictionary:">&nbsp;&nbsp;&nbsp;&nbsp;+ pointFromDictionary:</option>
 	
-	<option value="//api/name/linearObjectWithLinearObject:">&nbsp;&nbsp;&nbsp;&nbsp;+ linearObjectWithLinearObject:</option>
+	<option value="//api/name/pointWithPoint:">&nbsp;&nbsp;&nbsp;&nbsp;+ pointWithPoint:</option>
+	
+	<option value="//api/name/pointWithX:y:">&nbsp;&nbsp;&nbsp;&nbsp;+ pointWithX:y:</option>
 	
 	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
 	
+	<option value="//api/name/description">&nbsp;&nbsp;&nbsp;&nbsp;- description</option>
+	
+	<option value="//api/name/distanceToPoint:">&nbsp;&nbsp;&nbsp;&nbsp;- distanceToPoint:</option>
+	
 	<option value="//api/name/hash">&nbsp;&nbsp;&nbsp;&nbsp;- hash</option>
 	
-	<option value="//api/name/initWithType:position:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithType:position:</option>
+	<option value="//api/name/initWithX:y:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithX:y:</option>
 	
 	<option value="//api/name/isEqual:">&nbsp;&nbsp;&nbsp;&nbsp;- isEqual:</option>
 	
-	<option value="//api/name/isEqualToLinearObject:">&nbsp;&nbsp;&nbsp;&nbsp;- isEqualToLinearObject:</option>
+	<option value="//api/name/isEqualToPoint:">&nbsp;&nbsp;&nbsp;&nbsp;- isEqualToPoint:</option>
 	
-	<option value="//api/name/linearObjectTranslatedByDX:dY:">&nbsp;&nbsp;&nbsp;&nbsp;- linearObjectTranslatedByDX:dY:</option>
+	<option value="//api/name/length">&nbsp;&nbsp;&nbsp;&nbsp;- length</option>
+	
+	<option value="//api/name/pointTranslatedBydX:dY:">&nbsp;&nbsp;&nbsp;&nbsp;- pointTranslatedBydX:dY:</option>
 	
 	<option value="//api/name/toDictionary">&nbsp;&nbsp;&nbsp;&nbsp;- toDictionary</option>
 	
@@ -87,13 +95,15 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Properties">Properties</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating and Initializing Linear Objects">Creating and Initializing Linear Objects</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating and Initializing Points">Creating and Initializing Points</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Operations on linear object">Operations on linear object</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Operations on point">Operations on point</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Serialization">Serialization</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Identifying and Comparing Objects">Identifying and Comparing Objects</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Describing Objects">Describing Objects</a></span></li>
 	
 </ul></li>
 
@@ -103,9 +113,9 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/position">position</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/x">x</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/type">type</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/y">y</a></span></li>
 	
 </ul></li>
 
@@ -113,9 +123,11 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/linearObjectFromDictionary:">linearObjectFromDictionary:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pointFromDictionary:">pointFromDictionary:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/linearObjectWithLinearObject:">linearObjectWithLinearObject:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pointWithPoint:">pointWithPoint:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pointWithX:y:">pointWithX:y:</a></span></li>
 	
 </ul></li>
 
@@ -123,15 +135,21 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/description">description</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/distanceToPoint:">distanceToPoint:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hash">hash</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithType:position:">initWithType:position:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithX:y:">initWithX:y:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isEqual:">isEqual:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isEqualToLinearObject:">isEqualToLinearObject:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isEqualToPoint:">isEqualToPoint:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/linearObjectTranslatedByDX:dY:">linearObjectTranslatedByDX:dY:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/length">length</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pointTranslatedBydX:dY:">pointTranslatedBydX:dY:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/toDictionary">toDictionary</a></span></li>
 	
@@ -142,7 +160,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="ESTLocationLinearObject Class Reference" name="top"></a>
+				<a title="EILPoint Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -151,7 +169,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">ESTLocationLinearObject Class Reference</h1>
+						<h1 class="title title-header">EILPoint Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -162,7 +180,7 @@
 	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ESTLocationLinearObject.h<br />ESTLocationLinearObject.m</td>
+	<td class="specification-value">EILPoint.h<br />EILPoint.m</td>
 </tr>
 						</tbody></table></div>
 					
@@ -172,9 +190,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Represents an object in a location which <a href="#//api/name/position">position</a> can be described by a line segment.
-Typical examples are doors, windows, internal partition walls etc.
-Object is immutable.</p>
+						<p>Represents a geometrical point. Object is immutable.</p>
 					</div>
 					
 					
@@ -192,13 +208,13 @@ Object is immutable.</p>
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/type">&nbsp;&nbsp;type</a></code>
+		<code><a href="#//api/name/x">&nbsp;&nbsp;x</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/position">&nbsp;&nbsp;position</a></code>
+		<code><a href="#//api/name/y">&nbsp;&nbsp;y</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -206,19 +222,25 @@ Object is immutable.</p>
 						</ul>
 						
 						
-						<a title="Creating and Initializing Linear Objects" name="task_Creating and Initializing Linear Objects"></a>
-						<h3 class="subsubtitle task-title">Creating and Initializing Linear Objects</h3>
+						<a title="Creating and Initializing Points" name="task_Creating and Initializing Points"></a>
+						<h3 class="subsubtitle task-title">Creating and Initializing Points</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/initWithType:position:">&ndash;&nbsp;initWithType:position:</a></code>
+		<code><a href="#//api/name/initWithX:y:">&ndash;&nbsp;initWithX:y:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/linearObjectWithLinearObject:">+&nbsp;linearObjectWithLinearObject:</a></code>
+		<code><a href="#//api/name/pointWithX:y:">+&nbsp;pointWithX:y:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pointWithPoint:">+&nbsp;pointWithPoint:</a></code>
 	</span>
 	
 	
@@ -226,13 +248,25 @@ Object is immutable.</p>
 						</ul>
 						
 						
-						<a title="Operations on linear object" name="task_Operations on linear object"></a>
-						<h3 class="subsubtitle task-title">Operations on linear object</h3>
+						<a title="Operations on point" name="task_Operations on point"></a>
+						<h3 class="subsubtitle task-title">Operations on point</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/linearObjectTranslatedByDX:dY:">&ndash;&nbsp;linearObjectTranslatedByDX:dY:</a></code>
+		<code><a href="#//api/name/pointTranslatedBydX:dY:">&ndash;&nbsp;pointTranslatedBydX:dY:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/distanceToPoint:">&ndash;&nbsp;distanceToPoint:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/length">&ndash;&nbsp;length</a></code>
 	</span>
 	
 	
@@ -246,7 +280,7 @@ Object is immutable.</p>
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/linearObjectFromDictionary:">+&nbsp;linearObjectFromDictionary:</a></code>
+		<code><a href="#//api/name/pointFromDictionary:">+&nbsp;pointFromDictionary:</a></code>
 	</span>
 	
 	
@@ -272,13 +306,27 @@ Object is immutable.</p>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/isEqualToLinearObject:">&ndash;&nbsp;isEqualToLinearObject:</a></code>
+		<code><a href="#//api/name/isEqualToPoint:">&ndash;&nbsp;isEqualToPoint:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/hash">&ndash;&nbsp;hash</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Describing Objects" name="task_Describing Objects"></a>
+						<h3 class="subsubtitle task-title">Describing Objects</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/description">&ndash;&nbsp;description</a></code>
 	</span>
 	
 	
@@ -296,19 +344,18 @@ Object is immutable.</p>
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/position" title="position"></a>
-	<h3 class="subsubtitle method-title">position</h3>
+	<a name="//api/name/x" title="x"></a>
+	<h3 class="subsubtitle method-title">x</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Coordinates of the object in form of an oriented line segment.
-Orientation typically represent direction toward center of the location, perpendicular to the line segment.</p>
+		<p>X coordinate of the point.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) ESTOrientedLineSegment *position</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) double x</code></div>
 
     
 	
@@ -326,25 +373,25 @@ Orientation typically represent direction toward center of the location, perpend
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocationLinearObject.h</code><br />
+		<code class="declared-in-ref">EILPoint.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/type" title="type"></a>
-	<h3 class="subsubtitle method-title">type</h3>
+	<a name="//api/name/y" title="y"></a>
+	<h3 class="subsubtitle method-title">y</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Type of the object.</p>
+		<p>Y coordinate of the point.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) ESTLocationLinearObjectType type</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) double y</code></div>
 
     
 	
@@ -362,7 +409,7 @@ Orientation typically represent direction toward center of the location, perpend
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocationLinearObject.h</code><br />
+		<code class="declared-in-ref">EILPoint.h</code><br />
 	</div>				
 	
 	
@@ -377,18 +424,18 @@ Orientation typically represent direction toward center of the location, perpend
 						<h2 class="subtitle subtitle-methods">Class Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/linearObjectFromDictionary:" title="linearObjectFromDictionary:"></a>
-	<h3 class="subsubtitle method-title">linearObjectFromDictionary:</h3>
+	<a name="//api/name/pointFromDictionary:" title="pointFromDictionary:"></a>
+	<h3 class="subsubtitle method-title">pointFromDictionary:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Deserializes a linear object from <code>NSDictionary</code>.</p>
+		<p>Deserializes a point from <code>NSDictionar</code>y<code></code>.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (ESTLocationLinearObject *)linearObjectFromDictionary:(NSDictionary *)<em>dict</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (EILPoint *)pointFromDictionary:(NSDictionary *)<em>dict</em></code></div>
 
     
 	
@@ -397,7 +444,7 @@ Orientation typically represent direction toward center of the location, perpend
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>dict</em></dt>
-			<dd><p>NSDictionary to deserialize from.</p></dd>
+			<dd><p>NSDictionar<a href="#//api/name/y">y</a> to deserialize from.</p></dd>
 		</dl>
 		
 	</div>
@@ -406,7 +453,7 @@ Orientation typically represent direction toward center of the location, perpend
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A linear object created from NSDictionary.</p>
+		<p>A point created from NSDictionar<a href="#//api/name/y">y</a>.</p>
 	</div>
 	
 	
@@ -421,25 +468,25 @@ Orientation typically represent direction toward center of the location, perpend
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocationLinearObject.h</code><br />
+		<code class="declared-in-ref">EILPoint.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/linearObjectWithLinearObject:" title="linearObjectWithLinearObject:"></a>
-	<h3 class="subsubtitle method-title">linearObjectWithLinearObject:</h3>
+	<a name="//api/name/pointWithPoint:" title="pointWithPoint:"></a>
+	<h3 class="subsubtitle method-title">pointWithPoint:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns a new linear object based on the given linear object.</p>
+		<p>Returns a new point object based on the given point.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (instancetype)linearObjectWithLinearObject:(ESTLocationLinearObject *)<em>linearObject</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)pointWithPoint:(EILPoint *)<em>point</em></code></div>
 
     
 	
@@ -448,7 +495,7 @@ Orientation typically represent direction toward center of the location, perpend
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>point</em></dt>
-			<dd><p>A linear object.</p></dd>
+			<dd><p>A point.</p></dd>
 		</dl>
 		
 	</div>
@@ -457,7 +504,7 @@ Orientation typically represent direction toward center of the location, perpend
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>An linear object initialized with linearObject.<a href="#//api/name/type">type</a> and linearObject.<a href="#//api/name/position">position</a></p>
+		<p>A point initialized with (point.<a href="../Classes/EILPoint.html#//api/name/x">x</a>, point.<a href="../Classes/EILPoint.html#//api/name/y">y</a>).</p>
 	</div>
 	
 	
@@ -472,7 +519,63 @@ Orientation typically represent direction toward center of the location, perpend
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocationLinearObject.h</code><br />
+		<code class="declared-in-ref">EILPoint.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/pointWithX:y:" title="pointWithX:y:"></a>
+	<h3 class="subsubtitle method-title">pointWithX:y:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a new point object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (instancetype)pointWithX:(double)<em>x</em> y:(double)<em>y</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>x</em></dt>
+			<dd><p>Coordinate on X axis.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>y</em></dt>
+			<dd><p>Coordinate on Y axis.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A point initialized with (<a href="#//api/name/x">x</a>, <a href="#//api/name/y">y</a>).</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILPoint.h</code><br />
 	</div>				
 	
 	
@@ -485,6 +588,98 @@ Orientation typically represent direction toward center of the location, perpend
 					<div class="section section-methods">
 						<a title="Instance Methods" name="instance_methods"></a>
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/description" title="description"></a>
+	<h3 class="subsubtitle method-title">description</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a string representation of the receiver.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)description</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A string representation of the point in form of (<a href="#//api/name/x">x</a>,<a href="#//api/name/y">y</a>)</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILPoint.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/distanceToPoint:" title="distanceToPoint:"></a>
+	<h3 class="subsubtitle method-title">distanceToPoint:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Computes distance between given point and this point.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (double)distanceToPoint:(EILPoint *)<em>point</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>point</em></dt>
+			<dd><p>Given point to which distance will be computed.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Distance between points.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILPoint.h</code><br />
+	</div>				
+	
+	
+</div>
 						
 						<div class="section-method">
 	<a name="//api/name/hash" title="hash"></a>
@@ -516,25 +711,25 @@ Orientation typically represent direction toward center of the location, perpend
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocationLinearObject.h</code><br />
+		<code class="declared-in-ref">EILPoint.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/initWithType:position:" title="initWithType:position:"></a>
-	<h3 class="subsubtitle method-title">initWithType:position:</h3>
+	<a name="//api/name/initWithX:y:" title="initWithX:y:"></a>
+	<h3 class="subsubtitle method-title">initWithX:y:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns a new linear object.</p>
+		<p>Returns a new point object.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (instancetype)initWithType:(ESTLocationLinearObjectType)<em>type</em> position:(ESTOrientedLineSegment *)<em>position</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithX:(double)<em>x</em> y:(double)<em>y</em></code></div>
 
     
 	
@@ -542,13 +737,13 @@ Orientation typically represent direction toward center of the location, perpend
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>type</em></dt>
-			<dd><p>A <a href="#//api/name/type">type</a> of the linear object.</p></dd>
+			<dt><em>x</em></dt>
+			<dd><p>Coordinate on X axis.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>position</em></dt>
-			<dd><p>Coordinates of the object in form of an oriented line segment</p></dd>
+			<dt><em>y</em></dt>
+			<dd><p>Coordinate on Y axis.</p></dd>
 		</dl>
 		
 	</div>
@@ -557,7 +752,7 @@ Orientation typically represent direction toward center of the location, perpend
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A linear object initialized with <a href="#//api/name/position">position</a> and <a href="#//api/name/type">type</a>.</p>
+		<p>A point initialized with (<a href="#//api/name/x">x</a>, <a href="#//api/name/y">y</a>).</p>
 	</div>
 	
 	
@@ -572,7 +767,7 @@ Orientation typically represent direction toward center of the location, perpend
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocationLinearObject.h</code><br />
+		<code class="declared-in-ref">EILPoint.h</code><br />
 	</div>				
 	
 	
@@ -585,7 +780,7 @@ Orientation typically represent direction toward center of the location, perpend
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns a boolean value that indicates whether given linear object is equal to this one.</p>
+		<p>Returns a boolean value that indicates whether given point is equal to this one.</p>
 	</div>		
 	
     
@@ -599,7 +794,7 @@ Orientation typically represent direction toward center of the location, perpend
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>other</em></dt>
-			<dd><p>The object to be compared to this linear object. May be nil.</p></dd>
+			<dd><p>The object to be compared to this point. Ma<a href="#//api/name/y">y</a> be nil.</p></dd>
 		</dl>
 		
 	</div>
@@ -608,7 +803,7 @@ Orientation typically represent direction toward center of the location, perpend
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>YES if linear objects are equal, otherwise NO.</p>
+		<p>YES if points are equal, otherwise NO.</p>
 	</div>
 	
 	
@@ -623,15 +818,15 @@ Orientation typically represent direction toward center of the location, perpend
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocationLinearObject.h</code><br />
+		<code class="declared-in-ref">EILPoint.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/isEqualToLinearObject:" title="isEqualToLinearObject:"></a>
-	<h3 class="subsubtitle method-title">isEqualToLinearObject:</h3>
+	<a name="//api/name/isEqualToPoint:" title="isEqualToPoint:"></a>
+	<h3 class="subsubtitle method-title">isEqualToPoint:</h3>
 	
 	
 	
@@ -641,7 +836,7 @@ Orientation typically represent direction toward center of the location, perpend
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BOOL)isEqualToLinearObject:(ESTLocationLinearObject *)<em>object</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)isEqualToPoint:(EILPoint *)<em>point</em></code></div>
 
     
 	
@@ -668,25 +863,67 @@ Orientation typically represent direction toward center of the location, perpend
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocationLinearObject.h</code><br />
+		<code class="declared-in-ref">EILPoint.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/linearObjectTranslatedByDX:dY:" title="linearObjectTranslatedByDX:dY:"></a>
-	<h3 class="subsubtitle method-title">linearObjectTranslatedByDX:dY:</h3>
+	<a name="//api/name/length" title="length"></a>
+	<h3 class="subsubtitle method-title">length</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Translates the linear object by a given vector (dX, dY) and returns a new linear object.</p>
+		<p>Computes the length of the vector represented b<a href="#//api/name/y">y</a> the point
+i.e. distance from the point to the (0,0).</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (instancetype)linearObjectTranslatedByDX:(double)<em>dX</em> dY:(double)<em>dY</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (double)length</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Length of the vector</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILPoint.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/pointTranslatedBydX:dY:" title="pointTranslatedBydX:dY:"></a>
+	<h3 class="subsubtitle method-title">pointTranslatedBydX:dY:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Translates the point b<a href="#//api/name/y">y</a> a given vector (dX, dY) and returns a new point.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)pointTranslatedBydX:(double)<em>dX</em> dY:(double)<em>dY</em></code></div>
 
     
 	
@@ -709,7 +946,7 @@ Orientation typically represent direction toward center of the location, perpend
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A new linear object translated by (dX, dY).</p>
+		<p>A new point translated b<a href="#//api/name/y">y</a> (dX, dY).</p>
 	</div>
 	
 	
@@ -724,7 +961,7 @@ Orientation typically represent direction toward center of the location, perpend
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocationLinearObject.h</code><br />
+		<code class="declared-in-ref">EILPoint.h</code><br />
 	</div>				
 	
 	
@@ -737,7 +974,7 @@ Orientation typically represent direction toward center of the location, perpend
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Serializes the linear object to <code>NSDictionary</code>.</p>
+		<p>Serializes the point to <code>NSDictionar</code>y<code></code>.</p>
 	</div>		
 	
     
@@ -750,7 +987,7 @@ Orientation typically represent direction toward center of the location, perpend
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A linear object representation in NSDictionary.</p>
+		<p>A point representation in NSDictionar<a href="#//api/name/y">y</a>.</p>
 	</div>
 	
 	
@@ -765,7 +1002,7 @@ Orientation typically represent direction toward center of the location, perpend
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocationLinearObject.h</code><br />
+		<code class="declared-in-ref">EILPoint.h</code><br />
 	</div>				
 	
 	
@@ -789,7 +1026,7 @@ Orientation typically represent direction toward center of the location, perpend
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-06-09)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-11-06)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</span></p>
 						

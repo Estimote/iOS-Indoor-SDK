@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>ESTIndoorLocationView Class Reference</title>
+		<title>EILIndoorLocationView Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">ESTIndoorLocationView Class Reference</h1>
+				<h1 class="hideInXcode">EILIndoorLocationView Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -39,6 +39,8 @@
 	
 	<option value="properties">Properties</option>
 	
+	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
+	
 	<option value="//api/name/doorColor">&nbsp;&nbsp;&nbsp;&nbsp;doorColor</option>
 	
 	<option value="//api/name/doorThickness">&nbsp;&nbsp;&nbsp;&nbsp;doorThickness</option>
@@ -57,6 +59,8 @@
 	
 	<option value="//api/name/rotateOnPositionUpdate">&nbsp;&nbsp;&nbsp;&nbsp;rotateOnPositionUpdate</option>
 	
+	<option value="//api/name/showBeacons">&nbsp;&nbsp;&nbsp;&nbsp;showBeacons</option>
+	
 	<option value="//api/name/showTrace">&nbsp;&nbsp;&nbsp;&nbsp;showTrace</option>
 	
 	<option value="//api/name/showWallLengthLabels">&nbsp;&nbsp;&nbsp;&nbsp;showWallLengthLabels</option>
@@ -65,7 +69,11 @@
 	
 	<option value="//api/name/traceThickness">&nbsp;&nbsp;&nbsp;&nbsp;traceThickness</option>
 	
+	<option value="//api/name/wallLengthLabelFontSize">&nbsp;&nbsp;&nbsp;&nbsp;wallLengthLabelFontSize</option>
+	
 	<option value="//api/name/wallLengthLabelsColor">&nbsp;&nbsp;&nbsp;&nbsp;wallLengthLabelsColor</option>
+	
+	<option value="//api/name/windowBackgroundColor">&nbsp;&nbsp;&nbsp;&nbsp;windowBackgroundColor</option>
 	
 	<option value="//api/name/windowColor">&nbsp;&nbsp;&nbsp;&nbsp;windowColor</option>
 	
@@ -96,13 +104,13 @@
 	
 	<option value="//api/name/drawLocation:inRegionOfInterest:">&nbsp;&nbsp;&nbsp;&nbsp;- drawLocation:inRegionOfInterest:</option>
 	
-	<option value="//api/name/drawObject:withPosition:">&nbsp;&nbsp;&nbsp;&nbsp;- drawObject:withPosition:</option>
-	
 	<option value="//api/name/drawObjectInBackground:withPosition:identifier:">&nbsp;&nbsp;&nbsp;&nbsp;- drawObjectInBackground:withPosition:identifier:</option>
 	
 	<option value="//api/name/drawObjectInForeground:withPosition:identifier:">&nbsp;&nbsp;&nbsp;&nbsp;- drawObjectInForeground:withPosition:identifier:</option>
 	
 	<option value="//api/name/moveObjectWithIdentifier:toPosition:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- moveObjectWithIdentifier:toPosition:animated:</option>
+	
+	<option value="//api/name/objectWithidentifier:">&nbsp;&nbsp;&nbsp;&nbsp;- objectWithidentifier:</option>
 	
 	<option value="//api/name/removeObjectWithIdentifier:">&nbsp;&nbsp;&nbsp;&nbsp;- removeObjectWithIdentifier:</option>
 	
@@ -146,6 +154,8 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/doorColor">doorColor</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/doorThickness">doorThickness</a></span></li>
@@ -164,6 +174,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/rotateOnPositionUpdate">rotateOnPositionUpdate</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/showBeacons">showBeacons</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/showTrace">showTrace</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/showWallLengthLabels">showWallLengthLabels</a></span></li>
@@ -172,7 +184,11 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/traceThickness">traceThickness</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/wallLengthLabelFontSize">wallLengthLabelFontSize</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/wallLengthLabelsColor">wallLengthLabelsColor</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/windowBackgroundColor">windowBackgroundColor</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/windowColor">windowColor</a></span></li>
 	
@@ -204,13 +220,13 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/drawLocation:inRegionOfInterest:">drawLocation:inRegionOfInterest:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/drawObject:withPosition:">drawObject:withPosition:</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/drawObjectInBackground:withPosition:identifier:">drawObjectInBackground:withPosition:identifier:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/drawObjectInForeground:withPosition:identifier:">drawObjectInForeground:withPosition:identifier:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/moveObjectWithIdentifier:toPosition:animated:">moveObjectWithIdentifier:toPosition:animated:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/objectWithidentifier:">objectWithidentifier:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeObjectWithIdentifier:">removeObjectWithIdentifier:</a></span></li>
 	
@@ -223,7 +239,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="ESTIndoorLocationView Class Reference" name="top"></a>
+				<a title="EILIndoorLocationView Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -232,7 +248,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">ESTIndoorLocationView Class Reference</h1>
+						<h1 class="title title-header">EILIndoorLocationView Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -243,7 +259,7 @@
 	<td class="specification-value">UIView</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ESTIndoorLocationView.h<br />ESTIndoorLocationView.m</td>
+	<td class="specification-value">EILIndoorLocationView.h<br />EILIndoorLocationView.m</td>
 </tr>
 						</tbody></table></div>
 					
@@ -253,9 +269,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>A view for drawing <a href="../Classes/ESTLocation.html">ESTLocation</a> and user position within it.</p>
-
-<p>Calculates degrees from radians.</p>
+						<p>A view for drawing <a href="../Classes/EILLocation.html">EILLocation</a> and user position within it.</p>
 					</div>
 					
 					
@@ -272,6 +286,12 @@
 
 						<ul class="task-list">
 							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/location">&nbsp;&nbsp;location</a></code>
 	</span>
@@ -347,6 +367,12 @@
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/windowBackgroundColor">&nbsp;&nbsp;windowBackgroundColor</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/windowThickness">&nbsp;&nbsp;windowThickness</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
@@ -372,6 +398,18 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/showWallLengthLabels">&nbsp;&nbsp;showWallLengthLabels</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/wallLengthLabelFontSize">&nbsp;&nbsp;wallLengthLabelFontSize</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/showBeacons">&nbsp;&nbsp;showBeacons</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -433,12 +471,6 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/drawObject:withPosition:">&ndash;&nbsp;drawObject:withPosition:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
 		<code><a href="#//api/name/drawObjectInBackground:withPosition:identifier:">&ndash;&nbsp;drawObjectInBackground:withPosition:identifier:</a></code>
 	</span>
 	
@@ -446,6 +478,12 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/drawObjectInForeground:withPosition:identifier:">&ndash;&nbsp;drawObjectInForeground:withPosition:identifier:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/objectWithidentifier:">&ndash;&nbsp;objectWithidentifier:</a></code>
 	</span>
 	
 	
@@ -519,6 +557,42 @@
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="subsubtitle method-title">delegate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The delegate object to receive identifier of selected object in <a href="#//api/name/location">location</a> view.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;EILIndoorLocationViewDelegate&gt; delegate</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/doorColor" title="doorColor"></a>
 	<h3 class="subsubtitle method-title">doorColor</h3>
 	
@@ -548,7 +622,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -584,7 +658,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -597,12 +671,12 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p><a href="../Classes/ESTLocation.html"><code>ESTLocation</code></a> object to be drawn.</p>
+		<p><a href="../Classes/EILLocation.html"><code>EILLocation</code></a> object to be drawn.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) ESTLocation *location</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) EILLocation *location</code></div>
 
     
 	
@@ -620,7 +694,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -656,7 +730,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -692,7 +766,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -728,7 +802,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -764,7 +838,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -800,7 +874,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -813,7 +887,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>If YES. then the view will be rotated so the position indicator will always be pointing up.</p>
+		<p>If YES, then the view will be rotated so the position indicator will always be pointing up.</p>
 	</div>		
 	
     
@@ -836,7 +910,43 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/showBeacons" title="showBeacons"></a>
+	<h3 class="subsubtitle method-title">showBeacons</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>If YES, then beacons will be displayed.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) IBInspectable BOOL showBeacons</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -872,7 +982,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -885,7 +995,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>If YES then wall length labels will be displayed.</p>
+		<p>If YES, then wall length labels will be displayed.</p>
 	</div>		
 	
     
@@ -908,7 +1018,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -944,7 +1054,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -980,7 +1090,43 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/wallLengthLabelFontSize" title="wallLengthLabelFontSize"></a>
+	<h3 class="subsubtitle method-title">wallLengthLabelFontSize</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Font size for wall length labels.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) IBInspectable NSInteger wallLengthLabelFontSize</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -1016,7 +1162,43 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/windowBackgroundColor" title="windowBackgroundColor"></a>
+	<h3 class="subsubtitle method-title">windowBackgroundColor</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Color of the <a href="#//api/name/location">location</a> window background.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) IBInspectable UIColor *windowBackgroundColor</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -1052,7 +1234,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -1088,7 +1270,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -1149,7 +1331,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -1200,7 +1382,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -1218,7 +1400,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (CGPoint)calculatePicturePointFromRealPoint:(ESTPoint *)<em>realPoint</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (CGPoint)calculatePicturePointFromRealPoint:(EILPoint *)<em>realPoint</em></code></div>
 
     
 	
@@ -1251,7 +1433,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -1302,7 +1484,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -1353,7 +1535,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -1371,7 +1553,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (ESTPoint *)calculateRealPointFromPicturePoint:(CGPoint)<em>picturePoint</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (EILPoint *)calculateRealPointFromPicturePoint:(CGPoint)<em>picturePoint</em></code></div>
 
     
 	
@@ -1404,7 +1586,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -1445,7 +1627,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -1458,12 +1640,12 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Draws a graphical representation of <a href="../Classes/ESTLocation.html"><code>ESTLocation</code></a> object.</p>
+		<p>Draws a graphical representation of <a href="../Classes/EILLocation.html"><code>EILLocation</code></a> object.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)drawLocation:(ESTLocation *)<em>location</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)drawLocation:(EILLocation *)<em>location</em></code></div>
 
     
 	
@@ -1491,7 +1673,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -1504,14 +1686,14 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Draws a graphical representation of <a href="../Classes/ESTLocation.html"><code>ESTLocation</code></a> object
+		<p>Draws a graphical representation of <a href="../Classes/EILLocation.html"><code>EILLocation</code></a> object
 cropped to only include things explicitly inside the chosen
 region (defined by bounding box).</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)drawLocation:(ESTLocation *)<em>location</em> inRegionOfInterest:(CGRect)<em>regionOfInterest</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)drawLocation:(EILLocation *)<em>location</em> inRegionOfInterest:(CGRect)<em>regionOfInterest</em></code></div>
 
     
 	
@@ -1544,63 +1726,7 @@ region (defined by bounding box).</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/drawObject:withPosition:" title="drawObject:withPosition:"></a>
-	<h3 class="subsubtitle method-title">drawObject:withPosition:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Draws a view that represents a real object at given position.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)drawObject:(UIView *)<em>object</em> withPosition:(ESTPoint *)<em>position</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>object</em></dt>
-			<dd><p>View representing a real object. Cannot be nil.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>position</em></dt>
-			<dd><p>Object representing position in the <a href="#//api/name/location">location</a>. Cannot be nil.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Will throw an exception if called without first calling <a href="#//api/name/drawLocation:"><code>drawLocation:</code></a>.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -1618,7 +1744,7 @@ region (defined by bounding box).</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)drawObjectInBackground:(UIView *)<em>object</em> withPosition:(ESTOrientedPoint *)<em>position</em> identifier:(NSString *)<em>identifier</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)drawObjectInBackground:(UIView *)<em>object</em> withPosition:(EILOrientedPoint *)<em>position</em> identifier:(NSString *)<em>identifier</em></code></div>
 
     
 	
@@ -1652,7 +1778,8 @@ region (defined by bounding box).</p>
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>Background objects are drawn in order of addition below all other views.
 Object will be rotated with regard to <a href="#//api/name/location">location</a> to match orientation of the position.
-Will throw an exception if called without first calling <a href="#//api/name/drawLocation:"><code>drawLocation:</code></a>.</p>
+Will throw an exception if called without first calling <a href="#//api/name/drawLocation:"><code>drawLocation:</code></a>.
+Chosen identifier cannot be same as any beacon MAC address or kPositionViewIdentifier (&ldquo;com.estimote.position.view&rdquo;).</p>
 	</div>
 	
 	
@@ -1663,7 +1790,7 @@ Will throw an exception if called without first calling <a href="#//api/name/dra
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -1681,7 +1808,7 @@ Will throw an exception if called without first calling <a href="#//api/name/dra
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)drawObjectInForeground:(UIView *)<em>object</em> withPosition:(ESTOrientedPoint *)<em>position</em> identifier:(NSString *)<em>identifier</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)drawObjectInForeground:(UIView *)<em>object</em> withPosition:(EILOrientedPoint *)<em>position</em> identifier:(NSString *)<em>identifier</em></code></div>
 
     
 	
@@ -1716,7 +1843,8 @@ Will throw an exception if called without first calling <a href="#//api/name/dra
 		<p>Foreground objects are drawn in order of addition on top of background objects,
 <a href="#//api/name/location">location</a> and trace, but below position view. Object will be rotated with
 regard to <a href="#//api/name/location">location</a> to match orientation of the position.
-Will throw an exception if called without first calling <a href="#//api/name/drawLocation:"><code>drawLocation:</code></a>.</p>
+Will throw an exception if called without first calling <a href="#//api/name/drawLocation:"><code>drawLocation:</code></a>.
+Chosen identifier cannot be same as any beacon MAC address or kPositionViewIdentifier (&ldquo;com.estimote.position.view&rdquo;).</p>
 	</div>
 	
 	
@@ -1727,7 +1855,7 @@ Will throw an exception if called without first calling <a href="#//api/name/dra
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -1745,7 +1873,7 @@ Will throw an exception if called without first calling <a href="#//api/name/dra
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)moveObjectWithIdentifier:(NSString *)<em>identifier</em> toPosition:(ESTOrientedPoint *)<em>position</em> animated:(BOOL)<em>animated</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)moveObjectWithIdentifier:(NSString *)<em>identifier</em> toPosition:(EILOrientedPoint *)<em>position</em> animated:(BOOL)<em>animated</em></code></div>
 
     
 	
@@ -1790,7 +1918,64 @@ Will throw an exception, if there is no view with corresponding identifier.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/objectWithidentifier:" title="objectWithidentifier:"></a>
+	<h3 class="subsubtitle method-title">objectWithidentifier:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns view for object that was previously added to <a href="#//api/name/location">location</a> view.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (UIView *)objectWithidentifier:(NSString *)<em>identifier</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>identifier</em></dt>
+			<dd><p>Unique identifier by which view is identified. Cannot be nil.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>view for object with provided identifier.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>For tapped beacon its MAC address will be returned.
+For tapped position view kPositionViewIdentifier (&ldquo;com.estimote.position.view&rdquo;) will be returned.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -1841,7 +2026,7 @@ Will throw an exception, if there is no view with corresponding identifier.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -1860,7 +2045,7 @@ Will throw an exception if called without first calling <a href="#//api/name/dra
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)updatePosition:(ESTOrientedPoint *)<em>position</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)updatePosition:(EILOrientedPoint *)<em>position</em></code></div>
 
     
 	
@@ -1888,7 +2073,7 @@ Will throw an exception if called without first calling <a href="#//api/name/dra
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTIndoorLocationView.h</code><br />
+		<code class="declared-in-ref">EILIndoorLocationView.h</code><br />
 	</div>				
 	
 	
@@ -1912,7 +2097,7 @@ Will throw an exception if called without first calling <a href="#//api/name/dra
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-06-09)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-11-06)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</span></p>
 						

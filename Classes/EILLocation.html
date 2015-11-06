@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>ESTLocation Class Reference</title>
+		<title>EILLocation Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">ESTLocation Class Reference</h1>
+				<h1 class="hideInXcode">EILLocation Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -49,13 +49,23 @@
 	
 	<option value="//api/name/creationDate">&nbsp;&nbsp;&nbsp;&nbsp;creationDate</option>
 	
+	<option value="//api/name/geographicalLocation">&nbsp;&nbsp;&nbsp;&nbsp;geographicalLocation</option>
+	
 	<option value="//api/name/identifier">&nbsp;&nbsp;&nbsp;&nbsp;identifier</option>
 	
+	<option value="//api/name/isPublic">&nbsp;&nbsp;&nbsp;&nbsp;isPublic</option>
+	
+	<option value="//api/name/latitude">&nbsp;&nbsp;&nbsp;&nbsp;latitude</option>
+	
 	<option value="//api/name/linearObjects">&nbsp;&nbsp;&nbsp;&nbsp;linearObjects</option>
+	
+	<option value="//api/name/longitude">&nbsp;&nbsp;&nbsp;&nbsp;longitude</option>
 	
 	<option value="//api/name/name">&nbsp;&nbsp;&nbsp;&nbsp;name</option>
 	
 	<option value="//api/name/orientation">&nbsp;&nbsp;&nbsp;&nbsp;orientation</option>
+	
+	<option value="//api/name/owner">&nbsp;&nbsp;&nbsp;&nbsp;owner</option>
 	
 	<option value="//api/name/shape">&nbsp;&nbsp;&nbsp;&nbsp;shape</option>
 	
@@ -141,13 +151,23 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/creationDate">creationDate</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/geographicalLocation">geographicalLocation</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/identifier">identifier</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isPublic">isPublic</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/latitude">latitude</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/linearObjects">linearObjects</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/longitude">longitude</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/name">name</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/orientation">orientation</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/owner">owner</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shape">shape</a></span></li>
 	
@@ -196,7 +216,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="ESTLocation Class Reference" name="top"></a>
+				<a title="EILLocation Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -205,7 +225,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">ESTLocation Class Reference</h1>
+						<h1 class="title title-header">EILLocation Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -216,7 +236,7 @@
 	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ESTLocation.h<br />ESTLocation.m</td>
+	<td class="specification-value">EILLocation.h<br />EILLocation.m</td>
 </tr>
 						</tbody></table></div>
 					
@@ -228,8 +248,7 @@
 						<h2 class="subtitle subtitle-overview">Overview</h2>
 						<p>Represents a physical location prepared for Estimote Indoor Location. Object is immutable.</p>
 
-<p>Instances of <code>ESTLocation</code> can be created by <a href="../Classes/ESTLocationBuilder.html"><code>ESTLocationBuilder</code></a> or by importing
-JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"><code>[ESTLocationBuilder parseFromJSON:]</code></a>.</p>
+<p>Instances of <code>EILLocation</code> can be obtained by fetching from the Estimote Cloud (see <a href="../Classes/EILRequestFetchLocation.html"><code>EILRequestFetchLocation</code></a> and <a href="../Classes/EILRequestFetchLocations.html"><code>EILRequestFetchLocations</code></a>), created by <a href="../Classes/EILLocationBuilder.html"><code>EILLocationBuilder</code></a> or by importing JSON with <a href="../Classes/EILLocationBuilder.html#//api/name/parseFromJSON:"><code>[EILLocationBuilder parseFromJSON:]</code></a>.</p>
 					</div>
 					
 					
@@ -254,6 +273,36 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/name">&nbsp;&nbsp;name</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/geographicalLocation">&nbsp;&nbsp;geographicalLocation</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/latitude">&nbsp;&nbsp;latitude</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/longitude">&nbsp;&nbsp;longitude</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/owner">&nbsp;&nbsp;owner</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isPublic">&nbsp;&nbsp;isPublic</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -466,7 +515,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocation.h</code><br />
+		<code class="declared-in-ref">EILLocation.h</code><br />
 	</div>				
 	
 	
@@ -479,7 +528,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Beacons located in the location. Array of <a href="../Classes/ESTPositionedBeacon.html"><code>ESTPositionedBeacon</code></a>.</p>
+		<p>Beacons located in the location. Array of <a href="../Classes/EILPositionedBeacon.html"><code>EILPositionedBeacon</code></a>.</p>
 	</div>		
 	
     
@@ -502,7 +551,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocation.h</code><br />
+		<code class="declared-in-ref">EILLocation.h</code><br />
 	</div>				
 	
 	
@@ -515,7 +564,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Boundary of the location. Array of <a href="../Classes/ESTOrientedLineSegment.html"><code>ESTOrientedLineSegment</code></a>.</p>
+		<p>Boundary of the location. Array of <a href="../Classes/EILOrientedLineSegment.html"><code>EILOrientedLineSegment</code></a>.</p>
 	</div>		
 	
     
@@ -538,7 +587,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocation.h</code><br />
+		<code class="declared-in-ref">EILLocation.h</code><br />
 	</div>				
 	
 	
@@ -574,7 +623,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocation.h</code><br />
+		<code class="declared-in-ref">EILLocation.h</code><br />
 	</div>				
 	
 	
@@ -610,7 +659,43 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocation.h</code><br />
+		<code class="declared-in-ref">EILLocation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/geographicalLocation" title="geographicalLocation"></a>
+	<h3 class="subsubtitle method-title">geographicalLocation</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Geographical location of the location.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSDictionary *geographicalLocation</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILLocation.h</code><br />
 	</div>				
 	
 	
@@ -646,7 +731,79 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocation.h</code><br />
+		<code class="declared-in-ref">EILLocation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isPublic" title="isPublic"></a>
+	<h3 class="subsubtitle method-title">isPublic</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Visibility of the location (private/public).</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) BOOL isPublic</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILLocation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/latitude" title="latitude"></a>
+	<h3 class="subsubtitle method-title">latitude</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Latitude of geographical location of the location</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSNumber *latitude</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILLocation.h</code><br />
 	</div>				
 	
 	
@@ -659,7 +816,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Linear objects inside the location. Array of <a href="../Classes/ESTLocationLinearObject.html"><code>ESTLocationLinearObject</code></a>.</p>
+		<p>Linear objects inside the location. Array of <a href="../Classes/EILLocationLinearObject.html"><code>EILLocationLinearObject</code></a>.</p>
 	</div>		
 	
     
@@ -682,7 +839,43 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocation.h</code><br />
+		<code class="declared-in-ref">EILLocation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/longitude" title="longitude"></a>
+	<h3 class="subsubtitle method-title">longitude</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Longitude of geographical location of the location</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSNumber *longitude</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILLocation.h</code><br />
 	</div>				
 	
 	
@@ -718,7 +911,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocation.h</code><br />
+		<code class="declared-in-ref">EILLocation.h</code><br />
 	</div>				
 	
 	
@@ -754,7 +947,43 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocation.h</code><br />
+		<code class="declared-in-ref">EILLocation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/owner" title="owner"></a>
+	<h3 class="subsubtitle method-title">owner</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Email address of the owner of the location.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *owner</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILLocation.h</code><br />
 	</div>				
 	
 	
@@ -790,7 +1019,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocation.h</code><br />
+		<code class="declared-in-ref">EILLocation.h</code><br />
 	</div>				
 	
 	
@@ -816,7 +1045,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (ESTLocation *)locationFromDictionary:(NSDictionary *)<em>dict</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (EILLocation *)locationFromDictionary:(NSDictionary *)<em>dict</em></code></div>
 
     
 	
@@ -849,7 +1078,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocation.h</code><br />
+		<code class="declared-in-ref">EILLocation.h</code><br />
 	</div>				
 	
 	
@@ -867,7 +1096,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (ESTLocation *)locationFromLocation:(ESTLocation *)<em>location</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (EILLocation *)locationFromLocation:(EILLocation *)<em>location</em></code></div>
 
     
 	
@@ -900,7 +1129,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocation.h</code><br />
+		<code class="declared-in-ref">EILLocation.h</code><br />
 	</div>				
 	
 	
@@ -926,7 +1155,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BOOL)containsPoint:(ESTPoint *)<em>point</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)containsPoint:(EILPoint *)<em>point</em></code></div>
 
     
 	
@@ -953,7 +1182,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocation.h</code><br />
+		<code class="declared-in-ref">EILLocation.h</code><br />
 	</div>				
 	
 	
@@ -1009,7 +1238,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocation.h</code><br />
+		<code class="declared-in-ref">EILLocation.h</code><br />
 	</div>				
 	
 	
@@ -1050,7 +1279,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocation.h</code><br />
+		<code class="declared-in-ref">EILLocation.h</code><br />
 	</div>				
 	
 	
@@ -1086,7 +1315,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocation.h</code><br />
+		<code class="declared-in-ref">EILLocation.h</code><br />
 	</div>				
 	
 	
@@ -1104,7 +1333,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (instancetype)initWithLocation:(ESTLocation *)<em>location</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithLocation:(EILLocation *)<em>location</em></code></div>
 
     
 	
@@ -1137,7 +1366,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocation.h</code><br />
+		<code class="declared-in-ref">EILLocation.h</code><br />
 	</div>				
 	
 	
@@ -1188,7 +1417,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocation.h</code><br />
+		<code class="declared-in-ref">EILLocation.h</code><br />
 	</div>				
 	
 	
@@ -1206,7 +1435,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BOOL)isEqualToLocation:(ESTLocation *)<em>location</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)isEqualToLocation:(EILLocation *)<em>location</em></code></div>
 
     
 	
@@ -1233,7 +1462,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocation.h</code><br />
+		<code class="declared-in-ref">EILLocation.h</code><br />
 	</div>				
 	
 	
@@ -1251,7 +1480,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (NSArray *)linearObjectsWithType:(ESTLocationLinearObjectType)<em>type</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (NSArray *)linearObjectsWithType:(EILLocationLinearObjectType)<em>type</em></code></div>
 
     
 	
@@ -1269,7 +1498,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>Array of <code>ESTLinearObject</code> with given type.</p>
+		<p>Array of <a href="../Classes/EILLocationLinearObject.html"><code>EILLocationLinearObject</code></a> with given type.</p>
 	</div>
 	
 	
@@ -1284,7 +1513,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocation.h</code><br />
+		<code class="declared-in-ref">EILLocation.h</code><br />
 	</div>				
 	
 	
@@ -1302,7 +1531,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (ESTLocation *)locationTranslatedByDX:(double)<em>x</em> dY:(double)<em>y</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (EILLocation *)locationTranslatedByDX:(double)<em>x</em> dY:(double)<em>y</em></code></div>
 
     
 	
@@ -1340,7 +1569,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocation.h</code><br />
+		<code class="declared-in-ref">EILLocation.h</code><br />
 	</div>				
 	
 	
@@ -1353,12 +1582,12 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns a equally distributed random point inside the location.</p>
+		<p>Returns an equally distributed random point inside the location.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (ESTPoint *)randomPointInside</code></div>
+	<div class="method-subsection method-declaration"><code>- (EILPoint *)randomPointInside</code></div>
 
     
 	
@@ -1381,7 +1610,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocation.h</code><br />
+		<code class="declared-in-ref">EILLocation.h</code><br />
 	</div>				
 	
 	
@@ -1422,7 +1651,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTLocation.h</code><br />
+		<code class="declared-in-ref">EILLocation.h</code><br />
 	</div>				
 	
 	
@@ -1446,7 +1675,7 @@ JSON with <a href="../Classes/ESTLocationBuilder.html#//api/name/parseFromJSON:"
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-06-09)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-11-06)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</span></p>
 						
