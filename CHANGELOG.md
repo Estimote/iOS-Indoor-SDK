@@ -1,3 +1,6 @@
+## 2.0.1 (November, 16, 2015)
+- Fixed a bug with EILIndoorLocationManager not starting at all, if it was started while the application was in Inactive state.
+
 ## 2.0.0 (November, 6, 2015)
 - Prefix was changed from EST to EIL.
 - Updated dependency to Estimote iOS SDK 3.8.0.
