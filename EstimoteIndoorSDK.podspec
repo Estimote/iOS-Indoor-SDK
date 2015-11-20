@@ -35,5 +35,5 @@ Pod::Spec.new do |s|
                   'OTHER_LDFLAGS' => '"-lc++"'}
 
 
-  s.dependency "EstimoteSDK", "~> 2.4.0"
+  s.dependency "EstimoteSDK", "~> 3.0"
 end
