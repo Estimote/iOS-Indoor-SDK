@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name        = "EstimoteIndoorSDK"
-  s.version      = "1.6.0"
+  s.version      = "2.0.1"
   s.summary      = "Indoor Location SDK allows real-time beacon-based mapping and indoor location"
   s.description  = <<-DESC
                   Map any space using Estimote Beacons and visualize your location within it in real-time.
@@ -20,20 +20,21 @@ Pod::Spec.new do |s|
   s.platform    = :ios
   s.ios.deployment_target = '7.0'
 
-  s.source      = { :git => "https://github.com/Estimote/iOS-Indoor-SDK.git", :tag => "1.6.0" }
+  s.source      = { :git => "https://github.com/Estimote/iOS-Indoor-SDK.git", :tag => s.version }
   s.source_files =  'EstimoteIndoorLocationSDK/Headers/*.h'
 
-  s.resources = 'EstimoteIndoorLocationSDK/Resources/**/*'
-  s.preserve_paths = 'EstimoteIndoorLocationSDK/libEstimoteIndoorSDK.a', 'Resources/**/*'
+  s.resources = 'EstimoteIndoorLocationSDK/Resources/*'
+  s.preserve_paths = 'EstimoteIndoorLocationSDK/libEstimoteIndoorSDK.a', 'Resources/*'
   s.vendored_libraries = 'EstimoteIndoorLocationSDK/libEstimoteIndoorSDK.a'
 
-  s.frameworks = 'UIKit', 'Foundation', 'SystemConfiguration', 'MobileCoreServices', 'CoreLocation', 'CoreGraphics', 'CoreBluetooth', 'CoreMotion', 'MessageUI', 'MediaPlayer', 'AVFoundation', 'AudioToolbox'
+  s.frameworks = 'CoreMotion', 'AudioToolbox', 'MediaPlayer', 'MessageUI' 
+  s.library = 'z'
   s.requires_arc = true
 
   s.xcconfig  =  { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/EstimoteIndoorSDK"',
                   'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/Headers/EstimoteIndoorSDK"',
-                  'OTHER_LDFLAGS' => '"-lc++"'}
+                  'OTHER_LDFLAGS' => '"-lc++"',
+                  'ENABLE_BITCODE' => 'NO',}
 
-
-  s.dependency "EstimoteSDK", "~> 2.4.0"
+  s.dependency 'EstimoteSDK', '~> 3.8'
 end
