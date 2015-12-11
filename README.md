@@ -53,19 +53,26 @@ pod 'EstimoteIndoorSDK'
 Alternatively you can add SDK manually:
 
 1. Drag-and-drop the EstimoteIndooLocationSDK directory (containing libEstimoteIndoorLocationSDK.a, Headers and Resources) into your project in Xcode. Make sure the "copy items if needed" checkbox is selected.
+
 2. If you are not already using EstimoteSDK in your project, add EstimoteSDK framework to your project.
 This is what your catalogue structure should look like:
 
-![ScreenShot LinkWithBinaryLibraries](ReadmeImages/XcodeCatalogueStructure.png)
+   ![ScreenShot LinkWithBinaryLibraries](ReadmeImages/XcodeCatalogueStructure.png)
 
 3. Open your project settings and go to the "Build Phases" tab. In the "Link library with binaries" section click the "+" button and add the following frameworks that are required by EstimoteIndoorLocationSDK:
+
     * CoreMotion.framework
     * AudioToolbox.framework
     * MediaPlayer.framework
     * MessageUI.framework
     * libz.tbd
+    
+   While you're on this tab already, double-check if `libEstimoteIndoorSDK.a` is included in the "Link library with binaries" list. This should've happened automatically when you were copying the EstimoteIndooLocationSDK directory into the project during step 1. If for some reason it didn't, drag-and-drop the `libEstimoteIndoorSDK.a` file from the Project navigator onto the list.
+
 4. Go to "Build Settings", find "Other Linker Flags" and add `-lc++`. Additionally, set `Enable Bitcode` to `NO`.
+
 5. That's it! By this point, your project should compile successfully and you should be able to start using EstimoteIndoorLocationSDK.
+
 6. If you're coding in Swift, there's one more extra step necessary: to add a Bridging header file to expose Objective-C headers to Swift.
 
    To do that first add a new file to the project - make it a `Header file` and call it `YourProjectName-Bridging-Header.h`. In this file you need to import the following EstimoteIndoorLocationSDK and EstimoteSDK headers:
