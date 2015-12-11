@@ -52,7 +52,7 @@ pod 'EstimoteIndoorSDK'
 
 Alternatively you can add SDK manually:
 
-1. Copy the EstimoteIndooLocationSDK directory (containing libEstimoteIndoorLocationSDK.a, Headers and Resources) into your project.
+1. Drag-and-drop the EstimoteIndooLocationSDK directory (containing libEstimoteIndoorLocationSDK.a, Headers and Resources) into your project in Xcode. Make sure the "copy items if needed" checkbox is selected.
 2. If you are not already using EstimoteSDK in your project, add EstimoteSDK framework to your project.
 This is what your catalogue structure should look like:
 
