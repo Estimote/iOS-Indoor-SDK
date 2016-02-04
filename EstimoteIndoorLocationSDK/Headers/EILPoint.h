@@ -2,6 +2,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /** Represents a geometrical point. Object is immutable. */
 @interface EILPoint : NSObject
 
@@ -89,7 +91,7 @@
  * @param dict NSDictionary to deserialize from.
  * @return A point created from NSDictionary.
  */
-+ (EILPoint *)pointFromDictionary:(NSDictionary *)dict;
++ (nullable EILPoint *)pointFromDictionary:(NSDictionary *)dict;
 
 /**
  * Serializes the point to `NSDictionary`.
@@ -134,8 +136,10 @@
 ///-----------------------------------------
 /// @name Encoding and Decoding
 ///-----------------------------------------
-- (id)initWithCoder:(NSCoder *)coder;
+- (nullable instancetype)initWithCoder:(NSCoder *)coder;
 
 - (void)encodeWithCoder:(NSCoder *)coder;
 
 @end
+
+NS_ASSUME_NONNULL_END

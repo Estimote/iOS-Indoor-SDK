@@ -1,6 +1,7 @@
 //  Copyright (c) 2014 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
+#import <EstimoteSDK/EstimoteSDK.h>
 
 #define EIL_LOCATION_DEFAULT_NAME @"MyEstimoteLocation"
 
@@ -16,6 +17,9 @@ typedef NS_ENUM(int, EILLocationBuilderSide) {
 
 @class EILLocation;
 @class EILOrientedPoint;
+@class EILPoint;
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
 `EILLocationBuilder` is a builder object for creating `EILLocation` objects.
@@ -43,10 +47,10 @@ in the same order as the points. There are following 4 segments: [(0,0), (0,5)],
 
 The next step is to place beacons, doors on the boundary segments of the location:
 
-    [locationBuilder addBeaconIdentifiedByMac:@"63d4819e6a1d"
-                       atBoundarySegmentIndex:0
-                                   inDistance:2
-                                     fromSide:EILLocationBuilderLeftSide];
+    [locationBuilder addBeaconWithIdentifier:@"63d4819e6a1d"
+                      atBoundarySegmentIndex:0
+                                  inDistance:2
+                                    fromSide:EILLocationBuilderLeftSide];
 
 */
 @interface EILLocationBuilder : NSObject
@@ -59,9 +63,9 @@ The next step is to place beacons, doors on the boundary segments of the locatio
 /**
  * Adds a list of boundary points of location. Can be added clockwise or counter clockwise.
  *
- * @param boundaryPoints List of boundary points (`EILPoint`) that defines a location.
+ * @param boundaryPoints List of boundary points that defines a location.
  */
-- (void)setLocationBoundaryPoints:(NSArray *)boundaryPoints;
+- (void)setLocationBoundaryPoints:(NSArray<EILPoint *> *)boundaryPoints;
 
 /**
  * Sets the orientation of the room with respect to the magnetic north. Counted clockwise in degrees.
@@ -79,15 +83,78 @@ The next step is to place beacons, doors on the boundary segments of the locatio
  * Places a beacon on the boundary segment.
  * Boundary segments were created in the same order as points were added.
  *
- * @param macAddress MAC address of the beacon (lowercase, no colons, e.g. "63d4819e6a1d").
+ * @param identifier Beacon identifier (MAC address or identifier).
  * @param boundarySegmentIndex Index of the boundary segment.
  * @param distance Distance from the beacon to the side of the boundary segment.
  * @param side Side of the boundary segment as seen from inside of the location.
  */
+- (void)addBeaconWithIdentifier:(NSString *)identifier
+         atBoundarySegmentIndex:(NSUInteger)boundarySegmentIndex
+                     inDistance:(double)distance
+                       fromSide:(EILLocationBuilderSide)side;
+
+/**
+ * Places a beacon in the location.
+ *
+ * @param identifier Beacon identifier (MAC address or identifier).
+ * @param position Coordinates of the beacon position.
+ */
+- (void)addBeaconWithIdentifier:(NSString *)identifier
+                   withPosition:(EILOrientedPoint *)position;
+
+/**
+ * Places a beacon in the location.
+ *
+ * @param identifier Beacon identifier (MAC address or identifier).
+ * @param position Coordinates of the beacon position.
+ * @param color Color of the beacon.
+ */
+- (void)addBeaconWithIdentifier:(NSString *)identifier
+                   withPosition:(EILOrientedPoint *)position
+                       andColor:(ESTColor)color;
+
+/**
+ * Places a beacon on the boundary segment.
+ * Boundary segments were created in the same order as points were added.
+ *
+ * @param macAddress Beacon MAC address.
+ * @param boundarySegmentIndex Index of the boundary segment.
+ * @param distance Distance from the beacon to the side of the boundary segment.
+ * @param side Side of the boundary segment as seen from inside of the location.
+ *
+ * This method is deprecated. Use addBeaconWithIdentifier:atBoundarySegmentIndex:inDistance:fromSide: instead.
+ */
 - (void)addBeaconIdentifiedByMac:(NSString *)macAddress
           atBoundarySegmentIndex:(NSUInteger)boundarySegmentIndex
                       inDistance:(double)distance
-                        fromSide:(EILLocationBuilderSide)side;
+                        fromSide:(EILLocationBuilderSide)side
+                        __deprecated_msg("Use addBeaconWithIdentifier:atBoundarySegmentIndex:inDistance:fromSide: instead.");
+
+/**
+ * Places a beacon in the location.
+ *
+ * @param macAddress Beacon MAC address.
+ * @param position Coordinates of the beacon position.
+ *
+ * This method is deprecated. Use addBeaconWithIdentifier:withPosition: instead.
+ */
+- (void)addBeaconIdentifiedByMac:(NSString *)macAddress
+                    withPosition:(EILOrientedPoint *)position
+                    __deprecated_msg("Use addBeaconWithIdentifier:withPosition: instead.");
+
+/**
+ * Places a beacon in the location.
+ *
+ * @param macAddress Beacon MAC address.
+ * @param position Coordinates of the beacon position.
+ * @param color Color of the beacon.
+ *
+ * This method is deprecated. Use addBeaconWithIdentifier:withPosition:andColor: instead.
+ */
+- (void)addBeaconIdentifiedByMac:(NSString *)macAddress
+                    withPosition:(EILOrientedPoint *)position
+                        andColor:(ESTColor)color
+                        __deprecated_msg("Use addBeaconWithIdentifier:withPosition:andColor: instead.");
 
 /**
  * Places a door on the boundary segment.
@@ -141,18 +208,18 @@ The next step is to place beacons, doors on the boundary segments of the locatio
  *
  * @return A valid location.
  */
-- (EILLocation *)build;
+- (nullable EILLocation *)build;
 
 /**
-* Parses JSON string representation of the location. You might have it from the app
-* through "Export location code snippet".
-*
-* If location cannot be constructed based on JSON, an exception will be raised with
-* explanation why it has happened.
-*
-* @param json JSON encoded as a string representation of the location.
-* @return Location object built based upon the JSON. Returns nil if location cannot be built.
-*/
-+ (EILLocation *)parseFromJSON:(NSString *)json;
+ * Parses JSON string representation of the location. You might have it from the older version of the app through "Export location code snippet".
+ *
+ * If location cannot be constructed based on JSON, an exception will be raised with explanation why it has happened.
+ *
+ * @param json JSON encoded as a string representation of the location.
+ * @return Location object built based upon the JSON. Returns nil if location cannot be built.
+ */
++ (nullable EILLocation *)parseFromJSON:(NSString *)json;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -15,6 +15,8 @@ typedef enum : NSUInteger {
     EILLocationLinearObjectTypeWindow,
 } EILLocationLinearObjectType;
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  * Represents an object in a location which position can be described by a line segment.
  * Typical examples are doors, windows, internal partition walls etc.
@@ -84,7 +86,7 @@ typedef enum : NSUInteger {
 * @param dict NSDictionary to deserialize from.
 * @return A linear object created from NSDictionary.
 */
-+ (EILLocationLinearObject *)linearObjectFromDictionary:(NSDictionary *)dict;
++ (nullable EILLocationLinearObject *)linearObjectFromDictionary:(NSDictionary *)dict;
 
 /**
 * Serializes the linear object to `NSDictionary`.
@@ -117,8 +119,13 @@ typedef enum : NSUInteger {
 /// @name Describing Objects
 ///-----------------------------------------
 
+/**
+ * Returns a string representation of the location linear object.
+ *
+ * @return A string representation of the location linear object.
+ */
 - (NSString *)description;
 
 @end
 
-
+NS_ASSUME_NONNULL_END

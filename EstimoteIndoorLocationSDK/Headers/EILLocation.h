@@ -5,6 +5,9 @@
 #import "EILLocationLinearObject.h"
 
 @class EILPoint;
+@class EILPositionedBeacon;
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Represents a physical location prepared for Estimote Indoor Location. Object is immutable.
@@ -19,49 +22,52 @@
 ///-----------------------------------------
 
 /** Globally unique identifier of the location. Identifier is being set by server once location is persisted. */
-@property (nonatomic, strong, readonly) NSString        *identifier;
+@property (nonatomic, strong, readonly, nullable) NSString *identifier;
 
 /** Name of the location. */
-@property (nonatomic, strong, readonly) NSString        *name;
+@property (nonatomic, strong, readonly) NSString *name;
 
 /** Geographical location of the location. */
-@property (nonatomic, strong, readonly) NSDictionary    *geographicalLocation;
+@property (nonatomic, strong, readonly, nullable) NSDictionary *geographicalLocation;
 
 /** Latitude of geographical location of the location */
-@property (nonatomic, strong, readonly) NSNumber        *latitude;
+@property (nonatomic, strong, readonly, nullable) NSNumber *latitude;
 
 /** Longitude of geographical location of the location */
-@property (nonatomic, strong, readonly) NSNumber        *longitude;
+@property (nonatomic, strong, readonly, nullable) NSNumber *longitude;
 
 /** Email address of the owner of the location. */
-@property (nonatomic, strong, readonly) NSString        *owner;
+@property (nonatomic, strong, readonly, nullable) NSString *owner;
 
 /** Visibility of the location (private/public). */
-@property (nonatomic, assign, readonly) BOOL            isPublic;
+@property (nonatomic, assign, readonly) BOOL isPublic;
 
-/** Boundary of the location. Array of `EILOrientedLineSegment`. */
-@property (nonatomic, strong, readonly) NSArray         *boundarySegments;
+/** Boundary of the location. */
+@property (nonatomic, strong, readonly) NSArray<EILOrientedLineSegment *> *boundarySegments;
 
 /** Bezier path of the boundary of the location. */
-@property (nonatomic, strong, readonly) UIBezierPath    *shape;
+@property (nonatomic, strong, readonly) UIBezierPath *shape;
+
+/** Polygon of shape of the location. Points are sorted clockwise.  */
+@property (nonatomic, strong, readonly, nullable) NSArray<EILPoint *> *polygon;
 
 /** Area of the location in square meters. */
-@property (nonatomic, assign, readonly) double          area;
+@property (nonatomic, assign, readonly) double area;
 
 /** Bounding box of the location. */
-@property (nonatomic, assign, readonly) CGRect          boundingBox;
+@property (nonatomic, assign, readonly) CGRect boundingBox;
 
-/** Linear objects inside the location. Array of `EILLocationLinearObject`. */
-@property (nonatomic, strong, readonly) NSArray         *linearObjects;
+/** Linear objects inside the location. */
+@property (nonatomic, strong, readonly) NSArray<EILLocationLinearObject *> *linearObjects;
 
-/** Beacons located in the location. Array of `EILPositionedBeacon`. */
-@property (nonatomic, strong, readonly) NSArray         *beacons;
+/** Beacons located in the location. */
+@property (nonatomic, strong, readonly) NSArray<EILPositionedBeacon *> *beacons;
 
 /** Orientation to magnetic north, counted clockwise. Value is in degrees. */
-@property (nonatomic, assign, readonly) double          orientation;
+@property (nonatomic, assign, readonly) double orientation;
 
 /** Creation date. */
-@property (nonatomic, strong, readonly) NSDate          *creationDate;
+@property (nonatomic, strong, readonly) NSDate *creationDate;
 
 
 #pragma mark Creating and Initializing
@@ -96,7 +102,7 @@
 * @param dict `NSDictionary` to deserialize from.
 * @return A location created from `NSDictionary`.
 */
-+ (EILLocation *)locationFromDictionary:(NSDictionary *)dict;
++ (nullable EILLocation *)locationFromDictionary:(NSDictionary *)dict;
 
 /**
 * Serializes the point to `NSDictionary`.
@@ -142,9 +148,9 @@
 * Filters this location linear objects and returns only those for given type.
 *
 * @param type Type of linear object to filter this location linear objects.
-* @return Array of `EILLocationLinearObject` with given type.
+* @return Linear objects with given type.
 */
-- (NSArray *)linearObjectsWithType:(EILLocationLinearObjectType)type;
+- (NSArray<EILLocationLinearObject *> *)linearObjectsWithType:(EILLocationLinearObjectType)type;
 
 #pragma Identifying and Comparing Objects
 ///-----------------------------------------
@@ -178,3 +184,5 @@
 - (NSString *)description;
 
 @end
+
+NS_ASSUME_NONNULL_END

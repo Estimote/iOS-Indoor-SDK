@@ -35,7 +35,7 @@ Learn more:
 
 Indoor Location SDK enables creating location through builder and obtaining position updates from the location. Besides location builder there is also possibility of mapping location through Estimote Indoor Location App.
 
-The mapping process is simple and fast. Start by placing one beacon immediately to the right of the room's entrance at about chest height. Affix a single beacon in the center of each of the remaining walls. Then walk from beacon to beacon keeping as close to the perimeter of the space as possible. While walking, hold your phone in front of you. Stop at each beacon along the way, holding the phone next to it, to complete this one-time configuration process.
+The mapping process is simple. First, you'll need to map the shape. Start by walking around a location and stick as close to the perimeter as possible. Remember to hold the phone in front of you for the location to be mapped properly. The app will now suggest the number and placement of beacons. Affix them on the walls at chest height.  To finalize the process walk around the location once more (again with the phone in front of you). Stop at each beacon along the way, to complete this one-time configuration process.
 
 There is a nice video tutorial by [@phillydev716](https://twitter.com/phillydev716) on [YouTube on how to use Indoor Location in your app](https://www.youtube.com/watch?v=BjXHBBvrWQ0). Please note, that video tutorial uses older version of our SDK (v.1.6).
 
@@ -133,14 +133,18 @@ EILLocationBuilder *locationBuilder = [EILLocationBuilder new];
 
 Points that define the shape of location also define its boundary segments. They are indexed in the same order as the points. In this example there would be the following 4 segments: [(0,0), (0,5)], [(0,5), (5,5)], [(5,5), (5,0)], [(5,0), (0,0)].
 
-The next step is to place beacons and doors on the boundary segments of the location:
+The next step is to place beacons and doors in the location:
 
 ```objective-c
-[locationBuilder addBeaconIdentifiedByMac:@"aabbccddeeff"
+[locationBuilder addBeaconIdentifiedByIdentifier:@"aabbccddeeff"
 atBoundarySegmentIndex:0
 inDistance:2
 fromSide:EILLocationBuilderLeftSide];
 ```
+
+Using ```ESTIndoorLocationBuilder``` you can also place beacons inside the location (addBeaconWithIdentifier:withPosition:, addBeaconWithIdentifier:withPosition:andColor:), which is not possible with mapping tool in Indoor Location App.
+
+Note that methods used for adding beacons that are identified by their mac addresses are now depracated. Please use methods using identification by identifier instead.
 
 #### Via Estimote Indoor Location App
 
@@ -178,6 +182,17 @@ Note, that you need only one Indoor Location Manager to monitor multiple locatio
 ```
 In order to have Indoor Location status change and position updates without delay, you should start Indoor Location Manager and monitioring for Indoor Location early.
 
+EILIndoorLocationManager position updates can be delivered in two different modes. Modes differ in accuracy, stability and responsiveness. Depending on the mode system resource usage may be different.
+- `EILIndoorLocationManagerModeNormal` - Delivers most accurate and responsive position updates at the cost of high system resource usage. To achieve best results user should hold phone in hand in portrait orientation. This is default mode of `EILIndoorLocationManager`.
+- `EILIndoorLocationManagerModeLight` - Delivers stable, but a bit less responsive position updates. Has a very low system resource usage.
+
+In order to change mode simply change `mode` property of `EILIndoorLocationManager` object.
+
+```objective-c
+indoorLocationManager.mode = EILIndoorLocationManagerModeLight;
+```
+If the position updates delivery is in progress it will effectively restart position updates with new mode.
+
 ### Managing locations in the Estimote Cloud
 
 To manage your locations, you can use requests that allows communication with Estimote Cloud.
@@ -188,6 +203,7 @@ Provided requests are as follows:
 - ```EILRequestFetchLocation``` - request for fetching location identified by its identifier. Location has to be public or belong to currently authorized user
 - ```EILRequestFetchPublicLocations``` - request for fetching public nearby locations
 - ```EILRequestFetchLocations``` - request for fetching locations from Estimote Cloud for currently authorized user
+- ```EILRequestModifyLocation``` - request for modifying already existing location in Estimote Cloud
 
 Each location saved in Estimote Cloud is given a unique string identifier that corresponds to the `identifier` property of `EILLocation`. You can find it on cloud.estimote.com, on the "Locations" screen, and use it with the Indoor SDK to, among other things, fetch your stored location from Estimote Cloud. Example of fetching location by identifier can be seen below:
 

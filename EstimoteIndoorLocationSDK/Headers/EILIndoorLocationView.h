@@ -7,6 +7,8 @@
 @class EILPoint;
 @class EILOrientedPoint;
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  * Width of the border around location shape.
  * Non-zero value is needed for objects like beacons
@@ -50,10 +52,10 @@ didSelectObjectWithIdentifier:(NSString *)identifier;
 ///-----------------------------------------
 
 /** The delegate object to receive identifier of selected object in location view. */
-@property (nonatomic, weak) id <EILIndoorLocationViewDelegate> delegate;
+@property (nonatomic, weak, nullable) id <EILIndoorLocationViewDelegate> delegate;
 
 /** `EILLocation` object to be drawn. */
-@property (nonatomic, strong, readonly) EILLocation *location;
+@property (nonatomic, strong, readonly, nullable) EILLocation *location;
 
 /** If YES, then a trace will be displayed. */
 @property (nonatomic, assign) BOOL showTrace;
@@ -70,13 +72,13 @@ didSelectObjectWithIdentifier:(NSString *)identifier;
 ///-----------------------------------------
 
 /** View representing current position indicator. */
-@property (nonatomic, strong) UIView    *positionView;
+@property (nonatomic, strong, nullable) UIView    *positionView;
 
 /** Image used as current position indicator. */
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000
-@property (nonatomic, strong) IBInspectable UIImage   *positionImage;
+@property (nonatomic, strong, nullable) IBInspectable UIImage   *positionImage;
 #else
-@property (nonatomic, strong) UIImage   *positionImage;
+@property (nonatomic, strong, nullable) UIImage   *positionImage;
 #endif
 
 /** Color of the location boundary. */
@@ -189,7 +191,7 @@ didSelectObjectWithIdentifier:(NSString *)identifier;
  * region (defined by bounding box).
  *
  * @param location Object representing current location.
- * @param regionOfInterest Region of interest to be drawn
+ * @param regionOfInterest Region of interest to be drawn.
  */
 - (void)drawLocation:(EILLocation *)location
   inRegionOfInterest:(CGRect)regionOfInterest;
@@ -205,7 +207,7 @@ didSelectObjectWithIdentifier:(NSString *)identifier;
  *
  * @param position Object representing current position in the location.
  */
-- (void)updatePosition:(EILOrientedPoint *)position;
+- (void)updatePosition:(nullable EILOrientedPoint *)position;
 
 #pragma mark Drawing trace
 ///-----------------------------------------
@@ -230,7 +232,7 @@ didSelectObjectWithIdentifier:(NSString *)identifier;
  * Background objects are drawn in order of addition below all other views.
  * Object will be rotated with regard to location to match orientation of the position.
  * Will throw an exception if called without first calling `drawLocation:`.
- * Chosen identifier cannot be same as any beacon MAC address or kPositionViewIdentifier ("com.estimote.position.view").
+ * Chosen identifier cannot be same as any beacon identifier or kPositionViewIdentifier ("com.estimote.position.view").
  *
  * @param object View representing a real object. Cannot be nil.
  * @param position Object representing position in the location. Cannot be nil.
@@ -260,14 +262,14 @@ didSelectObjectWithIdentifier:(NSString *)identifier;
 /**
  * Returns view for object that was previously added to location view.
  *
- * For tapped beacon its MAC address will be returned.
+ * For tapped beacon its identifier will be returned.
  * For tapped position view kPositionViewIdentifier ("com.estimote.position.view") will be returned.
  *
  * @param identifier Unique identifier by which view is identified. Cannot be nil.
  *
  * @return view for object with provided identifier.
  */
-- (UIView *)objectWithidentifier:(NSString *)identifier;
+- (nullable UIView *)objectWithidentifier:(NSString *)identifier;
 
 /**
  * Moves an object identified by identifier to a given position.
@@ -353,3 +355,5 @@ didSelectObjectWithIdentifier:(NSString *)identifier;
 - (EILPoint *)calculateRealPointFromPicturePoint:(CGPoint)picturePoint;
 
 @end
+
+NS_ASSUME_NONNULL_END

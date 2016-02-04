@@ -5,10 +5,12 @@
 
 @class EILLocation;
 
+NS_ASSUME_NONNULL_BEGIN
+
 /** 
  * A block object to be executed when the request finishes.
  */
-typedef void(^EILRequestFetchLocationBlock)(EILLocation *location, NSError *error);
+typedef void(^EILRequestFetchLocationBlock)(EILLocation * _Nullable location, NSError * _Nullable error);
 
 /**
  * Request to fetch location identified by its identifier.
@@ -36,3 +38,5 @@ typedef void(^EILRequestFetchLocationBlock)(EILLocation *location, NSError *erro
 - (void)sendRequestWithCompletion:(EILRequestFetchLocationBlock)completion;
 
 @end
+
+NS_ASSUME_NONNULL_END

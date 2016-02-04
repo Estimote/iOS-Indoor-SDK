@@ -8,6 +8,7 @@
 */
 #define EIL_ORIENTATION_UNDEFINED -1
 
+NS_ASSUME_NONNULL_BEGIN
 
 /** Represents a geometrical point with additional information about orientation. Object is immutable. */
 @interface EILOrientedPoint : EILPoint
@@ -116,7 +117,7 @@
 * @param dict NSDictionary to deserialize from.
 * @return An oriented point created from NSDictionary.
 */
-+ (EILOrientedPoint *)pointFromDictionary:(NSDictionary *)dict;
++ (nullable EILOrientedPoint *)pointFromDictionary:(NSDictionary *)dict;
 
 /**
 * Serializes the oriented point to `NSDictionary`.
@@ -154,14 +155,17 @@
 *
 * @return A string representation of the point in form of (x,y, orientation)
 */
--(NSString *)description;
+- (NSString *)description;
 
 
 #pragma mark Encoding and Decoding
 ///-----------------------------------------
 /// @name Encoding and Decoding
 ///-----------------------------------------
-- (id)initWithCoder:(NSCoder *)coder;
+- (nullable instancetype)initWithCoder:(NSCoder *)coder;
 
 - (void)encodeWithCoder:(NSCoder *)coder;
+
 @end
+
+NS_ASSUME_NONNULL_END

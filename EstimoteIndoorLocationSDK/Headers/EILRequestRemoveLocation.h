@@ -5,10 +5,12 @@
 
 @class EILLocation;
 
+NS_ASSUME_NONNULL_BEGIN
+
 /** 
  * A block object to be executed when the request finishes.
  */
-typedef void(^EILRequestRemoveLocationBlock)(EILLocation *location, NSError *error);
+typedef void(^EILRequestRemoveLocationBlock)(EILLocation * _Nullable location, NSError * _Nullable error);
 
 /**
  * Request for removing a new location from Estimote Cloud.
@@ -36,3 +38,5 @@ typedef void(^EILRequestRemoveLocationBlock)(EILLocation *location, NSError *err
 - (void)sendRequestWithCompletion:(EILRequestRemoveLocationBlock)completion;
 
 @end
+
+NS_ASSUME_NONNULL_END

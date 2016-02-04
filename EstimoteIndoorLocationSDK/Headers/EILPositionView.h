@@ -4,6 +4,8 @@
 #import <UIKit/UIKit.h>
 #import "EILIndoorLocationManager.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /** 
  * View representing current position indicator with accuracy circle. 
  * It adjusts itself to always show correctly accuracy in scale.
@@ -44,3 +46,5 @@
 - (void)updateAccuracy:(EILPositionAccuracy)accuracy;
 
 @end
+
+NS_ASSUME_NONNULL_END

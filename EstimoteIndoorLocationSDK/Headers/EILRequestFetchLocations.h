@@ -3,10 +3,14 @@
 #import <Foundation/Foundation.h>
 #import <EstimoteSDK/EstimoteSDK.h>
 
+@class EILLocation;
+
+NS_ASSUME_NONNULL_BEGIN
+
 /** 
  * A block object to be executed when the request finishes. Returns an array of `EILIndoorLocation` objects.
  */
-typedef void(^EILRequestFetchLocationsBlock)(NSArray *locations, NSError *error);
+typedef void(^EILRequestFetchLocationsBlock)(NSArray<EILLocation *> * _Nullable locations, NSError * _Nullable error);
 
 /**
  * Request to fetch all locations from Estimote Cloud for currently authorised user.
@@ -26,3 +30,5 @@ typedef void(^EILRequestFetchLocationsBlock)(NSArray *locations, NSError *error)
 - (void)sendRequestWithCompletion:(EILRequestFetchLocationsBlock)completion;
 
 @end
+
+NS_ASSUME_NONNULL_END

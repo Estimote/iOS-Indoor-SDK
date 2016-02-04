@@ -5,6 +5,8 @@
 @class EILPoint;
 @class EILOrientedPoint;
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  * Represents a geometrical line segment with additional information about orientation.
  * Object is immutable.
@@ -92,6 +94,28 @@
 - (EILOrientedPoint *)centerPoint;
 
 /**
+ * Calculates left point of the line.
+ *
+ * If the orientation of the line is pointing at you, the left point will be on the left.
+ *
+ * If the line does not have an orientation nil will be returned.
+ *
+ * @return An oriented point representing left point of the line. It will have the same orientation as the line.
+ */
+- (EILOrientedPoint *)leftPoint;
+
+/**
+ * Calculates right point of the line.
+ *
+ * If the orientation of the line is pointing at you, the right point will be on the right.
+ *
+ * If the line does not have an orientation nil will be returned.
+ *
+ * @return An oriented point representing right point of the line. It will have the same orientation as the line.
+ */
+- (EILOrientedPoint *)rightPoint;
+
+/**
  * Calculates length of the line segment.
  *
  * @return A length of the line.
@@ -119,7 +143,7 @@
 * @param dict NSDictionary to deserialize from.
 * @return An oriented line segment created from NSDictionary.
 */
-+ (EILOrientedLineSegment *)lineFromDictionary:(NSDictionary *)dict;
++ (nullable EILOrientedLineSegment *)lineFromDictionary:(NSDictionary *)dict;
 
 /**
  * Serializes the oriented line segment to `NSDictionary`.
@@ -157,6 +181,8 @@
  *
  * @return A string representation of the oriented line segment in form of ((x1,y1),(x2,y2), orientation)
  */
--(NSString *)description;
+- (NSString *)description;
 
 @end
+
+NS_ASSUME_NONNULL_END

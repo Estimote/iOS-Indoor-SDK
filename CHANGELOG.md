@@ -1,3 +1,9 @@
+## 2.1.0 (February, 3, 2016)
+- `EILIndoorLocationManager` can provide position update in two different modes. In addition to normal mode, light mode delivers stable, but a bit less responsive position updates. Has a very low system resource usage.
+- In `EILLocationBuilder` beacons can be placed at arbitrary positions.
+- Added request for modifying locations in Estimote Cloud.
+- Updated resources with all resolutions.
+
 ## 2.0.1 (November, 16, 2015)
 - Fixed a bug with EILIndoorLocationManager not starting at all, if it was started while the application was in Inactive state.
 

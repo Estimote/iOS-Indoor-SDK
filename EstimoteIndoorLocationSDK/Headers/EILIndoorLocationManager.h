@@ -3,6 +3,26 @@
 #import <Foundation/Foundation.h>
 
 /**
+ * The possible modes of EILIndoorLocationManager position updates delivery.
+ *
+ * Modes differ in accuracy, stability and responsiveness. Depending on the mode system resource usage may be different.
+ */
+typedef NS_ENUM(NSInteger, EILIndoorLocationManagerMode) {
+    /**
+     * Normal mode of `EILIndoorLocationManager`. Delivers most accurate and responsive position updates at the cost of high system resource usage.
+     *
+     * This is the default mode of `EILIndoorLocationManager`.
+     *
+     * To achieve best results user should hold phone in hand in portrait orientation.
+     */
+            EILIndoorLocationManagerModeNormal,
+    /**
+     * Light mode of `EILIndoorLocationManager`. Delivers stable, but a bit less responsive position updates. Has a very low system resource usage.
+     */
+            EILIndoorLocationManagerModeLight,
+};
+
+/**
  * The possible states of the monitored location.
  */
 typedef NS_ENUM(NSInteger, EILLocationState) {
@@ -31,6 +51,8 @@ typedef NS_ENUM(NSInteger, EILIndoorErrorCode) {
     /** Platform does not support Bluetooth Low Energy. */
             EILBluetoothNotSupportedError
 };
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Describes the accuracy of the determined position.
@@ -69,6 +91,11 @@ typedef NS_ENUM(NSInteger, EILPositionAccuracy)
      * Accuracy should be thought of as comparable to location size.
      */
             EILPositionAccuracyVeryLow  = 4,
+    
+    /**
+     * Accuracy of determined position is unknown.
+     */
+            EILPositionAccuracyUnknown  = 5
 };
 
 @class EILIndoorLocationManager;
@@ -111,7 +138,7 @@ didFailToUpdatePositionWithError:(NSError *)error;
 /**
  * The delegate object to receive position update events.
  */
-@property (nonatomic, weak) id <EILIndoorLocationManagerDelegate> delegate;
+@property (nonatomic, weak, nullable) id <EILIndoorLocationManagerDelegate> delegate;
 
 /**
  * Starts `Indoor Location Manager`.
@@ -166,7 +193,7 @@ didFailToUpdatePositionWithError:(NSError *)error;
 /**
  * The set of all monitored `Indoor Location`s.
  */
-@property (nonatomic, strong, readonly) NSSet *monitoredLocations;
+@property (nonatomic, strong, readonly) NSSet<EILLocation *> *monitoredLocations;
 
 /**
  * Determines state for the monitored location.
@@ -196,6 +223,24 @@ didFailToUpdatePositionWithError:(NSError *)error;
 ///--------------------------------------------------------------------
 
 /**
+ * Mode of `EILIndoorLocationManager` position updates delivery.
+ *
+ * Default mode of `EILIndoorLocationManager` is `EILIndoorLocationManagerModeNormal`.
+ *
+ * Switching mode while delivery of position updates is in progress will effectively restart position updates with new mode.
+ *
+ * @see EILIndoorLocationManagerMode
+ */
+@property (nonatomic, assign) EILIndoorLocationManagerMode mode;
+
+/**
+ * Supported modes (`EILIndoorLocationManagerMode`) for the device.
+ *
+ * @return An array of supported modes (`EILIndoorLocationManagerMode`) encoded as `NSNumber *` objects.
+ */
++ (NSArray<NSNumber *> *)supportedModes;
+
+/**
  * Starts the delivery of position updates for the specified location.
  *
  * If the `Indoor Location Manager` is not started invoking this method will start it.
@@ -214,3 +259,5 @@ didFailToUpdatePositionWithError:(NSError *)error;
 - (void)stopPositionUpdates;
 
 @end
+
+NS_ASSUME_NONNULL_END
