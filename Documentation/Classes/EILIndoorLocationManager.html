@@ -41,9 +41,16 @@
 	
 	<option value="//api/name/isRunning">&nbsp;&nbsp;&nbsp;&nbsp;isRunning</option>
 	
+	<option value="//api/name/mode">&nbsp;&nbsp;&nbsp;&nbsp;mode</option>
+	
 	<option value="//api/name/monitoredLocations">&nbsp;&nbsp;&nbsp;&nbsp;monitoredLocations</option>
 	
 	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/supportedModes">&nbsp;&nbsp;&nbsp;&nbsp;+ supportedModes</option>
 	
 	
 	
@@ -96,11 +103,19 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isRunning">isRunning</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mode">mode</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/monitoredLocations">monitoredLocations</a></span></li>
 	
 </ul></li>
 
 
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/supportedModes">supportedModes</a></span></li>
+	
+</ul></li>
 
 
 
@@ -239,6 +254,18 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
+		<code><a href="#//api/name/mode">&nbsp;&nbsp;mode</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/supportedModes">+&nbsp;supportedModes</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/startPositionUpdatesForLocation:">&ndash;&nbsp;startPositionUpdatesForLocation:</a></code>
 	</span>
 	
@@ -274,7 +301,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;EILIndoorLocationManagerDelegate&gt; delegate</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak, nullable) id&lt;EILIndoorLocationManagerDelegate&gt; delegate</code></div>
 
     
 	
@@ -335,6 +362,58 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/mode" title="mode"></a>
+	<h3 class="subsubtitle method-title">mode</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Mode of <code>EILIndoorLocationManager</code> position updates delivery.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) EILIndoorLocationManagerMode mode</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Default mode of <code>EILIndoorLocationManager</code> is <code>EILIndoorLocationManagerModeNormal</code>.</p>
+
+<p>Switching mode while delivery of position updates is in progress will effectively re<a href="#//api/name/start">start</a> position updates with new mode.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Constants/EILIndoorLocationManagerMode.html">EILIndoorLocationManagerMode</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILIndoorLocationManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/monitoredLocations" title="monitoredLocations"></a>
 	<h3 class="subsubtitle method-title">monitoredLocations</h3>
 	
@@ -346,7 +425,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSSet *monitoredLocations</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSSet&lt;EILLocation*&gt; *monitoredLocations</code></div>
 
     
 	
@@ -373,6 +452,53 @@
 					</div>
 					
 					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/supportedModes" title="supportedModes"></a>
+	<h3 class="subsubtitle method-title">supportedModes</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Supported modes (<a href="../Constants/EILIndoorLocationManagerMode.html"><code>EILIndoorLocationManagerMode</code></a>) for the device.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSArray&lt;NSNumber*&gt; *)supportedModes</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An array of supported modes (<a href="../Constants/EILIndoorLocationManagerMode.html"><code>EILIndoorLocationManagerMode</code></a>) encoded as <code>NSNumber *</code> objects.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILIndoorLocationManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
 					
 					
 					
@@ -806,7 +932,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-11-06)</span><br />
+						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-02-10)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</span></p>
 						

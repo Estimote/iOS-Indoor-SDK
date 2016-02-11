@@ -67,6 +67,8 @@
 	
 	<option value="//api/name/owner">&nbsp;&nbsp;&nbsp;&nbsp;owner</option>
 	
+	<option value="//api/name/polygon">&nbsp;&nbsp;&nbsp;&nbsp;polygon</option>
+	
 	<option value="//api/name/shape">&nbsp;&nbsp;&nbsp;&nbsp;shape</option>
 	
 	
@@ -168,6 +170,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/orientation">orientation</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/owner">owner</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/polygon">polygon</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shape">shape</a></span></li>
 	
@@ -315,6 +319,12 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/shape">&nbsp;&nbsp;shape</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/polygon">&nbsp;&nbsp;polygon</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -528,12 +538,12 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Beacons located in the location. Array of <a href="../Classes/EILPositionedBeacon.html"><code>EILPositionedBeacon</code></a>.</p>
+		<p>Beacons located in the location.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray *beacons</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray&lt;EILPositionedBeacon*&gt; *beacons</code></div>
 
     
 	
@@ -564,12 +574,12 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Boundary of the location. Array of <a href="../Classes/EILOrientedLineSegment.html"><code>EILOrientedLineSegment</code></a>.</p>
+		<p>Boundary of the location.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray *boundarySegments</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray&lt;EILOrientedLineSegment*&gt; *boundarySegments</code></div>
 
     
 	
@@ -677,7 +687,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSDictionary *geographicalLocation</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly, nullable) NSDictionary *geographicalLocation</code></div>
 
     
 	
@@ -713,7 +723,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *identifier</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly, nullable) NSString *identifier</code></div>
 
     
 	
@@ -785,7 +795,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSNumber *latitude</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly, nullable) NSNumber *latitude</code></div>
 
     
 	
@@ -816,12 +826,12 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Linear objects inside the location. Array of <a href="../Classes/EILLocationLinearObject.html"><code>EILLocationLinearObject</code></a>.</p>
+		<p>Linear objects inside the location.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray *linearObjects</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray&lt;EILLocationLinearObject*&gt; *linearObjects</code></div>
 
     
 	
@@ -857,7 +867,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSNumber *longitude</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly, nullable) NSNumber *longitude</code></div>
 
     
 	
@@ -965,7 +975,43 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *owner</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly, nullable) NSString *owner</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILLocation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/polygon" title="polygon"></a>
+	<h3 class="subsubtitle method-title">polygon</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Polygon of <a href="#//api/name/shape">shape</a> of the location. Points are sorted clockwise.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly, nullable) NSArray&lt;EILPoint*&gt; *polygon</code></div>
 
     
 	
@@ -1045,7 +1091,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (EILLocation *)locationFromDictionary:(NSDictionary *)<em>dict</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (nullable EILLocation *)locationFromDictionary:(NSDictionary *)<em>dict</em></code></div>
 
     
 	
@@ -1480,7 +1526,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (NSArray *)linearObjectsWithType:(EILLocationLinearObjectType)<em>type</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (NSArray&lt;EILLocationLinearObject*&gt; *)linearObjectsWithType:(EILLocationLinearObjectType)<em>type</em></code></div>
 
     
 	
@@ -1498,7 +1544,7 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>Array of <a href="../Classes/EILLocationLinearObject.html"><code>EILLocationLinearObject</code></a> with given type.</p>
+		<p>Linear objects with given type.</p>
 	</div>
 	
 	
@@ -1675,7 +1721,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-11-06)</span><br />
+						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-02-10)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</span></p>
 						

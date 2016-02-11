@@ -39,9 +39,11 @@
 	
 	<option value="properties">Properties</option>
 	
+	<option value="//api/name/)">&nbsp;&nbsp;&nbsp;&nbsp;)</option>
+	
 	<option value="//api/name/color">&nbsp;&nbsp;&nbsp;&nbsp;color</option>
 	
-	<option value="//api/name/macAddress">&nbsp;&nbsp;&nbsp;&nbsp;macAddress</option>
+	<option value="//api/name/identifier">&nbsp;&nbsp;&nbsp;&nbsp;identifier</option>
 	
 	<option value="//api/name/major">&nbsp;&nbsp;&nbsp;&nbsp;major</option>
 	
@@ -74,6 +76,12 @@
 	<option value="//api/name/initWithBeaconIdentifiedByMac:withPosition:color:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithBeaconIdentifiedByMac:withPosition:color:</option>
 	
 	<option value="//api/name/initWithBeaconIdentifiedByMac:withPosition:color:proximityUUID:major:minor:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithBeaconIdentifiedByMac:withPosition:color:proximityUUID:major:minor:</option>
+	
+	<option value="//api/name/initWithBeaconIdentifier:position:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithBeaconIdentifier:position:</option>
+	
+	<option value="//api/name/initWithBeaconIdentifier:position:color:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithBeaconIdentifier:position:color:</option>
+	
+	<option value="//api/name/initWithBeaconIdentifier:position:color:proximityUUID:major:minor:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithBeaconIdentifier:position:color:proximityUUID:major:minor:</option>
 	
 	<option value="//api/name/isEqual:">&nbsp;&nbsp;&nbsp;&nbsp;- isEqual:</option>
 	
@@ -115,9 +123,11 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/)">)</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/color">color</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/macAddress">macAddress</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/identifier">identifier</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/major">major</a></span></li>
 	
@@ -152,6 +162,12 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithBeaconIdentifiedByMac:withPosition:color:">initWithBeaconIdentifiedByMac:withPosition:color:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithBeaconIdentifiedByMac:withPosition:color:proximityUUID:major:minor:">initWithBeaconIdentifiedByMac:withPosition:color:proximityUUID:major:minor:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithBeaconIdentifier:position:">initWithBeaconIdentifier:position:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithBeaconIdentifier:position:color:">initWithBeaconIdentifier:position:color:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithBeaconIdentifier:position:color:proximityUUID:major:minor:">initWithBeaconIdentifier:position:color:proximityUUID:major:minor:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isEqual:">isEqual:</a></span></li>
 	
@@ -220,7 +236,13 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/macAddress">&nbsp;&nbsp;macAddress</a></code>
+		<code><a href="#//api/name/identifier">&nbsp;&nbsp;identifier</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/)">&nbsp;&nbsp;)</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -257,6 +279,24 @@
 
 						<ul class="task-list">
 							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithBeaconIdentifier:position:">&ndash;&nbsp;initWithBeaconIdentifier:position:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithBeaconIdentifier:position:color:">&ndash;&nbsp;initWithBeaconIdentifier:position:color:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithBeaconIdentifier:position:color:proximityUUID:major:minor:">&ndash;&nbsp;initWithBeaconIdentifier:position:color:proximityUUID:major:minor:</a></code>
+	</span>
+	
+	
+</li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/initWithBeaconIdentifiedByMac:withPosition:">&ndash;&nbsp;initWithBeaconIdentifiedByMac:withPosition:</a></code>
 	</span>
@@ -354,6 +394,42 @@
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
+	<a name="//api/name/)" title=")"></a>
+	<h3 class="subsubtitle method-title">)</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Beacons mac address.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *__attribute ( ( deprecated ( ( &quot;Use identifier instead.&quot; )</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILPositionedBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/color" title="color"></a>
 	<h3 class="subsubtitle method-title">color</h3>
 	
@@ -390,18 +466,18 @@
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/macAddress" title="macAddress"></a>
-	<h3 class="subsubtitle method-title">macAddress</h3>
+	<a name="//api/name/identifier" title="identifier"></a>
+	<h3 class="subsubtitle method-title">identifier</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Beacons mac address.</p>
+		<p>Beacons identifier.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *macAddress</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *identifier</code></div>
 
     
 	
@@ -437,7 +513,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSNumber *major</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly, nullable) NSNumber *major</code></div>
 
     
 	
@@ -473,7 +549,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSNumber *minor</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly, nullable) NSNumber *minor</code></div>
 
     
 	
@@ -545,7 +621,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSUUID *proximityUUID</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly, nullable) NSUUID *proximityUUID</code></div>
 
     
 	
@@ -589,7 +665,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (EILPositionedBeacon *)beaconFromDictionary:(NSDictionary *)<em>dict</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (nullable EILPositionedBeacon *)beaconFromDictionary:(NSDictionary *)<em>dict</em></code></div>
 
     
 	
@@ -805,6 +881,8 @@
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>A positioned beacon initialized with MAC and <a href="#//api/name/position">position</a>.</p>
+
+<p>This method is deprecated. Use <a href="#//api/name/initWithBeaconIdentifier:position:">initWithBeaconIdentifier:position:</a> instead.</p>
 	</div>
 	
 	
@@ -866,6 +944,8 @@
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>A positioned beacon initialized with MAC and <a href="#//api/name/position">position</a>.</p>
+
+<p>This method is deprecated. Use <a href="#//api/name/initWithBeaconIdentifier:position:color:">initWithBeaconIdentifier:position:color:</a> instead.</p>
 	</div>
 	
 	
@@ -898,7 +978,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeaconIdentifiedByMac:(NSString *)<em>macAddress</em> withPosition:(EILOrientedPoint *)<em>position</em> color:(ESTColor)<em>color</em> proximityUUID:(NSUUID *)<em>proximityUUID</em> major:(NSNumber *)<em>major</em> minor:(NSNumber *)<em>minor</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeaconIdentifiedByMac:(NSString *)<em>macAddress</em> withPosition:(EILOrientedPoint *)<em>position</em> color:(ESTColor)<em>color</em> proximityUUID:(nullable NSUUID *)<em>proximityUUID</em> major:(nullable NSNumber *)<em>major</em> minor:(nullable NSNumber *)<em>minor</em></code></div>
 
     
 	
@@ -908,6 +988,201 @@
 		<dl class="argument-def parameter-def">
 			<dt><em>macAddress</em></dt>
 			<dd><p>Beacon MAC address.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>position</em></dt>
+			<dd><p>Beacon <a href="#//api/name/position">position</a>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>color</em></dt>
+			<dd><p>Beacon <a href="#//api/name/color">color</a></p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>proximityUUID</em></dt>
+			<dd><p>Beacon proximity UUID.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>major</em></dt>
+			<dd><p>Beacon <a href="#//api/name/major">major</a> value.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>minor</em></dt>
+			<dd><p>Beacon <a href="#//api/name/minor">minor</a> value.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A positioned beacon initialized with provided data.</p>
+
+<p>This method is deprecated. Use <a href="#//api/name/initWithBeaconIdentifier:position:color:proximityUUID:major:minor:">initWithBeaconIdentifier:position:color:proximityUUID:major:minor:</a> instead.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILPositionedBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithBeaconIdentifier:position:" title="initWithBeaconIdentifier:position:"></a>
+	<h3 class="subsubtitle method-title">initWithBeaconIdentifier:position:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a new beacon object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeaconIdentifier:(NSString *)<em>identifier</em> position:(EILOrientedPoint *)<em>position</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>identifier</em></dt>
+			<dd><p>Beacon <a href="#//api/name/identifier">identifier</a> (MAC address or <a href="#//api/name/identifier">identifier</a>).</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>position</em></dt>
+			<dd><p>Beacon <a href="#//api/name/position">position</a>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A positioned beacon initialized with <a href="#//api/name/identifier">identifier</a> and <a href="#//api/name/position">position</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILPositionedBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithBeaconIdentifier:position:color:" title="initWithBeaconIdentifier:position:color:"></a>
+	<h3 class="subsubtitle method-title">initWithBeaconIdentifier:position:color:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Designated initializer. Returns a new beacon object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeaconIdentifier:(NSString *)<em>identifier</em> position:(EILOrientedPoint *)<em>position</em> color:(ESTColor)<em>color</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>identifier</em></dt>
+			<dd><p>Beacon <a href="#//api/name/identifier">identifier</a> (MAC address or <a href="#//api/name/identifier">identifier</a>).</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>position</em></dt>
+			<dd><p>Beacon <a href="#//api/name/position">position</a>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>color</em></dt>
+			<dd><p>Beacon <a href="#//api/name/color">color</a></p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A positioned beacon initialized with <a href="#//api/name/identifier">identifier</a> and <a href="#//api/name/position">position</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILPositionedBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithBeaconIdentifier:position:color:proximityUUID:major:minor:" title="initWithBeaconIdentifier:position:color:proximityUUID:major:minor:"></a>
+	<h3 class="subsubtitle method-title">initWithBeaconIdentifier:position:color:proximityUUID:major:minor:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Designated initializer. Returns a new beacon object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeaconIdentifier:(NSString *)<em>identifier</em> position:(EILOrientedPoint *)<em>position</em> color:(ESTColor)<em>color</em> proximityUUID:(nullable NSUUID *)<em>proximityUUID</em> major:(nullable NSNumber *)<em>major</em> minor:(nullable NSNumber *)<em>minor</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>identifier</em></dt>
+			<dd><p>Beacon <a href="#//api/name/identifier">identifier</a> (MAC address or <a href="#//api/name/identifier">identifier</a>).</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -1123,7 +1398,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-11-06)</span><br />
+						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-02-10)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</span></p>
 						

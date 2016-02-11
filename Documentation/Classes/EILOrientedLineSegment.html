@@ -75,9 +75,13 @@
 	
 	<option value="//api/name/isEqualToOrientedLine:">&nbsp;&nbsp;&nbsp;&nbsp;- isEqualToOrientedLine:</option>
 	
+	<option value="//api/name/leftPoint">&nbsp;&nbsp;&nbsp;&nbsp;- leftPoint</option>
+	
 	<option value="//api/name/length">&nbsp;&nbsp;&nbsp;&nbsp;- length</option>
 	
 	<option value="//api/name/lineTranslatedBydX:dY:">&nbsp;&nbsp;&nbsp;&nbsp;- lineTranslatedBydX:dY:</option>
+	
+	<option value="//api/name/rightPoint">&nbsp;&nbsp;&nbsp;&nbsp;- rightPoint</option>
 	
 	<option value="//api/name/toDictionary">&nbsp;&nbsp;&nbsp;&nbsp;- toDictionary</option>
 	
@@ -153,9 +157,13 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isEqualToOrientedLine:">isEqualToOrientedLine:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/leftPoint">leftPoint</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/length">length</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lineTranslatedBydX:dY:">lineTranslatedBydX:dY:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/rightPoint">rightPoint</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/toDictionary">toDictionary</a></span></li>
 	
@@ -274,6 +282,18 @@ Object is immutable.</p>
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/centerPoint">&ndash;&nbsp;centerPoint</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/leftPoint">&ndash;&nbsp;leftPoint</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/rightPoint">&ndash;&nbsp;rightPoint</a></code>
 	</span>
 	
 	
@@ -491,7 +511,7 @@ Value is in degrees, counted clockwise.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (EILOrientedLineSegment *)lineFromDictionary:(NSDictionary *)<em>dict</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (nullable EILOrientedLineSegment *)lineFromDictionary:(NSDictionary *)<em>dict</em></code></div>
 
     
 	
@@ -997,6 +1017,54 @@ Value is in degrees, counted clockwise.</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/leftPoint" title="leftPoint"></a>
+	<h3 class="subsubtitle method-title">leftPoint</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calculates left point of the line.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (EILOrientedPoint *)leftPoint</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An oriented point representing left point of the line. It will have the same <a href="#//api/name/orientation">orientation</a> as the line.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If the <a href="#//api/name/orientation">orientation</a> of the line is pointing at you, the left point will be on the left.</p>
+
+<p>If the line does not have an <a href="#//api/name/orientation">orientation</a> nil will be returned.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILOrientedLineSegment.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/length" title="length"></a>
 	<h3 class="subsubtitle method-title">length</h3>
 	
@@ -1094,6 +1162,54 @@ Value is in degrees, counted clockwise.</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/rightPoint" title="rightPoint"></a>
+	<h3 class="subsubtitle method-title">rightPoint</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calculates right point of the line.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (EILOrientedPoint *)rightPoint</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An oriented point representing right point of the line. It will have the same <a href="#//api/name/orientation">orientation</a> as the line.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If the <a href="#//api/name/orientation">orientation</a> of the line is pointing at you, the right point will be on the right.</p>
+
+<p>If the line does not have an <a href="#//api/name/orientation">orientation</a> nil will be returned.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILOrientedLineSegment.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/toDictionary" title="toDictionary"></a>
 	<h3 class="subsubtitle method-title">toDictionary</h3>
 	
@@ -1152,7 +1268,7 @@ Value is in degrees, counted clockwise.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-11-06)</span><br />
+						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-02-10)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</span></p>
 						
