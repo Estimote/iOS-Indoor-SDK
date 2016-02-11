@@ -50,6 +50,16 @@
 	
 	<option value="//api/name/addBeaconIdentifiedByMac:atBoundarySegmentIndex:inDistance:fromSide:">&nbsp;&nbsp;&nbsp;&nbsp;- addBeaconIdentifiedByMac:atBoundarySegmentIndex:inDistance:fromSide:</option>
 	
+	<option value="//api/name/addBeaconIdentifiedByMac:withPosition:">&nbsp;&nbsp;&nbsp;&nbsp;- addBeaconIdentifiedByMac:withPosition:</option>
+	
+	<option value="//api/name/addBeaconIdentifiedByMac:withPosition:andColor:">&nbsp;&nbsp;&nbsp;&nbsp;- addBeaconIdentifiedByMac:withPosition:andColor:</option>
+	
+	<option value="//api/name/addBeaconWithIdentifier:atBoundarySegmentIndex:inDistance:fromSide:">&nbsp;&nbsp;&nbsp;&nbsp;- addBeaconWithIdentifier:atBoundarySegmentIndex:inDistance:fromSide:</option>
+	
+	<option value="//api/name/addBeaconWithIdentifier:withPosition:">&nbsp;&nbsp;&nbsp;&nbsp;- addBeaconWithIdentifier:withPosition:</option>
+	
+	<option value="//api/name/addBeaconWithIdentifier:withPosition:andColor:">&nbsp;&nbsp;&nbsp;&nbsp;- addBeaconWithIdentifier:withPosition:andColor:</option>
+	
 	<option value="//api/name/addDoorsWithLength:atBoundarySegmentIndex:inDistance:fromSide:">&nbsp;&nbsp;&nbsp;&nbsp;- addDoorsWithLength:atBoundarySegmentIndex:inDistance:fromSide:</option>
 	
 	<option value="//api/name/addWindowWithLength:atBoundarySegmentIndex:inDistance:fromSide:">&nbsp;&nbsp;&nbsp;&nbsp;- addWindowWithLength:atBoundarySegmentIndex:inDistance:fromSide:</option>
@@ -105,6 +115,16 @@
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addBeaconIdentifiedByMac:atBoundarySegmentIndex:inDistance:fromSide:">addBeaconIdentifiedByMac:atBoundarySegmentIndex:inDistance:fromSide:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addBeaconIdentifiedByMac:withPosition:">addBeaconIdentifiedByMac:withPosition:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addBeaconIdentifiedByMac:withPosition:andColor:">addBeaconIdentifiedByMac:withPosition:andColor:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addBeaconWithIdentifier:atBoundarySegmentIndex:inDistance:fromSide:">addBeaconWithIdentifier:atBoundarySegmentIndex:inDistance:fromSide:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addBeaconWithIdentifier:withPosition:">addBeaconWithIdentifier:withPosition:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addBeaconWithIdentifier:withPosition:andColor:">addBeaconWithIdentifier:withPosition:andColor:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addDoorsWithLength:atBoundarySegmentIndex:inDistance:fromSide:">addDoorsWithLength:atBoundarySegmentIndex:inDistance:fromSide:</a></span></li>
 	
@@ -186,10 +206,10 @@ in the same order as the points. There are following 4 segments: [(0,0), (0,5)],
 
 <p>The next step is to place beacons, doors on the boundary segments of the location:</p>
 
-<pre><code>[locationBuilder addBeaconIdentifiedByMac:@"63d4819e6a1d"
-                   atBoundarySegmentIndex:0
-                               inDistance:2
-                                 fromSide:EILLocationBuilderLeftSide];
+<pre><code>[locationBuilder addBeaconWithIdentifier:@"63d4819e6a1d"
+                  atBoundarySegmentIndex:0
+                              inDistance:2
+                                fromSide:EILLocationBuilderLeftSide];
 </code></pre>
 					</div>
 					
@@ -228,7 +248,37 @@ in the same order as the points. There are following 4 segments: [(0,0), (0,5)],
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
+		<code><a href="#//api/name/addBeaconWithIdentifier:atBoundarySegmentIndex:inDistance:fromSide:">&ndash;&nbsp;addBeaconWithIdentifier:atBoundarySegmentIndex:inDistance:fromSide:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addBeaconWithIdentifier:withPosition:">&ndash;&nbsp;addBeaconWithIdentifier:withPosition:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addBeaconWithIdentifier:withPosition:andColor:">&ndash;&nbsp;addBeaconWithIdentifier:withPosition:andColor:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/addBeaconIdentifiedByMac:atBoundarySegmentIndex:inDistance:fromSide:">&ndash;&nbsp;addBeaconIdentifiedByMac:atBoundarySegmentIndex:inDistance:fromSide:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addBeaconIdentifiedByMac:withPosition:">&ndash;&nbsp;addBeaconIdentifiedByMac:withPosition:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addBeaconIdentifiedByMac:withPosition:andColor:">&ndash;&nbsp;addBeaconIdentifiedByMac:withPosition:andColor:</a></code>
 	</span>
 	
 	
@@ -298,13 +348,12 @@ in the same order as the points. There are following 4 segments: [(0,0), (0,5)],
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Parses JSON string representation of the location. You might have it from the app
-through &ldquo;Export location code snippet&rdquo;.</p>
+		<p>Parses JSON string representation of the location. You might have it from the older version of the app through &ldquo;Export location code snippet&rdquo;.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (EILLocation *)parseFromJSON:(NSString *)<em>json</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (nullable EILLocation *)parseFromJSON:(NSString *)<em>json</em></code></div>
 
     
 	
@@ -331,8 +380,7 @@ through &ldquo;Export location code snippet&rdquo;.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>If location cannot be constructed based on JSON, an exception will be raised with
-explanation why it has happened.</p>
+		<p>If location cannot be constructed based on JSON, an exception will be raised with explanation why it has happened.</p>
 	</div>
 	
 	
@@ -379,7 +427,182 @@ Boundary segments were created in the same order as points were added.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>macAddress</em></dt>
-			<dd><p>MAC address of the beacon (lowercase, no colons, e.g. &ldquo;63d4819e6a1d&rdquo;).</p></dd>
+			<dd><p>Beacon MAC address.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>boundarySegmentIndex</em></dt>
+			<dd><p>Index of the boundary segment.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>distance</em></dt>
+			<dd><p>Distance from the beacon to the side of the boundary segment.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>side</em></dt>
+			<dd><p>Side of the boundary segment as seen from inside of the location.</p>
+
+<p>This method is deprecated. Use <a href="#//api/name/addBeaconWithIdentifier:atBoundarySegmentIndex:inDistance:fromSide:">addBeaconWithIdentifier:atBoundarySegmentIndex:inDistance:fromSide:</a> instead.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILLocationBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/addBeaconIdentifiedByMac:withPosition:" title="addBeaconIdentifiedByMac:withPosition:"></a>
+	<h3 class="subsubtitle method-title">addBeaconIdentifiedByMac:withPosition:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Places a beacon in the location.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)addBeaconIdentifiedByMac:(NSString *)<em>macAddress</em> withPosition:(EILOrientedPoint *)<em>position</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>macAddress</em></dt>
+			<dd><p>Beacon MAC address.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>position</em></dt>
+			<dd><p>Coordinates of the beacon position.</p>
+
+<p>This method is deprecated. Use <a href="#//api/name/addBeaconWithIdentifier:withPosition:">addBeaconWithIdentifier:withPosition:</a> instead.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILLocationBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/addBeaconIdentifiedByMac:withPosition:andColor:" title="addBeaconIdentifiedByMac:withPosition:andColor:"></a>
+	<h3 class="subsubtitle method-title">addBeaconIdentifiedByMac:withPosition:andColor:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Places a beacon in the location.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)addBeaconIdentifiedByMac:(NSString *)<em>macAddress</em> withPosition:(EILOrientedPoint *)<em>position</em> andColor:(ESTColor)<em>color</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>macAddress</em></dt>
+			<dd><p>Beacon MAC address.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>position</em></dt>
+			<dd><p>Coordinates of the beacon position.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>color</em></dt>
+			<dd><p>Color of the beacon.</p>
+
+<p>This method is deprecated. Use <a href="#//api/name/addBeaconWithIdentifier:withPosition:andColor:">addBeaconWithIdentifier:withPosition:andColor:</a> instead.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILLocationBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/addBeaconWithIdentifier:atBoundarySegmentIndex:inDistance:fromSide:" title="addBeaconWithIdentifier:atBoundarySegmentIndex:inDistance:fromSide:"></a>
+	<h3 class="subsubtitle method-title">addBeaconWithIdentifier:atBoundarySegmentIndex:inDistance:fromSide:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Places a beacon on the boundary segment.
+Boundary segments were created in the same order as points were added.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)addBeaconWithIdentifier:(NSString *)<em>identifier</em> atBoundarySegmentIndex:(NSUInteger)<em>boundarySegmentIndex</em> inDistance:(double)<em>distance</em> fromSide:(EILLocationBuilderSide)<em>side</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>identifier</em></dt>
+			<dd><p>Beacon identifier (MAC address or identifier).</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -395,6 +618,113 @@ Boundary segments were created in the same order as points were added.</p>
 		<dl class="argument-def parameter-def">
 			<dt><em>side</em></dt>
 			<dd><p>Side of the boundary segment as seen from inside of the location.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILLocationBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/addBeaconWithIdentifier:withPosition:" title="addBeaconWithIdentifier:withPosition:"></a>
+	<h3 class="subsubtitle method-title">addBeaconWithIdentifier:withPosition:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Places a beacon in the location.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)addBeaconWithIdentifier:(NSString *)<em>identifier</em> withPosition:(EILOrientedPoint *)<em>position</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>identifier</em></dt>
+			<dd><p>Beacon identifier (MAC address or identifier).</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>position</em></dt>
+			<dd><p>Coordinates of the beacon position.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EILLocationBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/addBeaconWithIdentifier:withPosition:andColor:" title="addBeaconWithIdentifier:withPosition:andColor:"></a>
+	<h3 class="subsubtitle method-title">addBeaconWithIdentifier:withPosition:andColor:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Places a beacon in the location.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)addBeaconWithIdentifier:(NSString *)<em>identifier</em> withPosition:(EILOrientedPoint *)<em>position</em> andColor:(ESTColor)<em>color</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>identifier</em></dt>
+			<dd><p>Beacon identifier (MAC address or identifier).</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>position</em></dt>
+			<dd><p>Coordinates of the beacon position.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>color</em></dt>
+			<dd><p>Color of the beacon.</p></dd>
 		</dl>
 		
 	</div>
@@ -555,7 +885,7 @@ Boundary segments were created in the same order as points were added.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (EILLocation *)build</code></div>
+	<div class="method-subsection method-declaration"><code>- (nullable EILLocation *)build</code></div>
 
     
 	
@@ -596,7 +926,7 @@ Boundary segments were created in the same order as points were added.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)setLocationBoundaryPoints:(NSArray *)<em>boundaryPoints</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)setLocationBoundaryPoints:(NSArray&lt;EILPoint*&gt; *)<em>boundaryPoints</em></code></div>
 
     
 	
@@ -605,7 +935,7 @@ Boundary segments were created in the same order as points were added.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>boundaryPoints</em></dt>
-			<dd><p>List of boundary points (<a href="../Classes/EILPoint.html"><code>EILPoint</code></a>) that defines a location.</p></dd>
+			<dd><p>List of boundary points that defines a location.</p></dd>
 		</dl>
 		
 	</div>
@@ -786,7 +1116,7 @@ Boundary segments were created in the same order as points were added.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-11-06)</span><br />
+						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-02-10)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</span></p>
 						
