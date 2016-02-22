@@ -75,18 +75,11 @@ This is what your catalogue structure should look like:
 
 6. If you're coding in Swift, there's one more extra step necessary: to add a Bridging header file to expose Objective-C headers to Swift.
 
-   To do that first add a new file to the project - make it a `Header file` and call it `YourProjectName-Bridging-Header.h`. In this file you need to import the following EstimoteIndoorLocationSDK and EstimoteSDK headers:
+   To do that first add a new file to the project - make it a `Header file` and call it `YourProjectName-Bridging-Header.h`. In this file you need to import the following header:
 
    ```
-   #import "EILIndoorLocationManager.h"
-   #import "EILLocation.h"
-   #import "EILIndoorLocationView.h"
-   #import "EILLocationBuilder.h"
+   #import "EILIndoorSDK.h"
    ```
-
-   After all that, your Bridging header could look like this:
-
-   ![ScreenShot BridgingHeader](ReadmeImages/BridgingHeader.png)
 
    Finally, click on your project root item in the Project navigator and go to `Build Settings` tab. Make sure that `All` is selected, then look for `Objective-C Bridging Header` and set it to `$(PROJECT_DIR)/YourProjectName/YourProjectName-Bridging-Header.h`. Now you're good to go!
 
