@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Represents a geometrical line segment with additional information about orientation.
  * Object is immutable.
  */
-@interface EILOrientedLineSegment : NSObject
+@interface EILOrientedLineSegment : NSObject <NSCoding>
 
 ///-----------------------------------------
 /// @name Properties
@@ -182,6 +182,26 @@ NS_ASSUME_NONNULL_BEGIN
  * @return A string representation of the oriented line segment in form of ((x1,y1),(x2,y2), orientation)
  */
 - (NSString *)description;
+
+#pragma mark Encoding and Decoding
+///-----------------------------------------
+/// @name Encoding and Decoding
+///-----------------------------------------
+
+/**
+ * Returns an oriented line segment initialized from data in a given unarchiver.
+ *
+ * @param decoder An unarchiver object.
+ * @return A new oriented line segment initialized using the data in decoder.
+ */
+- (nullable instancetype)initWithCoder:(NSCoder *)decoder;
+
+/**
+ * Encodes the oriented line segment using a given archiver.
+ *
+ * @param An archiver object.
+ */
+- (void)encodeWithCoder:(NSCoder *)coder;
 
 @end
 

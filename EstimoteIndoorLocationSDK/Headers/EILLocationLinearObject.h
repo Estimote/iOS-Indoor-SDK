@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Typical examples are doors, windows, internal partition walls etc.
  * Object is immutable.
  */
-@interface EILLocationLinearObject : NSObject
+@interface EILLocationLinearObject : NSObject <NSCoding>
 
 #pragma mark Properties
 ///-----------------------------------------
@@ -125,6 +125,26 @@ NS_ASSUME_NONNULL_BEGIN
  * @return A string representation of the location linear object.
  */
 - (NSString *)description;
+
+#pragma mark Encoding and Decoding
+///-----------------------------------------
+/// @name Encoding and Decoding
+///-----------------------------------------
+
+/**
+ * Returns a location linear object initialized from data in a given unarchiver.
+ *
+ * @param decoder An unarchiver object.
+ * @return A new location linear object initialized using the data in decoder.
+ */
+- (nullable instancetype)initWithCoder:(NSCoder *)decoder;
+
+/**
+ * Encodes the location linear object using a given archiver.
+ *
+ * @param An archiver object.
+ */
+- (void)encodeWithCoder:(NSCoder *)coder;
 
 @end
 

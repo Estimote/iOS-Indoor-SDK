@@ -5,7 +5,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /** Represents a geometrical point. Object is immutable. */
-@interface EILPoint : NSObject
+@interface EILPoint : NSObject <NSCoding>
 
 #pragma mark Properties
 ///-----------------------------------------
@@ -136,8 +136,20 @@ NS_ASSUME_NONNULL_BEGIN
 ///-----------------------------------------
 /// @name Encoding and Decoding
 ///-----------------------------------------
-- (nullable instancetype)initWithCoder:(NSCoder *)coder;
 
+/**
+ * Returns a point initialized from data in a given unarchiver.
+ *
+ * @param decoder An unarchiver object.
+ * @return A new point initialized using the data in decoder.
+ */
+- (nullable instancetype)initWithCoder:(NSCoder *)decoder;
+
+/**
+ * Encodes the point using a given archiver.
+ *
+ * @param An archiver object.
+ */
 - (void)encodeWithCoder:(NSCoder *)coder;
 
 @end

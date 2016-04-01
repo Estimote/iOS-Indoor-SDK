@@ -1,3 +1,7 @@
+## 2.2.0 (April, 1, 2016)
+- We improved how we detect walking direction. It also improves the accuracy of positioning quite a bit!
+- _CAN BREAK BUILD_: We reorganized and updated resources - all possible beacon colors and resolutions are covered now.
+
 ## 2.1.0 (February, 3, 2016)
 - `EILIndoorLocationManager` can provide position update in two different modes. In addition to normal mode, light mode delivers stable, but a bit less responsive position updates. Has a very low system resource usage.
 - In `EILLocationBuilder` beacons can be placed at arbitrary positions.

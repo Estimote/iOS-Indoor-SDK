@@ -8,7 +8,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /** Represents a beacon with additional information about its position. Object is immutable. */
-@interface EILPositionedBeacon : NSObject
+@interface EILPositionedBeacon : NSObject <NSCoding>
 
 #pragma mark Properties
 ///-----------------------------------------
@@ -190,6 +190,26 @@ NS_ASSUME_NONNULL_BEGIN
  * @return A string representation of the EILPositionedBeacon.
  */
 - (NSString *)description;
+
+#pragma mark Encoding and Decoding
+///-----------------------------------------
+/// @name Encoding and Decoding
+///-----------------------------------------
+
+/**
+ * Returns a positioned beacon initialized from data in a given unarchiver.
+ *
+ * @param decoder An unarchiver object.
+ * @return A new positioned beacon initialized using the data in decoder.
+ */
+- (nullable instancetype)initWithCoder:(NSCoder *)decoder;
+
+/**
+ * Encodes the positioned beacon segment using a given archiver.
+ *
+ * @param An archiver object.
+ */
+- (void)encodeWithCoder:(NSCoder *)coder;
 
 @end
 

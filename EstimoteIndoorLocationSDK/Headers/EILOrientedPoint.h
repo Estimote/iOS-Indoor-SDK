@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /** Represents a geometrical point with additional information about orientation. Object is immutable. */
-@interface EILOrientedPoint : EILPoint
+@interface EILOrientedPoint : EILPoint <NSCoding>
 
 #pragma mark Properties
 ///-----------------------------------------
@@ -162,8 +162,20 @@ NS_ASSUME_NONNULL_BEGIN
 ///-----------------------------------------
 /// @name Encoding and Decoding
 ///-----------------------------------------
-- (nullable instancetype)initWithCoder:(NSCoder *)coder;
 
+/**
+ * Returns an oriented point initialized from data in a given unarchiver.
+ *
+ * @param decoder An unarchiver object.
+ * @return A new oriented point initialized using the data in decoder.
+ */
+- (nullable instancetype)initWithCoder:(NSCoder *)decoder;
+
+/**
+ * Encodes the oriented point using a given archiver.
+ *
+ * @param An archiver object.
+ */
 - (void)encodeWithCoder:(NSCoder *)coder;
 
 @end
