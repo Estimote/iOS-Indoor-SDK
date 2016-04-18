@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		33483AB48225761E3A3859C3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B842E6E914CE9142DCD4A972 /* libPods.a */; };
+		71CBCA415B3C13AF02CF1E0F /* libPods-IndoorMap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D243817CEE4BEA689DB2A20 /* libPods-IndoorMap.a */; };
 		AE9764201C1F084E0058A4DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97641F1C1F084E0058A4DC /* AppDelegate.swift */; };
 		AE9764221C1F084E0058A4DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9764211C1F084E0058A4DC /* ViewController.swift */; };
 		AE9764251C1F084E0058A4DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9764231C1F084E0058A4DC /* Main.storyboard */; };
@@ -16,8 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6674EB1B493523897B66E749 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		9458C2843FD439BBC729B719 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		0D243817CEE4BEA689DB2A20 /* libPods-IndoorMap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IndoorMap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FAE69C9DC4FC3423C8FB152 /* Pods-IndoorMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IndoorMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IndoorMap/Pods-IndoorMap.debug.xcconfig"; sourceTree = "<group>"; };
+		3D33C44C5E1C7D7236B1453F /* Pods-IndoorMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IndoorMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-IndoorMap/Pods-IndoorMap.release.xcconfig"; sourceTree = "<group>"; };
 		AE97641C1C1F084E0058A4DC /* IndoorMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IndoorMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE97641F1C1F084E0058A4DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE9764211C1F084E0058A4DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,7 +27,6 @@
 		AE9764291C1F084E0058A4DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE97642B1C1F084E0058A4DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE97643C1C1F09810058A4DC /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
-		B842E6E914CE9142DCD4A972 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,28 +34,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33483AB48225761E3A3859C3 /* libPods.a in Frameworks */,
+				71CBCA415B3C13AF02CF1E0F /* libPods-IndoorMap.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		46CEF5E527300A46902553CF /* Frameworks */ = {
+		3149C0703AF275D8CE139E00 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B842E6E914CE9142DCD4A972 /* libPods.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		959A5B9E85CB14AB1A29941E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6674EB1B493523897B66E749 /* Pods.debug.xcconfig */,
-				9458C2843FD439BBC729B719 /* Pods.release.xcconfig */,
+				1FAE69C9DC4FC3423C8FB152 /* Pods-IndoorMap.debug.xcconfig */,
+				3D33C44C5E1C7D7236B1453F /* Pods-IndoorMap.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		753DD89218C1BD7C56D956FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D243817CEE4BEA689DB2A20 /* libPods-IndoorMap.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		AE9764131C1F084E0058A4DC = {
@@ -63,8 +63,8 @@
 			children = (
 				AE97641E1C1F084E0058A4DC /* IndoorMap */,
 				AE97641D1C1F084E0058A4DC /* Products */,
-				959A5B9E85CB14AB1A29941E /* Pods */,
-				46CEF5E527300A46902553CF /* Frameworks */,
+				3149C0703AF275D8CE139E00 /* Pods */,
+				753DD89218C1BD7C56D956FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,13 +97,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE97642E1C1F084E0058A4DC /* Build configuration list for PBXNativeTarget "IndoorMap" */;
 			buildPhases = (
+				97C8DBB5DA8D35745BB1C38C /* 📦 Check Pods Manifest.lock */,
 				AE97643D1C1F12B30058A4DC /* Check TODOs */,
-				A38AA211F160D92DEBDA2355 /* Check Pods Manifest.lock */,
 				AE9764181C1F084E0058A4DC /* Sources */,
 				AE9764191C1F084E0058A4DC /* Frameworks */,
 				AE97641A1C1F084E0058A4DC /* Resources */,
-				63DD830C8B85106B9BD3C3BE /* Embed Pods Frameworks */,
-				59D2367147151F3690E61445 /* Copy Pods Resources */,
+				F2C47F3536E53BF0158BAFA3 /* 📦 Embed Pods Frameworks */,
+				39B3A6DA8181AC8C182514DB /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,44 +161,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		59D2367147151F3690E61445 /* Copy Pods Resources */ = {
+		39B3A6DA8181AC8C182514DB /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IndoorMap/Pods-IndoorMap-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		63DD830C8B85106B9BD3C3BE /* Embed Pods Frameworks */ = {
+		97C8DBB5DA8D35745BB1C38C /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A38AA211F160D92DEBDA2355 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,6 +204,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "tags=\"TODO:\"\nmatches=`find \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($tags).*\\$\"`\necho \"$matches\" | perl -p -e \"s/($tags)/ error: \\$1/\"\n[ -z \"$matches\" ] || exit 1";
+		};
+		F2C47F3536E53BF0158BAFA3 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IndoorMap/Pods-IndoorMap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -339,7 +339,7 @@
 		};
 		AE97642F1C1F084E0058A4DC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6674EB1B493523897B66E749 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 1FAE69C9DC4FC3423C8FB152 /* Pods-IndoorMap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IndoorMap/Info.plist;
@@ -352,7 +352,7 @@
 		};
 		AE9764301C1F084E0058A4DC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9458C2843FD439BBC729B719 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 3D33C44C5E1C7D7236B1453F /* Pods-IndoorMap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IndoorMap/Info.plist;

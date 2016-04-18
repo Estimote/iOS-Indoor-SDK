@@ -1,3 +1,5 @@
 platform :ios, '8.0'
 
-pod 'EstimoteIndoorSDK'
+target 'IndoorMap' do
+  pod 'EstimoteIndoorSDK'
+end
