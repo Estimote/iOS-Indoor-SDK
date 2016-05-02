@@ -1,3 +1,6 @@
+## 2.2.1 (May, 2, 2016)
+- Fixed a bug resulting in EILIndoorLocationManager sometimes not providing updates after start.
+
 ## 2.2.0 (April, 1, 2016)
 - We improved how we detect walking direction. It also improves the accuracy of positioning quite a bit!
 - _CAN BREAK BUILD_: We reorganized and updated resources - all possible beacon colors and resolutions are covered now.
