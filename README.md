@@ -166,7 +166,7 @@ To obtain position updates, you need to set a ```delegate``` which will be recei
 indoorLocationManager.delegate = yourDelegate;
 [indoorLocationManager startPositionUpdatesForLocation:yourLocation];
 ```
-In addition to position, updates provide also information about accuracy of determined position which can be visualized via EILPositionView as avatar with a circle of given radius within which the real position is expected to be.
+In addition to position, updates provide also information about accuracy of determined position which can be visualized via EILPositionView or EILPositionNode as avatar with a circle of given radius within which the real position is expected to be.
 
 Note, that you need only one Indoor Location Manager to monitor multiple locations. However, position updates are available for only one location at the same time. If you need to enable position updates for new location, first you need to stop position updates:
 

@@ -1,3 +1,9 @@
+## 2.3.0 (October, 28, 2016)
+- Increased Indoor Light navigation mode position granularity, resulting in better accuracy.
+- Indoor Light is now more stable when the user is not moving.
+- Added information about orientation to Indoor Light.
+- Added SpriteKit based EILIndoorLocationScene with built in zoom in/out, rotate and pan gestures handling.
+
 ## 2.2.1 (May, 2, 2016)
 - Fixed a bug resulting in EILIndoorLocationManager sometimes not providing updates after start.
 

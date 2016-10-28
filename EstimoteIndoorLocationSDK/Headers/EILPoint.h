@@ -5,7 +5,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /** Represents a geometrical point. Object is immutable. */
-@interface EILPoint : NSObject <NSCoding>
+@interface EILPoint : NSObject <NSCoding, NSCopying>
 
 #pragma mark Properties
 ///-----------------------------------------
