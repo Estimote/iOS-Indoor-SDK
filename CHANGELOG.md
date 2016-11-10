@@ -1,3 +1,6 @@
+## 2.3.1 (November, 10, 2016)
+- Fixed enabling and disabling orientation in Light Mode.
+
 ## 2.3.0 (October, 28, 2016)
 - Increased Indoor Light navigation mode position granularity, resulting in better accuracy.
 - Indoor Light is now more stable when the user is not moving.
