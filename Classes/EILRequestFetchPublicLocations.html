@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>EILPositionView Class Reference</title>
+	<title>EILRequestFetchPublicLocations Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -60,11 +60,11 @@
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/initWithImage:location:showAccuracyCircle:forViewWithBounds:">- initWithImage:location:showAccuracyCircle:forViewWithBounds:</option>
+		<option value="//api/name/initWithBeaconIdentifiers:">- initWithBeaconIdentifiers:</option>
 		
-		<option value="//api/name/initWithImage:location:showAccuracyCircle:regionOfInterest:forViewWithBounds:">- initWithImage:location:showAccuracyCircle:regionOfInterest:forViewWithBounds:</option>
+		<option value="//api/name/initWithBeaconMacs:">- initWithBeaconMacs:</option>
 		
-		<option value="//api/name/updateAccuracy:">- updateAccuracy:</option>
+		<option value="//api/name/sendRequestWithCompletion:">- sendRequestWithCompletion:</option>
 		
 	</optgroup>
 	
@@ -81,16 +81,16 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">EILPositionView Class Reference</h1>
+					<h1 class="title">EILRequestFetchPublicLocations Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
-	<td>UIImageView</td>
+	<td>ESTRequestPostJSON</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>EILPositionView.h<br />EILPositionView.m</td>
+	<td>EILRequestFetchPublicLocations.h<br />EILRequestFetchPublicLocations.m</td>
 </tr>
 						</tbody></table></div>
 					
@@ -100,8 +100,10 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>View representing current position indicator with accuracy circle.
-It adjusts itself to always show correctly accuracy in scale.</p>
+						<p>Request to fetch public nearby locations and parsing response.
+In order to determine nearby public locations, scan for nearby beacons.
+All the locations that contain at least one of the given beacons (identified
+by their identifiers) will be fetched.</p>
 					</div>
 					
 					
@@ -117,8 +119,8 @@ It adjusts itself to always show correctly accuracy in scale.</p>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/initWithImage:location:showAccuracyCircle:forViewWithBounds:" title="initWithImage:location:showAccuracyCircle:forViewWithBounds:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/initWithImage:location:showAccuracyCircle:forViewWithBounds:">&ndash;&nbsp;initWithImage:location:showAccuracyCircle:forViewWithBounds:</a></code>
+	<a name="//api/name/initWithBeaconIdentifiers:" title="initWithBeaconIdentifiers:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithBeaconIdentifiers:">&ndash;&nbsp;initWithBeaconIdentifiers:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -128,12 +130,12 @@ It adjusts itself to always show correctly accuracy in scale.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Returns an initialized EILPositionView object for given location and size of superview.</p>
+				<p>Returns a new request object for fetching public locations for given beacons.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (instancetype)initWithImage:(UIImage *)<em>image</em> location:(EILLocation *)<em>location</em> showAccuracyCircle:(BOOL)<em>showAccuracyCircle</em> forViewWithBounds:(CGRect)<em>bounds</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeaconIdentifiers:(NSArray&lt;NSString*&gt; *)<em>identifiers</em></code></div>
 
 		    
 			
@@ -142,18 +144,8 @@ It adjusts itself to always show correctly accuracy in scale.</p>
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>location</code></th>
-						<td><p>The location for which the position is visualized.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>showAccuracyCircle</code></th>
-						<td><p>If YES then in addition to avatar, accuracy circle will be displayed.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>bounds</code></th>
-						<td><p>Bounds of Indoor LocationView, used to calculate scale for drawing avatar.</p></td>
+						<th scope="row" class="argument-name"><code>identifiers</code></th>
+						<td><p>An array containing identifiers of beacons that are used for fetching nearby public locations.</p></td>
 					</tr>
 				
 				</table>
@@ -163,7 +155,7 @@ It adjusts itself to always show correctly accuracy in scale.</p>
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>An initialized EILPositionView object.</p>
+				<p>A request initialized with identifiers of beacons.</p>
 			</div>
 			
 
@@ -178,15 +170,15 @@ It adjusts itself to always show correctly accuracy in scale.</p>
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">EILPositionView.h</code></p>
+				<p><code class="declared-in-ref">EILRequestFetchPublicLocations.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/initWithImage:location:showAccuracyCircle:regionOfInterest:forViewWithBounds:" title="initWithImage:location:showAccuracyCircle:regionOfInterest:forViewWithBounds:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/initWithImage:location:showAccuracyCircle:regionOfInterest:forViewWithBounds:">&ndash;&nbsp;initWithImage:location:showAccuracyCircle:regionOfInterest:forViewWithBounds:</a></code>
+	<a name="//api/name/initWithBeaconMacs:" title="initWithBeaconMacs:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithBeaconMacs:">&ndash;&nbsp;initWithBeaconMacs:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -196,12 +188,12 @@ It adjusts itself to always show correctly accuracy in scale.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Returns an initialized EILPositionView object for given location and size of superview.</p>
+				<p>Returns a new request object for fetching public locations for given beacons.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (instancetype)initWithImage:(UIImage *)<em>image</em> location:(EILLocation *)<em>location</em> showAccuracyCircle:(BOOL)<em>showAccuracyCircle</em> regionOfInterest:(CGRect)<em>regionOfInterest</em> forViewWithBounds:(CGRect)<em>bounds</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeaconMacs:(NSArray&lt;NSString*&gt; *)<em>beaconMacs</em></code></div>
 
 		    
 			
@@ -210,23 +202,8 @@ It adjusts itself to always show correctly accuracy in scale.</p>
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>location</code></th>
-						<td><p>The location for which the position is visualized.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>showAccuracyCircle</code></th>
-						<td><p>If YES then in addition to avatar, accuracy circle will be displayed.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>regionOfInterest</code></th>
-						<td><p>Region of interest to be drawn for the location.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>bounds</code></th>
-						<td><p>Bounds of Indoor LocationView, used to calculate scale for drawing avatar.</p></td>
+						<th scope="row" class="argument-name"><code>beaconMacs</code></th>
+						<td><p>An array of <code>NSString *</code> containing mac addresses of beacons that are used for fetching nearby public locations.</p></td>
 					</tr>
 				
 				</table>
@@ -236,7 +213,9 @@ It adjusts itself to always show correctly accuracy in scale.</p>
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>An initialized EILPositionView object.</p>
+				<p>A request initialized with mac addresses of beacons.</p>
+
+<p>This method is deprecated. Use <a href="#//api/name/initWithBeaconIdentifiers:">initWithBeaconIdentifiers:</a> instead.</p>
 			</div>
 			
 
@@ -251,15 +230,15 @@ It adjusts itself to always show correctly accuracy in scale.</p>
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">EILPositionView.h</code></p>
+				<p><code class="declared-in-ref">EILRequestFetchPublicLocations.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/updateAccuracy:" title="updateAccuracy:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/updateAccuracy:">&ndash;&nbsp;updateAccuracy:</a></code>
+	<a name="//api/name/sendRequestWithCompletion:" title="sendRequestWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sendRequestWithCompletion:">&ndash;&nbsp;sendRequestWithCompletion:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -269,12 +248,12 @@ It adjusts itself to always show correctly accuracy in scale.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Updates accuracy value.</p>
+				<p>Sends request to Estimote Cloud with completion block.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)updateAccuracy:(EILPositionAccuracy)<em>accuracy</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)sendRequestWithCompletion:(EILRequestFetchPublicLocationsBlock)<em>completion</em></code></div>
 
 		    
 			
@@ -283,6 +262,11 @@ It adjusts itself to always show correctly accuracy in scale.</p>
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>param completion Completion block to be executed when the request finishes.</p>
+			</div>
 			
 
 			
@@ -292,7 +276,7 @@ It adjusts itself to always show correctly accuracy in scale.</p>
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">EILPositionView.h</code></p>
+				<p><code class="declared-in-ref">EILRequestFetchPublicLocations.h</code></p>
 			</div>
 			
 			

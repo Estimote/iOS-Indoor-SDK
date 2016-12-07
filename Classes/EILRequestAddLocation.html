@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>EILIndoorLocationViewDelegate Protocol Reference</title>
+	<title>EILRequestAddLocation Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -60,7 +60,9 @@
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/indoorLocationView:didSelectObjectWithIdentifier:">- indoorLocationView:didSelectObjectWithIdentifier:</option>
+		<option value="//api/name/initWithLocation:">- initWithLocation:</option>
+		
+		<option value="//api/name/sendRequestWithCompletion:">- sendRequestWithCompletion:</option>
 		
 	</optgroup>
 	
@@ -77,16 +79,16 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">EILIndoorLocationViewDelegate Protocol Reference</h1>
+					<h1 class="title">EILRequestAddLocation Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<th>Conforms to</th>
-	<td>NSObject</td>
+	<th>Inherits from</th>
+	<td>ESTRequestPostJSON</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>EILIndoorLocationView.h</td>
+	<td>EILRequestAddLocation.h<br />EILRequestAddLocation.m</td>
 </tr>
 						</tbody></table></div>
 					
@@ -96,7 +98,12 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The <code>EILIndoorLocationViewDelegate</code> protocol defines the methods to receive identifier of selected object.</p>
+						<p>Request for saving new location in Estimote Cloud.</p>
+
+<p>Note that in order to have request working you need to be authenticated in Estimote Cloud.
+To do that you have to call [ESTConfig setupAppID:andAppToken:] first.
+You can find your API App ID and API App Token in the Apps: <a href="http://cloud.estimote.com/">http://cloud.estimote.com/</a>#/apps
+section of the Estimote Cloud: <a href="http://cloud.estimote.com/.">http://cloud.estimote.com/.</a></p>
 					</div>
 					
 					
@@ -112,8 +119,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/indoorLocationView:didSelectObjectWithIdentifier:" title="indoorLocationView:didSelectObjectWithIdentifier:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/indoorLocationView:didSelectObjectWithIdentifier:">&ndash;&nbsp;indoorLocationView:didSelectObjectWithIdentifier:</a></code>
+	<a name="//api/name/initWithLocation:" title="initWithLocation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithLocation:">&ndash;&nbsp;initWithLocation:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -123,12 +130,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Tells the delegate that an object in the location view was selected.</p>
+				<p>Returns a new request object for saving <a href="#//api/name/location">location</a> in Estimote Cloud.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)indoorLocationView:(EILIndoorLocationView *)<em>indoorLocationView</em> didSelectObjectWithIdentifier:(NSString *)<em>identifier</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithLocation:(EILLocation *)<em>location</em></code></div>
 
 		    
 			
@@ -137,19 +144,19 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>indoorLocationView</code></th>
-						<td><p>Location view on which the object was selected.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>identifier</code></th>
-						<td><p>Identifier of the selected object.</p></td>
+						<th scope="row" class="argument-name"><code>location</code></th>
+						<td><p>Location to be saved in Estimote Cloud.</p></td>
 					</tr>
 				
 				</table>
 			</div>
 			
 
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A request initialized with <a href="#//api/name/location">location</a>.</p>
+			</div>
 			
 
 			
@@ -163,7 +170,53 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">EILIndoorLocationView.h</code></p>
+				<p><code class="declared-in-ref">EILRequestAddLocation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sendRequestWithCompletion:" title="sendRequestWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sendRequestWithCompletion:">&ndash;&nbsp;sendRequestWithCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sends request to Estimote Cloud with completion block.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)sendRequestWithCompletion:(EILRequestAddLocationBlock)<em>completion</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>param completion Completion block to be executed when the request finishes.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EILRequestAddLocation.h</code></p>
 			</div>
 			
 			

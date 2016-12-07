@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>EILPositionNode Class Reference</title>
+	<title>EILRequestModifyLocation Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -54,19 +54,15 @@
 
 	
 	
-	<optgroup label="Properties">
-		
-		<option value="//api/name/showAccuracy">showAccuracy</option>
-		
-	</optgroup>
-	
 
 	
 
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/updateAccuracy:">- updateAccuracy:</option>
+		<option value="//api/name/initWithLocation:locationIdentifier:">- initWithLocation:locationIdentifier:</option>
+		
+		<option value="//api/name/sendRequestWithCompletion:">- sendRequestWithCompletion:</option>
 		
 	</optgroup>
 	
@@ -83,16 +79,16 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">EILPositionNode Class Reference</h1>
+					<h1 class="title">EILRequestModifyLocation Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
-	<td>SKSpriteNode</td>
+	<td>ESTRequestPutJSON</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>EILPositionNode.h<br />EILPositionNode.m</td>
+	<td>EILRequestModifyLocation.h<br />EILRequestModifyLocation.m</td>
 </tr>
 						</tbody></table></div>
 					
@@ -102,8 +98,12 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>A subclass of SKSpriteNode designed to represent user avatar together with accuracy circle.
-Accuracy circle makes it easy to visualy mark the possible position estimation error.</p>
+						<p>Request for modifying already existing location in Estimote Cloud.</p>
+
+<p>Note that in order to have request working you need to be authenticated in Estimote Cloud.
+To do that you have to call [ESTConfig setupAppID:andAppToken:] first.
+You can find your API App ID and API App Token in the Apps: <a href="http://cloud.estimote.com/">http://cloud.estimote.com/</a>#/apps
+section of the Estimote Cloud: <a href="http://cloud.estimote.com/.">http://cloud.estimote.com/.</a></p>
 					</div>
 					
 					
@@ -119,8 +119,8 @@ Accuracy circle makes it easy to visualy mark the possible position estimation e
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/showAccuracy" title="showAccuracy"></a>
-	<h3 class="method-title"><code><a href="#//api/name/showAccuracy">&nbsp;&nbsp;showAccuracy</a></code>
+	<a name="//api/name/initWithLocation:locationIdentifier:" title="initWithLocation:locationIdentifier:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithLocation:locationIdentifier:">&ndash;&nbsp;initWithLocation:locationIdentifier:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -130,53 +130,12 @@ Accuracy circle makes it easy to visualy mark the possible position estimation e
 			
 			
 			<div class="method-subsection brief-description">
-				<p>If YES, then accuracy circle is displayed.</p>
+				<p>Returns a new request object for modifying <a href="#//api/name/location">location</a> in Estimote Cloud.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL showAccuracy</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">EILPositionNode.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/updateAccuracy:" title="updateAccuracy:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/updateAccuracy:">&ndash;&nbsp;updateAccuracy:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Updates accuracy circle according to accuracy value.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)updateAccuracy:(CGFloat)<em>accuracy</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithLocation:(EILLocation *)<em>location</em> locationIdentifier:(NSString *)<em>locationIdentifier</em></code></div>
 
 		    
 			
@@ -185,14 +144,24 @@ Accuracy circle makes it easy to visualy mark the possible position estimation e
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>accuracy</code></th>
-						<td><p>Accuracy of position estimation in scene scale.</p></td>
+						<th scope="row" class="argument-name"><code>location</code></th>
+						<td><p>Modified <a href="#//api/name/location">location</a>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>locationIdentifier</code></th>
+						<td><p>Identifier of <a href="#//api/name/location">location</a> in Estimote Cloud that is to be modified.</p></td>
 					</tr>
 				
 				</table>
 			</div>
 			
 
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A request initialized with <a href="#//api/name/location">location</a> and <a href="#//api/name/location">location</a> identifier.</p>
+			</div>
 			
 
 			
@@ -206,7 +175,53 @@ Accuracy circle makes it easy to visualy mark the possible position estimation e
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">EILPositionNode.h</code></p>
+				<p><code class="declared-in-ref">EILRequestModifyLocation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sendRequestWithCompletion:" title="sendRequestWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sendRequestWithCompletion:">&ndash;&nbsp;sendRequestWithCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sends request to Estimote Cloud with completion block.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)sendRequestWithCompletion:(EILRequestModifyLocationBlock)<em>completion</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>param completion Completion block to be executed when the request finishes.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EILRequestModifyLocation.h</code></p>
 			</div>
 			
 			
