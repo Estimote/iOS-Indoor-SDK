@@ -1,3 +1,6 @@
+## 2.3.2 (December, 16, 2016)
+- Fixed an edge case bug affecting some of the users.
+
 ## 2.3.1 (November, 10, 2016)
 - Fixed enabling and disabling orientation in Light Mode.
 
