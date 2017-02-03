@@ -126,6 +126,7 @@
 				TargetAttributes = {
 					AE97641B1C1F084E0058A4DC = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -347,6 +348,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.estimote.IndoorMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = IndoorMap/ObjCBridge.h;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -360,6 +362,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.estimote.IndoorMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = IndoorMap/ObjCBridge.h;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

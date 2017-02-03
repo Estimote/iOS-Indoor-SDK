@@ -25,7 +25,7 @@ class ViewController: UIViewController, EILIndoorLocationManagerDelegate {
         // TODO: replace with an identifier of your own location
         // You will find the identifier on https://cloud.estimote.com/#/locations
         let fetchLocationRequest = EILRequestFetchLocation(locationIdentifier: "<#my-location#>")
-        fetchLocationRequest.sendRequestWithCompletion { (location, error) in
+        fetchLocationRequest.sendRequest { (location, error) in
             if let location = location {
                 self.location = location
 
@@ -36,26 +36,26 @@ class ViewController: UIViewController, EILIndoorLocationManagerDelegate {
                 // http://estimote.github.io/iOS-Indoor-SDK/Classes/EILIndoorLocationView.html
 
                 self.locationView.drawLocation(location)
-                self.locationManager.startPositionUpdatesForLocation(self.location)
+                self.locationManager.startPositionUpdates(for: self.location)
             } else {
                 print("can't fetch location: \(error)")
             }
         }
     }
 
-    func indoorLocationManager(manager: EILIndoorLocationManager, didFailToUpdatePositionWithError error: NSError) {
+    func indoorLocationManager(_ manager: EILIndoorLocationManager, didFailToUpdatePositionWithError error: Error) {
         print("failed to update position: \(error)")
     }
 
-    func indoorLocationManager(manager: EILIndoorLocationManager, didUpdatePosition position: EILOrientedPoint, withAccuracy positionAccuracy: EILPositionAccuracy, inLocation location: EILLocation) {
+    func indoorLocationManager(_ manager: EILIndoorLocationManager, didUpdatePosition position: EILOrientedPoint, with positionAccuracy: EILPositionAccuracy, in location: EILLocation) {
         var accuracy: String!
         switch positionAccuracy {
-        case .VeryHigh: accuracy = "+/- 1.00m"
-        case .High:     accuracy = "+/- 1.62m"
-        case .Medium:   accuracy = "+/- 2.62m"
-        case .Low:      accuracy = "+/- 4.24m"
-        case .VeryLow:  accuracy = "+/- ? :-("
-        case .Unknown:  accuracy = "unknown"
+        case .veryHigh: accuracy = "+/- 1.00m"
+        case .high:     accuracy = "+/- 1.62m"
+        case .medium:   accuracy = "+/- 2.62m"
+        case .low:      accuracy = "+/- 4.24m"
+        case .veryLow:  accuracy = "+/- ? :-("
+        case .unknown:  accuracy = "unknown"
         }
         print(String(format: "x: %5.2f, y: %5.2f, orientation: %3.0f, accuracy: %@", position.x, position.y, position.orientation, accuracy))
 
