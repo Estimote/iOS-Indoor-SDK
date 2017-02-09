@@ -1,3 +1,6 @@
+## 2.3.3 (February, 9, 2017)
+- Fixed a major responsiveness and positioning issue that occurred on iOS 10 devices while navigating inside locations with large number of beacons.
+
 ## 2.3.2 (December, 16, 2016)
 - Fixed an edge case bug affecting some of the users.
 
