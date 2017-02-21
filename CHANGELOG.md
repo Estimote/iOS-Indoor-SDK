@@ -1,3 +1,6 @@
+## 2.3.3.1 (February, 21, 2017)
+- Fixed problem with compatibility with Estimote SDK 4.13.1. 
+
 ## 2.3.3 (February, 9, 2017)
 - Fixed a major responsiveness and positioning issue that occurred on iOS 10 devices while navigating inside locations with large number of beacons.
 
