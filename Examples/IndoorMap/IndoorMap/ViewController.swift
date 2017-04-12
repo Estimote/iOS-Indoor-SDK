@@ -21,6 +21,7 @@ class ViewController: UIViewController, EILIndoorLocationManagerDelegate {
         ESTConfig.setupAppID("<#App ID#>", andAppToken: "<#App Token#>")
 
         self.locationManager.delegate = self
+        self.locationManager.mode = EILIndoorLocationManagerMode.light
 
         // TODO: replace with an identifier of your own location
         // You will find the identifier on https://cloud.estimote.com/#/locations
@@ -48,16 +49,7 @@ class ViewController: UIViewController, EILIndoorLocationManagerDelegate {
     }
 
     func indoorLocationManager(_ manager: EILIndoorLocationManager, didUpdatePosition position: EILOrientedPoint, with positionAccuracy: EILPositionAccuracy, in location: EILLocation) {
-        var accuracy: String!
-        switch positionAccuracy {
-        case .veryHigh: accuracy = "+/- 1.00m"
-        case .high:     accuracy = "+/- 1.62m"
-        case .medium:   accuracy = "+/- 2.62m"
-        case .low:      accuracy = "+/- 4.24m"
-        case .veryLow:  accuracy = "+/- ? :-("
-        case .unknown:  accuracy = "unknown"
-        }
-        print(String(format: "x: %5.2f, y: %5.2f, orientation: %3.0f, accuracy: %@", position.x, position.y, position.orientation, accuracy))
+        print(String(format: "x: %5.2f, y: %5.2f, orientation: %3.0f", position.x, position.y, position.orientation))
 
         self.locationView.updatePosition(position)
     }
