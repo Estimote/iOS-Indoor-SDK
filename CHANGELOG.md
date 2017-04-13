@@ -1,5 +1,9 @@
+## 2.4.0 (April, 12, 2017)
+- Fixed license agreement.
+- The SDK will automatically fetch the most up-to-date parameters of the positioning algorithm. This means that there is no need to update _the_ SDK to support newer revisions of beacons hardware.
+
 ## 2.3.3.1 (February, 21, 2017)
-- Fixed problem with compatibility with Estimote SDK 4.13.1. 
+- Fixed problem with compatibility with Estimote SDK 4.13.1.
 
 ## 2.3.3 (February, 9, 2017)
 - Fixed a major responsiveness and positioning issue that occurred on iOS 10 devices while navigating inside locations with large number of beacons.
