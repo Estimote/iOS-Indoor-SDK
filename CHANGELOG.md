@@ -1,3 +1,7 @@
+## 2.5.0 (May, 16, 2017)
+- Improved positioning accuracy & responsiveness for smaller locations.
+- Slightly improved positioning responsiveness for larger locations.
+
 ## 2.4.0 (April, 12, 2017)
 - Fixed license agreement.
 - The SDK will automatically fetch the most up-to-date parameters of the positioning algorithm. This means that there is no need to update the SDK to support newer revisions of beacons hardware.

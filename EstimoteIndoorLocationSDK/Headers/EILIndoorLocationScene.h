@@ -162,7 +162,7 @@ typedef enum : NSInteger {
  *  Avatar node will be recreated after each change of this property.
  *  @see EILIndoorLocationSceneUserNodeName
  */
-@property (nonatomic, strong, nullable) NSString * _Nullable avatarImageName;
+@property (nonatomic, strong, nullable) NSString *avatarImageName;
 
 /**
  *  Name of the image asset that should be used as a background.
@@ -171,21 +171,21 @@ typedef enum : NSInteger {
  *  Background node will be recreated after each change of this property.
  *  @see EILIndoorLocationSceneBackgroundImageNodeName
  */
-@property (nonatomic, strong, nullable) NSString * _Nullable backgroundImageName;
+@property (nonatomic, strong, nullable) NSString *backgroundImageName;
 
 /**
  *  Name of the image asset that should be used as a center user button.
  *  Center user button node will be recreated after each change of this property.
  *  @see EILIndoorLocationSceneCenterUserButtonNodeName
  */
-@property (nonatomic, strong, nullable) NSString * _Nullable centerUserButtonImageName;
+@property (nonatomic, strong, nullable) NSString *centerUserButtonImageName;
 
 /**
  *  Name of the image asset that should be used as a compass button.
  *  Compass button node will be recreated after each change of this property.
  *  @see EILIndoorLocationSceneCompassButtonNodeName
  */
-@property (nonatomic, strong, nullable) NSString * _Nullable compassButtonImageName;
+@property (nonatomic, strong, nullable) NSString *compassButtonImageName;
 
 /**
  *  strokeColor property value of the shape node that represents location border.
