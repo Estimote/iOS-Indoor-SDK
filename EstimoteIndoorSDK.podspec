@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name        = "EstimoteIndoorSDK"
-  s.version      = "2.4.0"
+  s.version      = "2.5.0"
   s.summary      = "Indoor Location SDK allows real-time beacon-based mapping and indoor location"
   s.description  = <<-DESC
                   Map any space using Estimote Beacons and visualize your location within it in real-time.
