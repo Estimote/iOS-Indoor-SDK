@@ -36,5 +36,5 @@ Pod::Spec.new do |s|
                   'OTHER_LDFLAGS' => '"-lc++"',
                   'ENABLE_BITCODE' => 'NO',}
 
-  s.dependency 'EstimoteSDK', '~> 4.14.1'
+  s.dependency 'EstimoteSDK', '~> 4.15.0'
 end
