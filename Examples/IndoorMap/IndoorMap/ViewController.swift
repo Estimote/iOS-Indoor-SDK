@@ -38,7 +38,7 @@ class ViewController: UIViewController, EILIndoorLocationManagerDelegate {
 
                 self.locationView.drawLocation(location)
                 self.locationManager.startPositionUpdates(for: self.location)
-            } else {
+            } else if let error = error {
                 print("can't fetch location: \(error)")
             }
         }
