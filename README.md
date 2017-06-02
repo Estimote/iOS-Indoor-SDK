@@ -35,7 +35,8 @@ Learn more:
 
 Indoor Location SDK enables creating location through builder and obtaining position updates from the location. Besides location builder there is also possibility of mapping location through Estimote Indoor Location App.
 
-The mapping process is simple. First, you'll need to map the shape. Start by walking around a location and stick as close to the perimeter as possible. Remember to hold the phone in front of you for the location to be mapped properly. The app will now suggest the number and placement of beacons. Affix them on the walls at chest height.  To finalize the process walk around the location once more (again with the phone in front of you). Stop at each beacon along the way, to complete this one-time configuration process.
+The mapping process is simple. First, you'll need to map the shape. Start by walking around a location and stick as close to the 
+perimeter as possible. Remember to hold the phone in front of you for the location to be mapped properly. The app will now suggest the number and placement of beacons. Affix them on the walls at chest height.  To finalize the process walk around the location once more (again with the phone in front of you). Stop at each beacon along the way, to complete this one-time configuration process.
 
 There is a nice video tutorial by [@phillydev716](https://twitter.com/phillydev716) on [YouTube on how to use Indoor Location in your app](https://www.youtube.com/watch?v=BjXHBBvrWQ0). Please note, that video tutorial uses older version of our SDK (v.1.6).
 
@@ -75,11 +76,18 @@ This is what your catalogue structure should look like:
 
 6. If you're coding in Swift, there's one more extra step necessary: to add a Bridging header file to expose Objective-C headers to Swift.
 
-   To do that first add a new file to the project - make it a `Header file` and call it `YourProjectName-Bridging-Header.h`. In this file you need to import the following header:
+   To do that first add a new file to the project - make it a `Header file` and call it `YourProjectName-Bridging-Header.h`. In this file you need to import the following EstimoteIndoorLocationSDK and EstimoteSDK headers:
 
    ```
-   #import "EILIndoorSDK.h"
+   #import "EILIndoorLocationManager.h"
+   #import "EILLocation.h"
+   #import "EILIndoorLocationView.h"
+   #import "EILLocationBuilder.h"
    ```
+
+   After all that, your Bridging header could look like this:
+
+   ![ScreenShot BridgingHeader](ReadmeImages/BridgingHeader.png)
 
    Finally, click on your project root item in the Project navigator and go to `Build Settings` tab. Make sure that `All` is selected, then look for `Objective-C Bridging Header` and set it to `$(PROJECT_DIR)/YourProjectName/YourProjectName-Bridging-Header.h`. Now you're good to go!
 
@@ -186,6 +194,46 @@ indoorLocationManager.mode = EILIndoorLocationManagerModeLight;
 ```
 If the position updates delivery is in progress it will effectively restart position updates with new mode.
 
+### Obtaining position updates in background
+
+If you want your Indoor Location enabled app to also work, when the app is running in the background, you have to use ```EILBackgroundIndoorLocationManager```. It works in a very similar way to the ```EILIndoorLocationManager```. You just need to add the following code to the AppDelegate.m:
+
+```objective-c
+EILBackgroundIndoorLocationManager *backgroundIndoorLocationManager = [EILBackgroundIndoorLocationManager new];
+self.backgroundIndoorLocationManager = backgroundIndoorLocationManager;
+```
+
+In order to provide you with positioning your app needs access to bluetooth alswo when in it's in background. To set that you need to go to the project settings, find "Capabilities" tab, set "Background modes" to On and check "Uses Bluetooth LE accessories".
+
+In order to relaunch the application (if it is killed by operating system or user) as the user enters the location "Always in use" Location Services authorization is required:
+
+```objective-c
+[self.backgroundIndoorLocationManager requestAlwaysAuthorization];
+```
+
+For best UX patterns for requesting permission please refer to [the following blog post](http://blog.estimote.com/post/144805191465/how-to-ask-users-for-permission-to-use-location).
+Also you need to go to the project settings, find "Capabilities" tab, set "Background modes" to On and check "Uses Bluetooth LE accessories".
+
+To obtain position updates, you need to set a ```delegate``` which will be receiving the updates:
+
+```objective-c
+backgroundIndoorLocationManager.delegate = yourDelegate;
+[backgroundIndoorLocationManager startPositionUpdatesForLocation:yourLocation];
+```
+
+To stop updating position:
+
+```objective-c
+[backgroundIndoorLocationManager stopPositionUpdates];
+```
+
+Important notes:
+- There is no need for calling ```startMonitoringForLocation```.
+- This code should be in AppDelegate.m - this way iOS can revive the app when you enter location, even if it was killed earlier.
+- In background only the light mode is available, so there is no need of setting it.
+- Foreground and background location managers are seperate. If you want to use both modes in your app, you have to use both managers.
+
+
 ### Managing locations in the Estimote Cloud
 
 To manage your locations, you can use requests that allows communication with Estimote Cloud.
@@ -231,5 +279,4 @@ You can check the authorization status using the following method that will retu
 ## Changelog
 
 To see what has changed in recent versions of Estimote Indoor Location SDK, see the [CHANGELOG](CHANGELOG.md).
-
 

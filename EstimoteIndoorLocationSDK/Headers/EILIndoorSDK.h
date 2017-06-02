@@ -1,13 +1,16 @@
-// Copyright (c) 2015 Estimote. All rights reserved.
+// Copyright (c) 2017 Estimote. All rights reserved.
 
 /** Version of this iOS Indoor Location SDK. */
-#define EIL_IOS_INDOOR_SDK_VERSION_STRING @"2.5.0"
+#define EIL_IOS_INDOOR_SDK_VERSION_STRING @"2.6.0"
 
 
 /** Library header, import this to import all of the public types in the Indoor SDK. */
 
 // Main interface for Indoor SDK.
 #import "EILIndoorLocationManager.h"
+
+// Position updates in background.
+#import "EILBackgroundIndoorLocationManager.h"
 
 // Location data structures.
 #import "EILPoint.h"

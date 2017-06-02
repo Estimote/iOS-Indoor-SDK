@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>EILBackgroundIndoorLocationManager Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">Estimote Indoor Location SDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Estimote</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/delegate">delegate</option>
+		
+		<option value="//api/name/isRunning">isRunning</option>
+		
+		<option value="//api/name/monitoredLocations">monitoredLocations</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/requestAlwaysAuthorization">- requestAlwaysAuthorization</option>
+		
+		<option value="//api/name/start">- start</option>
+		
+		<option value="//api/name/startMonitoringForLocation:">- startMonitoringForLocation:</option>
+		
+		<option value="//api/name/startPositionUpdatesForLocation:">- startPositionUpdatesForLocation:</option>
+		
+		<option value="//api/name/stateForLocation:">- stateForLocation:</option>
+		
+		<option value="//api/name/stateForLocationWithIdentifier:">- stateForLocationWithIdentifier:</option>
+		
+		<option value="//api/name/stop">- stop</option>
+		
+		<option value="//api/name/stopMonitoringForLocation:">- stopMonitoringForLocation:</option>
+		
+		<option value="//api/name/stopPositionUpdates">- stopPositionUpdates</option>
+		
+		<option value="//api/name/stopPositionUpdatesForLocation:">- stopPositionUpdatesForLocation:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">EILBackgroundIndoorLocationManager Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>EILBackgroundIndoorLocationManager.h<br />EILBackgroundIndoorLocationManager.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Background Indoor Location Manager class provides position updates in background.</p>
+
+<p>In order to relaunch the application (if it is killed by operating system or user) as the user enters the location &ldquo;Always in use&rdquo; Location Services authorization is required.</p>
+
+<p>Please note that when the application is relaunched in background no UI code is executed. All the logic regarding positioning in background should be executed in the App Delegate including recreating an instance of EILBackgroundIndoorLocationManager.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The delegate object to receive position <a href="#//api/name/update">update</a> events.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, weak, nullable) id&lt;EILBackgroundIndoorLocationManagerDelegate&gt; delegate</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EILBackgroundIndoorLocationManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/requestAlwaysAuthorization" title="requestAlwaysAuthorization"></a>
+	<h3 class="method-title"><code><a href="#//api/name/requestAlwaysAuthorization">&ndash;&nbsp;requestAlwaysAuthorization</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Requests permission to use location services whenever the app is running.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)requestAlwaysAuthorization</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>&ldquo;Always in use&rdquo; Location Services authorization is required for the background manager to be able to relaunch the app, if it is killed by operating system or user.</p>
+
+<p>For more details about the location services authorization model please refer to the CoreLocation documentation.</p>
+
+<p>For best UX patterns for requesting permission please refer to the following blog post: <a href="http://blog.estimote.com/post/144805191465/how-to-ask-users-for-permission-to-use-location">http://blog.estimote.com/post/144805191465/how-to-ask-users-for-permission-to-use-location</a></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p>[CLLocationManager requestWhenInUseAuthorization]</p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EILBackgroundIndoorLocationManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/start" title="start"></a>
+	<h3 class="method-title"><code><a href="#//api/name/start">&ndash;&nbsp;start</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Starts <code>Background Indoor Location Manager</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)start</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Starting <code>Background Indoor Location Manager</code> early allows it to warm-up and later on deliver without delay <code>Indoor Location</code> status change and position updates.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EILBackgroundIndoorLocationManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/stop" title="stop"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stop">&ndash;&nbsp;stop</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Completely stops <code>Background Indoor Location Manager</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)stop</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Invoking this method will stop all <code>Indoor Location</code> monitoring and position updates.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EILBackgroundIndoorLocationManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isRunning" title="isRunning"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isRunning">&nbsp;&nbsp;isRunning</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Informs whether <code>Background Indoor Location Manager</code> is currently running.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) BOOL isRunning</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EILBackgroundIndoorLocationManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Indoor Location Monitoring" name="task_Indoor Location Monitoring"></a>
+						<h2 class="task-title">Indoor Location Monitoring</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/startMonitoringForLocation:" title="startMonitoringForLocation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/startMonitoringForLocation:">&ndash;&nbsp;startMonitoringForLocation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Starts monitoring the specified <code>Indoor Location</code> allowing you determine if you are inside or outside monitored location.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)startMonitoringForLocation:(EILLocation *)<em>location</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>location</code></th>
+						<td><p>The <code>Indoor Location</code> object that defines the boundary to monitor.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>To function properly Background Location Manager requires &ldquo;Always in use&rdquo; Location Services authorization.</p>
+
+<p>The current state, i.e., inside/outside, is available on-demand, by calling the <a href="#//api/name/stateForLocation:"><code>stateForLocation:</code></a> method.</p>
+
+<p>If the <code>Background Indoor Location Manager</code> is not started this method will <a href="#//api/name/start">start</a> it.</p>
+
+<p>Starting monitoring for <code>Indoor Location</code> early allows position updates to be delivered without delay later on.</p>
+
+<p>Starting monitoring for a location already monitored will do nothing.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/stopMonitoringForLocation:">- stopMonitoringForLocation:</a></p></code></li>
+					
+					<li><code><p><a href="#//api/name/requestAlwaysAuthorization">- requestAlwaysAuthorization</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EILBackgroundIndoorLocationManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/stopMonitoringForLocation:" title="stopMonitoringForLocation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stopMonitoringForLocation:">&ndash;&nbsp;stopMonitoringForLocation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Stops monitoring the specified <code>Indoor Location</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)stopMonitoringForLocation:(EILLocation *)<em>location</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>location</code></th>
+						<td><p>The <code>Indoor Location</code> object currently being monitored. The object you specify need not be the exact same object that you registered, but its identifier or name should be the same.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/startMonitoringForLocation:">- startMonitoringForLocation:</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EILBackgroundIndoorLocationManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/monitoredLocations" title="monitoredLocations"></a>
+	<h3 class="method-title"><code><a href="#//api/name/monitoredLocations">&nbsp;&nbsp;monitoredLocations</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The set of all monitored <code>Indoor Location</code>s.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSSet&lt;EILLocation*&gt; *monitoredLocations</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EILBackgroundIndoorLocationManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/stateForLocation:" title="stateForLocation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stateForLocation:">&ndash;&nbsp;stateForLocation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Determines state for the monitored location.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EILLocationState)stateForLocation:(EILLocation *)<em>location</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>location</code></th>
+						<td><p>An <a href="../Classes/EILLocation.html"><code>EILLocation</code></a> object for which state should be determined.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>State in which the monitored location is.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>If the location is not monitored <code>EILLocationStateUnknown</code> will be returned.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EILBackgroundIndoorLocationManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/stateForLocationWithIdentifier:" title="stateForLocationWithIdentifier:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stateForLocationWithIdentifier:">&ndash;&nbsp;stateForLocationWithIdentifier:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Determines state for the monitored location identified by its identifier.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EILLocationState)stateForLocationWithIdentifier:(NSString *)<em>locationIdentifier</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>locationIdentifier</code></th>
+						<td><p>An identifier of the location for which state should be determined.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>State in which the monitored location is.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Each location saved in Estimote Cloud is given a unique string identifier that corresponds to the <code>identifier</code> property of <a href="../Classes/EILLocation.html"><code>EILLocation</code></a>. You can find it on cloud.estimote.com, on the &ldquo;Locations&rdquo; screen, and use it with the Indoor SDK to, among other things, fetch your stored location from Estimote Cloud.</p>
+
+<p>If the location is not monitored <code>EILLocationStateUnknown</code> will be returned.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EILBackgroundIndoorLocationManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Indoor Location Position Updates" name="task_Indoor Location Position Updates"></a>
+						<h2 class="task-title">Indoor Location Position Updates</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/startPositionUpdatesForLocation:" title="startPositionUpdatesForLocation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/startPositionUpdatesForLocation:">&ndash;&nbsp;startPositionUpdatesForLocation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Starts the delivery of position updates for the specified location.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)startPositionUpdatesForLocation:(EILLocation *)<em>location</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>location</code></th>
+						<td><p>The location.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>To function properly Background Location Manager requires &ldquo;Always in use&rdquo; Location Services authorization.</p>
+
+<p>If the <code>Background Indoor Location Manager</code> is not started invoking this method will <a href="#//api/name/start">start</a> it.</p>
+
+<p>Calling this method without calling <a href="#//api/name/start">start</a> <a href="#//api/name/startMonitoringForLocation:"><code>startMonitoringForLocation:</code></a> will result in approximately 6 s delay before first position updates are provided. Starting monitoring earlier will reduce this time by the amount of time monitoring was running.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/requestAlwaysAuthorization">- requestAlwaysAuthorization</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EILBackgroundIndoorLocationManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/stopPositionUpdatesForLocation:" title="stopPositionUpdatesForLocation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stopPositionUpdatesForLocation:">&ndash;&nbsp;stopPositionUpdatesForLocation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Stops the delivery of position updates for the specified location.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)stopPositionUpdatesForLocation:(EILLocation *)<em>location</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>location</code></th>
+						<td><p>The location.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EILBackgroundIndoorLocationManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/stopPositionUpdates" title="stopPositionUpdates"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stopPositionUpdates">&ndash;&nbsp;stopPositionUpdates</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Stops the delivery of position updates.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)stopPositionUpdates</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EILBackgroundIndoorLocationManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Estimote. All rights reserved. Updated: 2017-06-01</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

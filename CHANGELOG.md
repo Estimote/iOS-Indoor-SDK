@@ -1,3 +1,6 @@
+## 2.6.0 (June, 2, 2017)
+- Added `EILBackgroundIndoorLocationManager`. It provides the users’ position when the app is in background. It also can restart the app when the user re-enters a given location, if the app was killed by iOS or the user.
+
 ## 2.5.0 (May, 16, 2017)
 - Improved positioning accuracy & responsiveness for smaller locations.
 - Slightly improved positioning responsiveness for larger locations.
