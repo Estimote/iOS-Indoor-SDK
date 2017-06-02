@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>EILIndoorLocationManagerDelegate Protocol Reference</title>
+	<title>EILBackgroundIndoorLocationManagerDelegate Protocol Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -60,9 +60,9 @@
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/indoorLocationManager:didFailToUpdatePositionWithError:">- indoorLocationManager:didFailToUpdatePositionWithError:</option>
+		<option value="//api/name/backgroundIndoorLocationManager:didFailToUpdatePositionWithError:">- backgroundIndoorLocationManager:didFailToUpdatePositionWithError:</option>
 		
-		<option value="//api/name/indoorLocationManager:didUpdatePosition:withAccuracy:inLocation:">- indoorLocationManager:didUpdatePosition:withAccuracy:inLocation:</option>
+		<option value="//api/name/backgroundIndoorLocationManager:didUpdatePosition:withAccuracy:inLocation:">- backgroundIndoorLocationManager:didUpdatePosition:withAccuracy:inLocation:</option>
 		
 	</optgroup>
 	
@@ -79,7 +79,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">EILIndoorLocationManagerDelegate Protocol Reference</h1>
+					<h1 class="title">EILBackgroundIndoorLocationManagerDelegate Protocol Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -88,7 +88,7 @@
 	<td>NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>EILIndoorLocationManager.h</td>
+	<td>EILBackgroundIndoorLocationManager.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -98,7 +98,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The <code>EILIndoorLocationManagerDelegate</code> protocol defines the methods to receive location updates.</p>
+						<p>The <code>EILBackgroundIndoorLocationManagerDelegate</code> protocol defines the methods to receive location updates in background.</p>
 					</div>
 					
 					
@@ -114,8 +114,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/indoorLocationManager:didUpdatePosition:withAccuracy:inLocation:" title="indoorLocationManager:didUpdatePosition:withAccuracy:inLocation:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/indoorLocationManager:didUpdatePosition:withAccuracy:inLocation:">&ndash;&nbsp;indoorLocationManager:didUpdatePosition:withAccuracy:inLocation:</a></code>
+	<a name="//api/name/backgroundIndoorLocationManager:didUpdatePosition:withAccuracy:inLocation:" title="backgroundIndoorLocationManager:didUpdatePosition:withAccuracy:inLocation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/backgroundIndoorLocationManager:didUpdatePosition:withAccuracy:inLocation:">&ndash;&nbsp;backgroundIndoorLocationManager:didUpdatePosition:withAccuracy:inLocation:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -130,7 +130,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)indoorLocationManager:(EILIndoorLocationManager *)<em>manager</em> didUpdatePosition:(EILOrientedPoint *)<em>position</em> withAccuracy:(EILPositionAccuracy)<em>positionAccuracy</em> inLocation:(EILLocation *)<em>location</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)backgroundIndoorLocationManager:(EILBackgroundIndoorLocationManager *)<em>locationManager</em> didUpdatePosition:(EILOrientedPoint *)<em>position</em> withAccuracy:(EILPositionAccuracy)<em>positionAccuracy</em> inLocation:(EILLocation *)<em>location</em></code></div>
 
 		    
 			
@@ -139,7 +139,7 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>manager</code></th>
+						<th scope="row" class="argument-name"><code>locationManager</code></th>
 						<td><p>The manager object that generated the event.</p></td>
 					</tr>
 				
@@ -175,15 +175,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">EILIndoorLocationManager.h</code></p>
+				<p><code class="declared-in-ref">EILBackgroundIndoorLocationManager.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/indoorLocationManager:didFailToUpdatePositionWithError:" title="indoorLocationManager:didFailToUpdatePositionWithError:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/indoorLocationManager:didFailToUpdatePositionWithError:">&ndash;&nbsp;indoorLocationManager:didFailToUpdatePositionWithError:</a></code>
+	<a name="//api/name/backgroundIndoorLocationManager:didFailToUpdatePositionWithError:" title="backgroundIndoorLocationManager:didFailToUpdatePositionWithError:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/backgroundIndoorLocationManager:didFailToUpdatePositionWithError:">&ndash;&nbsp;backgroundIndoorLocationManager:didFailToUpdatePositionWithError:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -198,7 +198,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)indoorLocationManager:(EILIndoorLocationManager *)<em>manager</em> didFailToUpdatePositionWithError:(NSError *)<em>error</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)backgroundIndoorLocationManager:(EILBackgroundIndoorLocationManager *)<em>locationManager</em> didFailToUpdatePositionWithError:(NSError *)<em>error</em></code></div>
 
 		    
 			
@@ -207,8 +207,8 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>manager</code></th>
-						<td><p>The manager object that generated the event.</p></td>
+						<th scope="row" class="argument-name"><code>locationManager</code></th>
+						<td><p>The locationManager object that generated the event.</p></td>
 					</tr>
 				
 					<tr>
@@ -233,7 +233,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">EILIndoorLocationManager.h</code></p>
+				<p><code class="declared-in-ref">EILBackgroundIndoorLocationManager.h</code></p>
 			</div>
 			
 			
