@@ -28,6 +28,7 @@ Learn more:
     * [Manually, using EILLocationBuilder](#manually-using-eillocationbuilder)
     * [Via Estimote Indoor Location App](#via-estimote-indoor-location-app)
   * [Obtaining position update inside the location](#obtaining-position-update-inside-the-location)
+  * [Obtaining position updates in background](#obtaining-position-updates-in-background)
   * [Managing locations in the cloud](#managing-locations-in-the-estimote-cloud)
 * [Changelog](#changelog)
 
