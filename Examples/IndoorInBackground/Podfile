@@ -1,0 +1,3 @@
+target "IndoorInBackground" do
+pod "EstimoteIndoorSDK"
+end
