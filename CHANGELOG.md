@@ -1,3 +1,7 @@
+## 2.7.0 (June, 30, 2017)
+- Improved positioning accuracy & responsiveness for Light mode
+- _CAN BREAK BUILD_: Changed default positioning mode to Light
+
 ## 2.6.0 (June, 2, 2017)
 - Added `EILBackgroundIndoorLocationManager`. It provides the users’ position when the app is in background. It also can restart the app when the user re-enters a given location, if the app was killed by iOS or the user.
 

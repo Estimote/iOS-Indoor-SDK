@@ -185,13 +185,13 @@ Note, that you need only one Indoor Location Manager to monitor multiple locatio
 In order to have Indoor Location status change and position updates without delay, you should start Indoor Location Manager and monitioring for Indoor Location early.
 
 EILIndoorLocationManager position updates can be delivered in two different modes. Modes differ in accuracy, stability and responsiveness. Depending on the mode system resource usage may be different.
-- `EILIndoorLocationManagerModeNormal` - Delivers most accurate and responsive position updates at the cost of high system resource usage. To achieve best results user should hold phone in hand in portrait orientation. This is default mode of `EILIndoorLocationManager`.
-- `EILIndoorLocationManagerModeLight` - Delivers stable, but a bit less responsive position updates. Has a very low system resource usage.
+- `EILIndoorLocationManagerModeNormal` - Normal mode of `EILIndoorLocationManager`. Delivers most responsive position updates at the cost of high system resource usage. This mode can be a bit less stable compared to Light mode. Normal mode requires magnetometer to work properly. To achieve best results user should hold phone in hand in portrait orientation.
+- `EILIndoorLocationManagerModeLight` - Light mode of `EILIndoorLocationManager`. Delivers precise and robust position updates. Has a very low system resource usage. This mode is best for deployments. This is the default mode of `EILIndoorLocationManager`.
 
 In order to change mode simply change `mode` property of `EILIndoorLocationManager` object.
 
 ```objective-c
-indoorLocationManager.mode = EILIndoorLocationManagerModeLight;
+indoorLocationManager.mode = EILIndoorLocationManagerModeNormal;
 ```
 If the position updates delivery is in progress it will effectively restart position updates with new mode.
 

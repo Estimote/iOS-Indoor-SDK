@@ -9,15 +9,20 @@
  */
 typedef NS_ENUM(NSInteger, EILIndoorLocationManagerMode) {
     /**
-     * Normal mode of `EILIndoorLocationManager`. Delivers most accurate and responsive position updates at the cost of high system resource usage.
+     * Normal mode of `EILIndoorLocationManager`. Delivers most responsive position updates at the cost of high system resource usage.
+     * This mode can be a bit less stable compared to Light mode.
      *
-     * This is the default mode of `EILIndoorLocationManager`.
+     * Normal mode requires magnetometer to work properly.
      *
      * To achieve best results user should hold phone in hand in portrait orientation.
      */
             EILIndoorLocationManagerModeNormal,
     /**
-     * Light mode of `EILIndoorLocationManager`. Delivers stable, but a bit less responsive position updates. Has a very low system resource usage.
+     * Light mode of `EILIndoorLocationManager`. Delivers precise and robust position updates. Has a very low system resource usage.
+     *
+     * This mode is best for deployments.
+     *
+     * This is the default mode of `EILIndoorLocationManager`.
      */
             EILIndoorLocationManagerModeLight,
 };
