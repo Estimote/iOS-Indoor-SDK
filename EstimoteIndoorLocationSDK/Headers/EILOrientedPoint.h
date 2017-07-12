@@ -137,10 +137,10 @@ NS_ASSUME_NONNULL_BEGIN
  * @param other The object to be compared to this oriented point. May be nil.
  * @return YES if oriented points  are equal, otherwise NO.
  */
-- (BOOL)isEqual:(id)other;
+- (BOOL)isEqual:(nullable id)other;
 
 /** @see isEqual: */
-- (BOOL)isEqualToOrientedPoint:(EILOrientedPoint *)point;
+- (BOOL)isEqualToOrientedPoint:(nullable EILOrientedPoint *)point;
 
 /** Returns an integer that can be used as a table address in a hash table structure. */
 - (NSUInteger)hash;

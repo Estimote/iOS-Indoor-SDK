@@ -239,11 +239,11 @@ didFailToUpdatePositionWithError:(NSError *)error;
 @property (nonatomic, assign) EILIndoorLocationManagerMode mode;
 
 /**
- * Enables orientation when position updates.
+ * Enables providing orientation for position updates in Light mode.
  *
- * Default mode of `EILIndoorLocationManager` is enabled.
+ * Default value is NO.
  *
- * Switching mode while delivery of position updates is in progress will effectively restart position updates with new mode.
+ * If set to YES, for a brief moment after the start of positioning the orientation may be `EIL_ORIENTATION_UNDEFINED`.
  */
 @property (nonatomic, assign) BOOL provideOrientationForLightMode;
 

@@ -106,10 +106,10 @@ NS_ASSUME_NONNULL_BEGIN
 * @param other The object to be compared to this linear object. May be nil.
 * @return YES if linear objects are equal, otherwise NO.
 */
-- (BOOL)isEqual:(id)other;
+- (BOOL)isEqual:(nullable id)other;
 
 /** @see isEqual: */
-- (BOOL)isEqualToLinearObject:(EILLocationLinearObject *)object;
+- (BOOL)isEqualToLinearObject:(nullable EILLocationLinearObject *)object;
 
 /** Returns an integer that can be used as a table address in a hash table structure. */
 - (NSUInteger)hash;

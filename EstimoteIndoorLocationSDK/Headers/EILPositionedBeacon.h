@@ -166,7 +166,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param other The object to be compared to the beacon. May be nil.
  * @return YES if beacons are equal, otherwise NO.
  */
-- (BOOL)isEqual:(id)other;
+- (BOOL)isEqual:(nullable id)other;
 
 /**
  * Returns a boolean value that indicates whether given beacon is equal to this one.
@@ -174,7 +174,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param beacon The beacon object to be compared to the beacon. May be nil.
  * @return YES if beacons are equal, otherwise NO.
  */
-- (BOOL)isEqualToPositionedBeacon:(EILPositionedBeacon *)beacon;
+- (BOOL)isEqualToPositionedBeacon:(nullable EILPositionedBeacon *)beacon;
 
 /** Returns an integer that can be used as a table address in a hash table structure. */
 - (NSUInteger)hash;

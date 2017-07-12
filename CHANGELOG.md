@@ -1,3 +1,9 @@
+## 2.7.1 (July, 12, 2017)
+- `EILBackgroundIndoorLocationManager` will inform if BLE background capability is incorrectly configured.
+- Fixed nullability warning for `isEqual` methods.
+- Fixed an issue where Light positioning mode would not start on iPods and older iPads.
+- _CAN BREAK BUILD_: provideOrientationForLightMode default value is NO.
+
 ## 2.7.0 (June, 30, 2017)
 - Improved positioning accuracy & responsiveness for Light mode
 - _CAN BREAK BUILD_: Changed default positioning mode to Light

@@ -163,10 +163,10 @@ NS_ASSUME_NONNULL_BEGIN
  * @param other The object to be compared to this location. May be nil.
  * @return YES if locations are equal, otherwise NO.
  */
-- (BOOL)isEqual:(id)other;
+- (BOOL)isEqual:(nullable id)other;
 
 /** @see isEqual: */
-- (BOOL)isEqualToLocation:(EILLocation *)location;
+- (BOOL)isEqualToLocation:(nullable EILLocation *)location;
 
 /** Returns an integer that can be used as a table address in a hash table structure. */
 - (NSUInteger)hash;

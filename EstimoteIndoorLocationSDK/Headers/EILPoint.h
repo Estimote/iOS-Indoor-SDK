@@ -111,10 +111,10 @@ NS_ASSUME_NONNULL_BEGIN
  * @param other The object to be compared to this point. May be nil.
  * @return YES if points are equal, otherwise NO.
  */
-- (BOOL)isEqual:(id)other;
+- (BOOL)isEqual:(nullable id)other;
 
 /** @see isEqual: */
-- (BOOL)isEqualToPoint:(EILPoint *)point;
+- (BOOL)isEqualToPoint:(nullable EILPoint *)point;
 
 /** Returns an integer that can be used as a table address in a hash table structure. */
 - (NSUInteger)hash;
