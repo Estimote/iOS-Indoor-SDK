@@ -21,7 +21,6 @@ typedef NS_ENUM(int, EILLocationBuilderSide) {
 
 NS_ASSUME_NONNULL_BEGIN
 
-/**
 `EILLocationBuilder` is a builder object for creating `EILLocation` objects.
 
 In order to construct a new location you need to:
@@ -52,7 +51,7 @@ The next step is to place beacons, doors on the boundary segments of the locatio
                                   inDistance:2
                                     fromSide:EILLocationBuilderLeftSide];
 
-*/
+
 @interface EILLocationBuilder : NSObject
 
 #pragma mark Preparing shape of the location
@@ -113,22 +112,7 @@ The next step is to place beacons, doors on the boundary segments of the locatio
                    withPosition:(EILOrientedPoint *)position
                        andColor:(ESTColor)color;
 
-/**
- * Places a beacon on the boundary segment.
- * Boundary segments were created in the same order as points were added.
- *
- * @param macAddress Beacon MAC address.
- * @param boundarySegmentIndex Index of the boundary segment.
- * @param distance Distance from the beacon to the side of the boundary segment.
- * @param side Side of the boundary segment as seen from inside of the location.
- *
- * This method is deprecated. Use addBeaconWithIdentifier:atBoundarySegmentIndex:inDistance:fromSide: instead.
- */
-- (void)addBeaconIdentifiedByMac:(NSString *)macAddress
-          atBoundarySegmentIndex:(NSUInteger)boundarySegmentIndex
-                      inDistance:(double)distance
-                        fromSide:(EILLocationBuilderSide)side
-                        __deprecated_msg("Use addBeaconWithIdentifier:atBoundarySegmentIndex:inDistance:fromSide: instead.");
+
 
 /**
  * Places a beacon in the location.
@@ -158,12 +142,7 @@ The next step is to place beacons, doors on the boundary segments of the locatio
 
 /**
  * Places a door on the boundary segment.
- * Boundary segments were created in the same order as points were added.
- *
- * @param length Length of the door.
- * @param boundarySegmentIndex Index of the boundary segment.
- * @param distance Distance from the door to the side of the boundary segment.
- * @param side Side of the boundary segment as seen from inside of the location.
+
  */
 - (void)addDoorsWithLength:(double)length
     atBoundarySegmentIndex:(NSUInteger)boundarySegmentIndex
@@ -171,13 +150,7 @@ The next step is to place beacons, doors on the boundary segments of the locatio
                   fromSide:(EILLocationBuilderSide)side;
 
 /**
- * Places a window on the boundary segment.
- * Boundary segments were created in the same order as points were added.
- *
- * @param length Length of the window.
- * @param boundarySegmentIndex Index of the boundary segment.
- * @param distance Distance from the window to the side of the boundary segment.
- * @param side Side of the boundary segment as seen from inside of the location.
+ 
  */
 - (void)addWindowWithLength:(double)length
      atBoundarySegmentIndex:(NSUInteger)boundarySegmentIndex
@@ -211,12 +184,7 @@ The next step is to place beacons, doors on the boundary segments of the locatio
 - (nullable EILLocation *)build;
 
 /**
- * Parses JSON string representation of the location. You might have it from the older version of the app through "Export location code snippet".
- *
- * If location cannot be constructed based on JSON, an exception will be raised with explanation why it has happened.
- *
- * @param json JSON encoded as a string representation of the location.
- * @return Location object built based upon the JSON. Returns nil if location cannot be built.
+
  */
 + (nullable EILLocation *)parseFromJSON:(NSString *)json;
 
