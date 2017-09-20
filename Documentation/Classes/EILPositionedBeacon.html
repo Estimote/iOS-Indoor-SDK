@@ -56,8 +56,6 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/)">)</option>
-		
 		<option value="//api/name/color">color</option>
 		
 		<option value="//api/name/identifier">identifier</option>
@@ -91,12 +89,6 @@
 		<option value="//api/name/encodeWithCoder:">- encodeWithCoder:</option>
 		
 		<option value="//api/name/hash">- hash</option>
-		
-		<option value="//api/name/initWithBeaconIdentifiedByMac:withPosition:">- initWithBeaconIdentifiedByMac:withPosition:</option>
-		
-		<option value="//api/name/initWithBeaconIdentifiedByMac:withPosition:color:">- initWithBeaconIdentifiedByMac:withPosition:color:</option>
-		
-		<option value="//api/name/initWithBeaconIdentifiedByMac:withPosition:color:proximityUUID:major:minor:">- initWithBeaconIdentifiedByMac:withPosition:color:proximityUUID:major:minor:</option>
 		
 		<option value="//api/name/initWithBeaconIdentifier:position:">- initWithBeaconIdentifier:position:</option>
 		
@@ -247,47 +239,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/)" title=")"></a>
-	<h3 class="method-title"><code><a href="#//api/name/)">&nbsp;&nbsp;)</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Beacons mac address.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *__attribute ( ( deprecated ( ( &quot;Use identifier instead.&quot; )</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">EILPositionedBeacon.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/color" title="color"></a>
 	<h3 class="method-title"><code><a href="#//api/name/color">&nbsp;&nbsp;color</a></code>
 </h3>
@@ -304,7 +255,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) ESTColor color</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) EILColor color</code></div>
 
 		    
 			
@@ -539,7 +490,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeaconIdentifier:(NSString *)<em>identifier</em> position:(EILOrientedPoint *)<em>position</em> color:(ESTColor)<em>color</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeaconIdentifier:(NSString *)<em>identifier</em> position:(EILOrientedPoint *)<em>position</em> color:(EILColor)<em>color</em></code></div>
 
 		    
 			
@@ -607,7 +558,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeaconIdentifier:(NSString *)<em>identifier</em> position:(EILOrientedPoint *)<em>position</em> color:(ESTColor)<em>color</em> proximityUUID:(nullable NSUUID *)<em>proximityUUID</em> major:(nullable NSNumber *)<em>major</em> minor:(nullable NSNumber *)<em>minor</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeaconIdentifier:(NSString *)<em>identifier</em> position:(EILOrientedPoint *)<em>position</em> color:(EILColor)<em>color</em> proximityUUID:(nullable NSUUID *)<em>proximityUUID</em> major:(nullable NSNumber *)<em>major</em> minor:(nullable NSNumber *)<em>minor</em></code></div>
 
 		    
 			
@@ -653,226 +604,6 @@
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
 				<p>A positioned beacon initialized with provided data.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">EILPositionedBeacon.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/initWithBeaconIdentifiedByMac:withPosition:" title="initWithBeaconIdentifiedByMac:withPosition:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/initWithBeaconIdentifiedByMac:withPosition:">&ndash;&nbsp;initWithBeaconIdentifiedByMac:withPosition:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Returns a new beacon object.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeaconIdentifiedByMac:(NSString *)<em>macAddress</em> withPosition:(EILOrientedPoint *)<em>position</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>macAddress</code></th>
-						<td><p>Beacon MAC address.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>position</code></th>
-						<td><p>Beacon <a href="#//api/name/position">position</a>.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>A positioned beacon initialized with MAC and <a href="#//api/name/position">position</a>.</p>
-
-<p>This method is deprecated. Use <a href="#//api/name/initWithBeaconIdentifier:position:">initWithBeaconIdentifier:position:</a> instead.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">EILPositionedBeacon.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/initWithBeaconIdentifiedByMac:withPosition:color:" title="initWithBeaconIdentifiedByMac:withPosition:color:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/initWithBeaconIdentifiedByMac:withPosition:color:">&ndash;&nbsp;initWithBeaconIdentifiedByMac:withPosition:color:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Designated initializer. Returns a new beacon object.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeaconIdentifiedByMac:(NSString *)<em>macAddress</em> withPosition:(EILOrientedPoint *)<em>position</em> color:(ESTColor)<em>color</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>macAddress</code></th>
-						<td><p>Beacon MAC address.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>position</code></th>
-						<td><p>Beacon <a href="#//api/name/position">position</a>.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>color</code></th>
-						<td><p>Beacon <a href="#//api/name/color">color</a></p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>A positioned beacon initialized with MAC and <a href="#//api/name/position">position</a>.</p>
-
-<p>This method is deprecated. Use <a href="#//api/name/initWithBeaconIdentifier:position:color:">initWithBeaconIdentifier:position:color:</a> instead.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">EILPositionedBeacon.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/initWithBeaconIdentifiedByMac:withPosition:color:proximityUUID:major:minor:" title="initWithBeaconIdentifiedByMac:withPosition:color:proximityUUID:major:minor:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/initWithBeaconIdentifiedByMac:withPosition:color:proximityUUID:major:minor:">&ndash;&nbsp;initWithBeaconIdentifiedByMac:withPosition:color:proximityUUID:major:minor:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Designated initializer. Returns a new beacon object.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeaconIdentifiedByMac:(NSString *)<em>macAddress</em> withPosition:(EILOrientedPoint *)<em>position</em> color:(ESTColor)<em>color</em> proximityUUID:(nullable NSUUID *)<em>proximityUUID</em> major:(nullable NSNumber *)<em>major</em> minor:(nullable NSNumber *)<em>minor</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>macAddress</code></th>
-						<td><p>Beacon MAC address.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>position</code></th>
-						<td><p>Beacon <a href="#//api/name/position">position</a>.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>color</code></th>
-						<td><p>Beacon <a href="#//api/name/color">color</a></p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>proximityUUID</code></th>
-						<td><p>Beacon proximity UUID.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>major</code></th>
-						<td><p>Beacon <a href="#//api/name/major">major</a> value.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>minor</code></th>
-						<td><p>Beacon <a href="#//api/name/minor">minor</a> value.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>A positioned beacon initialized with provided data.</p>
-
-<p>This method is deprecated. Use <a href="#//api/name/initWithBeaconIdentifier:position:color:proximityUUID:major:minor:">initWithBeaconIdentifier:position:color:proximityUUID:major:minor:</a> instead.</p>
 			</div>
 			
 
@@ -1421,7 +1152,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 Estimote. All rights reserved. Updated: 2017-07-12</p>
+						<p class="copyright">Copyright &copy; 2017 Estimote. All rights reserved. Updated: 2017-09-20</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

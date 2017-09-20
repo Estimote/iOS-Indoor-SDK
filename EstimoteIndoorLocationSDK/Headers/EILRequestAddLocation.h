@@ -1,14 +1,13 @@
-//  Copyright © 2015 Estimote. All rights reserved.
+//  Copyright © 2017 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
-#import <EstimoteSDK/EstimoteSDK.h>
 
 @class EILLocation;
 
 NS_ASSUME_NONNULL_BEGIN
 
-/** 
- * A block object to be executed when the request finishes. 
+/**
+ * A block object to be executed when the request finishes.
  */
 typedef void(^EILRequestAddLocationBlock)(EILLocation * _Nullable location, NSError * _Nullable error);
 
@@ -20,7 +19,7 @@ typedef void(^EILRequestAddLocationBlock)(EILLocation * _Nullable location, NSEr
  * You can find your API App ID and API App Token in the Apps: http://cloud.estimote.com/#/apps
  * section of the Estimote Cloud: http://cloud.estimote.com/.
  */
-@interface EILRequestAddLocation : ESTRequestPostJSON
+@interface EILRequestAddLocation : NSObject
 
 /**
  * Returns a new request object for saving location in Estimote Cloud.

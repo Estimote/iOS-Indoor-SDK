@@ -1,7 +1,7 @@
 //  Copyright (c) 2014 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
-#import <EstimoteSDK/EstimoteSDK.h>
+#import "EILColor.h"
 
 #define EIL_LOCATION_DEFAULT_NAME @"MyEstimoteLocation"
 
@@ -18,6 +18,7 @@ typedef NS_ENUM(int, EILLocationBuilderSide) {
 @class EILLocation;
 @class EILOrientedPoint;
 @class EILPoint;
+@class EILLocationPin;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -111,50 +112,17 @@ The next step is to place beacons, doors on the boundary segments of the locatio
  */
 - (void)addBeaconWithIdentifier:(NSString *)identifier
                    withPosition:(EILOrientedPoint *)position
-                       andColor:(ESTColor)color;
+                       andColor:(EILColor)color;
 
 /**
- * Places a beacon on the boundary segment.
- * Boundary segments were created in the same order as points were added.
- *
- * @param macAddress Beacon MAC address.
- * @param boundarySegmentIndex Index of the boundary segment.
- * @param distance Distance from the beacon to the side of the boundary segment.
- * @param side Side of the boundary segment as seen from inside of the location.
- *
- * This method is deprecated. Use addBeaconWithIdentifier:atBoundarySegmentIndex:inDistance:fromSide: instead.
+ * Adds a location pin in the location.
+ * @param name Pin name.
+ * @param type Pin type.
+ * @param position Pin position.
  */
-- (void)addBeaconIdentifiedByMac:(NSString *)macAddress
-          atBoundarySegmentIndex:(NSUInteger)boundarySegmentIndex
-                      inDistance:(double)distance
-                        fromSide:(EILLocationBuilderSide)side
-                        __deprecated_msg("Use addBeaconWithIdentifier:atBoundarySegmentIndex:inDistance:fromSide: instead.");
-
-/**
- * Places a beacon in the location.
- *
- * @param macAddress Beacon MAC address.
- * @param position Coordinates of the beacon position.
- *
- * This method is deprecated. Use addBeaconWithIdentifier:withPosition: instead.
- */
-- (void)addBeaconIdentifiedByMac:(NSString *)macAddress
-                    withPosition:(EILOrientedPoint *)position
-                    __deprecated_msg("Use addBeaconWithIdentifier:withPosition: instead.");
-
-/**
- * Places a beacon in the location.
- *
- * @param macAddress Beacon MAC address.
- * @param position Coordinates of the beacon position.
- * @param color Color of the beacon.
- *
- * This method is deprecated. Use addBeaconWithIdentifier:withPosition:andColor: instead.
- */
-- (void)addBeaconIdentifiedByMac:(NSString *)macAddress
-                    withPosition:(EILOrientedPoint *)position
-                        andColor:(ESTColor)color
-                        __deprecated_msg("Use addBeaconWithIdentifier:withPosition:andColor: instead.");
+- (void)addLocationPinWithName:(NSString *)name
+                          type:(NSString *)type
+                      position:(EILOrientedPoint *)position;
 
 /**
  * Places a door on the boundary segment.
@@ -198,9 +166,9 @@ The next step is to place beacons, doors on the boundary segments of the locatio
  */
 - (void)setLocationCreationDate:(NSDate *)date;
 
-#pragma mark Building & Importing Location
+#pragma mark Building location
 ///-----------------------------------------
-/// @name Building & Importing Location
+/// @name Building location
 ///-----------------------------------------
 
 /**
@@ -209,16 +177,6 @@ The next step is to place beacons, doors on the boundary segments of the locatio
  * @return A valid location.
  */
 - (nullable EILLocation *)build;
-
-/**
- * Parses JSON string representation of the location. You might have it from the older version of the app through "Export location code snippet".
- *
- * If location cannot be constructed based on JSON, an exception will be raised with explanation why it has happened.
- *
- * @param json JSON encoded as a string representation of the location.
- * @return Location object built based upon the JSON. Returns nil if location cannot be built.
- */
-+ (nullable EILLocation *)parseFromJSON:(NSString *)json;
 
 @end
 

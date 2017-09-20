@@ -1,6 +1,6 @@
-//  Copyright © 2015 Estimote. All rights reserved.
+//  Copyright © 2017 Estimote. All rights reserved.
 
-#import <EstimoteSDK/EstimoteSDK.h>
+#import <Foundation/Foundation.h>
 
 @class EILLocation;
 
@@ -19,7 +19,7 @@ typedef void(^EILRequestModifyLocationBlock)(EILLocation * _Nullable location, N
  * You can find your API App ID and API App Token in the Apps: http://cloud.estimote.com/#/apps
  * section of the Estimote Cloud: http://cloud.estimote.com/.
  */
-@interface EILRequestModifyLocation : ESTRequestPutJSON
+@interface EILRequestModifyLocation : NSObject
 
 /**
  * Returns a new request object for modifying location in Estimote Cloud.

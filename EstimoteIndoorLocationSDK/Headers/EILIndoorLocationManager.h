@@ -4,33 +4,32 @@
 
 /**
  * The possible modes of EILIndoorLocationManager position updates delivery.
- *
- * Modes differ in accuracy, stability and responsiveness. Depending on the mode system resource usage may be different.
  */
-typedef NS_ENUM(NSInteger, EILIndoorLocationManagerMode) {
+typedef NS_ENUM(NSInteger, EILIndoorLocationManagerMode)
+{
     /**
-     * Normal mode of `EILIndoorLocationManager`. Delivers most responsive position updates at the cost of high system resource usage.
-     * This mode can be a bit less stable compared to Light mode.
-     *
-     * Normal mode requires magnetometer to work properly.
-     *
-     * To achieve best results user should hold phone in hand in portrait orientation.
-     */
-            EILIndoorLocationManagerModeNormal,
-    /**
-     * Light mode of `EILIndoorLocationManager`. Delivers precise and robust position updates. Has a very low system resource usage.
-     *
-     * This mode is best for deployments.
+     * Standard mode - provides stable and responsive position updates. This mode is compatible with all devices. Previously called `EILIndoorLocationManagerModeLight`.
      *
      * This is the default mode of `EILIndoorLocationManager`.
      */
-            EILIndoorLocationManagerModeLight,
+            EILIndoorLocationManagerModeStandard,
+    /**
+     * Experimental With Inertia mode - provides more responsive position updates thanks to using inertial sensors. Requires device to be in portrait mode. This mode is not supported by iPad & iPod device families. Previously called `EILIndoorLocationManagerModeNormal`.
+     */
+            EILIndoorLocationManagerModeExperimentalWithInertia,
+    /**
+     * Experimental With ARKit mode - provides hyper precise and responsive position updates thanks to using ARKit. If you are designing a mixed-reality experience this is the suggested mode. Requires iOS 11 device compatible with ARKit World Tracking.
+     *
+     * Augmented Reality Kit relies on access to the camera to work correctly. You need to add `NSCameraUsageDescription` key to the `Info.plist` file, explaining how your app is going to use this privilege. For example, "We use Augmented Reality to give you a virtual tour around the museum."
+     */
+            EILIndoorLocationManagerModeExperimentalWithARKit,
 };
 
 /**
  * The possible states of the monitored location.
  */
-typedef NS_ENUM(NSInteger, EILLocationState) {
+typedef NS_ENUM(NSInteger, EILLocationState)
+{
     /** The state of the monitored location is unknown. */
             EILLocationStateUnknown,
     /** The user is inside the location. */
@@ -42,7 +41,8 @@ typedef NS_ENUM(NSInteger, EILLocationState) {
 /**
  * The possible errors returned during updating position.
  */
-typedef NS_ENUM(NSInteger, EILIndoorErrorCode) {
+typedef NS_ENUM(NSInteger, EILIndoorErrorCode)
+{
     /** An unknown error occurred. */
             EILIndoorGenericError,
     /** Device is outside the location. */
@@ -76,36 +76,38 @@ typedef NS_ENUM(NSInteger, EILPositionAccuracy)
      * Accuracy of determined position is high.
      * Accuracy is below 1.62m.
      */
-            EILPositionAccuracyHigh     = 1,
+            EILPositionAccuracyHigh = 1,
 
     /**
      * Accuracy of determined position is medium.
      * Accuracy is below 2.62m.
      */
-            EILPositionAccuracyMedium   = 2,
+            EILPositionAccuracyMedium = 2,
 
     /**
      * Accuracy of determined position is low.
      * Accuracy is below 4.24m.
      */
-            EILPositionAccuracyLow      = 3,
+            EILPositionAccuracyLow = 3,
 
     /**
      * Accuracy of determined position is very low - typically during the initialization phase.
      * Accuracy can also drop to this level when the quality of determined position decreases significantly.
      * Accuracy should be thought of as comparable to location size.
      */
-            EILPositionAccuracyVeryLow  = 4,
-    
+            EILPositionAccuracyVeryLow = 4,
+
     /**
      * Accuracy of determined position is unknown.
      */
-            EILPositionAccuracyUnknown  = 5
+            EILPositionAccuracyUnknown = 5
 };
 
 @class EILIndoorLocationManager;
 @class EILLocation;
 @class EILOrientedPoint;
+@class ARSession;
+@class EILPoint;
 
 /**
  * The `EILIndoorLocationManagerDelegate` protocol defines the methods to receive location updates.
@@ -271,6 +273,27 @@ didFailToUpdatePositionWithError:(NSError *)error;
  * Stops the delivery of position updates.
  */
 - (void)stopPositionUpdates;
+
+/**
+ * If run in Experimental With ARKit positioning mode this property exposes internal ARKit session. For the `EILIndoorLocationManager` to work correctly it should be never started or stopped manually. Please rely on the `startPositionUpdatesForLocation:` and `stopPositionUpdates` methods of `EILIndoorLocationManager`.
+ */
+@property (nonatomic, strong, readonly) ARSession *arSession NS_AVAILABLE_IOS(11_0);
+
+/**
+ * Method for coordinate transformation between ARKit and Indoor Location.
+ *
+ * @param arkitPoint Position in ARKit coordinate system.
+ * @return Position in Indoor Location coordinate system.
+ */
+- (EILPoint *)indoorLocationPointFromARKitPoint:(EILPoint *)arkitPoint NS_AVAILABLE_IOS(11_0);
+
+/**
+ * Method for coordinate transformation between ARKit and Indoor Location.
+ *
+ * @param indoorLocationPoint Position in Indoor Location coordinate system.
+ * @return Position in ARKit coordinate system.
+ */
+- (EILPoint *)ARKitPointFromIndoorLocationPoint:(EILPoint *)indoorLocationPoint NS_AVAILABLE_IOS(11_0);
 
 @end
 

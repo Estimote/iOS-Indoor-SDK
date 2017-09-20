@@ -1,3 +1,13 @@
+## 3.0.0-alpha.1 (September, 20, 2017)
+- Added hyper-precise positioning mode using ARKit. If you are designing a mixed-reality experience this is the suggested mode.
+- Added Location Pins. 2D objects with name & type that can be stored in Estimote Cloud. They can be used to store information about Point of Interests, landmarks, as a back-end for AR etc. 
+
+We started making our API more convenient to use, however, it is still in progress. We wanted to share the new positioning mode with you as well as preview some changes.  
+- Positioning modes were renamed. Previous names were a bit misleading and did not reflect reality. 
+- Removed all deprecated methods.
+- Switched from ESTColor to EILColor.
+- Requests no longer depend by inheritance on EstimoteSDK requests.
+
 ## 2.7.1 (July, 12, 2017)
 - `EILBackgroundIndoorLocationManager` will inform if BLE background capability is incorrectly configured.
 - Fixed nullability warning for `isEqual` methods.

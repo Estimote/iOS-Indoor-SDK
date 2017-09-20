@@ -147,6 +147,11 @@ typedef enum : NSInteger {
 @property (nonatomic, assign, readonly) CGFloat locationScale;
 
 /**
+ * Length of the move animation duration.
+ */
+@property (nonatomic, assign) double moveAnimationDuration;
+
+/**
  *  Block of code that will be invoked every time a node on `EILIndoorLocationScene` is touched.
  *  @param nodeName Name of node that was touched.
  */

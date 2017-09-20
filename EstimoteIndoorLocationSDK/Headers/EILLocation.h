@@ -6,6 +6,7 @@
 
 @class EILPoint;
 @class EILPositionedBeacon;
+@class EILLocationPin;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -65,6 +66,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** Orientation to magnetic north, counted clockwise. Value is in degrees. */
 @property (nonatomic, assign, readonly) double orientation;
+
+/** Location pins that belong to location. */
+@property (nonatomic, strong, readonly, nullable) NSArray<EILLocationPin *> *locationPins;
 
 /** Creation date. */
 @property (nonatomic, strong, readonly) NSDate *creationDate;

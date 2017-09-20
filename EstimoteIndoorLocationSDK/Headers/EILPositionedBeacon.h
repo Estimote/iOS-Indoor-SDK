@@ -1,7 +1,7 @@
 //  Copyright (c) 2014 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
-#import <EstimoteSDK/EstimoteSDK.h>
+#import "EILColor.h"
 
 @class EILOrientedPoint;
 
@@ -19,10 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) EILOrientedPoint *position;
 /** Beacons identifier. */
 @property (nonatomic, strong, readonly) NSString *identifier;
-/** Beacons mac address. */
-@property (nonatomic, strong, readonly) NSString *macAddress __attribute ((deprecated(("Use identifier instead."))));
 /** Beacons color. */
-@property (nonatomic, assign, readonly) ESTColor color;
+@property (nonatomic, assign, readonly) EILColor color;
 /** Beacons proximity UUID. Can be nil, if unknown. */
 @property (nonatomic, strong, readonly, nullable) NSUUID *proximityUUID;
 /** Beacons major value. Can be nil, if unknown. */
@@ -56,7 +54,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (instancetype)initWithBeaconIdentifier:(NSString *)identifier
                                 position:(EILOrientedPoint *)position
-                                   color:(ESTColor)color;
+                                   color:(EILColor)color;
 
 /**
  * Designated initializer. Returns a new beacon object.
@@ -71,59 +69,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (instancetype)initWithBeaconIdentifier:(NSString *)identifier
                                 position:(EILOrientedPoint *)position
-                                   color:(ESTColor)color
+                                   color:(EILColor)color
                            proximityUUID:(nullable NSUUID *)proximityUUID
                                    major:(nullable NSNumber *)major
                                    minor:(nullable NSNumber *)minor;
-
-/**
- * Returns a new beacon object.
- *
- * @param macAddress Beacon MAC address.
- * @param position Beacon position.
- * @return A positioned beacon initialized with MAC and position.
- *
- * This method is deprecated. Use initWithBeaconIdentifier:position: instead.
- */
-- (instancetype)initWithBeaconIdentifiedByMac:(NSString *)macAddress
-                                 withPosition:(EILOrientedPoint *)position
-                                 __deprecated_msg("Use initWithBeaconIdentifier:position: instead.");
-
-/**
- * Designated initializer. Returns a new beacon object.
- *
- * @param macAddress Beacon MAC address.
- * @param position Beacon position.
- * @param color Beacon color
- * @return A positioned beacon initialized with MAC and position.
- *
- * This method is deprecated. Use initWithBeaconIdentifier:position:color: instead.
- */
-- (instancetype)initWithBeaconIdentifiedByMac:(NSString *)macAddress
-                                 withPosition:(EILOrientedPoint *)position
-                                        color:(ESTColor)color
-                                        __deprecated_msg("Use initWithBeaconIdentifier:position:color: instead.");
-
-/**
- * Designated initializer. Returns a new beacon object.
- *
- * @param macAddress Beacon MAC address.
- * @param position Beacon position.
- * @param color Beacon color
- * @param proximityUUID Beacon proximity UUID.
- * @param major Beacon major value.
- * @param minor Beacon minor value.
- * @return A positioned beacon initialized with provided data.
- *
- * This method is deprecated. Use initWithBeaconIdentifier:position:color:proximityUUID:major:minor: instead.
- */
-- (instancetype)initWithBeaconIdentifiedByMac:(NSString *)macAddress
-                                 withPosition:(EILOrientedPoint *)position
-                                        color:(ESTColor)color
-                                proximityUUID:(nullable NSUUID *)proximityUUID
-                                        major:(nullable NSNumber *)major
-                                        minor:(nullable NSNumber *)minor
-                                        __deprecated_msg("Use initWithBeaconIdentifier:position:color:proximityUUID:major:minor: instead.");
 
 /**
  * Returns a new beacon object.

@@ -184,9 +184,11 @@ Note, that you need only one Indoor Location Manager to monitor multiple locatio
 ```
 In order to have Indoor Location status change and position updates without delay, you should start Indoor Location Manager and monitioring for Indoor Location early.
 
-EILIndoorLocationManager position updates can be delivered in two different modes. Modes differ in accuracy, stability and responsiveness. Depending on the mode system resource usage may be different.
-- `EILIndoorLocationManagerModeNormal` - Normal mode of `EILIndoorLocationManager`. Delivers most responsive position updates at the cost of high system resource usage. This mode can be a bit less stable compared to Light mode. Normal mode requires magnetometer to work properly. To achieve best results user should hold phone in hand in portrait orientation.
-- `EILIndoorLocationManagerModeLight` - Light mode of `EILIndoorLocationManager`. Delivers precise and robust position updates. Has a very low system resource usage. This mode is best for deployments. This is the default mode of `EILIndoorLocationManager`.
+EILIndoorLocationManager position updates can be delivered in three different modes. 
+- `EILIndoorLocationManagerModeStandard` - provides stable and responsive position updates. This mode is compatible with all devices. This is the default mode of `EILIndoorLocationManager`.
+- `EILIndoorLocationManagerModeExperimentalWithInertia` - provides more responsive position updates thanks to using inertial sensors. Requires device to be in portrait mode. This mode is not supported by iPad & iPod device families.
+- `EILIndoorLocationManagerModeExperimentalWithARKit` - provides hyper precise and responsive position updates thanks to using ARKit. If you are designing a mixed-reality experience this is the suggested mode. Requires iOS 11 device compatible with ARKit World Tracking. You need to add NSCameraUsageDescription key to the Info.plist file, explaining how your app is going to use this privilege. For example, "We use Augmented Reality to give you a virtual tour around the museum."
+Note: Augmented Reality Kit relies on access to the camera to work correctly. You need to add NSCameraUsageDescription key to the Info.plist file, explaining how your app is going to use this privilege. For example, "We use Augmented Reality to give you a virtual tour around the museum."
 
 In order to change mode simply change `mode` property of `EILIndoorLocationManager` object.
 
@@ -204,7 +206,7 @@ EILBackgroundIndoorLocationManager *backgroundIndoorLocationManager = [EILBackgr
 self.backgroundIndoorLocationManager = backgroundIndoorLocationManager;
 ```
 
-In order to provide you with positioning your app needs access to bluetooth alswo when in it's in background. To set that you need to go to the project settings, find "Capabilities" tab, set "Background modes" to On and check "Uses Bluetooth LE accessories".
+In order to work properly your app needs access to bluetooth also when it is in background. To set that you need to go to the project settings, find "Capabilities" tab, set "Background modes" to On and check "Uses Bluetooth LE accessories".
 
 In order to relaunch the application (if it is killed by operating system or user) as the user enters the location "Always in use" Location Services authorization is required:
 
