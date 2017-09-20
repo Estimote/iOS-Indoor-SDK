@@ -54,6 +54,8 @@
 	
 	<optgroup label="Properties">
 		
+		<option value="//api/name/_0">_0</option>
+		
 		<option value="//api/name/delegate">delegate</option>
 		
 		<option value="//api/name/isRunning">isRunning</option>
@@ -77,6 +79,10 @@
 
 	
 	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/ARKitPointFromIndoorLocationPoint:">- ARKitPointFromIndoorLocationPoint:</option>
+		
+		<option value="//api/name/indoorLocationPointFromARKitPoint:">- indoorLocationPointFromARKitPoint:</option>
 		
 		<option value="//api/name/start">- start</option>
 		
@@ -147,7 +153,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The delegate object to receive position update events.</p>
+				<p>The delegate object to receive <a href="#//api/name/position">position</a> update events.</p>
 			</div>
 			
 		    
@@ -205,7 +211,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Starting <code>Indoor Location Manager</code> early allows it to warm-up and later on deliver without delay <code>Indoor Location</code> status change and position updates.</p>
+				<p>Starting <code>Indoor Location Manager</code> early allows it to warm-up and later on deliver without delay <code>Indoor Location</code> status change and <a href="#//api/name/position">position</a> updates.</p>
 			</div>
 			
 
@@ -251,7 +257,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Invoking this method will stop all <code>Indoor Location</code> monitoring and position updates.</p>
+				<p>Invoking this method will stop all <code>Indoor Location</code> monitoring and <a href="#//api/name/position">position</a> updates.</p>
 			</div>
 			
 
@@ -362,7 +368,7 @@
 
 <p>If the <code>Indoor Location Manager</code> is not started this method will <a href="#//api/name/start">start</a> it.</p>
 
-<p>Starting monitoring for <code>Indoor Location</code> early allows position updates to be delivered without delay later on.</p>
+<p>Starting monitoring for <code>Indoor Location</code> early allows <a href="#//api/name/position">position</a> updates to be delivered without delay later on.</p>
 
 <p>Starting monitoring for a location already monitored will do nothing.</p>
 			</div>
@@ -641,7 +647,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Mode of <code>EILIndoorLocationManager</code> position updates delivery.</p>
+				<p>Mode of <code>EILIndoorLocationManager</code> <a href="#//api/name/position">position</a> updates delivery.</p>
 			</div>
 			
 		    
@@ -660,7 +666,7 @@
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Default mode of <code>EILIndoorLocationManager</code> is <code>EILIndoorLocationManagerModeNormal</code>.</p>
 
-<p>Switching mode while delivery of position updates is in progress will effectively re<a href="#//api/name/start">start</a> position updates with new mode.</p>
+<p>Switching mode while delivery of <a href="#//api/name/position">position</a> updates is in progress will effectively re<a href="#//api/name/start">start</a> <a href="#//api/name/position">position</a> updates with new mode.</p>
 			</div>
 			
 
@@ -698,7 +704,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Enables providing orientation for position updates in Light <a href="#//api/name/mode">mode</a>.</p>
+				<p>Enables providing orientation for <a href="#//api/name/position">position</a> updates in Light <a href="#//api/name/mode">mode</a>.</p>
 			</div>
 			
 		    
@@ -792,7 +798,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Starts the delivery of position updates for the specified location.</p>
+				<p>Starts the delivery of <a href="#//api/name/position">position</a> updates for the specified location.</p>
 			</div>
 			
 		    
@@ -823,9 +829,9 @@
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>If the <code>Indoor Location Manager</code> is not started invoking this method will <a href="#//api/name/start">start</a> it.</p>
 
-<p>Only one location is supported at the same time. Calling this method without previously stopping position updates will have no effect.</p>
+<p>Only one location is supported at the same time. Calling this method without previously stopping <a href="#//api/name/position">position</a> updates will have no effect.</p>
 
-<p>Calling this method without calling <a href="#//api/name/start">start</a> <a href="#//api/name/startMonitoringForLocation:"><code>startMonitoringForLocation:</code></a> will result in approximately 6 s delay before first position updates are provided. Starting monitoring earlier will reduce this time by the amount of time monitoring was running.</p>
+<p>Calling this method without calling <a href="#//api/name/start">start</a> <a href="#//api/name/startMonitoringForLocation:"><code>startMonitoringForLocation:</code></a> will result in approximately 6 s delay before first <a href="#//api/name/position">position</a> updates are provided. Starting monitoring earlier will reduce this time by the amount of time monitoring was running.</p>
 			</div>
 			
 
@@ -854,7 +860,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Stops the delivery of position updates.</p>
+				<p>Stops the delivery of <a href="#//api/name/position">position</a> updates.</p>
 			</div>
 			
 		    
@@ -864,6 +870,163 @@
 		    
 			
 
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EILIndoorLocationManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/_0" title="_0"></a>
+	<h3 class="method-title"><code><a href="#//api/name/_0">&nbsp;&nbsp;_0</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>If run in Experimental With ARKit positioning <a href="#//api/name/mode">mode</a> this property exposes internal ARKit session. For the <code>EILIndoorLocationManager</code> to work correctly it should be never started or stopped manually. Please rely on the <a href="#//api/name/startPositionUpdatesForLocation:"><code>startPositionUpdatesForLocation:</code></a> and <a href="#//api/name/stopPositionUpdates"><code>stopPositionUpdates</code></a> methods of <code>EILIndoorLocationManager</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) ARSession *NS_AVAILABLE_IOS ( 11 _0</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EILIndoorLocationManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/indoorLocationPointFromARKitPoint:" title="indoorLocationPointFromARKitPoint:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/indoorLocationPointFromARKitPoint:">&ndash;&nbsp;indoorLocationPointFromARKitPoint:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Method for coordinate transformation between ARKit and Indoor Location.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EILPoint *)indoorLocationPointFromARKitPoint:(EILPoint *)<em>arkitPoint</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>arkitPoint</code></th>
+						<td><p>Position in ARKit coordinate system.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Position in Indoor Location coordinate system.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EILIndoorLocationManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/ARKitPointFromIndoorLocationPoint:" title="ARKitPointFromIndoorLocationPoint:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/ARKitPointFromIndoorLocationPoint:">&ndash;&nbsp;ARKitPointFromIndoorLocationPoint:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Method for coordinate transformation between ARKit and Indoor Location.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EILPoint *)ARKitPointFromIndoorLocationPoint:(EILPoint *)<em>indoorLocationPoint</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>indoorLocationPoint</code></th>
+						<td><p>Position in Indoor Location coordinate system.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Position in ARKit coordinate system.</p>
+			</div>
 			
 
 			
@@ -898,7 +1061,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 Estimote. All rights reserved. Updated: 2017-07-12</p>
+						<p class="copyright">Copyright &copy; 2017 Estimote. All rights reserved. Updated: 2017-09-20</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>EILRequestFetchPublicLocations Class Reference</title>
+	<title>EILRequestRemoveLocationPin Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -60,7 +60,9 @@
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/initWithBeaconIdentifiers:">- initWithBeaconIdentifiers:</option>
+		<option value="//api/name/initWithPin:">- initWithPin:</option>
+		
+		<option value="//api/name/initWithPinIdentifier:">- initWithPinIdentifier:</option>
 		
 		<option value="//api/name/sendRequestWithCompletion:">- sendRequestWithCompletion:</option>
 		
@@ -79,7 +81,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">EILRequestFetchPublicLocations Class Reference</h1>
+					<h1 class="title">EILRequestRemoveLocationPin Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -88,7 +90,7 @@
 	<td>NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>EILRequestFetchPublicLocations.h<br />EILRequestFetchPublicLocations.m</td>
+	<td>EILRequestRemoveLocationPin.h<br />EILRequestRemoveLocationPin.m</td>
 </tr>
 						</tbody></table></div>
 					
@@ -98,10 +100,12 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Request to fetch public nearby locations and parsing response.
-In order to determine nearby public locations, scan for nearby beacons.
-All the locations that contain at least one of the given beacons (identified
-by their identifiers) will be fetched.</p>
+						<p>Request for removing a new location from Estimote Cloud.</p>
+
+<p>Note that in order to have request working you need to be authenticated in Estimote Cloud.
+To do that you have to call [ESTConfig setupAppID:andAppToken:] first.
+You can find your API App ID and API App Token in the Apps: <a href="http://cloud.estimote.com/">http://cloud.estimote.com/</a>#/apps
+section of the Estimote Cloud: <a href="http://cloud.estimote.com/.">http://cloud.estimote.com/.</a></p>
 					</div>
 					
 					
@@ -117,8 +121,8 @@ by their identifiers) will be fetched.</p>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/initWithBeaconIdentifiers:" title="initWithBeaconIdentifiers:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/initWithBeaconIdentifiers:">&ndash;&nbsp;initWithBeaconIdentifiers:</a></code>
+	<a name="//api/name/initWithPin:" title="initWithPin:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithPin:">&ndash;&nbsp;initWithPin:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -128,12 +132,12 @@ by their identifiers) will be fetched.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Returns a new <a href="#//api/name/request">request</a> object for fetching public locations for given beacons.</p>
+				<p>Returns a new <a href="#//api/name/request">request</a> object for removing specified pin inside specified location from Estimote Cloud</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeaconIdentifiers:(NSArray&lt;NSString*&gt; *)<em>identifiers</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithPin:(EILLocationPin *)<em>locationPin</em></code></div>
 
 		    
 			
@@ -142,8 +146,8 @@ by their identifiers) will be fetched.</p>
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>identifiers</code></th>
-						<td><p>An array containing identifiers of beacons that are used for fetching nearby public locations.</p></td>
+						<th scope="row" class="argument-name"><code>locationPin</code></th>
+						<td><p>A location pin to be removed from specified location from Estimote Cloud.</p></td>
 					</tr>
 				
 				</table>
@@ -153,7 +157,7 @@ by their identifiers) will be fetched.</p>
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>A <a href="#//api/name/request">request</a> initialized with identifiers of beacons.</p>
+				<p>A <a href="#//api/name/request">request</a> initialized with location pin.</p>
 			</div>
 			
 
@@ -168,7 +172,65 @@ by their identifiers) will be fetched.</p>
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">EILRequestFetchPublicLocations.h</code></p>
+				<p><code class="declared-in-ref">EILRequestRemoveLocationPin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithPinIdentifier:" title="initWithPinIdentifier:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithPinIdentifier:">&ndash;&nbsp;initWithPinIdentifier:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns a new <a href="#//api/name/request">request</a> object for removing specified pin inside specified location from Estimote Cloud</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithPinIdentifier:(NSNumber *)<em>identifier</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>locationPin</code></th>
+						<td><p>A location pin to be removed from specified location from Estimote Cloud.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A <a href="#//api/name/request">request</a> initialized with location pin identifier.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EILRequestRemoveLocationPin.h</code></p>
 			</div>
 			
 			
@@ -191,7 +253,7 @@ by their identifiers) will be fetched.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)sendRequestWithCompletion:(EILRequestFetchPublicLocationsBlock)<em>completion</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)sendRequestWithCompletion:(EILRequestRemoveLocationPinBlock)<em>completion</em></code></div>
 
 		    
 			
@@ -214,7 +276,7 @@ by their identifiers) will be fetched.</p>
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">EILRequestFetchPublicLocations.h</code></p>
+				<p><code class="declared-in-ref">EILRequestRemoveLocationPin.h</code></p>
 			</div>
 			
 			
