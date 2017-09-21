@@ -7,7 +7,7 @@ import UIKit
 
 class ViewController: UIViewController, EILIndoorLocationManagerDelegate {
 
-    let locationManager = EILIndoorLocationManager()
+    var locationManager: EILIndoorLocationManager!
 
     var location: EILLocation!
 
@@ -20,8 +20,9 @@ class ViewController: UIViewController, EILIndoorLocationManagerDelegate {
         // You can get them by adding your app on https://cloud.estimote.com/#/apps
         ESTConfig.setupAppID("<#App ID#>", andAppToken: "<#App Token#>")
 
+        self.locationManager = EILIndoorLocationManager()
         self.locationManager.delegate = self
-        self.locationManager.mode = EILIndoorLocationManagerMode.light
+        self.locationManager.mode = EILIndoorLocationManagerMode.standard
 
         // TODO: replace with an identifier of your own location
         // You will find the identifier on https://cloud.estimote.com/#/locations

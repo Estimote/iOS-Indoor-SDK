@@ -11,7 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, EILBackgroundIndoorLocati
 
     var window: UIWindow?
     
-    let backgroundIndoorLocationManager = EILBackgroundIndoorLocationManager()
+    var backgroundIndoorLocationManager: EILBackgroundIndoorLocationManager!
     var fetchLocationTask: UIBackgroundTaskIdentifier = UIBackgroundTaskInvalid
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, EILBackgroundIndoorLocati
         // You can get them by adding your app on https://cloud.estimote.com/#/apps
         ESTConfig.setupAppID("<#App ID#>", andAppToken:"<#App Token#>")
         
+        self.backgroundIndoorLocationManager = EILBackgroundIndoorLocationManager()
         self.backgroundIndoorLocationManager.delegate = self
         
         // TODO: Double-check if the "Uses Bluetooth LE accessories" Background Mode is enabled. This is required for Indoor to work properly in the background.
