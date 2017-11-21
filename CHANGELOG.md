@@ -1,3 +1,6 @@
+## 3.0.0-alpha.2 (November, 21, 2017)
+- Improved positioning accuracy for Experimental With Inertia positioning mode.
+
 ## 3.0.0-alpha.1 (September, 20, 2017)
 - Added hyper-precise positioning mode using ARKit. If you are designing a mixed-reality experience this is the suggested mode.
 - Added Location Pins. 2D objects with name & type that can be stored in Estimote Cloud. They can be used to store information about Point of Interests, landmarks, as a back-end for AR etc. 

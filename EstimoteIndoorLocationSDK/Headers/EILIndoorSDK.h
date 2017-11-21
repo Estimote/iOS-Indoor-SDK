@@ -1,7 +1,7 @@
 // Copyright (c) 2017 Estimote. All rights reserved.
 
 /** Version of this iOS Indoor Location SDK. */
-#define EIL_IOS_INDOOR_SDK_VERSION_STRING @"3.0.0-alpha.1"
+#define EIL_IOS_INDOOR_SDK_VERSION_STRING @"3.0.0-alpha.2"
 
 
 /** Library header, import this to import all of the public types in the Indoor SDK. */
